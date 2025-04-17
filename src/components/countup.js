@@ -14,7 +14,7 @@ export default function Countup() {
     {
       icon: <FaLaptopCode size={40} className="text-blue-600 mb-2" />,
       end: 100,
-      label: 'Websites Made',
+      label: 'Books Published',
       duration: 2,
     },
     {
@@ -38,7 +38,7 @@ export default function Countup() {
   ];
 
   return (
-    <section className="relative">
+    <section className="w-full overflow-x-hidden items-center justify-center">
       <motion.div
         ref={ref}
         initial={{ opacity: 0, y: 30 }}
@@ -46,20 +46,20 @@ export default function Countup() {
         transition={{ duration: 0.8 }}
         className="max-w-7xl mx-auto px-4 text-center"
       >
-        <div className="grid grid-cols-4 md:grid-cols-4 gap-8 text-gray-700 text-xl">
+        <div className="grid grid-cols-4 md:grid-cols-4 gap-2 text-gray-700 text-xl items-center justify-center text-center">
           {stats.map((item, index) => (
             <motion.div
               key={index}
-              className="bg-gray-100 p-6 rounded-2xl shadow hover:shadow-lg transition duration-300"
+              className="bg-gray-100 p-6 rounded-2xl shadow hover:shadow-lg transition duration-300 text-center"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={inView ? { opacity: 1, scale: 1 } : {}}
               transition={{ delay: 0.1 * index, duration: 0.5 }}
             >
               {item.icon}
-              <h2 className="text-3xl font-bold">
+              <h2 className="text-3xl font-bold text-center">
                 {inView && <CountUp end={item.end} duration={item.duration} />}+
               </h2>
-              <p className="text-sm mt-1">{item.label}</p>
+              <p className="text-sm mt-1 text-center">{item.label}</p>
             </motion.div>
           ))}
         </div>

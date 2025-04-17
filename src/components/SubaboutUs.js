@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 
-export default function AboutUs() {
+export default function SubAboutUs() {
   const counters = [
     { label: "Books Published", value: 320 },
     { label: "Authors Supported", value: 95 },
@@ -28,7 +28,7 @@ export default function AboutUs() {
           </p>
         </div>
         <img
-          src="/images/download.jpg"
+          src="/images/1000_F_248500652_ODdXTJo565M5YO8wO7nvawB1li0uLtOZ.jpg"
           alt="Publishing Team"
           className="w-full lg:w-1/2 rounded-2xl shadow-md"
         />
@@ -56,7 +56,7 @@ export default function AboutUs() {
         </div>
       </div>
 
-      {/* Timeline 
+      {/* Timeline */}
       <div className="py-16 px-4 max-w-4xl mx-auto">
         <h3 className="text-2xl font-bold text-center mb-10">Our Journey</h3>
         <div className="relative border-l-4 border-orange-600 pl-6 space-y-10">
@@ -78,7 +78,6 @@ export default function AboutUs() {
           </div>
         </div>
       </div>
-      */}
 
       {/* Animated Counters */}
       <div className="bg-gradient-to-r from-orange-500 to-blue-600 text-white py-16">
