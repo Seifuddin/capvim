@@ -79,7 +79,7 @@ export default function Why() {
       <section className="py-20 bg-gradient-to-br from-gray-100 via-slate-200 to-gray-300 text-gray-800">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-14">
-            <h2 className="text-4xl font-bold mb-4">Why Choose Us</h2>
+            <h2 className="text-4xl font-bold mb-4 text-green-700">Why Choose Us</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               Discover what makes us a trusted partner in publishing exceptional content that informs, inspires, and endures.
             </p>
@@ -132,7 +132,7 @@ export default function Why() {
       <section className="py-20 bg-white text-gray-800">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">What Our Clients Say</h2>
+            <h2 className="text-4xl font-bold mb-4 text-green-700">What Our Clients Say</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               Hear from the authors and organizations we've had the pleasure of working with.
             </p>

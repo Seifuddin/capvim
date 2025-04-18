@@ -38,7 +38,7 @@ export default function Hero() {
   }, [displayText, typing]);
 
   return (
-    <section className="relative h-screen bg-gradient-to-br from-indigo-100 via-white to-gray-100 overflow-hidden">
+    <section className="relative pt-20 h-screen bg-gradient-to-br from-indigo-100 via-white to-gray-100 overflow-hidden">
       <div className="absolute inset-0 bg-[url('/images/istockphoto-470889570-612x612.jpg')] bg-cover bg-center opacity-50"></div>
 
       {/* Floating icons */}
@@ -115,6 +115,7 @@ export default function Hero() {
           className="flex justify-center md:justify-end mt-12 md:mt-0"
         >
           <div className="w-[280px] h-[280px] md:w-[340px] md:h-[340px] lg:w-[400px] lg:h-[400px] relative">
+            {/*
             <Image
               src="/images/1000_F_248500652_ODdXTJo565M5YO8wO7nvawB1li0uLtOZ.jpg"
               alt="Book Illustration"
@@ -122,6 +123,7 @@ export default function Hero() {
               objectFit="contain"
               priority
             />
+            */}
           </div>
         </motion.div>
       </div>
