@@ -10,41 +10,42 @@ export default function AboutUs() {
   ];
 
   return (
-    <section className="bg-white text-gray-800">
+    <section className="bg-gray-500 text-gray-800">
       {/* Intro */}
       <div className="text-center py-16 px-4 max-w-4xl mx-auto">
-        <h2 className="text-4xl font-bold mb-4">About Us</h2>
+        <h2 className="text-4xl font-bold mb-4 text-green-600">About Us</h2>
         <p className="text-lg text-gray-600">
           We are a leading publishing company dedicated to bringing powerful stories and meaningful content to life. Our passion is empowering authors and shaping the future of publishing.
         </p>
       </div>
 
       {/* Image + Text Split */}
-      <div className="flex flex-col-reverse lg:flex-row items-center max-w-6xl mx-auto px-4 py-12 gap-10">
+      <div className="flex flex-col lg:flex-row items-center max-w-6xl mx-auto px-4 py-12 gap-10">
+      <img
+          src="/images/top-ten-tips-for-embracing-collaboration-in-the-workplace-65aa5d8a274bf.jpg"
+          alt="Publishing Team"
+          className="w-full lg:w-1/2 rounded-2xl shadow-md"
+        />
         <div className="lg:w-1/2">
-          <h3 className="text-2xl font-bold mb-4">Who We Are</h3>
+          <h3 className="text-2xl font-bold mb-4 text-green-600">Who We Are</h3>
           <p className="text-gray-700 mb-4">
             Founded by book lovers and industry veterans, our publishing house blends tradition with innovation. We work closely with authors to craft compelling narratives and provide editorial excellence every step of the way.
           </p>
         </div>
-        <img
-          src="/images/download.jpg"
-          alt="Publishing Team"
-          className="w-full lg:w-1/2 rounded-2xl shadow-md"
-        />
+        
       </div>
 
       {/* Mission and Values */}
-      <div className="bg-gray-100 py-16 px-4">
+      <div className="bg-gray-200 py-16 px-4">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
           <div>
-            <h3 className="text-2xl font-bold mb-4">Our Mission</h3>
+            <h3 className="text-2xl font-bold mb-4 text-green-600">Our Mission</h3>
             <p className="text-gray-700">
               To amplify voices and stories that inspire, educate, and entertain readers worldwide through quality publishing and unwavering support for authors.
             </p>
           </div>
           <div>
-            <h3 className="text-2xl font-bold mb-4">Our Core Values</h3>
+            <h3 className="text-2xl font-bold mb-4 text-green-600">Our Core Values</h3>
             <ul className="list-disc list-inside text-gray-700 space-y-2">
               <li>Editorial excellence</li>
               <li>Author-first approach</li>

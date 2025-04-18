@@ -48,12 +48,12 @@ export default function FAQ() {
   });
 
   return (
-    <section className="max-w-6xl mx-auto px-4 py-12">
+    <section className="max-w-6xl mx-auto px-4 py-12 bg-white">
       <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8">Frequently Asked Questions</h2>
 
       {/* Search bar */}
       <div className="relative max-w-xl mx-auto mb-6">
-        <Search className="absolute left-3 top-3.5 w-5 h-5 text-gray-400" />
+        <Search className="absolute left-3 top-3.5 w-5 h-5 text-gray-700" />
         <input
           type="text"
           placeholder="Search FAQs..."
@@ -123,7 +123,7 @@ export default function FAQ() {
               className="bg-white rounded-xl shadow hover:shadow-md transition"
             >
               <button
-                className="w-full flex justify-between items-center p-5 text-left font-medium"
+                className="w-full flex justify-between items-center p-5 text-left font-semibold"
                 onClick={() => toggleFAQ(index)}
               >
                 <span>{faq.question}</span>

@@ -36,7 +36,7 @@ export default function Subhero() {
   return (
     <div className="relative w-full px-4 md:px-8 py-10">
       <h1 className="text-4xl md:text-3xl font-bold mb-10 text-center">
-        Our Portfolio
+        Our Work
       </h1>
 
       {/* Custom Navigation Buttons */}

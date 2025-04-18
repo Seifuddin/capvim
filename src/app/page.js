@@ -2,8 +2,9 @@ import Hero from "@/components/Hero";
 import ProductCarousel from "@/components/Products";
 import SubAbout from "@/components/SubAbout";
 import Subservices from "@/components/SubServices";
-import TestimonialSlider from "@/components/Testimonials";
 import FAQ from "../components/Faq";
+import Why from "@/components/Why";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -12,6 +13,8 @@ export default function Home() {
       <SubAbout />
       <Subservices />
       <FAQ />
+      <Why />
+      <Footer />
     </main>
   );
 }

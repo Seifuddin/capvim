@@ -22,7 +22,7 @@ export default function SubAboutUs() {
       {/* Image + Text Split */}
       <div className="flex flex-col-reverse lg:flex-row items-center max-w-6xl mx-auto px-4 py-12 gap-10">
         <div className="lg:w-1/2">
-          <h3 className="text-2xl font-bold mb-4">Who We Are</h3>
+          <h3 className="text-2xl font-bold mb-4 text-green-600">Who We Are</h3>
           <p className="text-gray-700 mb-4">
             Founded by book lovers and industry veterans, our publishing house blends tradition with innovation. We work closely with authors to craft compelling narratives and provide editorial excellence every step of the way.
           </p>
@@ -38,13 +38,13 @@ export default function SubAboutUs() {
       <div className="bg-gray-100 py-16 px-4">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
           <div>
-            <h3 className="text-2xl font-bold mb-4">Our Mission</h3>
+            <h3 className="text-2xl font-bold mb-4 text-green-600">Our Mission</h3>
             <p className="text-gray-700">
               To amplify voices and stories that inspire, educate, and entertain readers worldwide through quality publishing and unwavering support for authors.
             </p>
           </div>
           <div>
-            <h3 className="text-2xl font-bold mb-4">Our Core Values</h3>
+            <h3 className="text-2xl font-bold mb-4 text-green-600">Our Core Values</h3>
             <ul className="list-disc list-inside text-gray-700 space-y-2">
               <li>Editorial excellence</li>
               <li>Author-first approach</li>
