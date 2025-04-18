@@ -39,7 +39,7 @@ export default function Hero() {
 
   return (
     <section className="relative h-screen bg-gradient-to-br from-indigo-100 via-white to-gray-100 overflow-hidden">
-      <div className="absolute inset-0 bg-[url('/images/istockphoto-470889570-612x612.jpg')] bg-cover bg-center opacity-10"></div>
+      <div className="absolute inset-0 bg-[url('/images/istockphoto-470889570-612x612.jpg')] bg-cover bg-center opacity-50"></div>
 
       {/* Floating icons */}
       <motion.div

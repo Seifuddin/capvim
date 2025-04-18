@@ -49,7 +49,7 @@ export default function FAQ() {
 
   return (
     <section className="max-w-6xl mx-auto px-4 py-12 bg-white">
-      <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8">Frequently Asked Questions</h2>
+      <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8 text-green-700">Frequently Asked Questions</h2>
 
       {/* Search bar */}
       <div className="relative max-w-xl mx-auto mb-6">
@@ -59,7 +59,7 @@ export default function FAQ() {
           placeholder="Search FAQs..."
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
-          className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full pl-10 pr-4 py-2 border text-gray-600 border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
       </div>
 
@@ -123,7 +123,7 @@ export default function FAQ() {
               className="bg-white rounded-xl shadow hover:shadow-md transition"
             >
               <button
-                className="w-full flex justify-between items-center p-5 text-left font-semibold"
+                className="w-full flex justify-between items-center p-5 text-left font-semibold text-gray-800"
                 onClick={() => toggleFAQ(index)}
               >
                 <span>{faq.question}</span>
