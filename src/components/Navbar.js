@@ -2,9 +2,15 @@
 import { useState } from "react";
 import Link from "next/link"; // Import Next.js Link
 import { motion } from "framer-motion"; // For smooth animations
+import { X } from 'lucide-react'; // Add this import for the close icon
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+
+  // Close the menu when a link is clicked
+  const handleLinkClick = () => {
+    setIsOpen(false);
+  };
 
   return (
     <nav className="bg-gradient-to-r from-teal-500 to-blue-500 fixed w-full top-0 left-0 z-50 shadow-lg border-b-2 border-b-orange-500">
@@ -73,16 +79,16 @@ export default function Navbar() {
           >
             <X />
           </button>
-          <Link href="/" className="block font-semibold py-2">
+          <Link href="/" className="block font-semibold py-2" onClick={handleLinkClick}>
             Home
           </Link>
-          <Link href="/about" className="block font-semibold py-2">
+          <Link href="/about" className="block font-semibold py-2" onClick={handleLinkClick}>
             About Us
           </Link>
-          <Link href="/services" className="block font-semibold py-2">
+          <Link href="/services" className="block font-semibold py-2" onClick={handleLinkClick}>
             Services
           </Link>
-          <Link href="/contacts" className="block font-semibold py-2">
+          <Link href="/contacts" className="block font-semibold py-2" onClick={handleLinkClick}>
             Contact Us
           </Link>
         </motion.div>
