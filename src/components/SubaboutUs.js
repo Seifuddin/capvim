@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import Who from "./Who";
 
 export default function SubAboutUs() {
   const counters = [
@@ -12,27 +13,8 @@ export default function SubAboutUs() {
   return (
     <section className="bg-white text-gray-800">
       {/* Intro */}
-      <div className="text-center py-16 px-4 max-w-4xl mx-auto">
-        <h2 className="text-4xl font-bold mb-4">About Us</h2>
-        <p className="text-lg text-gray-600">
-          We are a leading publishing company dedicated to bringing powerful stories and meaningful content to life. Our passion is empowering authors and shaping the future of publishing.
-        </p>
-      </div>
+      <Who />
 
-      {/* Image + Text Split */}
-      <div className="flex flex-col-reverse lg:flex-row items-center max-w-6xl mx-auto px-4 py-12 gap-10">
-        <div className="lg:w-1/2">
-          <h3 className="text-2xl font-bold mb-4 text-green-600">Who We Are</h3>
-          <p className="text-gray-700 mb-4">
-            Founded by book lovers and industry veterans, our publishing house blends tradition with innovation. We work closely with authors to craft compelling narratives and provide editorial excellence every step of the way.
-          </p>
-        </div>
-        <img
-          src="/images/1000_F_248500652_ODdXTJo565M5YO8wO7nvawB1li0uLtOZ.jpg"
-          alt="Publishing Team"
-          className="w-full lg:w-1/2 rounded-2xl shadow-md"
-        />
-      </div>
 
       {/* Mission and Values */}
       <div className="bg-gray-100 py-16 px-4">

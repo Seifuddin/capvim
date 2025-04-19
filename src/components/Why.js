@@ -48,27 +48,33 @@ export default function Why() {
   const testimonials = [
     {
       quote: "Their attention to detail and collaborative process turned my manuscript into a masterpiece.",
-      author: "Jane Doe, Author",
+      author: "Clifford Matara, Author",
       image: "/images/young-elite-kenya-special-forces-sniper-becomes-world-s-second-deadliest-sniper-after-Symo-Hayha.jpg",
     },
     {
       quote: "Outstanding experience! The quality of design and timeliness exceeded expectations.",
-      author: "John Smith, Publisher",
+      author: "Vincent Obwogi, Publisher",
       image: "/images/young-elite-kenya-special-forces-sniper-becomes-world-s-second-deadliest-sniper-after-Symo-Hayha.jpg",
     },
     {
       quote: "Professional, creative, and always on point. Highly recommended!",
-      author: "Sarah Johnson, Editor-in-Chief",
+      author: "Ishmail Atudo, Editor-in-Chief",
       image: "/images/young-elite-kenya-special-forces-sniper-becomes-world-s-second-deadliest-sniper-after-Symo-Hayha.jpg",
     },
     {
       quote: "I felt supported every step of the way. Their team is simply the best.",
-      author: "David Wilson, Novelist",
+      author: "Brian Odhiambo, Novelist",
       image: "/images/young-elite-kenya-special-forces-sniper-becomes-world-s-second-deadliest-sniper-after-Symo-Hayha.jpg",
     },
     {
       quote: "My project wouldn't have been the same without them.",
-      author: "Emily Roberts, Poet",
+      author: "Jim Jim, Poet",
+      image: "/images/young-elite-kenya-special-forces-sniper-becomes-world-s-second-deadliest-sniper-after-Symo-Hayha.jpg",
+    },
+
+    {
+      quote: "My project wouldn't have been the same without them.",
+      author: "Muriithi Nguru, Software Engineer",
       image: "/images/young-elite-kenya-special-forces-sniper-becomes-world-s-second-deadliest-sniper-after-Symo-Hayha.jpg",
     },
   ];

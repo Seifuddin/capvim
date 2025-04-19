@@ -39,7 +39,7 @@ export default function Hero() {
 
   return (
     <section className="relative pt-20 h-screen bg-gradient-to-br from-indigo-100 via-white to-gray-100 overflow-hidden">
-      <div className="absolute inset-0 bg-[url('/images/istockphoto-470889570-612x612.jpg')] bg-cover bg-center opacity-50"></div>
+      <div className="absolute inset-0 bg-[url('/images/1000_F_248500652_ODdXTJo565M5YO8wO7nvawB1li0uLtOZ.jpg')] bg-cover bg-center"></div>
 
       {/* Floating icons */}
       <motion.div
@@ -71,7 +71,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className="text-4xl md:text-6xl font-bold text-gray-800"
+            className="text-4xl md:text-6xl font-bold text-white"
           >
             {displayText}
             <span className="blinking-cursor">|</span>
@@ -81,7 +81,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 1 }}
-            className="text-lg md:text-xl text-gray-600 max-w-xl"
+            className="text-lg md:text-xl text-white max-w-xl"
           >
             We help authors, thinkers, and creators publish meaningful content that makes an impact.
           </motion.p>
@@ -100,7 +100,7 @@ export default function Hero() {
             </a>
             <a
               href="#contact"
-              className="px-6 py-3 border-2 border-indigo-600 text-indigo-600 hover:bg-indigo-600 hover:text-white text-lg font-semibold rounded-full shadow transition transform hover:scale-105"
+              className="px-6 py-3 border-2 border-white text-white hover:bg-indigo-600 hover:text-white text-lg font-semibold rounded-full shadow transition transform hover:scale-105"
             >
               Contact Us
             </a>
