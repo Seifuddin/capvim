@@ -17,7 +17,7 @@ export default function SubAboutUs() {
 
 
       {/* Mission and Values */}
-      <div className="bg-gray-100 py-16 px-4">
+      <div className="bg-gray-200 py-16 px-4">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
           <div>
             <h3 className="text-2xl font-bold mb-4 text-green-600">Our Mission</h3>
@@ -40,7 +40,7 @@ export default function SubAboutUs() {
 
       {/* Timeline */}
       <div className="py-16 px-4 max-w-4xl mx-auto">
-        <h3 className="text-2xl font-bold text-center mb-10">Our Journey</h3>
+        <h3 className="text-2xl font-bold text-center mb-10 text-green-600">Our Journey</h3>
         <div className="relative border-l-4 border-orange-600 pl-6 space-y-10">
           <div>
             <h4 className="text-lg font-semibold">2011 - Company Founded</h4>

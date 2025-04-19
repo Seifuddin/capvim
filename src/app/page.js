@@ -1,5 +1,4 @@
 import Hero from "@/components/Hero";
-import ProductCarousel from "@/components/Products";
 import SubAbout from "@/components/SubAbout";
 import Subservices from "@/components/SubServices";
 import FAQ from "../components/Faq";

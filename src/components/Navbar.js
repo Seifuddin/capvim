@@ -1,20 +1,29 @@
-"use client"; // Make sure it's a client-side component
-
+"use client";
 import { useState } from "react";
 import Link from "next/link"; // Import Next.js Link
+import { motion } from "framer-motion"; // For smooth animations
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-blue-950 fixed w-full top-0 left-0 z-50 shadow-md border-b-2 border-b-orange-500">
+    <nav className="bg-gradient-to-r from-teal-500 to-blue-500 fixed w-full top-0 left-0 z-50 shadow-lg border-b-2 border-b-orange-500">
       <div className="max-w-screen-xl mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
-          <div className="flex text-white font-bold text-xl">
-            Capvim
+          <div className="flex text-white font-bold text-xl tracking-wide">
+            <motion.div
+              whileHover={{ scale: 1.1 }}
+              className="cursor-pointer"
+            >
+              Capvim
+            </motion.div>
           </div>
+          
           <div className="lg:hidden">
-            <button className="text-white" onClick={() => setIsOpen(!isOpen)}>
+            <button
+              className="text-white"
+              onClick={() => setIsOpen(!isOpen)}
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-6 w-6"
@@ -31,39 +40,52 @@ export default function Navbar() {
               </svg>
             </button>
           </div>
+
           {/* Desktop Navigation */}
           <div className="hidden lg:flex space-x-6">
-            <Link href="/" className="text-white font-semibold hover:text-gray-400">
+            <Link href="/" className="text-white font-semibold hover:text-gray-300 transition-all duration-300">
               Home
             </Link>
-            <Link href="/about" className="text-white font-semibold hover:text-gray-400">
+            <Link href="/about" className="text-white font-semibold hover:text-gray-300 transition-all duration-300">
               About Us
             </Link>
-            <Link href="/services" className="text-white font-semibold hover:text-gray-400">
+            <Link href="/services" className="text-white font-semibold hover:text-gray-300 transition-all duration-300">
               Services
             </Link>
-            <Link href="/contacts" className="text-white font-semibold hover:text-gray-400">
+            <Link href="/contacts" className="text-white font-semibold hover:text-gray-300 transition-all duration-300">
               Contact Us
             </Link>
           </div>
         </div>
       </div>
+
       {/* Mobile Navigation */}
       {isOpen && (
-        <div className="lg:hidden bg-gray-800 text-white space-y-4 px-4 py-4">
-          <Link href="/" className="block font-semibold">
+        <motion.div
+          initial={{ x: "100%" }}
+          animate={{ x: 0 }}
+          transition={{ type: "spring", stiffness: 300 }}
+          className="lg:hidden bg-gray-800 text-white space-y-4 px-4 py-4 absolute top-0 right-0 w-3/4 h-full z-50"
+        >
+          <button
+            onClick={() => setIsOpen(false)}
+            className="absolute top-4 right-4 text-white text-3xl"
+          >
+            <X />
+          </button>
+          <Link href="/" className="block font-semibold py-2">
             Home
           </Link>
-          <Link href="/about" className="block font-semibold">
+          <Link href="/about" className="block font-semibold py-2">
             About Us
           </Link>
-          <Link href="/services" className="block font-semibold">
+          <Link href="/services" className="block font-semibold py-2">
             Services
           </Link>
-          <Link href="/contacts" className="block font-semibold">
+          <Link href="/contacts" className="block font-semibold py-2">
             Contact Us
           </Link>
-        </div>
+        </motion.div>
       )}
     </nav>
   );

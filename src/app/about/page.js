@@ -1,6 +1,7 @@
 import AboutHero from '@/components/HeroAbout';
 import Location from '@/components/Location';
 import SubAboutUs from '@/components/SubaboutUs';
+import TheTeam from '@/components/Team';
 import React from 'react'
 
 export default function About() {
@@ -8,6 +9,7 @@ export default function About() {
         <main className="min-h-screen bg-gradient-to-br from-blue-50 to-gray-100">
           <AboutHero />
           <SubAboutUs />
+          <TheTeam />
           <Location />
         </main>
       );

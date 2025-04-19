@@ -13,7 +13,7 @@ export default function Who() {
           transition={{ duration: 1 }}
           className="space-y-6"
         >
-          <h2 className="text-4xl md:text-5xl font-bold leading-tight">
+          <h2 className="text-4xl md:text-5xl font-bold leading-tight text-green-600">
             Who We Are
           </h2>
           <p className="text-lg text-gray-600">
