@@ -50,7 +50,7 @@ export default function TheTeam() {
   const filteredMembers = selectedDept === "All" ? teamMembers : teamMembers.filter(m => m.department === selectedDept);
 
   return (
-    <section className="bg-white py-20 px-6 md:px-20" id="team">
+    <section className="bg-gray-200 py-20 px-6 md:px-20" id="team">
       <div className="text-center mb-12">
         <h2 className="text-4xl font-bold text-green-600">Meet Our Team</h2>
         <p className="text-gray-600 mt-4 max-w-xl mx-auto">

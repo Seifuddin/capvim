@@ -6,7 +6,7 @@ import React from 'react'
 
 export default function About() {
     return (
-        <main className="min-h-screen bg-gradient-to-br from-blue-50 to-gray-100">
+        <main className="overflow-x-hidden bg-gradient-to-br from-blue-50 to-gray-100">
           <AboutHero />
           <SubAboutUs />
           <TheTeam />
