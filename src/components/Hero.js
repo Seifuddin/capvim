@@ -6,8 +6,8 @@ import Image from "next/image";
 
 export default function Hero() {
   const words = [
-    "Publish with Purpose.",
-    "Inspire with Every Page.",
+    "Where Creativity Meets Precision — Your Publishing Journey Starts Here",
+    "A Trusted Partner in Publishing — From Vision to Volume",
     "Transform Ideas into Books."
   ];
   const [currentWordIndex, setCurrentWordIndex] = useState(0);

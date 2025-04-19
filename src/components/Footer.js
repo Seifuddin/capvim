@@ -62,11 +62,11 @@ export default function Footer() {
             </li>
             <li className="flex items-start gap-2">
               <Phone className="w-4 h-4 mt-1 text-indigo-400" />
-              <span>+254 111 608 331</span>
+              <span>+254 728 240 931</span>
             </li>
             <li className="flex items-start gap-2">
               <Mail className="w-4 h-4 mt-1 text-indigo-400" />
-              <span>capviminternationalpublishers@gmail.com</span>
+              <span>info@capvim.com</span>
             </li>
           </ul>
         </motion.div>

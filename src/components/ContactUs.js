@@ -32,7 +32,7 @@ export default function ContactUs() {
                 <input
                   type="text"
                   name="name"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full text-gray-600 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                   placeholder="Your Name"
                 />
               </div>
@@ -54,7 +54,7 @@ export default function ContactUs() {
                 <input
                   type="tel"
                   name="phone"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full text-gray-600 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                   placeholder="Your Phone Number"
                 />
               </div>
@@ -65,7 +65,7 @@ export default function ContactUs() {
                 <input
                   type="text"
                   name="subject"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full text-gray-600 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                   placeholder="Subject of Your Message"
                 />
               </div>
@@ -75,7 +75,7 @@ export default function ContactUs() {
                 <label className="block text-gray-700">Message</label>
                 <textarea
                   name="message"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full text-gray-600 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                   placeholder="Your Message"
                   rows="5"
                 ></textarea>
@@ -84,7 +84,7 @@ export default function ContactUs() {
               {/* Submit Button */}
               <button
                 type="submit"
-                className="w-full mt-4 py-2 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition-all"
+                className="w-full text-gray-600 mt-4 py-2 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition-all"
               >
                 Send Message
               </button>
@@ -98,7 +98,7 @@ export default function ContactUs() {
           <div className="space-y-6">
             <div className="flex items-center space-x-4">
               <FaPhoneAlt className="text-blue-500 h-6 w-6" />
-              <span className="text-lg text-gray-700">+123 456 7890</span>
+              <span className="text-lg text-gray-700">+254 728 240 949</span>
             </div>
             <div className="flex items-center space-x-4">
               <FaEnvelope className="text-blue-500 h-6 w-6" />
@@ -106,7 +106,7 @@ export default function ContactUs() {
             </div>
             <div className="flex items-center space-x-4">
               <FaMapMarkerAlt className="text-blue-500 h-6 w-6" />
-              <span className="text-lg text-gray-700">1234 Street, City, Country</span>
+              <span className="text-lg text-gray-700"> Kweria Road, Nairobi, Kenya</span>
             </div>
             <div className="flex items-center space-x-4">
               <FaLinkedin className="text-blue-500 h-6 w-6" />

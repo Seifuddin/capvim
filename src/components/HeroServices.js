@@ -4,11 +4,11 @@ import { useState, useEffect } from "react";
 import { BookOpen, Pencil, Paperclip } from "lucide-react";
 import Image from "next/image";
 
-export default function AboutHero() {
+export default function ServicesHero() {
   const words = [
-    "We Are Capvim — Dedicated to Bringing Your Words to the World",
-    "Your Story Matters — We're Here to Help You Tell It Right.",
-    "Driven by a Passion for Publishing and Empowering Authors Worldwide"
+    "Our Services.",
+    "What We Do",
+    "Expert Publishing Services to Bring Your Vision to Life",
   ];
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [displayText, setDisplayText] = useState("");
@@ -81,7 +81,7 @@ export default function AboutHero() {
           transition={{ delay: 0.5, duration: 1 }}
           className="text-lg md:text-xl text-gray-100 max-w-2xl"
         >
-          We are a leading publishing company dedicated to bringing powerful stories and meaningful content to life. Our passion is empowering authors and shaping the future of publishing.
+          Empowering Writers and Creators Through Expert Publishing Services
         </motion.p>
 
         <motion.div
