@@ -4,7 +4,7 @@ import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaLinkedin, FaTwitter } from "r
 
 export default function ContactUs() {
   return (
-    <div className="bg-gray-50 py-16 pt-24">
+    <div className="bg-gray-50 py-16 pt-24 overflow-x-hidden">
       {/* Hero Section */}
       <div className="max-w-screen-xl mx-auto px-4 text-center">
         <motion.h1
@@ -102,7 +102,7 @@ export default function ContactUs() {
             </div>
             <div className="flex items-center space-x-4">
               <FaEnvelope className="text-blue-500 h-6 w-6" />
-              <span className="text-lg text-gray-700">info@capvim.com</span>
+              <span className="text-lg text-gray-700">capvimlimited@gmail.com</span>
             </div>
             <div className="flex items-center space-x-4">
               <FaMapMarkerAlt className="text-blue-500 h-6 w-6" />
@@ -111,13 +111,13 @@ export default function ContactUs() {
             <div className="flex items-center space-x-4">
               <FaLinkedin className="text-blue-500 h-6 w-6" />
               <span className="text-lg text-gray-700">
-                <a href="https://linkedin.com/company/capvim" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
               </span>
             </div>
             <div className="flex items-center space-x-4">
               <FaTwitter className="text-blue-500 h-6 w-6" />
               <span className="text-lg text-gray-700">
-                <a href="https://twitter.com/capvim" target="_blank" rel="noopener noreferrer">Twitter</a>
+                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a>
               </span>
             </div>
           </div>

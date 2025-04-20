@@ -11,7 +11,7 @@ export default function SubAboutUs() {
   ];
 
   return (
-    <section className="bg-white text-gray-800">
+    <section className="bg-white text-gray-800 overflow-x-hidden">
       {/* Intro */}
       <Who />
 

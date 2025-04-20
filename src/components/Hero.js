@@ -38,7 +38,7 @@ export default function Hero() {
   }, [displayText, typing]);
 
   return (
-    <section className="relative pt-20 h-screen bg-gradient-to-br from-indigo-100 via-white to-gray-100 overflow-hidden">
+    <section className="relative pt-20 h-screen bg-gradient-to-br from-indigo-100 via-white to-gray-100 overflow-hidden overflow-x-hidden">
       <div className="absolute inset-0 bg-[url('/images/1000_F_248500652_ODdXTJo565M5YO8wO7nvawB1li0uLtOZ.jpg')] bg-cover bg-center"></div>
 
       {/* Floating icons */}

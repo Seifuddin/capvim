@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Who() {
   return (
-    <section className="relative bg-white text-gray-800 py-20 px-6 lg:px-20 overflow-hidden">
+    <section className="relative bg-white text-gray-800 py-20 px-6 lg:px-20 overflow-hidden overflow-x-hidden">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
         {/* Text Section */}
         <motion.div

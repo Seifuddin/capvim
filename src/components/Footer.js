@@ -13,7 +13,7 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-gray-300 pt-16 pb-10 px-6">
+    <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-gray-300 pt-16 pb-10 px-6 overflow-x-hidden">
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -66,7 +66,7 @@ export default function Footer() {
             </li>
             <li className="flex items-start gap-2">
               <Mail className="w-4 h-4 mt-1 text-indigo-400" />
-              <span>info@capvim.com</span>
+              <span>capvimlimited@gmail.com</span>
             </li>
           </ul>
         </motion.div>
@@ -79,16 +79,16 @@ export default function Footer() {
         >
           <h4 className="text-white font-semibold mb-4">Follow Us</h4>
           <div className="flex gap-4">
-            <a href="#" className="hover:text-white transition">
+            <a href="https://www.facebook.com/CapvimSchoolMagazinePrinters?mibextid=rS40aB7S9Ucbxw6v" className="hover:text-white transition">
               <Facebook className="w-5 h-5" />
             </a>
-            <a href="#" className="hover:text-white transition">
+            <a href="https://www.twitter.com" className="hover:text-white transition">
               <Twitter className="w-5 h-5" />
             </a>
-            <a href="#" className="hover:text-white transition">
+            <a href="https://www.instagram.com" className="hover:text-white transition">
               <Instagram className="w-5 h-5" />
             </a>
-            <a href="#" className="hover:text-white transition">
+            <a href="https://www.linkedin.com" className="hover:text-white transition">
               <Linkedin className="w-5 h-5" />
             </a>
           </div>

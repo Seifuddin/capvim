@@ -38,7 +38,7 @@ export default function ServicesHero() {
   }, [displayText, typing]);
 
   return (
-    <section className="relative pt-24 pb-10 bg-gradient-to-br from-indigo-100 via-white to-gray-100 overflow-hidden">
+    <section className="relative pt-24 pb-10 bg-gradient-to-br from-indigo-100 via-white to-gray-100 overflow-hidden overflow-x-hidden">
       <div className="absolute inset-0 bg-[url('/images/two-people-sitting-floor-library-one-them-is-reading-book_861143-205.avif')] bg-cover bg-center"></div>
 
       {/* Floating icons */}

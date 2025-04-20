@@ -10,7 +10,7 @@ export default function AboutUs() {
   ];
 
   return (
-    <section className="bg-gray-100 text-gray-800">
+    <section className="bg-gray-100 text-gray-800 overflow-x-hidden">
       {/* Intro */}
       <div className="text-center py-16 px-4 max-w-4xl mx-auto">
         <h2 className="text-4xl font-bold mb-4 text-green-600">About Us</h2>

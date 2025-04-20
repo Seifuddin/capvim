@@ -82,7 +82,7 @@ export default function Why() {
   return (
     <>
       {/* WHY CHOOSE US */}
-      <section className="py-20 bg-gradient-to-br from-gray-100 via-slate-200 to-gray-300 text-gray-800">
+      <section className="py-20 bg-gradient-to-br from-gray-100 via-slate-200 to-gray-300 text-gray-800 overflow-x-hidden">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-14">
             <h2 className="text-4xl font-bold mb-4 text-green-700">Why Choose Us</h2>

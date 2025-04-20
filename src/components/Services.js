@@ -72,7 +72,7 @@ export default function ServicesPage() {
   };
 
   return (
-    <section className="bg-gradient-to-tr from-green-100 via-white to-green-50 py-16 px-4">
+    <section className="bg-gradient-to-tr from-green-100 via-white to-green-50 py-16 px-4 overflow-x-hidden">
       <div className="max-w-7xl mx-auto text-center">
         <motion.div
           initial={{ opacity: 0, y: 50 }}

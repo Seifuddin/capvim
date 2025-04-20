@@ -4,7 +4,7 @@ import { MapPin } from "lucide-react";
 
 export default function Location() {
   return (
-    <section className="bg-gray-100 py-20 px-6 md:px-16 lg:px-24">
+    <section className="bg-gray-100 py-20 px-6 md:px-16 lg:px-24 overflow-x-hidden">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         {/* Text Section */}
         <motion.div

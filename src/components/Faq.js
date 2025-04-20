@@ -48,7 +48,7 @@ export default function FAQ() {
   });
 
   return (
-    <section className="max-w-6xl mx-auto px-4 py-12 bg-white">
+    <section className="max-w-6xl mx-auto px-4 py-12 bg-white overflow-x-hidden">
       <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8 text-green-700">Frequently Asked Questions</h2>
 
       {/* Search bar */}

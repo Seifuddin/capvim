@@ -4,7 +4,7 @@ import React from "react";
 
 export default function Services() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-blue-50 to-gray-100">
+    <main className="min-h-screen bg-gradient-to-br from-blue-50 to-gray-100 overflow-x-hidden">
       <ServicesHero />
       <OurServices />
     </main>
