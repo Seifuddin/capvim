@@ -107,7 +107,7 @@ const books = [
   
 export default function PortfolioPage() {
   return (
-    <section className="min-h-screen bg-gradient-to-b from-white to-gray-100 py-20 px-6 md:px-20">
+    <section className="min-h-screen bg-indigo-100 py-20 px-6 md:px-20">
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
