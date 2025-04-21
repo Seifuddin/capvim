@@ -46,7 +46,7 @@ export default function Who() {
           className="relative w-full h-[400px] md:h-[500px] lg:h-[550px]"
         >
           <Image
-            src="/images/developing a website.o.avif"
+            src="/images/unnamed.jpg"
             alt="Publishing Team"
             layout="fill"
             objectFit="cover"

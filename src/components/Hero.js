@@ -44,19 +44,19 @@ export default function Hero() {
       title: "Becoming You",
       author: "Jane Collins",
       genre: "Self-Help",
-      src: "/images/top-ten-tips-for-embracing-collaboration-in-the-workplace-65aa5d8a274bf.jpg",
+      src: "/images/book-cover-2023-03.avif",
     },
     {
       title: "Legacy of Hope",
       author: "Marcus Leen",
       genre: "Historical Fiction",
-      src: "/images/top-ten-tips-for-embracing-collaboration-in-the-workplace-65aa5d8a274bf.jpg",
+      src: "/images/nonfiction12.webp",
     },
     {
       title: "Voices Unheard",
       author: "Tariq Mendez",
       genre: "Memoir",
-      src: "/images/top-ten-tips-for-embracing-collaboration-in-the-workplace-65aa5d8a274bf.jpg",
+      src: "/images/book-cover-2023-03.avif",
     },
   ];
 

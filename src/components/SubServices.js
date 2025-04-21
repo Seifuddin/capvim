@@ -9,42 +9,42 @@ const services = [
     description:
       "We guide you from manuscript to market with complete book publishing services including ISBN registration, layout design, and printing.",
     icon: <BookOpen className="w-6 h-6 text-green-700" />,
-    image: "/images/developing a website.o.avif",
+    image: "/images/images (6).jpg",
   },
   {
     title: "Editing & Proofreading",
     description:
       "Ensure your content is error-free and polished with our professional editing and proofreading services by experienced editors.",
     icon: <PenTool className="w-6 h-6 text-green-700" />,
-    image: "/images/developing a website.o.avif",
+    image: "/images/0448aa45c224d4abcdc7a6eb7171d4f8 (1).jpg",
   },
   {
     title: "Cover Design & Layout",
     description:
       "Our creative designers craft eye-catching book covers and interior layouts that align with your genre and audience.",
     icon: <ImagePlus className="w-6 h-6 text-green-700" />,
-    image: "/images/developing a website.o.avif",
+    image: "/images/annual-report-book-cover-template-free-vector (1).jpg",
   },
   {
     title: "e-Book Creation",
     description:
       "We convert your manuscript into accessible e-book formats compatible with all major digital platforms.",
     icon: <FileText className="w-6 h-6 text-green-700" />,
-    image: "/images/developing a website.o.avif",
+    image: "/images/books-enter-into-screen-e-book_207634-4022 (1).avif",
   },
   {
     title: "Printing & Distribution",
     description:
       "We offer high-quality printing and global distribution to ensure your book reaches readers everywhere.",
     icon: <Printer className="w-6 h-6 text-green-700" />,
-    image: "/images/developing a website.o.avif",
+    image: "/images/Distribution.jpg",
   },
   {
     title: "Publishing Consultation",
     description:
       "Get expert advice on publishing strategy, market positioning, and navigating the publishing industry.",
     icon: <HelpCircle className="w-6 h-6 text-green-700" />,
-    image: "/images/developing a website.o.avif",
+    image: "/images/amy-hirschi-JaoVGh5aJ3E-unsplash_300x300.avif",
   },
 ];
 

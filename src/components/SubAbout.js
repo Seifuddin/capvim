@@ -22,7 +22,7 @@ export default function AboutUs() {
       {/* Image + Text Split */}
       <div className="flex flex-col lg:flex-row items-center max-w-6xl mx-auto px-4 py-12 gap-10">
       <img
-          src="/images/top-ten-tips-for-embracing-collaboration-in-the-workplace-65aa5d8a274bf.jpg"
+          src="/images/About-us-min.jpg"
           alt="Publishing Team"
           className="w-full lg:w-1/2 rounded-2xl shadow-md"
         />
