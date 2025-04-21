@@ -10,7 +10,7 @@ export default function AboutUs() {
   ];
 
   return (
-    <section className="bg-gray-100 text-gray-800 overflow-x-hidden">
+    <section className="bg-indigo-50 text-gray-800 overflow-x-hidden">
       {/* Intro */}
       <div className="text-center py-16 px-4 max-w-4xl mx-auto">
         <h2 className="text-4xl font-bold mb-4 text-green-600">About Us</h2>
@@ -31,12 +31,18 @@ export default function AboutUs() {
           <p className="text-gray-700 mb-4">
             Founded by book lovers and industry veterans, our publishing house blends tradition with innovation. We work closely with authors to craft compelling narratives and provide editorial excellence every step of the way.
           </p>
+          <a
+              href="/about"
+              className="absolute mt-5 px-3 py-2 border-2 border-blue bg-green-700 text-white hover:bg-indigo-600 hover:text-white text-md font-semibold rounded-md shadow transition transform hover:scale-105"
+            >
+              Learn More...
+            </a>
         </div>
         
       </div>
 
       {/* Mission and Values */}
-      <div className="bg-gray-200 py-16 px-4">
+      <div className="bg-gray-200 py-16 px-4 mt-5">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
           <div>
             <h3 className="text-2xl font-bold mb-4 text-green-600">Our Mission</h3>

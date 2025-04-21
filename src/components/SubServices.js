@@ -52,7 +52,7 @@ export default function Subservices() {
   const [selected, setSelected] = useState(null);
 
   return (
-    <section className="bg-gradient-to-tr from-green-100 via-white to-green-50 py-16 px-4 overflow-x-hidden">
+    <section className="bg-gradient-to-tr from-green-200 via-white to-green-100 py-16 px-4 overflow-x-hidden">
       <div className="max-w-7xl mx-auto text-center">
         <h2 className="text-4xl font-bold mb-10 text-green-700">Our Services</h2>
         <motion.div

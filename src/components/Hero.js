@@ -8,7 +8,7 @@ export default function Hero() {
   const words = [
     "Where Creativity Meets Precision — Your Publishing Journey Starts Here",
     "A Trusted Partner in Publishing — From Vision to Volume",
-    "Transform Ideas into Books."
+    "Transform Ideas into Books.",
   ];
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [displayText, setDisplayText] = useState("");
@@ -19,7 +19,9 @@ export default function Hero() {
     if (typing) {
       if (displayText.length < words[currentWordIndex].length) {
         timeout = setTimeout(() => {
-          setDisplayText(words[currentWordIndex].slice(0, displayText.length + 1));
+          setDisplayText(
+            words[currentWordIndex].slice(0, displayText.length + 1)
+          );
         }, 100);
       } else {
         timeout = setTimeout(() => setTyping(false), 2000);
@@ -37,8 +39,29 @@ export default function Hero() {
     return () => clearTimeout(timeout);
   }, [displayText, typing]);
 
+  const books = [
+    {
+      title: "Becoming You",
+      author: "Jane Collins",
+      genre: "Self-Help",
+      src: "/images/top-ten-tips-for-embracing-collaboration-in-the-workplace-65aa5d8a274bf.jpg",
+    },
+    {
+      title: "Legacy of Hope",
+      author: "Marcus Leen",
+      genre: "Historical Fiction",
+      src: "/images/top-ten-tips-for-embracing-collaboration-in-the-workplace-65aa5d8a274bf.jpg",
+    },
+    {
+      title: "Voices Unheard",
+      author: "Tariq Mendez",
+      genre: "Memoir",
+      src: "/images/top-ten-tips-for-embracing-collaboration-in-the-workplace-65aa5d8a274bf.jpg",
+    },
+  ];
+
   return (
-    <section className="relative pt-20 h-screen bg-gradient-to-br from-indigo-100 via-white to-gray-100 overflow-hidden overflow-x-hidden">
+    <section className="relative pt-20 h-screen bg-gradient-to-br from-indigo-100 via-white to-gray-100 overflow-hidden">
       <div className="absolute inset-0 bg-[url('/images/1000_F_248500652_ODdXTJo565M5YO8wO7nvawB1li0uLtOZ.jpg')] bg-cover bg-center"></div>
 
       {/* Floating icons */}
@@ -65,7 +88,7 @@ export default function Hero() {
       </motion.div>
 
       <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 items-center h-full max-w-7xl mx-auto px-6 lg:px-16">
-        {/* Left: Text Content */}
+        {/* Left Text */}
         <div className="text-center md:text-left space-y-6">
           <motion.h1
             initial={{ opacity: 0, y: -20 }}
@@ -76,7 +99,6 @@ export default function Hero() {
             {displayText}
             <span className="blinking-cursor">|</span>
           </motion.h1>
-
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -92,43 +114,70 @@ export default function Hero() {
             transition={{ delay: 1, duration: 0.5 }}
             className="flex gap-4 flex-wrap"
           >
+            
             <a
-              href="#services"
+              href="/services"
               className="px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white text-lg font-semibold rounded-full shadow-lg transition transform hover:scale-105"
             >
-              Get Started
+              Services
             </a>
             <a
-              href="#contact"
+              href="/contacts"
               className="px-6 py-3 border-2 border-white text-white hover:bg-indigo-600 hover:text-white text-lg font-semibold rounded-full shadow transition transform hover:scale-105"
             >
               Contact Us
             </a>
           </motion.div>
+          
         </div>
 
-        {/* Right: Static Image */}
+        {/* Right Book Cards */}
         <motion.div
           initial={{ opacity: 0, x: 30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.5, duration: 1 }}
-          className="flex justify-center md:justify-end mt-12 md:mt-0"
+          className="flex flex-col items-center justify-center mt-12 md:mt-0"
         >
-          <div className="w-[280px] h-[280px] md:w-[340px] md:h-[340px] lg:w-[400px] lg:h-[400px] relative">
-            {/*
-            <Image
-              src="/images/1000_F_248500652_ODdXTJo565M5YO8wO7nvawB1li0uLtOZ.jpg"
-              alt="Book Illustration"
-              layout="fill"
-              objectFit="contain"
-              priority
-            />
-            */}
+          <div className="grid grid-cols-3 gap-4">
+            {books.map((book, index) => (
+              <div key={index} className="w-[110px] md:w-[120px] lg:w-[130px] h-[180px] perspective">
+                <div className="relative w-full h-full transition-transform duration-700 transform-style-preserve-3d hover:rotate-y-180">
+                  {/* Front */}
+                  <div className="absolute inset-0 backface-hidden rounded-xl shadow-lg overflow-hidden">
+                    <Image
+                      src={book.src}
+                      alt={book.title}
+                      width={130}
+                      height={180}
+                      className="object-cover w-full h-full"
+                    />
+                  </div>
+
+                  {/* Back */}
+                  <div className="absolute inset-0 bg-white text-indigo-700 rounded-xl p-2 text-sm backface-hidden rotate-y-180 flex flex-col items-center justify-center">
+                    <p className="font-bold">{book.title}</p>
+                    <p className="mt-1">{book.author}</p>
+                    <p className="text-xs text-indigo-500">{book.genre}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
+
+          {/* Portfolio Button */}
+          <motion.a
+            href="/portfolio"
+            className="mt-6 px-5 py-2 text-sm md:text-base bg-indigo-500 hover:bg-indigo-600 text-white rounded-full shadow-md transition transform hover:scale-105"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.2 }}
+          >
+            See Portfolio
+          </motion.a>
         </motion.div>
       </div>
 
-      {/* Scroll down prompt */}
+      {/* Scroll indicator */}
       <motion.div
         className="absolute bottom-10 text-indigo-500 left-1/2 transform -translate-x-1/2"
         animate={{ y: [0, 10, 0] }}
@@ -138,6 +187,7 @@ export default function Hero() {
         <div className="w-1 h-6 bg-indigo-500 mx-auto mt-1 rounded-full"></div>
       </motion.div>
 
+      {/* Cursor + Flip style */}
       <style jsx>{`
         .blinking-cursor {
           font-weight: 100;
@@ -147,7 +197,29 @@ export default function Hero() {
         }
 
         @keyframes blink {
-          50% { opacity: 0; }
+          50% {
+            opacity: 0;
+          }
+        }
+
+        .perspective {
+          perspective: 1000px;
+        }
+
+        .transform-style-preserve-3d {
+          transform-style: preserve-3d;
+        }
+
+        .backface-hidden {
+          backface-visibility: hidden;
+        }
+
+        .rotate-y-180 {
+          transform: rotateY(180deg);
+        }
+
+        .hover\\:rotate-y-180:hover {
+          transform: rotateY(180deg);
         }
       `}</style>
     </section>

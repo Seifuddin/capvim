@@ -17,35 +17,60 @@ const teamMembers = [
     title: "Director, Academics and Field Liaison",
     image: "/images/young-elite-kenya-special-forces-sniper-becomes-world-s-second-deadliest-sniper-after-Symo-Hayha.jpg",
     bio: "Cliff oversees all editorial content and maintains Capvim's publishing standards.",
-    department: "Overall Management and CEO"
+    department: "Overall Management and CEO",
+    social: {
+      facebook: "https://www.facebook.com/profile.php?id=100086445833000",
+      twitter: "https://x.com/Lapsa020?t=qD76KpTBcO3PW_5an73b7Q&s=09",
+      linkedin: "https://linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=edwin-nguru-92ab23312"
+    }
   },
   {
     name: "Trinah",
     title: "Manager, Accounts and Deputy Chief of Party",
     image: "/images/young-elite-kenya-special-forces-sniper-becomes-world-s-second-deadliest-sniper-after-Symo-Hayha.jpg",
     bio: "Trinah leads our visual storytelling and creative publishing projects.",
-    department: "Accounts"
+    department: "Accounts",
+    social: {
+      facebook: "https://www.facebook.com/profile.php?id=100086445833000",
+      twitter: "https://x.com/Lapsa020?t=qD76KpTBcO3PW_5an73b7Q&s=09",
+      linkedin: "https://linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=edwin-nguru-92ab23312"
+    }
   },
   {
     name: "Rhobey",
     title: "Chief Graphics Designer",
     image: "/images/young-elite-kenya-special-forces-sniper-becomes-world-s-second-deadliest-sniper-after-Symo-Hayha.jpg",
     bio: "Rhobey ensures timely publication and manages author relations.",
-    department: "Graphics Design"
+    department: "Graphics Design",
+    social: {
+      facebook: "https://www.facebook.com/profile.php?id=100086445833000",
+      twitter: "https://x.com/Lapsa020?t=qD76KpTBcO3PW_5an73b7Q&s=09",
+      linkedin: "https://linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=edwin-nguru-92ab23312"
+    }
   },
   {
     name: "Faith",
     title: "Sales and Marketing",
     image: "/images/young-elite-kenya-special-forces-sniper-becomes-world-s-second-deadliest-sniper-after-Symo-Hayha.jpg",
     bio: "Faith directs design strategies and book cover aesthetics.",
-    department: "Sales and Marketing"
+    department: "Sales and Marketing",
+    social: {
+      facebook: "https://www.facebook.com/profile.php?id=100086445833000",
+      twitter: "https://x.com/Lapsa020?t=qD76KpTBcO3PW_5an73b7Q&s=09",
+      linkedin: "https://linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=edwin-nguru-92ab23312"
+    }
   },
   {
     name: "Muriithi Nguru",
     title: "Manager, e-books and Online Content",
     image: "/images/young-elite-kenya-special-forces-sniper-becomes-world-s-second-deadliest-sniper-after-Symo-Hayha.jpg",
     bio: "Manages and directs design strategies and book cover aesthetics.",
-    department: "Online Content and Developer"
+    department: "Online Content and Developer",
+    social: {
+      facebook: "https://www.facebook.com/profile.php?id=100086445833000",
+      twitter: "https://x.com/Lapsa020?t=qD76KpTBcO3PW_5an73b7Q&s=09",
+      linkedin: "https://linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=edwin-nguru-92ab23312"
+    }
   }
 ];
 
@@ -90,7 +115,6 @@ export default function TheTeam() {
         </div>
       </div>
 
-      {/* Navigation Arrows */}
       <div className="absolute top-[50%] -translate-y-1/2 left-4 z-10">
         <button ref={prevRef} className="p-2 bg-white rounded-full shadow hover:bg-green-100">
           <ChevronLeft className="w-6 h-6 text-[#002147]" />
@@ -143,13 +167,31 @@ export default function TheTeam() {
                 <p className="text-green-600 mt-1">{member.title}</p>
                 <p className="text-sm text-gray-500 mt-1">{member.department}</p>
                 <div className="flex justify-center gap-4 mt-4">
-                  <motion.a href="https://www.facebook.com/profile.php?id=100086445833000" whileHover={{ scale: 1.2 }} className="text-[#002147] hover:text-green-600 animate-pulse">
+                  <motion.a 
+                    href={member.social.facebook} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    whileHover={{ scale: 1.2 }} 
+                    className="text-[#002147] hover:text-green-600 animate-pulse"
+                  >
                     <Facebook className="w-5 h-5" />
                   </motion.a>
-                  <motion.a href="https://x.com/Lapsa020?t=qD76KpTBcO3PW_5an73b7Q&s=09" whileHover={{ scale: 1.2 }} className="text-[#002147] hover:text-green-600 animate-pulse">
+                  <motion.a 
+                    href={member.social.twitter} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    whileHover={{ scale: 1.2 }} 
+                    className="text-[#002147] hover:text-green-600 animate-pulse"
+                  >
                     <Twitter className="w-5 h-5" />
                   </motion.a>
-                  <motion.a href="https://linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=edwin-nguru-92ab23312" whileHover={{ scale: 1.2 }} className="text-[#002147] hover:text-green-600 animate-pulse">
+                  <motion.a 
+                    href={member.social.linkedin} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    whileHover={{ scale: 1.2 }} 
+                    className="text-[#002147] hover:text-green-600 animate-pulse"
+                  >
                     <Linkedin className="w-5 h-5" />
                   </motion.a>
                 </div>
@@ -167,7 +209,6 @@ export default function TheTeam() {
         ))}
       </Swiper>
 
-      {/* Modal */}
       <Dialog open={isOpen} onClose={() => setIsOpen(false)} className="fixed z-50 inset-0 overflow-y-auto">
         <div className="flex items-center justify-center min-h-screen px-4">
           <div className="fixed inset-0 bg-black bg-opacity-30" aria-hidden="true" />

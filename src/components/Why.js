@@ -171,7 +171,7 @@ export default function Why() {
           >
             {testimonials.map((testimonial, idx) => (
               <SwiperSlide key={idx}>
-                <motion.div whileHover={{ scale: 1.02 }} className="bg-indigo-50 p-6 rounded-xl shadow-lg text-center h-full">
+                <motion.div whileHover={{ scale: 1.02 }} className="bg-indigo-100 p-6 rounded-xl shadow-lg text-center h-full">
                   <img src={testimonial.image} alt={testimonial.author} className="w-16 h-16 mx-auto rounded-full mb-4 object-cover shadow-md" />
                   <Quote className="w-6 h-6 text-indigo-500 mx-auto mb-2" />
                   <p className="italic text-gray-700 mb-4">"{testimonial.quote}"</p>
