@@ -24,7 +24,7 @@ export default function AboutUs() {
       <img
           src="/images/Capvim IP.png"
           alt="Publishing Team"
-          className="w-full lg:w-1/2 rounded-2xl shadow-md"
+          className="w-full rounded-md p-5 bg-indigo-100 shadow-md"
         />
         <div className="lg:w-1/2">
           <h3 className="text-2xl font-bold mb-4 text-blue-800">Who We Are</h3>

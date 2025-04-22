@@ -21,7 +21,11 @@ export default function Navbar() {
               whileHover={{ scale: 1.1 }}
               className="cursor-pointer"
             >
-              Capvim
+              <img
+          src="/images/Capvim IP.png"
+          alt="Publishing Team"
+          className="w-24 rounded-sm bg-teal-400 shadow-md p-2"
+        />
             </motion.div>
           </div>
           
