@@ -91,7 +91,7 @@ export default function TheTeam() {
   const nextRef = useRef(null);
 
   return (
-    <section className="bg-gray-200 py-20 px-6 md:px-20 relative overflow-x-hidden" id="team">
+    <section className="bg-white py-20 px-6 md:px-20 relative overflow-x-hidden" id="team">
       <div className="text-center mb-12">
         <h2 className="text-4xl font-bold text-green-600">Meet Our Team</h2>
         <p className="text-gray-600 mt-4 max-w-xl mx-auto">
@@ -151,10 +151,10 @@ export default function TheTeam() {
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
-              className="bg-[#f8fafc] rounded-2xl shadow-md overflow-hidden text-center cursor-pointer hover:shadow-xl"
+              className="bg-indigo-100 pt-5 rounded-2xl shadow-md overflow-hidden text-center cursor-pointer hover:shadow-xl"
               onClick={() => openModal(member)}
             >
-              <div className="relative w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden">
+              <div className="relative w-20 h-20 mx-auto mb-4 rounded-full overflow-hidden border-2 border-blue-800">
                 <Image
                   src={member.image}
                   alt={member.name}
@@ -162,7 +162,7 @@ export default function TheTeam() {
                   className="object-cover"
                 />
               </div>
-              <div className="p-6">
+              <div className="p-4">
                 <h3 className="text-xl font-semibold text-[#002147]">{member.name}</h3>
                 <p className="text-green-600 mt-1">{member.title}</p>
                 <p className="text-sm text-gray-500 mt-1">{member.department}</p>
@@ -216,7 +216,7 @@ export default function TheTeam() {
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.3 }}
-            className="bg-white rounded-xl shadow-lg z-50 max-w-md mx-auto p-6 relative"
+            className="bg-indigo-50 rounded-xl shadow-lg z-50 max-w-md mx-auto p-6 relative"
           >
             <Dialog.Title className="text-xl font-bold text-[#002147] mb-2">
               {selectedMember?.name}

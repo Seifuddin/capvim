@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Who() {
   return (
-    <section className="relative bg-indigo-50 text-gray-800 py-20 px-6 lg:px-20 overflow-hidden overflow-x-hidden">
+    <section className="relative bg-white text-gray-800 py-20 px-6 lg:px-20 overflow-hidden overflow-x-hidden">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
         {/* Text Section */}
         <motion.div
@@ -43,7 +43,7 @@ export default function Who() {
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
-          className="relative w-full h-[400px] md:h-[500px] lg:h-[550px]"
+          className="relative w-full h-[250px] md:h-[400px] lg:h-[400px]"
         >
           <Image
             src="/images/Who-We-Are-Polaris-Market-Research.webp"

@@ -94,7 +94,7 @@ export default function Why() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Image */}
             <motion.div initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1 }}>
-              <img src="/images/1657974996_whyus.jpg" alt="Why Choose Us" className="rounded-2xl w-full shadow-lg" />
+              <img src="/images/1657974996_whyus.jpg" alt="Why Choose Us" className="relative rounded-lg w-full h-[250px] md:h-[400px] lg:h-[400px]" />
             </motion.div>
 
             {/* Features */}
