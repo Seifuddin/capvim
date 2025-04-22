@@ -13,11 +13,8 @@ export default function ContactUs() {
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          Get In Touch With Us
         </motion.h1>
-        <p className="text-lg text-gray-700">
-          We'd love to hear from you! Whether you have a question, feedback, or just want to chat, feel free to reach out.
-        </p>
+       
       </div>
 
       {/* Contact Form Section */}

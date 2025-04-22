@@ -10,7 +10,7 @@ export default function AboutUs() {
   ];
 
   return (
-    <section className="bg-white text-gray-800 overflow-x-hidden">
+    <section className="bg-gradient-to-tr from-green-300 via-white to-green-200  text-gray-800 overflow-x-hidden">
       {/* Intro */}
       <div className="text-center py-16 px-4 max-w-4xl mx-auto">
         <h2 className="text-4xl font-bold mb-4 text-green-600">About Us</h2>
@@ -42,7 +42,7 @@ export default function AboutUs() {
       </div>
 
       {/* Mission and Values */}
-      <div className="bg-gradient-to-tr from-green-300 via-white to-green-200 py-16 px-4 mt-5">
+      <div className="bg-white py-16 px-4 mt-5">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
           <div>
             <h3 className="text-2xl font-bold mb-4 text-green-600">Our Mission</h3>
@@ -88,7 +88,7 @@ export default function AboutUs() {
       */}
 
       {/* Animated Counters */}
-      <div className="bg-gradient-to-r from-orange-500 to-blue-600 text-white py-16">
+      <div className="bg-gradient-to-r from-orange-500 to-blue-600 text-white py-10">
         <div className="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-4 text-center gap-8">
           {counters.map((counter, index) => (
             <motion.div
