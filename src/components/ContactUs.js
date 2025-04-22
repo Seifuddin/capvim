@@ -4,7 +4,7 @@ import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaLinkedin, FaTwitter } from "r
 
 export default function ContactUs() {
   return (
-    <div className="bg-indigo-100 py-16 pt-24 overflow-x-hidden">
+    <div className="bg-gradient-to-tr from-green-300 via-white to-green-200 py-16 pt-24 overflow-x-hidden">
       {/* Hero Section */}
       <div className="max-w-screen-xl mx-auto px-4 text-center">
         <motion.h1

@@ -17,7 +17,7 @@ export default function SubAboutUs() {
 
 
       {/* Mission and Values */}
-      <div className="bg-gray-200 py-16 px-4">
+      <div className="bg-gradient-to-tr from-green-300 via-white to-green-200 py-16 px-4">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
           <div>
             <h3 className="text-2xl font-bold mb-4 text-green-600">Our Mission</h3>

@@ -120,7 +120,7 @@ export default function FAQ() {
           filteredFaqs.map((faq, index) => (
             <div
               key={`${faq.question}-${index}`}
-              className="bg-white rounded-xl shadow hover:shadow-md transition"
+              className="bg-gradient-to-tr from-green-200 via-white to-green-100 rounded-xl shadow hover:shadow-md transition"
             >
               <button
                 className="w-full flex justify-between items-center p-5 text-left font-semibold text-gray-800"
