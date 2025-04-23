@@ -154,7 +154,7 @@ export default function TheTeam() {
               className="bg-indigo-100 pt-5 rounded-2xl shadow-md overflow-hidden text-center cursor-pointer hover:shadow-xl"
               onClick={() => openModal(member)}
             >
-              <div className="relative w-20 h-20 mx-auto mb-4 rounded-full overflow-hidden border-2 border-blue-800">
+              <div className="relative w-20 h-20 mx-auto mb-4 rounded-full overflow-hidden border-2">
                 <Image
                   src={member.image}
                   alt={member.name}
