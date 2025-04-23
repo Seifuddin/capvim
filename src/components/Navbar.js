@@ -24,7 +24,7 @@ export default function Navbar() {
               <img
           src="/images/Capvim IP.png"
           alt="Publishing Team"
-          className="w-20 rounded-sm bg-gray-200 shadow-md p-2"
+          className="w-24 rounded-sm bg-gray-200 shadow-md p-2"
         />
             </motion.div>
           </div>

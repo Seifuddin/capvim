@@ -41,7 +41,7 @@ export default function SubAboutUs() {
       {/* Timeline */}
       <div className="py-16 px-4 max-w-4xl mx-auto">
         <h3 className="text-2xl font-bold text-center mb-10 text-green-600">Our Journey</h3>
-        <div className="relative border-l-4 border-orange-600 pl-6 space-y-10">
+        <div className="relative border-l-4 border-blue-600 pl-6 space-y-10">
           <div>
             <h4 className="text-lg font-semibold">2011 - Company Founded</h4>
             <p className="text-gray-600">Established with the mission to support emerging authors and diverse narratives.</p>
