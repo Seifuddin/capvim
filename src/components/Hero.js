@@ -63,7 +63,7 @@ export default function Hero() {
 
   return (
     <section className="relative pt-20 min-h-screen bg-gradient-to-br from-indigo-700 via-white to-green-500 overflow-hidden">
-      <div className="absolute inset-0 z-50 bg-[url('/images/1000_F_248500652_ODdXTJo565M5YO8wO7nvawB1li0uLtOZ.jpg"></div>
+      <div className="absolute inset-0  bg-[url('/images/1000_F_248500652_ODdXTJo565M5YO8wO7nvawB1li0uLtOZ.jpg')] bg-cover bg-center"></div>
 
       {/* Floating icons */}
       <motion.div
@@ -187,7 +187,7 @@ export default function Hero() {
         </motion.div>
         
         </div>
-        <div className="relative p-10 rounded-lg">
+        <div className="relative rounded-lg">
           <ImageSlider />
         </div>
         {/* Right Book Cards
