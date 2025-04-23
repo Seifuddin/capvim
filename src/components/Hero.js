@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { BookOpen, Pencil, Paperclip } from "lucide-react";
 import Image from "next/image";
+import ImageSlider from "./Imageslider";
 
 export default function Hero() {
   const words = [
@@ -61,8 +62,8 @@ export default function Hero() {
   ];
 
   return (
-    <section className="relative pt-20 h-screen bg-gradient-to-br from-indigo-100 via-white to-gray-100 overflow-hidden">
-      <div className="absolute inset-0 bg-[url('/images/1000_F_248500652_ODdXTJo565M5YO8wO7nvawB1li0uLtOZ.jpg')] bg-cover bg-center"></div>
+    <section className="relative pt-20 min-h-screen bg-gradient-to-br from-indigo-700 via-white to-green-500 overflow-hidden">
+      <div className="absolute inset-0 z-50 bg-[url('/images/1000_F_248500652_ODdXTJo565M5YO8wO7nvawB1li0uLtOZ.jpg"></div>
 
       {/* Floating icons */}
       <motion.div
@@ -128,20 +129,28 @@ export default function Hero() {
               Contact Us
             </a>
           </motion.div>
-          
-        </div>
-
-        {/* Right Book Cards */}
-        <motion.div
+          <motion.div
           initial={{ opacity: 0, x: 30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.5, duration: 1 }}
-          className="flex flex-col items-center justify-center mt-12 md:mt-0"
+          className="flex flex-col items-center justify-center mt-12 md:mt-0 py-10"
         >
-          <div className="grid grid-cols-3 gap-4">
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5, duration: 1 }}
+            className="text-lg md:text-xl text-white max-w-xl p-2 mb-5 font-bold border-2 border-white rounded-full"
+          >
+            Our Portfolio
+          </motion.p>
+          
+          <div className="grid items-center justify-center grid-cols-3 gap-4">
+          
+            
             {books.map((book, index) => (
               <div key={index} className="w-[110px] md:w-[120px] lg:w-[130px] h-[180px] perspective">
                 <div className="relative w-full h-full transition-transform duration-700 transform-style-preserve-3d hover:rotate-y-180">
+                  
                   {/* Front */}
                   <div className="absolute inset-0 backface-hidden rounded-xl shadow-lg overflow-hidden">
                     <Image
@@ -164,6 +173,7 @@ export default function Hero() {
             ))}
           </div>
 
+
           {/* Portfolio Button */}
           <motion.a
             href="/portfolio"
@@ -175,6 +185,61 @@ export default function Hero() {
             See Portfolio
           </motion.a>
         </motion.div>
+        
+        </div>
+        <div className="relative p-10 rounded-lg">
+          <ImageSlider />
+        </div>
+        {/* Right Book Cards
+        <motion.div
+          initial={{ opacity: 0, x: 30 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.5, duration: 1 }}
+          className="flex flex-col items-center justify-center mt-12 md:mt-0"
+        >
+          
+          <div className="grid grid-cols-3 gap-4">
+
+            
+            {books.map((book, index) => (
+              <div key={index} className="w-[110px] md:w-[120px] lg:w-[130px] h-[180px] perspective">
+                <div className="relative w-full h-full transition-transform duration-700 transform-style-preserve-3d hover:rotate-y-180">
+                  
+                  Front
+                  <div className="absolute inset-0 backface-hidden rounded-xl shadow-lg overflow-hidden">
+                    <Image
+                      src={book.src}
+                      alt={book.title}
+                      width={130}
+                      height={180}
+                      className="object-cover w-full h-full"
+                    />
+                  </div>
+
+                  Back 
+                  <div className="absolute inset-0 bg-white text-indigo-700 rounded-xl p-2 text-sm backface-hidden rotate-y-180 flex flex-col items-center justify-center">
+                    <p className="font-bold">{book.title}</p>
+                    <p className="mt-1">{book.author}</p>
+                    <p className="text-xs text-indigo-500">{book.genre}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+
+           Portfolio Button
+          <motion.a
+            href="/portfolio"
+            className="mt-6 px-5 py-2 text-sm md:text-base bg-indigo-500 hover:bg-indigo-600 text-white rounded-full shadow-md transition transform hover:scale-105"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.2 }}
+          >
+            See Portfolio
+          </motion.a>
+        </motion.div>
+        */}
       </div>
 
       {/* Scroll indicator */}

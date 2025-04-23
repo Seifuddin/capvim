@@ -17,7 +17,7 @@ export default function Location() {
             Visit Capvim International Publishers
           </h2>
           <p className="text-gray-700 text-lg leading-relaxed mb-6">
-            We are located at <strong>Creative Plaza, Nairobi</strong> – a hub for publishing excellence. Whether you're looking to consult, collaborate, or create, our doors are open to you.
+            We are located at <strong>Globe View Plaza, Nairobi</strong> – a hub for publishing excellence. Whether you're looking to consult, collaborate, or create, our doors are open to you.
           </p>
 
           {/* Animated Button with Icon and Pulse */}
