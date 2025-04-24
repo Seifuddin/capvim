@@ -127,7 +127,7 @@ export default function ContactUs() {
         <div className="w-full h-96 rounded-lg overflow-hidden">
           {/* You can embed Google Map here */}
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.247298107088!2d144.95373531531873!3d-37.81720957975127!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d5cfc6b7b39%3A0x5045675218ce1e0!2sFedEx!5e0!3m2!1sen!2sus!4v1643819122544!5m2!1sen!2sus"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9487.075528360676!2d36.8191619147623!3d-1.2792480364845629!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f3f9964aed32f%3A0x2a81c5e4ac4dd3c0!2sInklab%20Digital%20Printers!5e0!3m2!1sen!2ske!4v1745533752904!5m2!1sen!2ske"
             width="100%"
             height="100%"
             style={{ border: "0" }}

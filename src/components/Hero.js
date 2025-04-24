@@ -129,7 +129,11 @@ export default function Hero() {
               Contact Us
             </a>
           </motion.div>
-          <motion.div
+          
+        
+        </div>
+        <div className="relative rounded-lg">
+        <motion.div
           initial={{ opacity: 0, x: 30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.5, duration: 1 }}
@@ -185,10 +189,6 @@ export default function Hero() {
             See Portfolio
           </motion.a>
         </motion.div>
-        
-        </div>
-        <div className="relative rounded-lg">
-          <ImageSlider />
         </div>
         {/* Right Book Cards
         <motion.div

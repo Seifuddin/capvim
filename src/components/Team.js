@@ -151,7 +151,7 @@ export default function TheTeam() {
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
-              className="bg-indigo-100 pt-5 rounded-2xl shadow-md overflow-hidden text-center cursor-pointer hover:shadow-xl"
+              className="bg-gradient-to-tr from-green-300 via-white to-green-200 pt-5 rounded-2xl shadow-md overflow-hidden text-center cursor-pointer hover:shadow-xl"
               onClick={() => openModal(member)}
             >
               <div className="relative w-20 h-20 mx-auto mb-4 rounded-full overflow-hidden border-2 border-blue-800">

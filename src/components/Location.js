@@ -36,16 +36,16 @@ export default function Location() {
 
             {/* Get Directions Button */}
             <motion.a
-              href="https://www.google.com/maps/dir/?api=1&destination=Creative+Plaza,+Nairobi"
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{ scale: 1.05, backgroundColor: "#047857" }}
-              whileTap={{ scale: 0.95 }}
-              className="relative z-10 flex items-center gap-2 bg-[#0a1d37] text-white px-6 py-3 rounded-full font-semibold shadow-lg transition"
-            >
-              <MapPin size={20} className="text-white" />
-              Get Directions
-            </motion.a>
+  href="https://maps.app.goo.gl/8rZ9a6jx9MUV4rjJ7"
+  target="_blank"
+  rel="noopener noreferrer"
+  whileHover={{ scale: 1.05, backgroundColor: "#047857" }}
+  whileTap={{ scale: 0.95 }}
+  className="relative z-10 flex items-center gap-2 bg-[#0a1d37] text-white px-6 py-3 rounded-full font-semibold shadow-lg transition"
+>
+  <MapPin size={20} className="text-white" />
+  Get Directions
+</motion.a>
           </div>
         </motion.div>
 
@@ -59,16 +59,16 @@ export default function Location() {
         >
           <iframe
             title="Capvim Location"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15955.282818208532!2d36.8136192!3d-1.2863899!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10d4868a1c3d%3A0x9d2c68f70c55e6ab!2sCreative%20Plaza%2C%20Nairobi!5e0!3m2!1sen!2ske!4v1680000000000!5m2!1sen!2ske"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9487.075528360676!2d36.8191619147623!3d-1.2792480364845629!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f3f9964aed32f%3A0x2a81c5e4ac4dd3c0!2sInklab%20Digital%20Printers!5e0!3m2!1sen!2ske!4v1745533752904!5m2!1sen!2ske"
             width="100%"
             height="100%"
             loading="lazy"
             style={{ border: 0 }}
             allowFullScreen
             referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>
+          />
         </motion.div>
       </div>
     </section>
   );
-}
+};
