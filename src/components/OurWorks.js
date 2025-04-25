@@ -5,21 +5,23 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const portfolioItems = [
+
   {
     title: 'Book Title 1',
-    image: '/images/book-cover-2023-03.avif',
+    image: '/images/J.R.R.Tolkien-The-Hobbit.png',
+    description: 'A thrilling story about innovation and creativity in publishing.',
+    author: 'Jane Smith',
+  },
+
+  {
+    title: 'Book Title 2',
+    image: '/images/Harry_Potter_and_the_Cursed_Child_Special_Rehearsal_Edition_Book_Cover.jpg',
     description: 'A brief overview of Book Title 1 with its highlights and key messages.',
     author: 'John Doe',
   },
   {
-    title: 'Book Title 2',
-    image: '/images/book-cover-2023-03.avif',
-    description: 'A thrilling story about innovation and creativity in publishing.',
-    author: 'Jane Smith',
-  },
-  {
     title: 'Book Title 3',
-    image: '/images/book-cover-2023-03.avif',
+    image: '/images/Sin-Eater-by-Megan-Campisi.jpg',
     description: 'Explore the depth of modern literature with Book Title 3.',
     author: 'Emily Johnson',
   },
@@ -29,10 +31,10 @@ const OurWorks = () => {
   const [selectedItem, setSelectedItem] = useState(null);
 
   return (
-    <section className="relative w-full  bg-gradient-to-b from-gray-100 via-white to-gray-100 overflow-hidden">
+    <section className="relative w-full bg-white/30 border-2 border-gray-500 overflow-hidden rounded-3xl">
       <div className="absolute inset-0 bg-gradient-to-br from-blue-100 to-transparent opacity-30 pointer-events-none"></div>
 
-      <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 items-center max-w-7xl mx-auto px-6 lg:px-16 h-full">
+      <div className="relative z-10 grid grid-cols-1 md:grid-cols-1 items-center max-w-7xl mx-auto px-6 lg:px-16 h-full">
         {/* Left Content */}
         <div className="h-full flex flex-col justify-center space-y-6 py-6">
           <motion.div
@@ -41,8 +43,8 @@ const OurWorks = () => {
             transition={{ delay: 0.5, duration: 1 }}
             className="flex flex-col items-center justify-center md:items-start py-4"
           >
-            <h3 className="text-xl font-semibold text-gray-700 mb-4">Our Portfolio:</h3>
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+            <h3 className="text-xl font-semibold text-black mb-4">Our Portfolio:</h3>
+            <div className="grid grid-cols-3 sm:grid-cols-3 gap-4">
               {portfolioItems.map((item, index) => (
                 <motion.div
                   key={index}
@@ -68,8 +70,17 @@ const OurWorks = () => {
         </div>
 
         {/* Right Content - Image Slider */}
-        <div className="h-full w-full flex justify-center items-center">
-          <ImgSlider />
+        <div className="h-full w-full flex justify-center p-3 items-center">
+          {/* Portfolio Button */}
+                    <motion.a
+                      href="/portfolio"
+                      className="mt-2 px-5 py-2 text-sm md:text-base bg-blue-700 hover:bg-indigo-600 text-white rounded-full shadow-md transition transform hover:scale-105"
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 1.2 }}
+                    >
+                      See Portfolio
+                    </motion.a>
         </div>
       </div>
 
