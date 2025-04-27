@@ -4,7 +4,7 @@ import Navbar from '../components/Navbar'
 import Footer from '@/components/Footer'
 
 export const metadata = {
-  title: 'My App',
+  title: 'Capvim',
   description: 'This is my Next.js app using App Router',
 }
 

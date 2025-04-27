@@ -106,7 +106,7 @@ export default function AboutUs() {
       */}
 
       {/* Animated Counters */}
-      <div className="bg-gradient-to-r from-orange-500 to-blue-600 text-white py-10">
+      <div className="bg-gradient-to-r from-green-500 to-blue-600 text-white py-10">
         <div className="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-4 text-center gap-8">
           {counters.map((counter, index) => (
             <motion.div

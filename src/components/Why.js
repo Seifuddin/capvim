@@ -49,33 +49,33 @@ export default function Why() {
     {
       quote: "Their attention to detail and collaborative process turned my manuscript into a masterpiece.",
       author: "Clifford Matara, Author",
-      image: "/images/WhatsApp Image 2025-04-24 at 17.22.28.jpeg",
+      image: "/images/WhatsApp Image 2025-04-27 at 04.32.48 (1).jpeg",
     },
     {
       quote: "Outstanding experience! The quality of design and timeliness exceeded expectations.",
       author: "Vincent Obwogi, Publisher",
-      image: "/images/WhatsApp Image 2025-04-24 at 17.22.28.jpeg",
+      image: "/images/WhatsApp Image 2025-04-27 at 04.32.48 (1).jpeg",
     },
     {
       quote: "Professional, creative, and always on point. Highly recommended!",
       author: "Ishmail Atudo, Editor-in-Chief",
-      image: "/images/WhatsApp Image 2025-04-24 at 17.22.28.jpeg",
+      image: "/images/WhatsApp Image 2025-04-27 at 04.32.48 (1).jpeg",
     },
     {
       quote: "I felt supported every step of the way. Their team is simply the best.",
       author: "Brian Odhiambo, Novelist",
-      image: "/images/WhatsApp Image 2025-04-24 at 17.22.28.jpeg",
+      image: "/images/WhatsApp Image 2025-04-27 at 04.32.48 (1).jpeg",
     },
     {
       quote: "My project wouldn't have been the same without them.",
       author: "Jim Jim, Poet",
-      image: "/images/WhatsApp Image 2025-04-24 at 17.22.28.jpeg",
+      image: "/images/WhatsApp Image 2025-04-27 at 04.32.48 (1).jpeg",
     },
 
     {
       quote: "My project wouldn't have been the same without them.",
       author: "Muriithi Nguru, Software Engineer",
-      image: "/images/WhatsApp Image 2025-04-24 at 17.22.28.jpeg",
+      image: "/images/WhatsApp Image 2025-04-27 at 04.32.48 (1).jpeg",
     },
   ];
 

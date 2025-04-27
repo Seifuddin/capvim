@@ -36,8 +36,8 @@ const OurWorks = () => {
   const nextRef = useRef(null);
 
   return (
-    <section className="relative w-full bg-white/0 border-2 border-gray-500 overflow-hidden rounded-3xl">
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-100 to-transparent opacity-30 pointer-events-none"></div>
+    <section className="relative w-full overflow-hidden rounded-3xl">
+      <div className="absolute inset-0 pointer-events-none"></div>
 
       <div className="relative z-10 grid grid-cols-1 items-center max-w-7xl mx-auto px-6 lg:px-16 h-full py-10">
         {/* Title & Slider */}

@@ -15,7 +15,7 @@ const teamMembers = [
   {
     name: "Clifford Matara",
     title: "Director, Academics and Field Liaison",
-    image: "/images/WhatsApp Image 2025-04-24 at 17.22.28.jpeg",
+    image: "/images/WhatsApp Image 2025-04-27 at 04.32.48 (1).jpeg",
     bio: "Cliff oversees all editorial content and maintains Capvim's publishing standards.",
     department: "Overall Management and CEO",
     social: {
@@ -27,7 +27,7 @@ const teamMembers = [
   {
     name: "Trinah",
     title: "Manager, Accounts and Deputy Chief of Party",
-    image: "/images/WhatsApp Image 2025-04-24 at 17.22.28.jpeg",
+    image: "/images/WhatsApp Image 2025-04-27 at 04.32.48 (1).jpeg",
     bio: "Trinah leads our visual storytelling and creative publishing projects.",
     department: "Accounts",
     social: {
@@ -39,7 +39,7 @@ const teamMembers = [
   {
     name: "Rhobey",
     title: "Chief Graphics Designer",
-    image: "/images/WhatsApp Image 2025-04-24 at 17.22.28.jpeg",
+    image: "/images/WhatsApp Image 2025-04-27 at 04.32.48 (1).jpeg",
     bio: "Rhobey ensures timely publication and manages author relations.",
     department: "Graphics Design",
     social: {
@@ -51,7 +51,7 @@ const teamMembers = [
   {
     name: "Faith",
     title: "Sales and Marketing",
-    image: "/images/WhatsApp Image 2025-04-24 at 17.22.28.jpeg",
+    image: "/images/WhatsApp Image 2025-04-27 at 04.32.48 (1).jpeg",
     bio: "Faith directs design strategies and book cover aesthetics.",
     department: "Sales and Marketing",
     social: {
@@ -63,7 +63,7 @@ const teamMembers = [
   {
     name: "Muriithi Nguru",
     title: "Manager, e-books and Online Content",
-    image: "/images/WhatsApp Image 2025-04-24 at 17.22.28.jpeg",
+    image: "/images/WhatsApp Image 2025-04-27 at 04.32.48 (1).jpeg",
     bio: "Manages and directs design strategies and book cover aesthetics.",
     department: "Online Content and Developer",
     social: {
