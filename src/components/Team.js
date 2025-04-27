@@ -11,12 +11,12 @@ import "swiper/css/autoplay";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-const teamMembers = [
+const teamMembers = [ 
   {
     name: "Clifford Matara",
     title: "Director, Academics and Field Liaison",
     image: "/images/WhatsApp Image 2025-04-27 at 04.32.48 (1).jpeg",
-    bio: "Cliff oversees all editorial content and maintains Capvim's publishing standards.",
+    bio: "Clifford oversees all academic programs, ensures publishing standards are upheld, and liaises with field teams to maintain excellence.",
     department: "Overall Management and CEO",
     social: {
       facebook: "https://www.facebook.com/profile.php?id=100086445833000",
@@ -28,7 +28,7 @@ const teamMembers = [
     name: "Trinah",
     title: "Manager, Accounts and Deputy Chief of Party",
     image: "/images/WhatsApp Image 2025-04-27 at 04.32.48 (1).jpeg",
-    bio: "Trinah leads our visual storytelling and creative publishing projects.",
+    bio: "Trinah oversees financial operations and supports project leadership to ensure smooth and efficient organizational management.",
     department: "Accounts",
     social: {
       facebook: "https://www.facebook.com/profile.php?id=100086445833000",
@@ -40,7 +40,7 @@ const teamMembers = [
     name: "Rhobey",
     title: "Chief Graphics Designer",
     image: "/images/WhatsApp Image 2025-04-27 at 04.32.48 (1).jpeg",
-    bio: "Rhobey ensures timely publication and manages author relations.",
+    bio: "Rhobey leads the creative team, producing innovative visual designs that align with Capvim’s brand and publishing goals.",
     department: "Graphics Design",
     social: {
       facebook: "https://www.facebook.com/profile.php?id=100086445833000",
@@ -52,7 +52,7 @@ const teamMembers = [
     name: "Faith",
     title: "Sales and Marketing",
     image: "/images/WhatsApp Image 2025-04-27 at 04.32.48 (1).jpeg",
-    bio: "Faith directs design strategies and book cover aesthetics.",
+    bio: "Faith drives Capvim’s marketing initiatives, spearheading sales strategies and building strong client relationships.",
     department: "Sales and Marketing",
     social: {
       facebook: "https://www.facebook.com/profile.php?id=100086445833000",
@@ -64,7 +64,7 @@ const teamMembers = [
     name: "Muriithi Nguru",
     title: "Manager, e-books and Online Content",
     image: "/images/WhatsApp Image 2025-04-27 at 04.32.48 (1).jpeg",
-    bio: "Manages and directs design strategies and book cover aesthetics.",
+    bio: "Nguru manages the development and distribution of digital content, maintains and develops our website, ensuring a seamless experience across Capvim’s online platforms.",
     department: "Online Content and Developer",
     social: {
       facebook: "https://www.facebook.com/profile.php?id=100086445833000",
