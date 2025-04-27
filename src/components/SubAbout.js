@@ -33,11 +33,11 @@ export default function AboutUs() {
       <img
           src="/images/Capvim IP.png"
           alt="Publishing Team"
-          className="w-full rounded-md p-5 shadow-md"
+          className="w-full rounded-md p-5 shadow-md border"
         />
         </motion.div>
 
-        <div className="lg:w-1/2">
+        <div className="lg:w-1/2 pb-5">
         <motion.div initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1 }}>
 
           <h3 className="text-2xl font-bold mb-4 text-blue-800">Who We Are</h3>
@@ -46,7 +46,7 @@ export default function AboutUs() {
           </p>
           <a
               href="/about"
-              className="absolute mt-5 px-3 py-5 border-2 border-blue bg-blue-800 text-white hover:bg-indigo-600 hover:text-white text-md font-semibold rounded-md shadow transition transform hover:scale-105"
+              className="absolute mt-5 px-3 py-1 border-2 border-blue bg-blue-800 text-white hover:bg-indigo-600 hover:text-white text-md font-semibold rounded-md shadow transition transform hover:scale-105"
             >
               Learn More...
             </a>
