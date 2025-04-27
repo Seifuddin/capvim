@@ -49,8 +49,14 @@ export default function FAQ() {
 
   return (
     <section className="max-w-6xl mx-auto px-4 py-12 bg-white overflow-x-hidden">
+      <motion.div
+                                    initial={{ opacity: 0, y: 50 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 1 }}
+                                    className="relative"
+                                  >
       <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8 text-green-700">Frequently Asked Questions</h2>
-
+      </motion.div>
       {/* Search bar */}
       <div className="relative max-w-xl mx-auto mb-6">
         <Search className="absolute left-3 top-3.5 w-5 h-5 text-gray-700" />

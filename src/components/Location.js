@@ -13,13 +13,19 @@ export default function Location() {
           transition={{ duration: 1 }}
           viewport={{ once: true }}
         >
+          <motion.div
+                                                    initial={{ opacity: 0, y: 50 }}
+                                                    whileInView={{ opacity: 1, y: 0 }}
+                                                    transition={{ duration: 1 }}
+                                                    className="relative"
+                                                  >
           <h2 className="text-3xl md:text-4xl font-bold text-green-600 mb-4">
             Visit Capvim International Publishers
           </h2>
           <p className="text-gray-700 text-lg leading-relaxed mb-6">
             We are located at <strong>Globe View Plaza, Nairobi</strong> – a hub for publishing excellence. Whether you're looking to consult, collaborate, or create, our doors are open to you.
           </p>
-
+</motion.div>
           {/* Animated Button with Icon and Pulse */}
           <div className="relative inline-block">
             {/* Pulsing Background */}
@@ -51,12 +57,11 @@ export default function Location() {
 
         {/* Embedded Google Map */}
         <motion.div
-          initial={{ opacity: 0, x: 30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1 }}
-          viewport={{ once: true }}
-          className="w-full h-80 md:h-full shadow-lg rounded-lg overflow-hidden"
-        >
+                                                    initial={{ opacity: 0, y: 50 }}
+                                                    whileInView={{ opacity: 1, y: 0 }}
+                                                    transition={{ duration: 1 }}
+                                                    className="w-full h-80 md:h-full shadow-lg border rounded-lg overflow-hidden"
+                                                  >
           <iframe
             title="Capvim Location"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9487.075528360676!2d36.8191619147623!3d-1.2792480364845629!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f3f9964aed32f%3A0x2a81c5e4ac4dd3c0!2sInklab%20Digital%20Printers!5e0!3m2!1sen!2ske!4v1745533752904!5m2!1sen!2ske"

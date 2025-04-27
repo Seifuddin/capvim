@@ -105,7 +105,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 1 }}
-            className="text-2xl text-gray-100 font-bold max-w-xl"
+            className="text-xl text-white font-bold max-w-xl"
           >
             We help authors, thinkers, and creators publish meaningful content that makes an impact.
           </motion.p>

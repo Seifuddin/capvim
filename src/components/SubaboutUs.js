@@ -20,12 +20,15 @@ export default function SubAboutUs() {
       <div className="bg-gradient-to-tr from-green-300 via-white to-green-200 py-16 px-4">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
           <div>
+                    <motion.div initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1 }}>
             <h3 className="text-2xl font-bold mb-4 text-green-600">Our Mission</h3>
             <p className="text-gray-700">
               To amplify voices and stories that inspire, educate, and entertain readers worldwide through quality publishing and unwavering support for authors.
             </p>
+            </motion.div>
           </div>
           <div>
+          <motion.div initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1 }}>
             <h3 className="text-2xl font-bold mb-4 text-green-600">Our Core Values</h3>
             <ul className="list-disc list-inside text-gray-700 space-y-2">
               <li>Editorial excellence</li>
@@ -34,29 +37,50 @@ export default function SubAboutUs() {
               <li>Commitment to innovation</li>
               <li>Integrity and transparency</li>
             </ul>
+            </motion.div>
           </div>
         </div>
       </div>
 
       {/* Timeline */}
       <div className="py-16 px-4 max-w-4xl mx-auto">
+      <motion.div initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1 }}>
+
         <h3 className="text-2xl font-bold text-center mb-10 text-green-600">Our Journey</h3>
+        </motion.div>
+
         <div className="relative border-l-4 border-blue-600 pl-6 space-y-10">
           <div>
+          <motion.div initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1 }}>
+
             <h4 className="text-lg font-semibold">2011 - Company Founded</h4>
             <p className="text-gray-600">Established with the mission to support emerging authors and diverse narratives.</p>
+            </motion.div>
+
           </div>
           <div>
+          <motion.div initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1 }}>
+
             <h4 className="text-lg font-semibold">2014 - First Bestseller</h4>
             <p className="text-gray-600">Achieved national recognition with our first best-selling novel.</p>
+            </motion.div>
+
           </div>
           <div>
+          <motion.div initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1 }}>
+
             <h4 className="text-lg font-semibold">2017 - Global Distribution</h4>
             <p className="text-gray-600">Expanded to international markets, enabling worldwide access to our titles.</p>
+            </motion.div>
+
           </div>
           <div>
+          <motion.div initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1 }}>
+
             <h4 className="text-lg font-semibold">2023 - Digital Publishing Launch</h4>
             <p className="text-gray-600">Introduced eBook and audiobook formats to reach more readers globally.</p>
+            </motion.div>
+
           </div>
         </div>
       </div>

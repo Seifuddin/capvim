@@ -13,20 +13,33 @@ export default function AboutUs() {
     <section className="bg-gradient-to-tr from-green-300 via-white to-green-200  text-gray-800 overflow-x-hidden">
       {/* Intro */}
       <div className="text-center py-16 px-4 max-w-4xl mx-auto">
+        <motion.div
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 1 }}
+                  className="relative"
+                >
         <h2 className="text-4xl font-bold mb-4 text-green-600">About Us</h2>
         <p className="text-lg text-gray-600">
           We are a leading publishing company dedicated to bringing powerful stories and meaningful content to life. Our passion is empowering authors and shaping the future of publishing.
         </p>
+        </motion.div>
       </div>
 
       {/* Image + Text Split */}
       <div className="flex flex-col lg:flex-row items-center max-w-6xl mx-auto px-4 py-12 gap-10">
+                    <motion.div initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1 }}>
+        
       <img
           src="/images/Capvim IP.png"
           alt="Publishing Team"
           className="w-full rounded-md p-5 shadow-md"
         />
+        </motion.div>
+
         <div className="lg:w-1/2">
+        <motion.div initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1 }}>
+
           <h3 className="text-2xl font-bold mb-4 text-blue-800">Who We Are</h3>
           <p className="text-gray-700 mb-4">
             Founded by book lovers and industry veterans, our publishing house blends tradition with innovation. We work closely with authors to craft compelling narratives and provide editorial excellence every step of the way.
@@ -37,20 +50,24 @@ export default function AboutUs() {
             >
               Learn More...
             </a>
+        </motion.div>
         </div>
-        
       </div>
 
       {/* Mission and Values */}
       <div className="bg-white py-16 px-4 mt-5">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
           <div>
+          <motion.div initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1 }}>
+
             <h3 className="text-2xl font-bold mb-4 text-green-600">Our Mission</h3>
             <p className="text-gray-700">
               To amplify voices and stories that inspire, educate, and entertain readers worldwide through quality publishing and unwavering support for authors.
             </p>
+            </motion.div>
           </div>
           <div>
+          <motion.div initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1 }}>
             <h3 className="text-2xl font-bold mb-4 text-green-600">Our Core Values</h3>
             <ul className="list-disc list-inside text-gray-700 space-y-2">
               <li>Editorial excellence</li>
@@ -59,6 +76,7 @@ export default function AboutUs() {
               <li>Commitment to innovation</li>
               <li>Integrity and transparency</li>
             </ul>
+            </motion.div>
           </div>
         </div>
       </div>

@@ -15,7 +15,7 @@ const teamMembers = [
   {
     name: "Clifford Matara",
     title: "Director, Academics and Field Liaison",
-    image: "/images/young-elite-kenya-special-forces-sniper-becomes-world-s-second-deadliest-sniper-after-Symo-Hayha.jpg",
+    image: "/images/WhatsApp Image 2025-04-24 at 17.22.28.jpeg",
     bio: "Cliff oversees all editorial content and maintains Capvim's publishing standards.",
     department: "Overall Management and CEO",
     social: {
@@ -27,7 +27,7 @@ const teamMembers = [
   {
     name: "Trinah",
     title: "Manager, Accounts and Deputy Chief of Party",
-    image: "/images/young-elite-kenya-special-forces-sniper-becomes-world-s-second-deadliest-sniper-after-Symo-Hayha.jpg",
+    image: "/images/WhatsApp Image 2025-04-24 at 17.22.28.jpeg",
     bio: "Trinah leads our visual storytelling and creative publishing projects.",
     department: "Accounts",
     social: {
@@ -39,7 +39,7 @@ const teamMembers = [
   {
     name: "Rhobey",
     title: "Chief Graphics Designer",
-    image: "/images/young-elite-kenya-special-forces-sniper-becomes-world-s-second-deadliest-sniper-after-Symo-Hayha.jpg",
+    image: "/images/WhatsApp Image 2025-04-24 at 17.22.28.jpeg",
     bio: "Rhobey ensures timely publication and manages author relations.",
     department: "Graphics Design",
     social: {
@@ -51,7 +51,7 @@ const teamMembers = [
   {
     name: "Faith",
     title: "Sales and Marketing",
-    image: "/images/young-elite-kenya-special-forces-sniper-becomes-world-s-second-deadliest-sniper-after-Symo-Hayha.jpg",
+    image: "/images/WhatsApp Image 2025-04-24 at 17.22.28.jpeg",
     bio: "Faith directs design strategies and book cover aesthetics.",
     department: "Sales and Marketing",
     social: {
@@ -63,7 +63,7 @@ const teamMembers = [
   {
     name: "Muriithi Nguru",
     title: "Manager, e-books and Online Content",
-    image: "/images/young-elite-kenya-special-forces-sniper-becomes-world-s-second-deadliest-sniper-after-Symo-Hayha.jpg",
+    image: "/images/WhatsApp Image 2025-04-24 at 17.22.28.jpeg",
     bio: "Manages and directs design strategies and book cover aesthetics.",
     department: "Online Content and Developer",
     social: {
@@ -93,11 +93,17 @@ export default function TheTeam() {
   return (
     <section className="bg-white py-20 px-6 md:px-20 relative overflow-x-hidden" id="team">
       <div className="text-center mb-12">
+        <motion.div
+                                                    initial={{ opacity: 0, y: 50 }}
+                                                    whileInView={{ opacity: 1, y: 0 }}
+                                                    transition={{ duration: 1 }}
+                                                    className="relative"
+                                                  >
         <h2 className="text-4xl font-bold text-green-600">Meet Our Team</h2>
         <p className="text-gray-600 mt-4 max-w-xl mx-auto">
           A dynamic group of passionate professionals committed to bringing your ideas to life through publishing excellence.
         </p>
-
+        </motion.div>
         <div className="mt-6 flex flex-wrap justify-center gap-4">
           {departments.map((dept) => (
             <button

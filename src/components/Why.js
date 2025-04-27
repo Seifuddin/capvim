@@ -49,46 +49,53 @@ export default function Why() {
     {
       quote: "Their attention to detail and collaborative process turned my manuscript into a masterpiece.",
       author: "Clifford Matara, Author",
-      image: "/images/young-elite-kenya-special-forces-sniper-becomes-world-s-second-deadliest-sniper-after-Symo-Hayha.jpg",
+      image: "/images/WhatsApp Image 2025-04-24 at 17.22.28.jpeg",
     },
     {
       quote: "Outstanding experience! The quality of design and timeliness exceeded expectations.",
       author: "Vincent Obwogi, Publisher",
-      image: "/images/young-elite-kenya-special-forces-sniper-becomes-world-s-second-deadliest-sniper-after-Symo-Hayha.jpg",
+      image: "/images/WhatsApp Image 2025-04-24 at 17.22.28.jpeg",
     },
     {
       quote: "Professional, creative, and always on point. Highly recommended!",
       author: "Ishmail Atudo, Editor-in-Chief",
-      image: "/images/young-elite-kenya-special-forces-sniper-becomes-world-s-second-deadliest-sniper-after-Symo-Hayha.jpg",
+      image: "/images/WhatsApp Image 2025-04-24 at 17.22.28.jpeg",
     },
     {
       quote: "I felt supported every step of the way. Their team is simply the best.",
       author: "Brian Odhiambo, Novelist",
-      image: "/images/young-elite-kenya-special-forces-sniper-becomes-world-s-second-deadliest-sniper-after-Symo-Hayha.jpg",
+      image: "/images/WhatsApp Image 2025-04-24 at 17.22.28.jpeg",
     },
     {
       quote: "My project wouldn't have been the same without them.",
       author: "Jim Jim, Poet",
-      image: "/images/young-elite-kenya-special-forces-sniper-becomes-world-s-second-deadliest-sniper-after-Symo-Hayha.jpg",
+      image: "/images/WhatsApp Image 2025-04-24 at 17.22.28.jpeg",
     },
 
     {
       quote: "My project wouldn't have been the same without them.",
       author: "Muriithi Nguru, Software Engineer",
-      image: "/images/young-elite-kenya-special-forces-sniper-becomes-world-s-second-deadliest-sniper-after-Symo-Hayha.jpg",
+      image: "/images/WhatsApp Image 2025-04-24 at 17.22.28.jpeg",
     },
   ];
 
   return (
-    <>
+    <div>
       {/* WHY CHOOSE US */}
       <section className="py-20 bg-gradient-to-tr from-green-300 via-white to-green-200 text-gray-800 overflow-x-hidden">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-14">
+            <motion.div
+                              initial={{ opacity: 0, y: 50 }}
+                              whileInView={{ opacity: 1, y: 0 }}
+                              transition={{ duration: 1 }}
+                              className="relative"
+                            >
             <h2 className="text-4xl font-bold mb-4 text-green-700">Why Choose Us</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               Discover what makes us a trusted partner in publishing exceptional content that informs, inspires, and endures.
             </p>
+            </motion.div>
           </div>
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -138,10 +145,17 @@ export default function Why() {
       <section className="py-20 bg-white text-gray-800">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-12">
+          <motion.div
+                              initial={{ opacity: 0, y: 50 }}
+                              whileInView={{ opacity: 1, y: 0 }}
+                              transition={{ duration: 1 }}
+                              className="relative"
+                            >
             <h2 className="text-4xl font-bold mb-4 text-green-700">What Our Clients Say</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               Hear from the authors and organizations we've had the pleasure of working with.
             </p>
+            </motion.div>
           </div>
 
           {/* Custom Arrows */}
@@ -182,6 +196,6 @@ export default function Why() {
           </Swiper>
         </div>
       </section>
-    </>
+    </div>
   );
-}
+};

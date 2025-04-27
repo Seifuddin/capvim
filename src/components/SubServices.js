@@ -54,7 +54,14 @@ export default function Subservices() {
   return (
     <section className="bg-gradient-to-tr from-green-300 via-white to-green-200 py-16 px-4 overflow-x-hidden">
       <div className="max-w-7xl mx-auto text-center">
+        <motion.div
+                                            initial={{ opacity: 0, y: 50 }}
+                                            whileInView={{ opacity: 1, y: 0 }}
+                                            transition={{ duration: 1 }}
+                                            className="relative"
+                                          >
         <h2 className="text-4xl font-bold mb-10 text-green-700">Our Services</h2>
+        </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
