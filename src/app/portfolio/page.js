@@ -1,176 +1,141 @@
 "use client";
+import PortfolioHero from "@/components/HeroPortfolio";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
 const books = [
-    {
-      title: "Becoming You",
-      author: "Jane Collins",
-      genre: "Self-Help",
-      src: "/images/Sin-Eater-by-Megan-Campisi.jpg",
-      date: "March 12, 2024",
-      rating: "★★★★☆",
-    },
-    {
-      title: "Legacy of Hope",
-      author: "Marcus Leen",
-      genre: "Historical Fiction",
-      src: "/images/Harry_Potter_and_the_Cursed_Child_Special_Rehearsal_Edition_Book_Cover.jpg",
-      date: "June 5, 2023",
-      rating: "★★★★★",
-    },
-    {
-      title: "Voices Unheard",
-      author: "Tariq Mendez",
-      genre: "Memoir",
-      src: "/images/J.R.R.Tolkien-The-Hobbit.png",
-      date: "January 20, 2025",
-      rating: "★★★☆☆",
-    },
+  {
+    title: "Becoming You",
+    author: "Jane Collins",
+    genre: "Self-Help",
+    src: "/images/Sin-Eater-by-Megan-Campisi.jpg",
+    date: "March 12, 2024",
+    rating: "★★★★☆",
+  },
+  {
+    title: "Legacy of Hope",
+    author: "Marcus Leen",
+    genre: "Historical Fiction",
+    src: "/images/Harry_Potter_and_the_Cursed_Child_Special_Rehearsal_Edition_Book_Cover.jpg",
+    date: "June 5, 2023",
+    rating: "★★★★★",
+  },
+  {
+    title: "Voices Unheard",
+    author: "Tariq Mendez",
+    genre: "Memoir",
+    src: "/images/J.R.R.Tolkien-The-Hobbit.png",
+    date: "January 20, 2025",
+    rating: "★★★☆☆",
+  },
+  {
+    title: "Becoming You",
+    author: "Jane Collins",
+    genre: "Self-Help",
+    src: "/images/Sin-Eater-by-Megan-Campisi.jpg",
+    date: "March 12, 2024",
+    rating: "★★★★☆",
+  },
+  {
+    title: "Legacy of Hope",
+    author: "Marcus Leen",
+    genre: "Historical Fiction",
+    src: "/images/Harry_Potter_and_the_Cursed_Child_Special_Rehearsal_Edition_Book_Cover.jpg",
+    date: "June 5, 2023",
+    rating: "★★★★★",
+  },
+  {
+    title: "Voices Unheard",
+    author: "Tariq Mendez",
+    genre: "Memoir",
+    src: "/images/J.R.R.Tolkien-The-Hobbit.png",
+    date: "January 20, 2025",
+    rating: "★★★☆☆",
+  },
+  {
+    title: "Becoming You",
+    author: "Jane Collins",
+    genre: "Self-Help",
+    src: "/images/Sin-Eater-by-Megan-Campisi.jpg",
+    date: "March 12, 2024",
+    rating: "★★★★☆",
+  },
+  {
+    title: "Legacy of Hope",
+    author: "Marcus Leen",
+    genre: "Historical Fiction",
+    src: "/images/Harry_Potter_and_the_Cursed_Child_Special_Rehearsal_Edition_Book_Cover.jpg",
+    date: "June 5, 2023",
+    rating: "★★★★★",
+  },
+  {
+    title: "Voices Unheard",
+    author: "Tariq Mendez",
+    genre: "Memoir",
+    src: "/images/J.R.R.Tolkien-The-Hobbit.png",
+    date: "January 20, 2025",
+    rating: "★★★☆☆",
+  },
+  {
+    title: "Becoming You",
+    author: "Jane Collins",
+    genre: "Self-Help",
+    src: "/images/Sin-Eater-by-Megan-Campisi.jpg",
+    date: "March 12, 2024",
+    rating: "★★★★☆",
+  },
+  {
+    title: "Legacy of Hope",
+    author: "Marcus Leen",
+    genre: "Historical Fiction",
+    src: "/images/Harry_Potter_and_the_Cursed_Child_Special_Rehearsal_Edition_Book_Cover.jpg",
+    date: "June 5, 2023",
+    rating: "★★★★★",
+  },
+  {
+    title: "Voices Unheard",
+    author: "Tariq Mendez",
+    genre: "Memoir",
+    src: "/images/J.R.R.Tolkien-The-Hobbit.png",
+    date: "January 20, 2025",
+    rating: "★★★☆☆",
+  },
+  // ...more books
+];
 
-    {
-        title: "Becoming You",
-        author: "Jane Collins",
-        genre: "Self-Help",
-        src: "/images/Sin-Eater-by-Megan-Campisi.jpg",
-        date: "March 12, 2024",
-        rating: "★★★★☆",
-      },
-      {
-        title: "Legacy of Hope",
-        author: "Marcus Leen",
-        genre: "Historical Fiction",
-        src: "/images/Harry_Potter_and_the_Cursed_Child_Special_Rehearsal_Edition_Book_Cover.jpg",
-        date: "June 5, 2023",
-        rating: "★★★★★",
-      },
-      {
-        title: "Voices Unheard",
-        author: "Tariq Mendez",
-        genre: "Memoir",
-        src: "/images/J.R.R.Tolkien-The-Hobbit.png",
-        date: "January 20, 2025",
-        rating: "★★★☆☆",
-      },
-
-      {
-        title: "Becoming You",
-        author: "Jane Collins",
-        genre: "Self-Help",
-        src: "/images/Sin-Eater-by-Megan-Campisi.jpg",
-        date: "March 12, 2024",
-        rating: "★★★★☆",
-      },
-      {
-        title: "Legacy of Hope",
-        author: "Marcus Leen",
-        genre: "Historical Fiction",
-        src: "/images/Harry_Potter_and_the_Cursed_Child_Special_Rehearsal_Edition_Book_Cover.jpg",
-        date: "June 5, 2023",
-        rating: "★★★★★",
-      },
-      {
-        title: "Voices Unheard",
-        author: "Tariq Mendez",
-        genre: "Memoir",
-        src: "/images/J.R.R.Tolkien-The-Hobbit.png",
-        date: "January 20, 2025",
-        rating: "★★★☆☆",
-      },
-
-      {
-        title: "Becoming You",
-        author: "Jane Collins",
-        genre: "Self-Help",
-        src: "/images/Sin-Eater-by-Megan-Campisi.jpg",
-        date: "March 12, 2024",
-        rating: "★★★★☆",
-      },
-      {
-        title: "Legacy of Hope",
-        author: "Marcus Leen",
-        genre: "Historical Fiction",
-        src: "/images/Harry_Potter_and_the_Cursed_Child_Special_Rehearsal_Edition_Book_Cover.jpg",
-        date: "June 5, 2023",
-        rating: "★★★★★",
-      },
-      {
-        title: "Voices Unheard",
-        author: "Tariq Mendez",
-        genre: "Memoir",
-        src: "/images/J.R.R.Tolkien-The-Hobbit.png",
-        date: "January 20, 2025",
-        rating: "★★★☆☆",
-      },
-    // Add more as needed
-  ];
-  
 export default function PortfolioPage() {
   return (
-    <section className="min-h-screen bg-gradient-to-tr from-green-300 via-white to-green-200 py-20 px-6 md:px-20">
-      <motion.div
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        className="text-center mb-12"
-      >
-        <h2 className="text-4xl font-bold text-indigo-600">Our Portfolio</h2>
-        <p className="text-gray-600 font-semibold mt-4 max-w-xl mx-auto">
-          Explore some of the amazing books we’ve published with our talented authors and storytellers.
-        </p>
-      </motion.div>
-
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+    <section className="min-h-screen bg-gray-100">
+      <PortfolioHero />
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-w-6xl mx-auto py-20 px-6 md:px-20">
         {books.map((book, index) => (
           <motion.div
             key={index}
-            className="perspective"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1, duration: 0.5 }}
+            className="flex flex-col items-center"
           >
-            <div className="relative w-full h-[260px] transition-transform duration-700 transform-style-preserve-3d hover:rotate-y-180">
-              {/* Front */}
-              <div className="absolute inset-0 backface-hidden rounded-xl shadow-lg overflow-hidden">
-                <Image
-                  src={book.src}
-                  alt={book.title}
-                  fill
-                  className="object-cover"
-                />
-              </div>
-
-              {/* Back */}
-              <div className="absolute inset-0 bg-white text-indigo-700 rounded-xl p-4 backface-hidden rotate-y-180 flex flex-col items-center justify-center text-center">
-                <p className="font-bold text-lg">{book.title}</p>
-                <p className="mt-1 text-sm">{book.author}</p>
-                <p className="text-xs text-indigo-500 mb-2">{book.genre}</p>
-                <p className="text-xs text-gray-500">📅 {book.date}</p>
-                <p className="text-yellow-500 text-lg">{book.rating}</p>
+            {/* Book Image */}
+            <div className="w-full h-[260px] relative rounded-lg overflow-hidden shadow-md">
+              <Image
+                src={book.src}
+                alt={book.title}
+                fill
+                className="object-cover"
+              />
             </div>
+
+            {/* Book Details */}
+            <div className="w-full bg-gradient-to-tr from-green-300 via-white to-green-200 mt-3 p-3 rounded-lg shadow-sm text-center">
+              <h3 className="text-indigo-700 font-semibold text-lg">{book.title}</h3>
+              <p className="text-gray-600 text-sm mt-1">by {book.author}</p>
+              <p className="text-gray-400 text-xs mt-2">📅 {book.date}</p>
+              <p className="text-yellow-500 text-lg mt-1">{book.rating}</p>
             </div>
           </motion.div>
         ))}
       </div>
-
-      {/* Styling for flip cards */}
-      <style jsx>{`
-        .perspective {
-          perspective: 1000px;
-        }
-        .transform-style-preserve-3d {
-          transform-style: preserve-3d;
-        }
-        .backface-hidden {
-          backface-visibility: hidden;
-        }
-        .rotate-y-180 {
-          transform: rotateY(180deg);
-        }
-        .hover\\:rotate-y-180:hover {
-          transform: rotateY(180deg);
-        }
-      `}</style>
     </section>
   );
 }

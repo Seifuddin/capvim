@@ -46,7 +46,7 @@ export default function AboutUs() {
           </p>
           <a
               href="/about"
-              className="absolute mt-5 px-3 py-2 border-2 border-blue bg-blue-800 text-white hover:bg-indigo-600 hover:text-white text-md font-semibold rounded-md shadow transition transform hover:scale-105"
+              className="absolute mt-5 px-3 py-5 border-2 border-blue bg-blue-800 text-white hover:bg-indigo-600 hover:text-white text-md font-semibold rounded-md shadow transition transform hover:scale-105"
             >
               Learn More...
             </a>
