@@ -81,7 +81,7 @@ export default function ContactUs() {
               {/* Submit Button */}
               <button
                 type="submit"
-                className="w-full text-gray-600 mt-4 py-2 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition-all"
+                className="w-full mt-4 py-2 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition-all"
               >
                 Send Message
               </button>
@@ -99,7 +99,7 @@ export default function ContactUs() {
             </div>
             <div className="flex items-center space-x-4">
               <FaEnvelope className="text-blue-500 h-6 w-6" />
-              <span className="text-lg text-gray-700">capvimlimited@gmail.com</span>
+              <span className="text-lg text-gray-700">capvimpublishers@gmail.com</span>
             </div>
             <div className="flex items-center space-x-4">
               <FaMapMarkerAlt className="text-blue-500 h-6 w-6" />

@@ -128,12 +128,14 @@ export default function ServicesPage() {
               {selectedService?.title} - Pricing
             </Dialog.Title>
             <p className="text-gray-700 mt-4">{selectedService?.pricing}</p>
+            <div className="flex justify-end space-x-2"></div>
             <button
               className="mt-6 px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700"
               onClick={() => setPricingOpen(false)}
             >
               Close
             </button>
+           
           </Dialog.Panel>
         </div>
       </Dialog>

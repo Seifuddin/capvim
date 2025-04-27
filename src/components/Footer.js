@@ -41,10 +41,10 @@ export default function Footer() {
         >
           <h4 className="text-white font-semibold mb-4">Our Services</h4>
           <ul className="space-y-2 text-sm">
-            <li><a href="#editing" className="hover:text-white transition">Editing & Proofreading</a></li>
-            <li><a href="#layout" className="hover:text-white transition">Layout & Design</a></li>
-            <li><a href="#printing" className="hover:text-white transition">Book & Magazine Printing</a></li>
-            <li><a href="#distribution" className="hover:text-white transition">Distribution</a></li>
+            <li><a href="/services" className="hover:text-white transition">Editing & Proofreading</a></li>
+            <li><a href="/services" className="hover:text-white transition">Layout & Design</a></li>
+            <li><a href="/services" className="hover:text-white transition">Book & Magazine Printing</a></li>
+            <li><a href="/services" className="hover:text-white transition">Distribution</a></li>
           </ul>
         </motion.div>
 
@@ -66,7 +66,7 @@ export default function Footer() {
             </li>
             <li className="flex items-start gap-2">
               <Mail className="w-4 h-4 mt-1 text-indigo-400" />
-              <span>capvimlimited@gmail.com</span>
+              <span>capvimpublishers@gmail.com</span>
             </li>
           </ul>
         </motion.div>
