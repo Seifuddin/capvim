@@ -6,7 +6,7 @@ import { ChevronDown, Search, Filter } from "lucide-react";
 
 const faqs = [
     { category: "Services", question: "What types of publishing services do you offer?", answer: "We offer book publishing, magazine publishing, academic publishing, and digital publishing services." },
-    { category: "Manuscript", question: "How do I submit my manuscript?", answer: "You can submit your manuscript via our online submission form or email it to submissions@ourpublishing.com." },
+    { category: "Manuscript", question: "How do I submit my manuscript?", answer: "You can submit your manuscript via our online submission form or email it to capvimpublishers@gmail.com." },
     { category: "Editing", question: "Do you provide editing and proofreading?", answer: "Yes, we have a team of professional editors who review and enhance your manuscript before publishing." },
     { category: "Timeline", question: "How long does the publishing process take?", answer: "It depends on the complexity of the project, but typical timelines range from 6 to 12 weeks." },
     { category: "Distribution", question: "Where will my book be available?", answer: "We distribute through major platforms like Amazon, bookstores, and libraries both locally and internationally." },
