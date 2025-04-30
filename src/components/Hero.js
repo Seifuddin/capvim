@@ -72,13 +72,13 @@ export default function Hero() {
         >
           <a
             href="/services"
-            className="px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white text-lg font-semibold rounded-lg shadow-lg transition transform hover:scale-105"
+            className="px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white text-lg font-semibold rounded-3xl shadow-lg transition transform hover:scale-105"
           >
             Our Services
           </a>
           <a
             href="/portfolio"
-            className="px-6 py-3 bg-green-600 hover:bg-green-700 text-white text-lg font-semibold rounded-lg shadow-lg transition transform hover:scale-105"
+            className="px-6 py-3 bg-green-600 hover:bg-green-700 text-white text-lg font-semibold rounded-3xl shadow-lg transition transform hover:scale-105"
           >
             Our Portfolio
           </a>

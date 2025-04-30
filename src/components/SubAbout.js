@@ -27,26 +27,26 @@ export default function AboutUs() {
       </div>
 
       {/* Image + Text Split */}
-      <div className="flex flex-col lg:flex-row items-center max-w-6xl mx-auto px-4 py-12 gap-10">
-                    <motion.div initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1 }}>
+      <div className="flex flex-col lg:flex-row items-center max-w-6xl mx-auto px-4 py-7 gap-10">
+      <motion.div initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1 }}>
         
       <img
           src="/images/Capvim IP.png"
           alt="Publishing Team"
-          className="w-full rounded-md p-5 shadow-md border"
+          className="w-full rounded-md p-5 shadow-md border border-gray-300"
         />
         </motion.div>
 
         <div className="lg:w-1/2 pb-5">
         <motion.div initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1 }}>
 
-          <h3 className="text-2xl font-bold mb-4 text-blue-800">Who We Are</h3>
+          <h3 className="text-2xl font-bold mb-4 text-green-600">Who We Are</h3>
           <p className="text-gray-700 mb-4">
             Founded by book lovers and industry veterans, our publishing house blends tradition with innovation. We work closely with authors to craft compelling narratives and provide editorial excellence every step of the way.
           </p>
           <a
               href="/about"
-              className="absolute mt-5 px-3 py-1 border-2 border-blue bg-blue-800 text-white hover:bg-indigo-600 hover:text-white text-md font-semibold rounded-md shadow transition transform hover:scale-105"
+              className="relative mt-5 px-3 py-2 border-2 border-blue bg-blue-800 text-white hover:bg-indigo-600 hover:text-white text-md rounded-md shadow transition transform hover:scale-105"
             >
               Learn More...
             </a>
