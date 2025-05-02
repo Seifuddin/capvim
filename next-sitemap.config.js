@@ -2,6 +2,5 @@
 module.exports = {
     siteUrl: 'https://capvim.vercel.app',
     generateRobotsTxt: true,
-    sitemapSize: 5000,
-  }
-  
+    sitemapSize: 7000,
+  };  
