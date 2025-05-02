@@ -53,18 +53,28 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        {/* ✅ Google Site Verification meta tag */}
-        <meta
-          name="google-site-verification"
-          content="ADkcLjDHtzdrUvb0iDbNahcHbnhtbauFZY7ZnlkfVKo"
+        {/* Google Analytics Tag */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-95TGZEWFVE"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-95TGZEWFVE');
+            `,
+          }}
         />
+        
+        {/* Google Site Verification */}
+        <meta name="google-site-verification" content="ADkcLjDHtzdrUvb0iDbNahcHbnhtbauFZY7ZnlkfVKo" />
       </head>
       <body className={inter.className}>
         <Navbar />
         <main>{children}</main>
         <Footer />
 
-        {/* JSON-LD Schema for Business - Helps Google understand your brand */}
+        {/* Schema Markup */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
