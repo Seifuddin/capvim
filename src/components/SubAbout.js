@@ -12,7 +12,7 @@ export default function AboutUs() {
   return (
     <section className="bg-gradient-to-tr from-green-300 via-white to-green-200  text-gray-800 overflow-x-hidden">
       {/* Intro */}
-      <div className="text-center py-16 px-4 max-w-4xl mx-auto">
+      <div className="text-center py-10 px-4 max-w-4xl mx-auto">
         <motion.div
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -27,13 +27,13 @@ export default function AboutUs() {
       </div>
 
       {/* Image + Text Split */}
-      <div className="flex flex-col lg:flex-row items-center max-w-6xl mx-auto px-4 py-7 gap-10">
+      <div className="flex flex-col lg:flex-row items-center max-w-6xl mx-auto px-4 py-4 gap-10">
       <motion.div initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1 }}>
         
       <img
           src="/images/Capvim IP.png"
           alt="Publishing Team"
-          className="w-full rounded-md p-5 shadow-md border border-gray-300"
+          className="w-full rounded-md p-5 shadow-md border bg-indigo-50 border-gray-300"
         />
         </motion.div>
 

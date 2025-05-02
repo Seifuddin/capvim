@@ -1,182 +1,49 @@
-"use client";
 import PortfolioHero from "@/components/HeroPortfolio";
-import { motion } from "framer-motion";
-import Image from "next/image";
+import Portfolio from "@/components/Portfolio";
 
-const books = [
-  {
-    title: "English Paper 3",
-    author: "Gideon Musau & Clementine Ndambuki",
-    genre: "Revision Book",
-    src: "/covers/Screenshot_20250429-000508.jpg",
-    date: "March 12, 2024",
-    rating: "★★★★☆",
+export const metadata = {
+  title: 'Our Portfolio | Capvim Publishers',
+  description:
+    'Browse Capvim Publishers’ portfolio of successful publishing projects. From set books to revision guides, see what we’ve published for authors across Kenya.',
+  keywords: [
+    'Capvim Publishers portfolio',
+    'published books Kenya',
+    'book publishing company Kenya',
+    'set books Kenya',
+    'revision books publishing',
+    'Capvim publications',
+  ],
+  openGraph: {
+    title: 'Capvim Publishers Portfolio',
+    description:
+      'Explore our growing portfolio of books and publishing projects, trusted by authors and educators in Kenya.',
+    url: 'https://capvim.vercel.app/portfolio',
+    siteName: 'Capvim Publishers',
+    images: [
+      {
+        url: 'https://capvim.vercel.app/og-portfolio.jpg', // Replace with actual preview image URL
+        width: 1200,
+        height: 630,
+        alt: 'Capvim Publishers Book Covers',
+      },
+    ],
+    locale: 'en_KE',
+    type: 'website',
   },
-  {
-    title: "Mapenzi Ni Kisu",
-    author: "Robert Mustaki",
-    genre: "Set Book",
-    src: "/covers/Screenshot_20250429-000511.jpg",
-    date: "June 5, 2023",
-    rating: "★★★★★",
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Capvim Publishers Portfolio',
+    description:
+      'See the wide range of books Capvim Publishers has successfully published in Kenya.',
+    images: ['https://capvim.vercel.app/og-portfolio.jpg'], // Replace with actual preview image URL
   },
-  {
-    title: "Reloaded Comprehensive, Biology Paper 1 & 2",
-    author: "S. B. Owaga, F. Maina, M. Matara",
-    genre: "Revision Book",
-    src: "/covers/Screenshot_20250429-000521.jpg",
-    date: "January 20, 2025",
-    rating: "★★★☆☆",
-  },
-  {
-    title: "National Teachers Workshop",
-    author: "Capvim Publishers",
-    genre: "Self-Help",
-    src: "/covers/Screenshot_20250429-000539.jpg",
-    date: "March 12, 2024",
-    rating: "★★★★☆",
-  },
-  {
-    title: "Reloaded Comprehensive, Geography Paper 1",
-    author: "Kaara Lawrence & Mr. Limo",
-    genre: "Revision Book",
-    src: "/covers/Screenshot_20250429-000602.jpg",
-    date: "June 5, 2023",
-    rating: "★★★★★",
-  },
-  {
-    title: "Reloaded Comprehensive, Geography Paper 2",
-    author: "Kaara Lawrence & Mr. Limo",
-    genre: "Revision Book",
-    src: "/covers/Screenshot_20250429-000555.jpg",
-    date: "June 5, 2023",
-    rating: "★★★★★",
-  },
-  {
-    title: "Reloaded Comprehensive, CRE Paper 1",
-    author: "Clifford Matara, Gideon Mochere & Joan Nyaboke ",
-    genre: "Revision Book",
-    src: "/covers/Screenshot_20250429-000610.jpg",
-    date: "January 20, 2025",
-    rating: "★★★☆☆",
-  },
-  {
-    title: "Victus",
-    author: "Terry Orlale",
-    genre: "Self Help",
-    src: "/covers/Screenshot_20250429-000613.jpg",
-    date: "January 20, 2025",
-    rating: "★★★☆☆",
-  },
-  {
-    title: "Reloaded Comprehensive, CRE paper 2",
-    author: "Clifford Matara, Gideon Mochere & Joan Nyaboke ",
-    genre: "Revision Book",
-    src: "/covers/Screenshot_20250429-000642.jpg",
-    date: "January 20, 2025",
-    rating: "★★★☆☆",
-  },
-  {
-    title: "Reloaded Comprehensive, Home Science Paper 1 & Paper 2",
-    author: "Felly Chebet, Beverly Moraa & Carol Ndambuki",
-    genre: "Revision Book",
-    src: "/covers/Screenshot_20250429-000645.jpg",
-    date: "January 20, 2025",
-    rating: "★★★☆☆",
-  },
-  {
-    title: "Reloaded Comprehensive, Business Studies Paper 1 & Paper 2",
-    author: "A. O. Anan & J. Otiambo ",
-    genre: "Revision Book",
-    src: "/covers/Screenshot_20250429-000648.jpg",
-    date: "January 20, 2025",
-    rating: "★★★☆☆",
-  },
-  {
-    title: "Reloaded Comprehensive, AGriculture Paper 1 & Paper2",
-    author: "Mangere Ismael & John Mulinge",
-    genre: "Revision Book",
-    src: "/covers/Screenshot_20250429-000651.jpg",
-    date: "January 20, 2025",
-    rating: "★★★☆☆",
-  },
-  {
-    title: "Mche",
-    author: "John Wekesa ",
-    genre: "Set Book",
-    src: "/covers/Screenshot_20250429-000728.jpg",
-    date: "January 20, 2025",
-    rating: "★★★☆☆",
-  },
-  {
-    title: "Demystified English Paper 3",
-    author: "Nyamita Paul, Judith A. Onywany, Noah Otok & Tony Brian ",
-    genre: "Revision Book",
-    src: "/covers/Screenshot_20250429-000739.jpg",
-    date: "January 20, 2025",
-    rating: "★★★☆☆",
-  },
-  {
-    title: "The Eagle Series",
-    author: "B. Maloba, L. Chisaka, S. Musiko, F. Sakwa, B. Wandera & G. Keya",
-    genre: "Set Book",
-    src: "/covers/Screenshot_20250429-000742.jpg",
-    date: "January 20, 2025",
-    rating: "★★★☆☆",
-  },
-  {
-    title: "Oral Literature & Poetry, A Simplified Guide to KCSE English",
-    author: "Julius Ochieng",
-    genre: "Poetry",
-    src: "/covers/Screenshot_20250429-000745.jpg",
-    date: "January 20, 2025",
-    rating: "★★★☆☆",
-  },
-  {
-    title: "One Touch English Paper 1",
-    author: "Shijedi Derick & Barack Wandera",
-    genre: "Revision Book",
-    src: "/covers/Screenshot_20250429-000748.jpg",
-    date: "January 20, 2025",
-    rating: "★★★☆☆",
-  },
-  
-  // ...more books
-];
+};
 
 export default function PortfolioPage() {
   return (
     <section className="min-h-screen bg-gray-100">
       <PortfolioHero />
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-w-6xl mx-auto py-20 px-6 md:px-20">
-        {books.map((book, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.1, duration: 0.5 }}
-            className="flex flex-col items-center"
-          >
-            {/* Book Image */}
-            <div className="w-full h-[260px] relative rounded-lg overflow-hidden shadow-md">
-              <Image
-                src={book.src}
-                alt={book.title}
-                fill
-                className="object-cover"
-              />
-            </div>
-
-            {/* Book Details */}
-            <div className="w-full bg-gradient-to-tr from-green-300 via-white to-green-200 mt-3 p-3 rounded-lg shadow-sm text-center">
-              <h3 className="text-indigo-700 font-semibold text-lg">{book.title}</h3>
-              <p className="text-gray-600 text-sm mt-1">by {book.author}</p>
-              <p className="text-gray-400 text-xs mt-2">📅 {book.date}</p>
-              <p className="text-yellow-500 text-lg mt-1">{book.rating}</p>
-            </div>
-          </motion.div>
-        ))}
-      </div>
+      <Portfolio />
     </section>
   );
 }

@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://capvim.vercel.app
+
+# Sitemaps
+Sitemap: https://capvim.vercel.app/sitemap.xml
