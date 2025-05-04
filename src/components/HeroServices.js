@@ -79,7 +79,7 @@ export default function ServicesHero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 1 }}
-          className="text-lg md:text-xl text-gray-100 max-w-2xl"
+          className="text-lg md:text-xl text-gray-100 max-w-2xl font-semibold"
         >
           Empowering Writers and Creators Through Expert Publishing Services
         </motion.p>

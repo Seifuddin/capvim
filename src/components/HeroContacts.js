@@ -79,7 +79,7 @@ export default function ContactsHero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 1 }}
-          className="text-lg md:text-xl text-gray-100 max-w-2xl"
+          className="text-lg md:text-xl text-gray-100 max-w-2xl font-semibold"
         >
           Have a question about our services or want to learn more about Capvim International Publishers? We’d love to hear from you
         </motion.p>

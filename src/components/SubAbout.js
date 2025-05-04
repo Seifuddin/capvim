@@ -3,10 +3,10 @@ import { motion } from "framer-motion";
 
 export default function AboutUs() {
   const counters = [
-    { label: "Books Published", value: 320 },
-    { label: "Authors Supported", value: 95 },
-    { label: "Years in Publishing", value: 12 },
-    { label: "Awards Received", value: 18 },
+    { label: "Books Published", value: 100 },
+    { label: "Authors Supported", value: 10 },
+    { label: "Years in Publishing", value: 10 },
+    { label: "Awards Received", value: 5 },
   ];
 
   return (
