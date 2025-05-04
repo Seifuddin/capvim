@@ -110,7 +110,7 @@ export default function Why() {
                 <motion.div
                   key={idx}
                   whileHover={{ scale: 1.03 }}
-                  className=" bg-indigo-50 flex items-start gap-4 cursor-pointer hover:bg-indigo-50 p-2 rounded-lg shadow-sm transition-transform duration-300"
+                  className=" bg-white/30 flex items-start gap-4 cursor-pointer hover:bg-indigo-50 p-2 rounded-lg shadow-sm transition-transform duration-300"
                   onClick={() => setSelectedFeature(item)}
                 >
                   <div className="bg-indigo-100 p-3 rounded-full">{item.icon}</div>

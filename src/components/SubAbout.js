@@ -33,7 +33,7 @@ export default function AboutUs() {
       <img
           src="/images/Capvim IP.png"
           alt="Publishing Team"
-          className="w-full rounded-md p-5 shadow-md border bg-indigo-50 border-gray-300"
+          className="w-full rounded-md p-5 shadow-md border bg-black/5 border-gray-300"
         />
         </motion.div>
 
