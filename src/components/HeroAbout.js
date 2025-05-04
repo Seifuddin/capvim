@@ -38,8 +38,8 @@ export default function AboutHero() {
   }, [displayText, typing]);
 
   return (
-    <section className="w-full overflow-x-hidden relative pt-24 pb-10 bg-gradient-to-br from-indigo-100 via-white to-gray-100 overflow-hidden">
-      <div className="absolute inset-0 bg-[url('/images/two-people-sitting-floor-library-one-them-is-reading-book_861143-205.avif')] bg-cover bg-center"></div>
+    <section className="w-full overflow-x-hidden relative pt-24 pb-10 bg-black/50 overflow-hidden">
+      <div className="absolute inset-0 opacity-70 bg-[url('/images/two-people-sitting-floor-library-one-them-is-reading-book_861143-205.avif')] bg-cover bg-center"></div>
 
       {/* Floating icons */}
       <motion.div
@@ -69,7 +69,7 @@ export default function AboutHero() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="text-4xl md:text-6xl font-bold text-white mb-4"
+          className="text-4xl md:text-6xl font-bold text-blue-100 mb-4"
         >
           {displayText}
           <span className="blinking-cursor">|</span>
@@ -79,7 +79,7 @@ export default function AboutHero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 1 }}
-          className="text-lg md:text-xl text-gray-100 max-w-2xl"
+          className="text-lg md:text-xl text-white max-w-2xl font-semibold"
         >
           We are a leading publishing company dedicated to bringing powerful stories and meaningful content to life. Our passion is empowering authors and shaping the future of publishing.
         </motion.p>
