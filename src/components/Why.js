@@ -1,5 +1,5 @@
 "use client";
-import { useState, useRef } from "react";
+import { useState, useRef, useCallback } from "react";
 import { motion } from "framer-motion";
 import { BookOpen, Users, Award, ShieldCheck, Quote, ChevronLeft, ChevronRight } from "lucide-react";
 import { Dialog } from "@headlessui/react";
@@ -10,7 +10,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/effect-fade";
 
-export default function Why() {
+const Why = () => {
   const [selectedFeature, setSelectedFeature] = useState(null);
   const swiperRef = useRef(null);
 
@@ -71,13 +71,20 @@ export default function Why() {
       author: "Jim Jim, Poet",
       image: "/images/WhatsApp Image 2025-04-27 at 04.32.48 (1).jpeg",
     },
-
     {
       quote: "My project wouldn't have been the same without them.",
       author: "Muriithi Nguru, Software Engineer",
       image: "/images/WhatsApp Image 2025-04-27 at 04.32.48 (1).jpeg",
     },
   ];
+
+  const handleFeatureClick = useCallback((item) => {
+    setSelectedFeature(item);
+  }, []);
+
+  const handleModalClose = useCallback(() => {
+    setSelectedFeature(null);
+  }, []);
 
   return (
     <div>
@@ -86,32 +93,41 @@ export default function Why() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-14">
             <motion.div
-                              initial={{ opacity: 0, y: 50 }}
-                              whileInView={{ opacity: 1, y: 0 }}
-                              transition={{ duration: 1 }}
-                              className="relative"
-                            >
-            <h2 className="text-4xl font-bold mb-4 text-green-700">Why Choose Us</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Discover what makes us a trusted partner in publishing exceptional content that informs, inspires, and endures.
-            </p>
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1 }}
+              className="relative"
+            >
+              <h2 className="text-4xl font-bold mb-4 text-green-700">Why Choose Us</h2>
+              <p className="text-gray-600 max-w-2xl mx-auto">
+                Discover what makes us a trusted partner in publishing exceptional content that informs, inspires, and endures.
+              </p>
             </motion.div>
           </div>
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Image */}
             <motion.div initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1 }}>
-              <img src="/images/1657974996_whyus.jpg" alt="Why Choose Us" className="relative rounded-lg w-full h-[250px] md:h-[400px] lg:h-[400px]" />
+              <img
+                src="/images/1657974996_whyus.jpg"
+                alt="Why Choose Us"
+                className="relative rounded-lg w-full h-[250px] md:h-[400px] lg:h-[400px]"
+              />
             </motion.div>
 
             {/* Features */}
-            <motion.div initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1 }} className="space-y-8">
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1 }}
+              className="space-y-8"
+            >
               {features.map((item, idx) => (
                 <motion.div
                   key={idx}
                   whileHover={{ scale: 1.03 }}
-                  className=" bg-white/30 flex items-start gap-4 cursor-pointer hover:bg-indigo-50 p-2 rounded-lg shadow-sm transition-transform duration-300"
-                  onClick={() => setSelectedFeature(item)}
+                  className="bg-white/30 flex items-start gap-4 cursor-pointer hover:bg-indigo-50 p-2 rounded-lg shadow-sm transition-transform duration-300"
+                  onClick={() => handleFeatureClick(item)}
                 >
                   <div className="bg-indigo-100 p-3 rounded-full">{item.icon}</div>
                   <div>
@@ -125,14 +141,14 @@ export default function Why() {
         </div>
 
         {/* Modal */}
-        <Dialog open={!!selectedFeature} onClose={() => setSelectedFeature(null)} className="relative z-50">
+        <Dialog open={!!selectedFeature} onClose={handleModalClose} className="relative z-50">
           <div className="fixed inset-0 bg-black/30 backdrop-blur-sm" aria-hidden="true" />
           <div className="fixed inset-0 flex items-center justify-center p-4">
             <Dialog.Panel className="w-full max-w-md bg-white rounded-xl shadow-xl p-6">
               <Dialog.Title className="text-2xl font-bold mb-2 text-indigo-700">{selectedFeature?.title}</Dialog.Title>
               <Dialog.Description className="text-gray-700">{selectedFeature?.modal}</Dialog.Description>
               <div className="mt-6 text-right">
-                <button onClick={() => setSelectedFeature(null)} className="px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 transition">
+                <button onClick={handleModalClose} className="px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 transition">
                   Close
                 </button>
               </div>
@@ -145,25 +161,31 @@ export default function Why() {
       <section className="py-20 bg-white text-gray-800">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-12">
-          <motion.div
-                              initial={{ opacity: 0, y: 50 }}
-                              whileInView={{ opacity: 1, y: 0 }}
-                              transition={{ duration: 1 }}
-                              className="relative"
-                            >
-            <h2 className="text-4xl font-bold mb-4 text-green-700">What Our Clients Say</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Hear from the authors and organizations we've had the pleasure of working with.
-            </p>
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1 }}
+              className="relative"
+            >
+              <h2 className="text-4xl font-bold mb-4 text-green-700">What Our Clients Say</h2>
+              <p className="text-gray-600 max-w-2xl mx-auto">
+                Hear from the authors and organizations we've had the pleasure of working with.
+              </p>
             </motion.div>
           </div>
 
           {/* Custom Arrows */}
           <div className="flex justify-between items-center mb-4">
-            <button onClick={() => swiperRef.current?.slidePrev()} className="p-2 rounded-full bg-gradient-to-tr from-green-200 via-white to-green-100 hover:bg-indigo-200 text-indigo-600 transition">
+            <button
+              onClick={() => swiperRef.current?.slidePrev()}
+              className="p-2 rounded-full bg-gradient-to-tr from-green-200 via-white to-green-100 hover:bg-indigo-200 text-indigo-600 transition"
+            >
               <ChevronLeft className="w-6 h-6" />
             </button>
-            <button onClick={() => swiperRef.current?.slideNext()} className="p-2 rounded-full bg-gradient-to-tr from-green-200 via-white to-green-100 hover:bg-indigo-200 text-indigo-600 transition">
+            <button
+              onClick={() => swiperRef.current?.slideNext()}
+              className="p-2 rounded-full bg-gradient-to-tr from-green-200 via-white to-green-100 hover:bg-indigo-200 text-indigo-600 transition"
+            >
               <ChevronRight className="w-6 h-6" />
             </button>
           </div>
@@ -172,7 +194,7 @@ export default function Why() {
           <Swiper
             modules={[Navigation, Pagination, EffectFade, Autoplay]}
             onSwiper={(swiper) => (swiperRef.current = swiper)}
-            effect="slide" // change to "fade" for fade effect
+            effect="slide"
             autoplay={{ delay: 5000 }}
             loop={true}
             spaceBetween={30}
@@ -186,7 +208,11 @@ export default function Why() {
             {testimonials.map((testimonial, idx) => (
               <SwiperSlide key={idx}>
                 <motion.div whileHover={{ scale: 1.02 }} className="bg-gradient-to-tr from-green-300 via-white to-green-200 p-6 rounded-xl shadow-lg text-center h-full">
-                  <img src={testimonial.image} alt={testimonial.author} className="w-16 h-16 mx-auto rounded-full mb-4 object-cover shadow-md" />
+                  <img
+                    src={testimonial.image}
+                    alt={testimonial.author}
+                    className="w-16 h-16 mx-auto rounded-full mb-4 object-cover shadow-md"
+                  />
                   <Quote className="w-6 h-6 text-indigo-500 mx-auto mb-2" />
                   <p className="italic text-gray-700 mb-4">"{testimonial.quote}"</p>
                   <p className="font-semibold text-indigo-700">{testimonial.author}</p>
@@ -199,3 +225,5 @@ export default function Why() {
     </div>
   );
 };
+
+export default Why;

@@ -2,67 +2,64 @@
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { BookOpen, Pencil, Paperclip } from "lucide-react";
-import Image from "next/image";
 
-export default function ContactsHero() {
-  const words = [
-    "Contact Us.",
-    "Get In Touch With Us",
-    "We'd love to hear from you! Whether you have a question, feedback, or just want to chat, feel free to reach out.",
-  ];
-  const [currentWordIndex, setCurrentWordIndex] = useState(0);
-  const [displayText, setDisplayText] = useState("");
+// Custom hook for typewriter effect
+function useTypewriter(words, typingSpeed = 100, deletingSpeed = 50, delay = 2000) {
+  const [index, setIndex] = useState(0);
+  const [text, setText] = useState("");
   const [typing, setTyping] = useState(true);
 
   useEffect(() => {
+    const currentWord = words[index];
     let timeout;
+
     if (typing) {
-      if (displayText.length < words[currentWordIndex].length) {
-        timeout = setTimeout(() => {
-          setDisplayText(words[currentWordIndex].slice(0, displayText.length + 1));
-        }, 100);
+      if (text.length < currentWord.length) {
+        timeout = setTimeout(() => setText(currentWord.slice(0, text.length + 1)), typingSpeed);
       } else {
-        timeout = setTimeout(() => setTyping(false), 2000);
+        timeout = setTimeout(() => setTyping(false), delay);
       }
     } else {
-      timeout = setTimeout(() => {
-        if (displayText.length > 0) {
-          setDisplayText(displayText.slice(0, -1));
-        } else {
-          setTyping(true);
-          setCurrentWordIndex((currentWordIndex + 1) % words.length);
-        }
-      }, 50);
+      if (text.length > 0) {
+        timeout = setTimeout(() => setText(text.slice(0, -1)), deletingSpeed);
+      } else {
+        setTyping(true);
+        setIndex((prev) => (prev + 1) % words.length);
+      }
     }
+
     return () => clearTimeout(timeout);
-  }, [displayText, typing]);
+  }, [text, typing]);
+
+  return text;
+}
+
+export default function ContactsHero() {
+  const displayText = useTypewriter([
+    "Contact Us.",
+    "Get In Touch With Us",
+    "We'd love to hear from you! Whether you have a question, feedback, or just want to chat, feel free to reach out.",
+  ]);
 
   return (
     <section className="relative pt-24 pb-10 bg-gradient-to-br from-indigo-100 via-white to-gray-100 overflow-hidden overflow-x-hidden">
       <div className="absolute inset-0 bg-[url('/images/two-people-sitting-floor-library-one-them-is-reading-book_861143-205.avif')] bg-cover bg-center"></div>
 
       {/* Floating icons */}
-      <motion.div
-        className="absolute top-1/4 left-10 text-indigo-300"
-        animate={{ y: [0, -10, 0] }}
-        transition={{ duration: 4, repeat: Infinity }}
-      >
-        <BookOpen size={40} />
-      </motion.div>
-      <motion.div
-        className="absolute bottom-20 right-16 text-indigo-200"
-        animate={{ y: [0, 15, 0] }}
-        transition={{ duration: 5, repeat: Infinity }}
-      >
-        <Pencil size={35} />
-      </motion.div>
-      <motion.div
-        className="absolute top-1/2 right-10 text-indigo-300"
-        animate={{ y: [0, -10, 0] }}
-        transition={{ duration: 6, repeat: Infinity }}
-      >
-        <Paperclip size={30} />
-      </motion.div>
+      {[
+        { icon: <BookOpen size={40} />, className: "top-1/4 left-10", duration: 4 },
+        { icon: <Pencil size={35} />, className: "bottom-20 right-16", duration: 5 },
+        { icon: <Paperclip size={30} />, className: "top-1/2 right-10", duration: 6 },
+      ].map((item, i) => (
+        <motion.div
+          key={i}
+          className={`absolute text-indigo-300 ${item.className}`}
+          animate={{ y: [0, -10, 0] }}
+          transition={{ duration: item.duration, repeat: Infinity }}
+        >
+          {item.icon}
+        </motion.div>
+      ))}
 
       <div className="relative z-10 flex flex-col justify-center items-center h-full text-center px-6">
         <motion.h1
@@ -81,29 +78,9 @@ export default function ContactsHero() {
           transition={{ delay: 0.5, duration: 1 }}
           className="text-lg md:text-xl text-gray-100 max-w-2xl font-semibold"
         >
-          Have a question about our services or want to learn more about Capvim International Publishers? We’d love to hear from you
+          Have a question about our services or want to learn more about Capvim International Publishers? We’d love to hear from you.
         </motion.p>
 
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 1, duration: 0.5 }}
-          className="mt-8 flex gap-4 flex-wrap justify-center"
-        >
-          
-        </motion.div>
-
-        {/* Image without 3D effects 
-        <div className="mt-12">
-          <Image
-            src="/images/1000_F_248500652_ODdXTJo565M5YO8wO7nvawB1li0uLtOZ.jpg"
-            alt="Book Illustration"
-            width={320}
-            height={320}
-            className="mx-auto"
-          />
-        </div>
-          */}
         {/* Scroll down prompt */}
         <motion.div
           className="absolute bottom-10 text-indigo-500"
@@ -122,9 +99,10 @@ export default function ContactsHero() {
           color: #4f46e5;
           animation: blink 1s step-start infinite;
         }
-
         @keyframes blink {
-          50% { opacity: 0; }
+          50% {
+            opacity: 0;
+          }
         }
       `}</style>
     </section>

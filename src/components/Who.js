@@ -2,16 +2,27 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 
+// Reusable animation wrapper for motion components
+const MotionSection = ({ children, initial, animate, transition }) => (
+  <motion.div
+    initial={initial}
+    animate={animate}
+    transition={transition}
+    className="space-y-6"
+  >
+    {children}
+  </motion.div>
+);
+
 export default function Who() {
   return (
-    <section className="relative bg-white text-gray-800 py-20 px-6 lg:px-20 overflow-hidden overflow-x-hidden">
+    <section className="relative bg-white text-gray-800 py-20 px-6 lg:px-20">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
         {/* Text Section */}
-        <motion.div
+        <MotionSection
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
-          className="space-y-6"
         >
           <h2 className="text-4xl md:text-5xl font-bold leading-tight text-green-600">
             Who We Are
@@ -36,7 +47,7 @@ export default function Who() {
               Contact Us
             </a>
           </div>
-        </motion.div>
+        </MotionSection>
 
         {/* Image Section */}
         <motion.div
@@ -51,6 +62,7 @@ export default function Who() {
             layout="fill"
             objectFit="cover"
             className="rounded-2xl shadow-lg"
+            priority
           />
         </motion.div>
       </div>
@@ -62,7 +74,7 @@ export default function Who() {
         transition={{ delay: 1, duration: 2 }}
         className="absolute text-9xl md:text-[200px] font-black uppercase text-indigo-200 top-10 left-1/2 transform -translate-x-1/2 whitespace-nowrap pointer-events-none select-none"
       >
-        Capvim 
+        Capvim
       </motion.h1>
     </section>
   );

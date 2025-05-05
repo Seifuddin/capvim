@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
+import { useTypingText } from "@/hooks/useTypingText"; // Import the custom hook
 import { BookOpen, Pencil, Paperclip } from "lucide-react";
 import Image from "next/image";
 
@@ -10,32 +10,8 @@ export default function PortfolioHero() {
     "Our Journey of Creativity and Excellence.",
     "Books that Define Our Passion for Publishing",
   ];
-  const [currentWordIndex, setCurrentWordIndex] = useState(0);
-  const [displayText, setDisplayText] = useState("");
-  const [typing, setTyping] = useState(true);
 
-  useEffect(() => {
-    let timeout;
-    if (typing) {
-      if (displayText.length < words[currentWordIndex].length) {
-        timeout = setTimeout(() => {
-          setDisplayText(words[currentWordIndex].slice(0, displayText.length + 1));
-        }, 100);
-      } else {
-        timeout = setTimeout(() => setTyping(false), 2000);
-      }
-    } else {
-      timeout = setTimeout(() => {
-        if (displayText.length > 0) {
-          setDisplayText(displayText.slice(0, -1));
-        } else {
-          setTyping(true);
-          setCurrentWordIndex((currentWordIndex + 1) % words.length);
-        }
-      }, 50);
-    }
-    return () => clearTimeout(timeout);
-  }, [displayText, typing]);
+  const { displayText, cursor } = useTypingText(words);
 
   return (
     <section className="relative pt-24 pb-10 bg-gradient-to-br from-indigo-100 via-white to-gray-100 overflow-hidden overflow-x-hidden">
@@ -72,7 +48,7 @@ export default function PortfolioHero() {
           className="text-4xl md:text-6xl font-bold text-white mb-4"
         >
           {displayText}
-          <span className="blinking-cursor">|</span>
+          <span className="blinking-cursor">{cursor}</span>
         </motion.h1>
 
         <motion.p
@@ -80,30 +56,10 @@ export default function PortfolioHero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 1 }}
           className="text-lg md:text-xl text-gray-100 max-w-2xl font-semibold"
-        > 
-            Explore some of the amazing books we’ve published with our talented authors and storytellers.
+        >
+          Explore some of the amazing books we’ve published with our talented authors and storytellers.
         </motion.p>
 
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 1, duration: 0.5 }}
-          className="mt-8 flex gap-4 flex-wrap justify-center"
-        >
-          
-        </motion.div>
-
-        {/* Image without 3D effects 
-        <div className="mt-12">
-          <Image
-            src="/images/1000_F_248500652_ODdXTJo565M5YO8wO7nvawB1li0uLtOZ.jpg"
-            alt="Book Illustration"
-            width={320}
-            height={320}
-            className="mx-auto"
-          />
-        </div>
-          */}
         {/* Scroll down prompt */}
         <motion.div
           className="absolute bottom-10 text-indigo-500"

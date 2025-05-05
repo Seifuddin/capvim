@@ -3,6 +3,12 @@ import { motion } from "framer-motion";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaLinkedin, FaTwitter } from "react-icons/fa"; // Icons for contact
 
 export default function ContactUs() {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Add form submission logic here (e.g., sending data to an API)
+    alert("Form submitted! (Logic not implemented yet.)");
+  };
+
   return (
     <div className="bg-gradient-to-tr from-green-300 via-white to-green-200 py-16 pt-24 overflow-x-hidden">
       {/* Hero Section */}
@@ -13,15 +19,15 @@ export default function ContactUs() {
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
         >
+          Get in Touch with Capvim Publishers
         </motion.h1>
-       
       </div>
 
       {/* Contact Form Section */}
       <div className="max-w-screen-xl mx-auto px-4 mt-12 grid grid-cols-1 lg:grid-cols-2 gap-8">
         <div className="bg-white p-8 rounded-lg shadow-lg">
           <h2 className="text-3xl font-semibold text-blue-900 mb-6">Send Us a Message</h2>
-          <form>
+          <form onSubmit={handleSubmit}>
             <div className="space-y-4">
               {/* Full Name */}
               <div>
@@ -31,6 +37,7 @@ export default function ContactUs() {
                   name="name"
                   className="w-full text-gray-600 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                   placeholder="Your Name"
+                  required
                 />
               </div>
 
@@ -42,6 +49,7 @@ export default function ContactUs() {
                   name="email"
                   className="w-full text-gray-600 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                   placeholder="Your Email"
+                  required
                 />
               </div>
 
@@ -53,6 +61,7 @@ export default function ContactUs() {
                   name="phone"
                   className="w-full text-gray-600 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                   placeholder="Your Phone Number"
+                  required
                 />
               </div>
 
@@ -64,6 +73,7 @@ export default function ContactUs() {
                   name="subject"
                   className="w-full text-gray-600 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                   placeholder="Subject of Your Message"
+                  required
                 />
               </div>
 
@@ -75,6 +85,7 @@ export default function ContactUs() {
                   className="w-full text-gray-600 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                   placeholder="Your Message"
                   rows="5"
+                  required
                 ></textarea>
               </div>
 
@@ -95,11 +106,15 @@ export default function ContactUs() {
           <div className="space-y-6">
             <div className="flex items-center space-x-4">
               <FaPhoneAlt className="text-blue-500 h-6 w-6" />
-              <span className="text-lg text-gray-700">+254 728 240 949</span>
+              <span className="text-lg text-gray-700">
+                <a href="tel:+254728240949">+254 728 240 949</a>
+              </span>
             </div>
             <div className="flex items-center space-x-4">
               <FaEnvelope className="text-blue-500 h-6 w-6" />
-              <span className="text-lg text-gray-700">capvimpublishers@gmail.com</span>
+              <span className="text-lg text-gray-700">
+                <a href="mailto:capvimpublishers@gmail.com">capvimpublishers@gmail.com</a>
+              </span>
             </div>
             <div className="flex items-center space-x-4">
               <FaMapMarkerAlt className="text-blue-500 h-6 w-6" />
