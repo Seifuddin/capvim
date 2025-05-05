@@ -1,18 +1,8 @@
 "use client";
 import { useState } from "react";
-import Link from "next/link";
-import { motion } from "framer-motion";
-import { X } from 'lucide-react';
-
-const NavLink = ({ href, children, onClick }) => (
-  <Link
-    href={href}
-    className="text-white font-semibold hover:text-gray-300 transition-all duration-300"
-    onClick={onClick}
-  >
-    {children}
-  </Link>
-);
+import Link from "next/link"; // Import Next.js Link
+import { motion } from "framer-motion"; // For smooth animations
+import { X } from 'lucide-react'; // Add this import for the close icon
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,49 +17,54 @@ export default function Navbar() {
       <div className="max-w-screen-xl mx-auto px-4 py-2">
         <div className="flex justify-between items-center">
           <div className="flex text-white font-bold text-xl tracking-wide">
-            <motion.div whileHover={{ scale: 1.1 }} className="cursor-pointer">
+            <motion.div
+              whileHover={{ scale: 1.1 }}
+              className="cursor-pointer"
+            >
               <img
-                src="/images/Capvim IP.png"
-                alt="Publishing Team"
-                className="w-16 md:w-24 rounded-sm bg-gray-200 shadow-md p-1"
-                loading="lazy"
-              />
+          src="/images/Capvim IP.png"
+          alt="Publishing Team"
+          className="w-16 md:w-24 rounded-sm bg-gray-200 shadow-md p-1"
+        />
             </motion.div>
           </div>
-
-          {/* Mobile menu toggle */}
+          
           <div className="lg:hidden">
             <button
               className="text-white"
               onClick={() => setIsOpen(!isOpen)}
             >
-              {isOpen ? (
-                <X size={24} />
-              ) : (
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
-                </svg>
-              )}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
             </button>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex space-x-6">
-            <NavLink href="/" onClick={handleLinkClick}>Home</NavLink>
-            <NavLink href="/about" onClick={handleLinkClick}>About Us</NavLink>
-            <NavLink href="/services" onClick={handleLinkClick}>Services</NavLink>
-            <NavLink href="/contacts" onClick={handleLinkClick}>Contact Us</NavLink>
+            <Link href="/" className="text-white font-semibold hover:text-gray-300 transition-all duration-300">
+              Home
+            </Link>
+            <Link href="/about" className="text-white font-semibold hover:text-gray-300 transition-all duration-300">
+              About Us
+            </Link>
+            <Link href="/services" className="text-white font-semibold hover:text-gray-300 transition-all duration-300">
+              Services
+            </Link>
+            <Link href="/contacts" className="text-white font-semibold hover:text-gray-300 transition-all duration-300">
+              Contact Us
+            </Link>
           </div>
         </div>
       </div>
@@ -80,7 +75,7 @@ export default function Navbar() {
           initial={{ x: "100%" }}
           animate={{ x: 0 }}
           transition={{ type: "spring", stiffness: 300 }}
-          className="lg:hidden relative bg-gray-800 text-white space-y-4 px-4 py-4 top-0 right-0 w-full h-full"
+          className="lg:hidden relative bg-gray-800 text-white space-y-4 px-4 py-4  top-0 right-0 w-full h-full"
         >
           <button
             onClick={() => setIsOpen(false)}
@@ -88,10 +83,18 @@ export default function Navbar() {
           >
             <X />
           </button>
-          <NavLink href="/" onClick={handleLinkClick}>Home</NavLink>
-          <NavLink href="/about" onClick={handleLinkClick}>About Us</NavLink>
-          <NavLink href="/services" onClick={handleLinkClick}>Services</NavLink>
-          <NavLink href="/contacts" onClick={handleLinkClick}>Contact Us</NavLink>
+          <Link href="/" className="block font-semibold py-2" onClick={handleLinkClick}>
+            Home
+          </Link>
+          <Link href="/about" className="block font-semibold py-2" onClick={handleLinkClick}>
+            About Us
+          </Link>
+          <Link href="/services" className="block font-semibold py-2" onClick={handleLinkClick}>
+            Services
+          </Link>
+          <Link href="/contacts" className="block font-semibold py-2" onClick={handleLinkClick}>
+            Contact Us
+          </Link>
         </motion.div>
       )}
     </nav>
