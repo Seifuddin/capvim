@@ -167,7 +167,7 @@ export default function Portfolio() {
 
             {/* Book Details */}
             <div className="w-full bg-gradient-to-tr from-green-300 via-white to-green-200 mt-3 p-3 rounded-lg shadow-sm text-center">
-            <h3 className="text-indigo-700 font-semibold text-base md:text-lg leading-tight overflow-hidden text-ellipsis whitespace-normal max-h-[3.5rem] break-words">
+            <h3 className="text-indigo-700 font-semibold text-base md:text-lg leading-tight break-words">
               {book.title}
             </h3>
               <p className="text-gray-600 text-sm mt-1">by {book.author}</p>
