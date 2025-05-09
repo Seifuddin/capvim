@@ -49,32 +49,32 @@ const Why = () => {
     {
       quote: "Their attention to detail and collaborative process turned my manuscript into a masterpiece.",
       author: "Clifford Matara, Author",
-      image: "/images/WhatsApp Image 2025-04-27 at 04.32.48 (1).jpeg",
+      image: "/images/WhatsApp Image 2025-04-27 at 04.32.48 (1).webp",
     },
     {
       quote: "Outstanding experience! The quality of design and timeliness exceeded expectations.",
       author: "Vincent Obwogi, Publisher",
-      image: "/images/WhatsApp Image 2025-04-27 at 04.32.48 (1).jpeg",
+      image: "/images/WhatsApp Image 2025-04-27 at 04.32.48 (1).webp",
     },
     {
       quote: "Professional, creative, and always on point. Highly recommended!",
       author: "Ishmail Atudo, Editor-in-Chief",
-      image: "/images/WhatsApp Image 2025-04-27 at 04.32.48 (1).jpeg",
+      image: "/images/WhatsApp Image 2025-04-27 at 04.32.48 (1).webp",
     },
     {
       quote: "I felt supported every step of the way. Their team is simply the best.",
       author: "Brian Odhiambo, Novelist",
-      image: "/images/WhatsApp Image 2025-04-27 at 04.32.48 (1).jpeg",
+      image: "/images/WhatsApp Image 2025-04-27 at 04.32.48 (1).webp",
     },
     {
       quote: "My project wouldn't have been the same without them.",
       author: "Jim Jim, Poet",
-      image: "/images/WhatsApp Image 2025-04-27 at 04.32.48 (1).jpeg",
+      image: "/images/WhatsApp Image 2025-04-27 at 04.32.48 (1).webp",
     },
     {
       quote: "My project wouldn't have been the same without them.",
       author: "Muriithi Nguru, Software Engineer",
-      image: "/images/WhatsApp Image 2025-04-27 at 04.32.48 (1).jpeg",
+      image: "/images/WhatsApp Image 2025-04-27 at 04.32.48 (1).webp",
     },
   ];
 
@@ -109,7 +109,7 @@ const Why = () => {
             {/* Image */}
             <motion.div initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1 }}>
               <img
-                src="/images/1657974996_whyus.jpg"
+                src="/images/100-Your-Ownership.webp"
                 alt="Why Choose Us"
                 className="relative rounded-lg w-full h-[250px] md:h-[400px] lg:h-[400px]"
               />

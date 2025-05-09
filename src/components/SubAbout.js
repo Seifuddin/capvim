@@ -68,7 +68,7 @@ export default function AboutUs() {
           transition={{ duration: 1 }}
         >
           <img
-            src="/images/Capvim IP.png"
+            src="/images/filters_format(webp)_quality(1).webp"
             alt="Publishing Team"
             loading="lazy"
             className="w-full rounded-md p-5 shadow-md border bg-black/5 border-gray-300"

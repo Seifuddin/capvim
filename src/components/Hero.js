@@ -41,7 +41,7 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen bg-black/80 overflow-hidden flex items-center justify-center text-center">
       {/* Background Image */}
-      <div className="absolute inset-0 opacity-50 bg-[url('/images/http___com.ft.imagepublish.upp-prod-eu.s3.amazonaws.avif')] bg-cover bg-center"></div>
+      <div className="absolute inset-0 opacity-50 bg-[url('/images/http___com.ft.imagepublish.upp-prod-eu.s3.amazonaws.webp')] bg-cover bg-center"></div>
 
       {/* Content */}
       <div className="relative z-10 space-y-6 px-4">
@@ -59,7 +59,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 1 }}
-          className="text-lg md:text-xl text-white font-medium"
+          className="text-lg md:text-xl text-white font-medium" style="opacity: 1; transform: none;"
         >
           We help authors, thinkers, and creators publish meaningful content that makes an impact.
         </motion.p>
@@ -85,7 +85,7 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      {/* Scroll Indicator */}
+      {/* Scroll Indicator 
       <motion.div
         className="absolute bottom-10 text-indigo-500 left-1/2 transform -translate-x-1/2"
         animate={{ y: [0, 10, 0] }}
@@ -93,7 +93,7 @@ export default function Hero() {
       >
         <span className="text-sm">Scroll Down</span>
         <div className="w-1 h-6 bg-indigo-500 mx-auto mt-1 rounded-full"></div>
-      </motion.div>
+      </motion.div> */}
 
       {/* Cursor Blinking Style */}
       <style jsx>{`

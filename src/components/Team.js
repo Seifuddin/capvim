@@ -15,7 +15,7 @@ const teamMembers = [
   {
     name: "Clifford Matara",
     title: "Director, Academics and Field Liaison",
-    image: "/images/WhatsApp Image 2025-04-27 at 04.32.48 (1).jpeg",
+    image: "/images/WhatsApp Image 2025-04-27 at 04.32.48 (1).webp",
     bio: "Clifford oversees all academic programs, ensures publishing standards are upheld, and liaises with field teams to maintain excellence.",
     department: "Overall Management and CEO",
     social: {
@@ -27,7 +27,7 @@ const teamMembers = [
   {
     name: "Trinah",
     title: "Manager, Accounts and Deputy Chief of Party",
-    image: "/images/WhatsApp Image 2025-04-27 at 04.32.48 (1).jpeg",
+    image: "/images/WhatsApp Image 2025-04-27 at 04.32.48 (1).webp",
     bio: "Trinah oversees financial operations and supports project leadership to ensure smooth and efficient organizational management.",
     department: "Accounts",
     social: {
@@ -39,7 +39,7 @@ const teamMembers = [
   {
     name: "Rhobey",
     title: "Chief Graphics Designer",
-    image: "/images/WhatsApp Image 2025-04-27 at 04.32.48 (1).jpeg",
+    image: "/images/WhatsApp Image 2025-04-27 at 04.32.48 (1).webp",
     bio: "Rhobey leads the creative team, producing innovative visual designs that align with Capvim’s brand and publishing goals.",
     department: "Graphics Design",
     social: {
@@ -51,7 +51,7 @@ const teamMembers = [
   {
     name: "Faith",
     title: "Sales and Marketing",
-    image: "/images/WhatsApp Image 2025-04-27 at 04.32.48 (1).jpeg",
+    image: "/images/WhatsApp Image 2025-04-27 at 04.32.48 (1).webp",
     bio: "Faith drives Capvim’s marketing initiatives, spearheading sales strategies and building strong client relationships.",
     department: "Sales and Marketing",
     social: {
@@ -63,7 +63,7 @@ const teamMembers = [
   {
     name: "Muriithi Nguru",
     title: "Manager, e-books and Online Content",
-    image: "/images/WhatsApp Image 2025-04-27 at 04.32.48 (1).jpeg",
+    image: "/images/WhatsApp Image 2025-04-27 at 04.32.48 (1).webp",
     bio: "Nguru manages the development and distribution of digital content, maintains and develops our website, ensuring a seamless experience across Capvim’s online platforms.",
     department: "Online Content and Developer",
     social: {

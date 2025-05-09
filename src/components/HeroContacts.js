@@ -43,7 +43,7 @@ export default function ContactsHero() {
 
   return (
     <section className="relative pt-24 pb-10 bg-gradient-to-br from-indigo-100 via-white to-gray-100 overflow-hidden overflow-x-hidden">
-      <div className="absolute inset-0 bg-[url('/images/two-people-sitting-floor-library-one-them-is-reading-book_861143-205.avif')] bg-cover bg-center"></div>
+      <div className="absolute inset-0 bg-[url('/images/two-people-sitting-floor-library-one-them-is-reading-book_861143-205.webp')] bg-cover bg-center"></div>
 
       {/* Floating icons */}
       {[
@@ -81,15 +81,6 @@ export default function ContactsHero() {
           Have a question about our services or want to learn more about Capvim International Publishers? We’d love to hear from you.
         </motion.p>
 
-        {/* Scroll down prompt */}
-        <motion.div
-          className="absolute bottom-10 text-indigo-500"
-          animate={{ y: [0, 10, 0] }}
-          transition={{ repeat: Infinity, duration: 2 }}
-        >
-          <span className="text-sm">Scroll Down</span>
-          <div className="w-1 h-6 bg-indigo-500 mx-auto mt-1 rounded-full"></div>
-        </motion.div>
       </div>
 
       <style jsx>{`

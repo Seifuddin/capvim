@@ -53,12 +53,12 @@ export default function AboutHero() {
       {/* Optimized Background */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/two-people-sitting-floor-library-one-them-is-reading-book_861143-205.avif"
+          src="/images/two-people-sitting-floor-library-one-them-is-reading-book_861143-205.webp"
           alt="Two people reading books in a library"
           fill
           priority
           quality={60}
-          className="object-cover object-center opacity-70"
+          className="object-cover object-center"
         />
       </div>
 
@@ -105,16 +105,6 @@ export default function AboutHero() {
         >
           We are a leading publishing company dedicated to bringing powerful stories and meaningful content to life. Our passion is empowering authors and shaping the future of publishing.
         </motion.p>
-
-        {/* Scroll down indicator */}
-        <motion.div
-          className="absolute bottom-10 text-indigo-500"
-          animate={{ y: [0, 10, 0] }}
-          transition={{ repeat: Infinity, duration: 2 }}
-        >
-          <span className="text-sm">Scroll Down</span>
-          <div className="w-1 h-6 bg-indigo-500 mx-auto mt-1 rounded-full"></div>
-        </motion.div>
       </div>
 
       {/* Blinking Cursor Style */}

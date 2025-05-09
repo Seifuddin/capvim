@@ -57,7 +57,7 @@ export default function Who() {
           className="relative w-full h-[250px] md:h-[400px] lg:h-[400px]"
         >
           <Image
-            src="/images/Who-We-Are-Polaris-Market-Research.webp"
+            src="/images/filters_format(webp)_quality(1).webp"
             alt="Publishing Team"
             layout="fill"
             objectFit="cover"
