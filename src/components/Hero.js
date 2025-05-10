@@ -11,33 +11,28 @@ export default function Hero() {
   ];
 
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
+  const [hydrated, setHydrated] = useState(false);
   const [displayText, setDisplayText] = useState("");
-  const [typing, setTyping] = useState(true);
 
   useEffect(() => {
+    setHydrated(true);
+  }, []);
+
+  useEffect(() => {
+    if (!hydrated) return;
     let timeout;
-    if (typing) {
-      if (displayText.length < words[currentWordIndex].length) {
-        timeout = setTimeout(() => {
-          setDisplayText(
-            words[currentWordIndex].slice(0, displayText.length + 1)
-          );
-        }, 100);
-      } else {
-        timeout = setTimeout(() => setTyping(false), 2000);
-      }
+    if (displayText.length < words[currentWordIndex].length) {
+      timeout = setTimeout(() => {
+        setDisplayText(words[currentWordIndex].slice(0, displayText.length + 1));
+      }, 100);
     } else {
       timeout = setTimeout(() => {
-        if (displayText.length > 0) {
-          setDisplayText(displayText.slice(0, -1));
-        } else {
-          setTyping(true);
-          setCurrentWordIndex((currentWordIndex + 1) % words.length);
-        }
-      }, 50);
+        setDisplayText("");
+        setCurrentWordIndex((currentWordIndex + 1) % words.length);
+      }, 3000);
     }
     return () => clearTimeout(timeout);
-  }, [displayText, typing, currentWordIndex, words]);
+  }, [displayText, hydrated, currentWordIndex]);
 
   return (
     <section className="relative min-h-screen bg-black/80 overflow-hidden flex items-center justify-center text-center">
@@ -48,7 +43,7 @@ export default function Hero() {
           alt="Background image"
           layout="fill"
           objectFit="cover"
-          priority // Prioritize loading of background image
+          priority
         />
       </div>
 
@@ -60,19 +55,19 @@ export default function Hero() {
           transition={{ duration: 1 }}
           className="text-4xl md:text-6xl font-bold text-white"
         >
-          {displayText}
-          <span className="blinking-cursor">|</span>
+          {hydrated ? (
+            <>
+              {displayText}
+              <span className="blinking-cursor">|</span>
+            </>
+          ) : (
+            "Where Creativity Meets Precision — Your Publishing Journey Starts Here"
+          )}
         </motion.h1>
 
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5, duration: 1 }}
-          className="text-lg md:text-xl text-white font-medium"
-          style={{ opacity: 1, transform: "none" }}
-        >
+        <p className="text-lg md:text-xl text-white font-medium animate-fade-in">
           We help authors, thinkers, and creators publish meaningful content that makes an impact.
-        </motion.p>
+        </p>
 
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
@@ -94,21 +89,6 @@ export default function Hero() {
           </a>
         </motion.div>
       </div>
-
-      {/* Cursor Blinking Style */}
-      <style jsx>{`
-        .blinking-cursor {
-          font-weight: 100;
-          font-size: 2rem;
-          color: #4f46e5;
-          animation: blink 1s step-start infinite;
-        }
-        @keyframes blink {
-          50% {
-            opacity: 0;
-          }
-        }
-      `}</style>
     </section>
   );
 }
