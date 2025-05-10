@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 export default function Hero() {
   const words = [
@@ -41,14 +42,15 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen bg-black/80 overflow-hidden flex items-center justify-center text-center">
       {/* Background Image */}
-      <div
-        className="absolute inset-0 opacity-50 bg-cover bg-center"
-        style={{
-          backgroundImage:
-            "url('/images/http___com.ft.imagepublish.upp-prod-eu.s3.amazonaws.webp')",
-        }}
-        aria-hidden="true"
-      ></div>
+      <div className="absolute inset-0 opacity-50">
+        <Image
+          src="/images/two-people-sitting-floor-library-one-them-is-reading-book_861143-205.webp"
+          alt="Background image"
+          layout="fill"
+          objectFit="cover"
+          priority // Prioritize loading of background image
+        />
+      </div>
 
       {/* Content */}
       <div className="relative z-10 space-y-6 px-4">
@@ -92,18 +94,6 @@ export default function Hero() {
           </a>
         </motion.div>
       </div>
-
-      {/* Optional: Scroll Indicator */}
-      {/* 
-      <motion.div
-        className="absolute bottom-10 text-indigo-500 left-1/2 transform -translate-x-1/2"
-        animate={{ y: [0, 10, 0] }}
-        transition={{ repeat: Infinity, duration: 2 }}
-      >
-        <span className="text-sm">Scroll Down</span>
-        <div className="w-1 h-6 bg-indigo-500 mx-auto mt-1 rounded-full"></div>
-      </motion.div>
-      */}
 
       {/* Cursor Blinking Style */}
       <style jsx>{`

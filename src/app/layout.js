@@ -10,9 +10,7 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata = {
   title: 'Capvim Publishers | Professional Book Publishing in Kenya',
   description: 'Capvim Publishers offers expert book publishing, editing, cover design, and ISBN registration services in Kenya.',
-  keywords: [
-    'book publishing Kenya', 'self-publishing', 'ISBN services Kenya', 'Capvim Publishers', 'editing services Kenya', 'children’s book printing',
-  ],
+  keywords: ['book publishing Kenya', 'self-publishing', 'ISBN services Kenya', 'Capvim Publishers', 'editing services Kenya', 'children’s book printing'],
   authors: [{ name: 'Capvim Publishers', url: 'https://capvim.vercel.app' }],
   openGraph: {
     title: 'Capvim Publishers',
@@ -21,9 +19,7 @@ export const metadata = {
     siteName: 'Capvim Publishers',
     locale: 'en_KE',
     type: 'website',
-    images: [
-      { url: 'https://capvim.vercel.app/og-image.jpg', width: 1200, height: 630, alt: 'Capvim Publishers - Expert Book Publishing in Kenya' },
-    ],
+    images: [{ url: 'https://capvim.vercel.app/og-image.jpg', width: 1200, height: 630, alt: 'Capvim Publishers - Expert Book Publishing in Kenya' }],
   },
   robots: { index: true, follow: true },
 };
@@ -39,6 +35,7 @@ export default function RootLayout({ children }) {
         <meta property="og:image" content="https://capvim.vercel.app/og-image.jpg" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" as="style" />
       </Head>
       <body className={inter.className}>
         <Navbar />

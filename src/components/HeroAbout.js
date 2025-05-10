@@ -6,10 +6,10 @@ import Image from "next/image";
 
 export default function ServicesHero() {
   const words = [
-  "We Are Capvim — Dedicated to Bringing Your Words to the World",
-  "Your Story Matters — We're Here to Help You Tell It Right.",
-  "Driven by a Passion for Publishing and Empowering Authors Worldwide"
-];
+    "We Are Capvim — Dedicated to Bringing Your Words to the World",
+    "Your Story Matters — We're Here to Help You Tell It Right.",
+    "Driven by a Passion for Publishing and Empowering Authors Worldwide"
+  ];
 
   const { displayText, cursor } = useTypingText(words);
 
@@ -21,21 +21,21 @@ export default function ServicesHero() {
       <motion.div
         className="absolute top-1/4 left-10 text-indigo-300"
         animate={{ y: [0, -10, 0] }}
-        transition={{ duration: 4, repeat: Infinity }}
+        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
       >
         <BookOpen size={40} />
       </motion.div>
       <motion.div
         className="absolute bottom-20 right-16 text-indigo-200"
         animate={{ y: [0, 15, 0] }}
-        transition={{ duration: 5, repeat: Infinity }}
+        transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
       >
         <Pencil size={35} />
       </motion.div>
       <motion.div
         className="absolute top-1/2 right-10 text-indigo-300"
         animate={{ y: [0, -10, 0] }}
-        transition={{ duration: 6, repeat: Infinity }}
+        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
       >
         <Paperclip size={30} />
       </motion.div>
