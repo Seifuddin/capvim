@@ -1,0 +1,1 @@
+{/* lighthouse https://capvim.vercel.app --chrome-flags="--headless" --view */}

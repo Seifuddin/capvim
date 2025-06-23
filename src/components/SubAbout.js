@@ -43,7 +43,7 @@ export default function AboutUs() {
     const icons = [FiBookOpen, FiUser, FiCalendar, FiAward];
 
   return (
-    <section className="bg-gradient-to-tr from-green-300 via-white to-green-200 text-gray-800 overflow-x-hidden">
+    <section className="bg-gray-100 text-gray-800 overflow-x-hidden">
       {/* Intro */}
       <div className="text-center py-10 px-4 max-w-4xl mx-auto">
         <motion.div
@@ -53,15 +53,13 @@ export default function AboutUs() {
         >
           <h2 className="text-4xl font-bold mb-4 text-green-600">About Us</h2>
           <p className="text-lg text-gray-600">
-            We are a leading publishing company dedicated to bringing powerful
-            stories and meaningful content to life. Our passion is empowering
-            authors and shaping the future of publishing.
+            Know more about Capvim
           </p>
         </motion.div>
       </div>
 
       {/* Image + Text Split */}
-      <div className="flex flex-col lg:flex-row items-center max-w-6xl mx-auto px-4 py-4 gap-10">
+      <div className="grid md:grid-cols-2 items-center max-w-6xl mx-auto p-4 gap-10">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -71,7 +69,7 @@ export default function AboutUs() {
             src="/images/filters_format(webp)_quality(1).webp"
             alt="Publishing Team"
             loading="lazy"
-            className="w-full rounded-md p-5 shadow-md border bg-black/5 border-gray-300"
+            className="w-full rounded-md shadow-md"
           />
         </motion.div>
 
@@ -79,10 +77,11 @@ export default function AboutUs() {
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
-          className="lg:w-1/2 pb-5"
+          className="pb-5"
         >
           <h3 className="text-2xl font-bold mb-4 text-green-600">Who We Are</h3>
           <p className="text-gray-700 mb-4">
+            We are a leading publishing company dedicated to bringing powerful stories and meaningful content to life. Our passion is empowering authors and shaping the future of publishing. 
             Founded by book lovers and industry veterans, our publishing house
             blends tradition with innovation. We work closely with authors to
             craft compelling narratives and provide editorial excellence every
@@ -97,8 +96,8 @@ export default function AboutUs() {
         </motion.div>
       </div>
 
-      {/* Mission and Values */}
-      <div className="bg-white py-16 px-4 mt-5">
+      {/* Mission and Values 
+      <div className="bg-gray-200 py-16 px-4 mt-5">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -133,9 +132,9 @@ export default function AboutUs() {
           </motion.div>
         </div>
       </div>
-
+      */}
       {/* Animated Counters with Icons and Progress Bars */}
-            <div className="bg-gradient-to-r from-green-600 to-blue-600 text-white py-10">
+            <div className="bg-blue-950 text-white py-10 mt-10">
               <div className="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-4 text-center gap-8">
                 {counters.map((counter, index) => {
                   const Icon = icons[index];

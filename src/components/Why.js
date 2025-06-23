@@ -89,7 +89,7 @@ const Why = () => {
   return (
     <div>
       {/* WHY CHOOSE US */}
-      <section className="py-20 bg-gradient-to-tr from-green-300 via-white to-green-200 text-gray-800 overflow-x-hidden">
+      <section className="py-20 bg-blue-100 text-gray-800 overflow-x-hidden">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-14">
             <motion.div
@@ -126,7 +126,7 @@ const Why = () => {
                 <motion.div
                   key={idx}
                   whileHover={{ scale: 1.03 }}
-                  className="bg-white/30 flex items-start gap-4 cursor-pointer hover:bg-indigo-50 p-2 rounded-lg shadow-sm transition-transform duration-300"
+                  className="bg-white/60 flex items-start gap-4 cursor-pointer hover:bg-indigo-50 p-2 rounded-lg shadow-sm transition-transform duration-300"
                   onClick={() => handleFeatureClick(item)}
                 >
                   <div className="bg-indigo-100 p-3 rounded-full">{item.icon}</div>
@@ -158,7 +158,7 @@ const Why = () => {
       </section>
 
       {/* TESTIMONIALS */}
-      <section className="py-20 bg-white text-gray-800">
+      <section className="py-20 bg-gray-100 text-gray-800">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-12">
             <motion.div
@@ -178,13 +178,13 @@ const Why = () => {
           <div className="flex justify-between items-center mb-4">
             <button
               onClick={() => swiperRef.current?.slidePrev()}
-              className="p-2 rounded-full bg-gradient-to-tr from-green-200 via-white to-green-100 hover:bg-indigo-200 text-indigo-600 transition"
+              className="p-2 rounded-full bg-green-100 hover:bg-indigo-200 text-indigo-600 transition"
             >
               <ChevronLeft className="w-6 h-6" />
             </button>
             <button
               onClick={() => swiperRef.current?.slideNext()}
-              className="p-2 rounded-full bg-gradient-to-tr from-green-200 via-white to-green-100 hover:bg-indigo-200 text-indigo-600 transition"
+              className="p-2 rounded-full bg-green-100 hover:bg-indigo-200 text-indigo-600 transition"
             >
               <ChevronRight className="w-6 h-6" />
             </button>
@@ -207,7 +207,7 @@ const Why = () => {
           >
             {testimonials.map((testimonial, idx) => (
               <SwiperSlide key={idx}>
-                <motion.div whileHover={{ scale: 1.02 }} className="bg-gradient-to-tr from-green-300 via-white to-green-200 p-6 rounded-xl shadow-lg text-center h-full">
+                <motion.div whileHover={{ scale: 1.02 }} className="bg-white borde p-6 rounded-xl shadow-lg text-center h-full">
                   <img
                     src={testimonial.image}
                     alt={testimonial.author}

@@ -52,7 +52,7 @@ export default function Subservices() {
   const [selected, setSelected] = useState(null);
 
   return (
-    <section className="bg-gradient-to-tr from-green-300 via-white to-green-200 py-16 px-4 overflow-x-hidden">
+    <section className="bg-blue-100 py-16 px-4 overflow-x-hidden">
       <div className="max-w-7xl mx-auto text-center">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -73,7 +73,7 @@ export default function Subservices() {
             <motion.div
               key={index}
               whileHover={{ scale: 1.02 }}
-              className="bg-white rounded-2xl shadow-lg overflow-hidden cursor-pointer transition duration-300"
+              className="bg-gray-100 rounded-md shadow-lg overflow-hidden cursor-pointer transition duration-300"
               onClick={() => setSelected({ title, description, icon: Icon, image })}
             >
               <img src={image} alt={title} className="w-full h-44 object-cover" />

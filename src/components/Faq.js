@@ -48,7 +48,8 @@ export default function FAQ() {
   });
 
   return (
-    <section className="max-w-6xl mx-auto px-4 py-12 bg-white overflow-x-hidden">
+    <section className="overflow-x-hidden bg-gray-100">
+    <div className="max-w-6xl mx-auto px-4 py-12 overflow-x-hidden">
       <motion.div
                                     initial={{ opacity: 0, y: 50 }}
                                     whileInView={{ opacity: 1, y: 0 }}
@@ -99,8 +100,8 @@ export default function FAQ() {
               <button
                 onClick={() => setSelectedCategory("All")}
                 className={`px-4 py-2 rounded-full border ${
-                  selectedCategory === "All" ? "bg-blue-600 text-white" : "bg-white text-gray-700"
-                } hover:bg-blue-100 transition`}
+                  selectedCategory === "All" ? "bg-blue-600 text-white" : "bg-gray-200 text-blue-700"
+                } hover:bg-green-500 transition`}
               >
                 All
               </button>
@@ -109,8 +110,8 @@ export default function FAQ() {
                   key={cat}
                   onClick={() => setSelectedCategory(cat)}
                   className={`px-4 py-2 rounded-full border ${
-                    selectedCategory === cat ? "bg-blue-600 text-white" : "bg-white text-gray-700"
-                  } hover:bg-blue-100 transition`}
+                    selectedCategory === cat ? "bg-blue-600 text-white" : "bg-gray-200 text-blue-700"
+                  } hover:bg-blue-500 hover:text-white transition`}
                 >
                   {cat}
                 </button>
@@ -126,10 +127,10 @@ export default function FAQ() {
           filteredFaqs.map((faq, index) => (
             <div
               key={`${faq.question}-${index}`}
-              className="bg-gradient-to-tr from-green-200 via-white to-green-100 rounded-xl shadow hover:shadow-md transition"
+              className="bg-gray-200 rounded-md shado hover:shado border border-gray-300 transition"
             >
               <button
-                className="w-full flex justify-between items-center p-5 text-left font-semibold text-gray-800"
+                className="w-full flex justify-between items-center p-5 text-left font-semibold text-blue-800"
                 onClick={() => toggleFAQ(index)}
               >
                 <span>{faq.question}</span>
@@ -158,6 +159,7 @@ export default function FAQ() {
         ) : (
           <p className="text-center text-gray-500 col-span-full">No FAQs match your search.</p>
         )}
+      </div>
       </div>
     </section>
   );
