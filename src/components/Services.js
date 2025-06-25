@@ -166,7 +166,7 @@ export default function ServicesPage() {
         />
       </Head>
 
-      <section className="bg-gradient-to-tr from-green-300 via-white to-green-200 py-16 px-4 overflow-x-hidden">
+      <section className="bg-gray-50 py-16 px-4 overflow-x-hidden">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -179,7 +179,7 @@ export default function ServicesPage() {
               <motion.div
                 key={index}
                 whileHover={{ scale: 1.02 }}
-                className="bg-white rounded-2xl shadow-lg overflow-hidden cursor-pointer transition duration-300 flex flex-col justify-between"
+                className="bg-white rounded-md shadow-lg overflow-hidden cursor-pointer transition duration-300 flex flex-col justify-between"
               >
                 <div className="relative w-full h-44">
                   <Image
@@ -204,13 +204,13 @@ export default function ServicesPage() {
                   <div className="flex space-x-2">
                     <button
                       onClick={() => openPricingModal(service)}
-                      className="bg-green-600 text-white px-3 py-2 rounded-lg text-sm hover:bg-green-700"
+                      className="w-full bg-green-600 text-white px-3 py-2 rounded-lg text-sm hover:bg-green-700"
                     >
                       See Pricing
                     </button>
                     <button
                       onClick={() => openRequestModal(service)}
-                      className="bg-emerald-500 text-white px-3 py-2 rounded-lg text-sm hover:bg-emerald-600"
+                      className="w-full bg-emerald-500 text-white px-3 py-2 rounded-lg text-sm hover:bg-emerald-600"
                     >
                       Request This Service
                     </button>

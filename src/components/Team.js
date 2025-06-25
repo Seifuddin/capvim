@@ -15,7 +15,7 @@ const teamMembers = [
   {
     name: "Clifford Matara",
     title: "Director, Academics and Field Liaison",
-    image: "/images/WhatsApp Image 2025-04-27 at 04.32.48 (1).webp",
+    image: "/images/istockphoto-1131673353-612x612.jpg",
     bio: "Clifford oversees all academic programs, ensures publishing standards are upheld, and liaises with field teams to maintain excellence.",
     department: "Overall Management and CEO",
     social: {
@@ -27,7 +27,7 @@ const teamMembers = [
   {
     name: "Trinah",
     title: "Manager, Accounts and Deputy Chief of Party",
-    image: "/images/WhatsApp Image 2025-04-27 at 04.32.48 (1).webp",
+    image: "/images/istockphoto-1131673353-612x612.jpg",
     bio: "Trinah oversees financial operations and supports project leadership to ensure smooth and efficient organizational management.",
     department: "Accounts",
     social: {
@@ -39,7 +39,7 @@ const teamMembers = [
   {
     name: "Rhobey",
     title: "Chief Graphics Designer",
-    image: "/images/WhatsApp Image 2025-04-27 at 04.32.48 (1).webp",
+    image: "/images/istockphoto-1131673353-612x612.jpg",
     bio: "Rhobey leads the creative team, producing innovative visual designs that align with Capvim’s brand and publishing goals.",
     department: "Graphics Design",
     social: {
@@ -51,7 +51,7 @@ const teamMembers = [
   {
     name: "Faith",
     title: "Sales and Marketing",
-    image: "/images/WhatsApp Image 2025-04-27 at 04.32.48 (1).webp",
+    image: "/images/istockphoto-1131673353-612x612.jpg",
     bio: "Faith drives Capvim’s marketing initiatives, spearheading sales strategies and building strong client relationships.",
     department: "Sales and Marketing",
     social: {
@@ -91,7 +91,7 @@ export default function TheTeam() {
   const nextRef = useRef(null);
 
   return (
-    <section className="bg-white py-20 px-6 md:px-20 relative overflow-x-hidden" id="team">
+    <section className="bg-gray-50 py-20 px-6 md:px-20 relative overflow-x-hidden" id="team">
       <div className="text-center mb-12">
         <motion.div
                                                     initial={{ opacity: 0, y: 50 }}
@@ -140,6 +140,7 @@ export default function TheTeam() {
         autoplay={{ delay: 3000 }}
         pagination={{ clickable: true }}
         navigation={{ prevEl: prevRef.current, nextEl: nextRef.current }}
+        className="max-w-5xl items-center justify-center"
         onBeforeInit={(swiper) => {
           swiper.params.navigation.prevEl = prevRef.current;
           swiper.params.navigation.nextEl = nextRef.current;
@@ -147,7 +148,7 @@ export default function TheTeam() {
         breakpoints={{
           640: { slidesPerView: 2 },
           768: { slidesPerView: 3 },
-          1024: { slidesPerView: 4 },
+          1024: { slidesPerView: 3 },
         }}
       >
         {filteredMembers.map((member, index) => (
@@ -157,10 +158,10 @@ export default function TheTeam() {
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
-              className="bg-gradient-to-tr from-green-300 via-white to-green-200 pt-5 rounded-2xl shadow-md overflow-hidden text-center cursor-pointer hover:shadow-xl"
+              className="bg-gray-100 p-5 rounded-2xl border border-blue-300 shadow-md overflow-hidden text-center cursor-pointer hover:shadow-xl"
               onClick={() => openModal(member)}
             >
-              <div className="relative w-20 h-20 mx-auto mb-4 rounded-full overflow-hidden border-2 border-blue-800">
+              <div className="relative w-20 h-20 mx-auto mb- rounded-full overflow-hidden border-2 border-blue-800">
                 <Image
                   src={member.image}
                   alt={member.name}
@@ -169,7 +170,7 @@ export default function TheTeam() {
                 />
               </div>
               <div className="p-4">
-                <h3 className="text-xl font-semibold text-[#002147]">{member.name}</h3>
+                <h3 className="text-xl font-semibold text-blue-800">{member.name}</h3>
                 <p className="text-green-600 mt-1">{member.title}</p>
                 <p className="text-sm text-gray-500 mt-1">{member.department}</p>
                 <div className="flex justify-center gap-4 mt-4">
@@ -205,9 +206,9 @@ export default function TheTeam() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={() => openModal(member)}
-                  className="mt-4 flex items-center justify-center gap-2 px-4 py-2 border border-[#002147] text-[#002147] hover:bg-[#002147] hover:text-white rounded-full transition-all animate-bounce"
+                  className="w-full flex items-center mt-4 bg-blue-50 justify-center gap-2 px-1 py-2 border border-blue-400 text-blue-600 hover:bg-[#002147] hover:text-white rounded-full transition-all animate-bounce"
                 >
-                  <Info className="w-4 h-4 animate-ping" /> <span>More Info</span>
+                  <Info className=" w-4 h-4 animate-ping" /> <span>More Info</span>
                 </motion.button>
               </div>
             </motion.div>
@@ -225,8 +226,18 @@ export default function TheTeam() {
             className="bg-indigo-50 rounded-xl shadow-lg z-50 max-w-md mx-auto p-6 relative"
           >
             <Dialog.Title className="text-xl font-bold text-[#002147] mb-2">
+              <div className="relative w-24 h-24 mx-auto mb-5 rounded-full overflow-hidden border-2 border-blue-800">
+              <Image
+                  src={selectedMember?.image}
+                  alt={selectedMember?.name}
+                  layout="fill"
+                  className="object-cover w-20 h-20"
+                />
+                </div>
               {selectedMember?.name}
             </Dialog.Title>
+            
+            
             <p className="text-green-600 mb-4">{selectedMember?.title}</p>
             <p className="text-sm text-gray-500 mb-1">Department: {selectedMember?.department}</p>
             <p className="text-gray-700 mt-2">{selectedMember?.bio}</p>
