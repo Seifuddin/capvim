@@ -1,8 +1,8 @@
-import Hero from "@/components/Hero";
 import SubAbout from "@/components/SubAbout";
 import Subservices from "@/components/SubServices";
 import FAQ from "../components/Faq";
 import Why from "@/components/Why";
+import HeroSection from "@/components/Heroo";
 
 export const metadata = {
   title: 'Capvim Publishers | Book Publishing Experts in Kenya',
@@ -45,7 +45,7 @@ export const metadata = {
 export default function Home() {
   return (
     <main className="overflow-x-hidden">
-      <Hero />
+      <HeroSection />
       <SubAbout />
       <Subservices />
       <FAQ />
