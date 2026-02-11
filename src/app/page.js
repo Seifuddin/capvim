@@ -1,8 +1,14 @@
 import SubAbout from "@/components/SubAbout";
-import Subservices from "@/components/SubServices";
-import FAQ from "../components/Faq";
+import OurServices from "@/components/Services"
+import FAQ from "@/components/FAQ";
 import Why from "@/components/Why";
 import HeroSection from "@/components/Heroo";
+import PublishingProcess from "@/components/Process";
+import PricingPackages from "@/components/Packages";
+import DidYouKnow from "@/components/Know";
+import PublishingCounters from "@/components/Counter";
+import SubAboutUs from "@/components/SubaboutUs";
+import Who from "@/components/Who";
 
 export const metadata = {
   title: 'Capvim Publishers | Book Publishing Experts in Kenya',
@@ -46,8 +52,12 @@ export default function Home() {
   return (
     <main className="overflow-x-hidden">
       <HeroSection />
-      <SubAbout />
-      <Subservices />
+      <DidYouKnow />
+      <Who />
+      <PublishingCounters />
+      <OurServices />
+      <PublishingProcess />
+      <PricingPackages />
       <FAQ />
       <Why />
     </main>

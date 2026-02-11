@@ -16,28 +16,28 @@ const Why = () => {
 
   const features = [
     {
-      icon: <BookOpen className="w-8 h-8 text-indigo-600" />,
+      icon: <BookOpen className="w-6 h-6 text-white" />,
       title: "Expert Editors",
       desc: "Our seasoned editors ensure every publication is polished and professional.",
       modal:
         "From manuscripts to magazines, our editors bring decades of experience to deliver quality and consistency in every page.",
     },
     {
-      icon: <Users className="w-8 h-8 text-indigo-600" />,
+      icon: <Users className="w-6 h-6 text-white" />,
       title: "Collaborative Approach",
       desc: "We work closely with authors and clients throughout the publishing journey.",
       modal:
         "We believe great publishing comes from partnership. You’re involved in every step, from concept to final print.",
     },
     {
-      icon: <Award className="w-8 h-8 text-indigo-600" />,
+      icon: <Award className="w-6 h-6 text-white" />,
       title: "Award-Winning Designs",
       desc: "Our layouts and covers have earned recognition across the industry.",
       modal:
         "We fuse storytelling with design excellence to craft books and publications that captivate readers at first glance.",
     },
     {
-      icon: <ShieldCheck className="w-8 h-8 text-indigo-600" />,
+      icon: <ShieldCheck className="w-6 h-6 text-white" />,
       title: "Reliable & Timely Delivery",
       desc: "We deliver high-quality publications on time, every time.",
       modal:
@@ -89,7 +89,7 @@ const Why = () => {
   return (
     <div>
       {/* WHY CHOOSE US */}
-      <section className="py-20 bg-blue-100 text-gray-800 overflow-x-hidden">
+      <section className="py-20 bg-green-50 text-gray-800 overflow-x-hidden">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-14">
             <motion.div
@@ -129,7 +129,7 @@ const Why = () => {
                   className="bg-white/60 flex items-start gap-4 cursor-pointer hover:bg-indigo-50 p-2 rounded-lg shadow-sm transition-transform duration-300"
                   onClick={() => handleFeatureClick(item)}
                 >
-                  <div className="bg-indigo-100 p-3 rounded-full">{item.icon}</div>
+                  <div className="bg-green-700 p-2 rounded-full">{item.icon}</div>
                   <div>
                     <h4 className="text-xl font-semibold mb-1">{item.title}</h4>
                     <p className="text-gray-600">{item.desc}</p>
@@ -158,7 +158,7 @@ const Why = () => {
       </section>
 
       {/* TESTIMONIALS */}
-      <section className="py-20 bg-gray-100 text-gray-800">
+      <section className="py-20 bg-green-50 text-gray-800">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-12">
             <motion.div

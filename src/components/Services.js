@@ -14,76 +14,84 @@ import {
   HelpCircle,
 } from "lucide-react";
 
-// Service data
+/* =========================
+   SERVICE DATA
+========================= */
+
 const services = [
   {
     title: "Book Publishing",
     description:
-      "We guide you from manuscript to market with complete book publishing services including ISBN registration, layout design, and printing.",
+      "We transform your manuscript into a professionally published book including ISBN registration, interior formatting, cover production, printing coordination, and distribution strategy.",
     icon: <BookOpen className="w-6 h-6 text-green-700" />,
     image: "/images/bookpublishing.jpg.webp",
     pricing:
-      "Please contact us for details on pricing as pricing varies depending on several factors.",
+      "Pricing depends on manuscript length, formatting complexity, printing volume, and distribution scope. Contact us for a tailored quote.",
   },
   {
     title: "Editing & Proofreading",
     description:
-      "Ensure your content is error-free and polished with our professional editing and proofreading services by experienced editors.",
+      "Our experienced editors refine your manuscript for clarity, grammar accuracy, structure, tone consistency, and professional publishing standards.",
     icon: <PenTool className="w-6 h-6 text-green-700" />,
     image: "/images/editing-service-editor.webp",
     pricing:
-      "Please contact us for details on pricing as pricing varies depending on several factors.",
+      "Costs vary depending on word count and editing depth (developmental, line editing, proofreading). Contact us for assessment.",
   },
   {
     title: "Cover Design & Layout",
     description:
-      "Our creative designers craft eye-catching book covers and interior layouts that align with your genre and audience.",
+      "We design compelling book covers and professionally formatted interiors that reflect your genre, audience, and publishing goals.",
     icon: <ImagePlus className="w-6 h-6 text-green-700" />,
-    image: "/images/orange-color-scheme-city-background-business-book-cover-design-template-brochure-flyer-layout-annual-report-magazine-108070657.webp",
+    image:
+      "/images/orange-color-scheme-city-background-business-book-cover-design-template-brochure-flyer-layout-annual-report-magazine-108070657.webp",
     pricing:
-      "Please contact us for details on pricing as pricing varies depending on several factors.",
+      "Pricing depends on design complexity, revisions required, and layout specifications. Reach out for detailed pricing.",
   },
   {
     title: "e-Book Creation",
     description:
-      "We convert your manuscript into accessible e-book formats compatible with all major digital platforms.",
+      "We convert your manuscript into optimized eBook formats (EPUB, MOBI, PDF) compatible with major global digital platforms.",
     icon: <FileText className="w-6 h-6 text-green-700" />,
-    image: "/images/open-pages-book-e-book-online-learning-graphic-concept_53876-127665.avif",
+    image:
+      "/images/open-pages-book-e-book-online-learning-graphic-concept_53876-127665.avif",
     pricing:
-      "Please contact us for details on pricing as pricing varies depending on several factors.",
+      "Pricing varies based on formatting complexity and number of platforms targeted.",
   },
   {
     title: "Printing & Distribution",
     description:
-      "We offer high-quality printing and global distribution to ensure your book reaches readers everywhere.",
+      "High-quality printing solutions with strategic distribution channels to ensure your book reaches local and international readers.",
     icon: <Printer className="w-6 h-6 text-green-700" />,
     image: "/images/Woman-scanning-paper-files-1024x683.webp",
     pricing:
-      "Please contact us for details on pricing as pricing varies depending on several factors.",
+      "Printing cost depends on page count, paper type, binding style, and quantity.",
   },
   {
     title: "Publishing Consultation",
     description:
-      "Get expert advice on publishing strategy, market positioning, and navigating the publishing industry.",
+      "Strategic publishing guidance covering market positioning, publishing models, timelines, and author branding.",
     icon: <HelpCircle className="w-6 h-6 text-green-700" />,
     image: "/images/classe_5SqEkiJ.original.format-webp-lossless.webp",
     pricing:
-      "Please contact us for details on pricing as pricing varies depending on several factors.",
+      "Consultation fees depend on session duration and scope of advisory support required.",
   },
 ];
 
-// Pricing Modal Component
+/* =========================
+   PRICING MODAL
+========================= */
+
 const PricingModal = ({ service, isOpen, onClose }) => (
   <Dialog open={isOpen} onClose={onClose} className="relative z-50">
-    <div className="fixed inset-0 bg-black/30" />
+    <div className="fixed inset-0 bg-black/40 backdrop-blur-sm" />
     <div className="fixed inset-0 flex items-center justify-center p-4">
-      <Dialog.Panel className="bg-white p-6 rounded-xl max-w-md w-full">
-        <Dialog.Title className="text-xl font-bold text-green-700">
-          {service?.title} - Pricing
+      <Dialog.Panel className="bg-white p-8 rounded-2xl max-w-lg w-full shadow-2xl">
+        <Dialog.Title className="text-2xl font-bold text-green-700">
+          {service?.title} Pricing
         </Dialog.Title>
-        <p className="text-gray-700 mt-4">{service?.pricing}</p>
+        <p className="text-gray-600 mt-4">{service?.pricing}</p>
         <button
-          className="mt-6 px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700"
+          className="mt-6 w-full px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition"
           onClick={onClose}
         >
           Close
@@ -93,46 +101,51 @@ const PricingModal = ({ service, isOpen, onClose }) => (
   </Dialog>
 );
 
-// Request Modal Component
+/* =========================
+   REQUEST MODAL
+========================= */
+
 const RequestModal = ({ service, isOpen, onClose }) => (
   <Dialog open={isOpen} onClose={onClose} className="relative z-50">
-    <div className="fixed inset-0 bg-black/30" />
+    <div className="fixed inset-0 bg-black/40 backdrop-blur-sm" />
     <div className="fixed inset-0 flex items-center justify-center p-4">
-      <Dialog.Panel className="bg-white p-6 rounded-xl max-w-md w-full">
-        <Dialog.Title className="text-xl font-bold text-emerald-600">
+      <Dialog.Panel className="bg-white p-8 rounded-2xl max-w-lg w-full shadow-2xl">
+        <Dialog.Title className="text-2xl font-bold text-green-700">
           Request: {service?.title}
         </Dialog.Title>
-        <form className="mt-4 space-y-4">
+
+        <form className="mt-6 space-y-4">
           <input
             type="text"
             placeholder="Your Name"
-            className="w-full border rounded px-3 py-2"
+            className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-500"
             required
           />
           <input
             type="email"
             placeholder="Your Email"
-            className="w-full border rounded px-3 py-2"
+            className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-500"
             required
           />
           <textarea
             placeholder="Describe your request..."
-            className="w-full border rounded px-3 py-2 h-24"
+            className="w-full border rounded-lg px-4 py-2 h-28 focus:outline-none focus:ring-2 focus:ring-green-500"
             required
           />
-          <div className="flex justify-end space-x-2">
+
+          <div className="flex gap-3">
             <button
               type="button"
-              className="px-4 py-2 bg-gray-300 rounded"
+              className="flex-1 bg-gray-200 py-2 rounded-lg"
               onClick={onClose}
             >
               Cancel
             </button>
             <button
               type="submit"
-              className="px-4 py-2 bg-emerald-500 text-white rounded hover:bg-emerald-600"
+              className="flex-1 bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition"
             >
-              Submit
+              Submit Request
             </button>
           </div>
         </form>
@@ -140,6 +153,10 @@ const RequestModal = ({ service, isOpen, onClose }) => (
     </div>
   </Dialog>
 );
+
+/* =========================
+   MAIN COMPONENT
+========================= */
 
 export default function ServicesPage() {
   const [selectedService, setSelectedService] = useState(null);
@@ -159,60 +176,89 @@ export default function ServicesPage() {
   return (
     <>
       <Head>
-        <title>Publishing Services | Capvim Publishers</title>
+        <title>Publishing Services | Capvim International Publishers</title>
         <meta
           name="description"
-          content="Explore professional publishing services including book publishing, editing, cover design, eBook creation, and more by Capvim International Publishers."
+          content="Professional publishing services including book publishing, editing, cover design, eBook creation, printing, and consultation by Capvim International Publishers."
         />
       </Head>
 
-      <section className="bg-gray-50 py-16 px-4 overflow-x-hidden">
-        <div className="max-w-7xl mx-auto text-center">
+      <section className="bg-green-50 py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+
+          {/* SECTION HEADER */}
+          <div className="max-w-3xl mx-auto text-center mb-16">
+            <span className="inline-block bg-green-100 text-green-700 px-4 py-1 rounded-full text-sm font-medium mb-4">
+              Our Professional Services
+            </span>
+
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
+              Comprehensive Publishing Solutions
+              <br className="hidden md:block" />
+              From Manuscript to Marketplace
+            </h2>
+
+            <p className="mt-4 text-gray-600 text-lg">
+              At Capvim International Publishers, we provide end-to-end
+              publishing solutions designed to transform your manuscript into
+              a professionally published and globally distributed book.
+            </p>
+          </div>
+
+          {/* SERVICES GRID */}
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
+            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
+            className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3"
           >
             {services.map((service, index) => (
               <motion.div
                 key={index}
-                whileHover={{ scale: 1.02 }}
-                className="bg-white rounded-md shadow-lg overflow-hidden cursor-pointer transition duration-300 flex flex-col justify-between"
+                whileHover={{ y: -6 }}
+                className="group bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500 overflow-hidden flex flex-col border border-gray-100"
               >
-                <div className="relative w-full h-44">
+                <div className="relative w-full h-52">
                   <Image
                     src={service.image}
                     alt={service.title}
                     fill
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                    className="object-cover"
-                    priority={index < 3}
+                    className="object-cover group-hover:scale-105 transition-transform duration-700"
                   />
                 </div>
-                <div className="p-5 text-left">
-                  <div className="flex items-center gap-2 mb-2">
+
+                <div className="p-6 flex flex-col flex-grow">
+                  <div className="flex items-center gap-2 mb-3">
                     {service.icon}
                     <h3 className="text-xl font-semibold text-green-700">
                       {service.title}
                     </h3>
                   </div>
-                  <p className="text-gray-600 text-sm line-clamp-3 mb-4">
+
+                  <p className="text-gray-600 text-sm mb-4">
                     {service.description}
                   </p>
-                  <div className="flex space-x-2">
-                    <button
-                      onClick={() => openPricingModal(service)}
-                      className="w-full bg-green-600 text-white px-3 py-2 rounded-lg text-sm hover:bg-green-700"
-                    >
-                      See Pricing
-                    </button>
+
+                  <ul className="text-xs text-gray-500 space-y-1 mb-6">
+                    <li>✔ Professional industry standards</li>
+                    <li>✔ Experienced publishing team</li>
+                    <li>✔ Transparent communication</li>
+                  </ul>
+
+                  <div className="mt-auto flex gap-2">
                     <button
                       onClick={() => openRequestModal(service)}
-                      className="w-full bg-emerald-500 text-white px-3 py-2 rounded-lg text-sm hover:bg-emerald-600"
+                      className="flex-1 bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition"
                     >
-                      Request This Service
+                      Request Service
+                    </button>
+
+                    <button
+                      onClick={() => openPricingModal(service)}
+                      className="flex-1 border border-green-600 text-green-700 px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-50 transition"
+                    >
+                      View Pricing
                     </button>
                   </div>
                 </div>

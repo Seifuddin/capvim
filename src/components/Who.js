@@ -16,7 +16,7 @@ const MotionSection = ({ children, initial, animate, transition }) => (
 
 export default function Who() {
   return (
-    <section className="relative bg-gray-50 text-gray-800 py-20 px-6 lg:px-20">
+    <section className="relative bg-green-50 text-gray-800 py-20 px-6 lg:px-20">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
         {/* Text Section */}
         <MotionSection

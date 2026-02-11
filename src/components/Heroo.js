@@ -1,4 +1,3 @@
-// app/components/HeroSection.jsx
 "use client";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -6,47 +5,62 @@ import Link from "next/link";
 export default function HeroSection() {
   return (
     <section
-      className="relative bg-cover bg-center min-h-screen flex items-center text-white"
-      style={{ backgroundImage: "url('/images/1000_F_248500652_ODdXTJo565M5YO8wO7nvawB1li0uLtOZ.jpg')" }}
+      id="home"
+      className="relative bg-gradient-to-r from-blue-950 px-6 pt-14 via-indigo-800 to-blue-600 text-white overflow-hidden"
     >
-      {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-black/10 z-0" />
+      {/* Background Overlay with Patterns */}
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/60 via-[#0a2540]/90 to-blue-800/70 z-0"></div>
+      <div className="absolute inset-0 bg-[url('/images/pattern.png')] opacity-10 bg-cover bg-center z-0"></div>
 
-      {/* Two-column layout */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 items-center h-full">
-        {/* Left column: text content */}
+      <div className="relative z-10 max-w-7xl mx-auto px4 md:px- lg:px14 py-24 flex flex-col md:flex-row gap-10 items-center">
+        
+        {/* Left Content */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1 }}
-          className="text-left bg-black/30 shadow-lg rounded-md"
+          transition={{ duration: 0.7 }}
+          className="text-center md:text-left md:w-1/2"
         >
-          <h1 className="text-5xl sm:text-7xl font-extrabold leading-tight mb-4">
-            Transform Ideas into Books...
+          <h1 className="text-3xl md:text-5xl lg:text-6xl text-yellow-400 font-extrabold leading-tight mb-4">
+            Transform Ideas {" "}
+            <span className="text-white">into Books...</span>
           </h1>
-          <p className="text-lg sm:text-2xl text-gray-200 mb-6 max-w-xl font-mono">
+        <div className="w-24 h-1 bg-yellow-400 mx-auto md:mx-0 rounded-full mb-6"></div>
+
+
+          <p className="mt-6 text-base md:text-xl text-gray-200">
             We help authors, thinkers, and creators publish meaningful content that makes an impact. A Trusted Partner in Publishing — From Vision to Volume.
           </p>
-          <div className="flex flex-row gap-4">
+
+          <div className="mt-8 flex flex-col sm:flex-row sm:justify-center md:justify-start gap-4">
             <Link
               href="/services"
-              className="bg-white text-gray-800 px-6 py-3 rounded-full font-medium hover:bg-gray-200 transition"
+              className="px-6 py-2 fontserif bg-yellow-400 text-indigo-900 rounded-md shadow-md fontsemibold hover:bg-yellow-500 transition"
             >
               Services
             </Link>
             <Link
               href="/portfolio"
-              className="bg-blue-600 text-white px-6 py-3 rounded-full font-medium hover:bg-blue-700 transition"
+              className="px-6 py-2 fontserif border border-white text-gray-100 rounded-md hover:bg-yellow-400 hover:text-gray-900 transition"
             >
               Portfolio
             </Link>
           </div>
         </motion.div>
 
-        {/* Right column: optional empty div or future media */}
-        <div className="hidden md:block">
-          {/* You can add an image, logo, or a scripture quote here if needed */}
-        </div>
+        {/* Right Side Image */}
+        <motion.div
+          initial={{ opacity: 0, x: 40 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.7 }}
+          className="mt-12 md:mt-0 md:w-1/2 flex justify-center"
+        >
+          <img
+            src="/images/portrait-beautiful-young-woman-holding-books-showing-thumb-up_114579-70563.avif"
+            alt="Hospital illustration"
+            className="w-full rounded max-w-md md:max-w-lg lg:max-w-xl drop-shadow-2xl"
+          />
+        </motion.div>
       </div>
     </section>
   );
