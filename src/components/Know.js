@@ -6,25 +6,25 @@ import { BookOpen, Globe, PenTool, Printer } from "lucide-react";
 export default function DidYouKnow() {
   const facts = [
     {
-      icon: <BookOpen className="w-6 h-6 text-green-600" />,
+      icon: <BookOpen className="w-6 h-6 text-white" />,
       title: "Over 2,000 Manuscripts Reviewed",
       description:
         "Capvim International Publishers has evaluated and guided thousands of authors to success.",
     },
     {
-      icon: <PenTool className="w-6 h-6 text-green-600" />,
+      icon: <PenTool className="w-6 h-6 text-white" />,
       title: "Professional Editing",
       description:
         "Every manuscript goes through professional editing and proofreading to ensure high-quality publications.",
     },
     {
-      icon: <Printer className="w-6 h-6 text-green-600" />,
+      icon: <Printer className="w-6 h-6 text-white" />,
       title: "Global Distribution",
       description:
         "Books published with us reach readers worldwide through trusted distribution channels.",
     },
     {
-      icon: <Globe className="w-6 h-6 text-green-600" />,
+      icon: <Globe className="w-6 h-6 text-white" />,
       title: "Digital & Print",
       description:
         "We make sure your book is available in both print and digital formats to maximize reach.",
@@ -52,7 +52,7 @@ export default function DidYouKnow() {
             viewport={{ once: true }}
             className="bg-white p-6 rounded-2xl shadow-md flex flex-col items-start gap-3 hover:shadow-xl transition duration-300"
           >
-            <div className="bg-green-100 p-3 rounded-full">
+            <div className="bg-green-700 p-3 rounded-full">
               {fact.icon}
             </div>
             <h3 className="text-lg font-semibold text-green-700">

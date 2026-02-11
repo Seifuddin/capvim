@@ -13,8 +13,8 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="bg-gradient-to-r from-teal-900 to-blue-900 fixed w-full top-0 left-0 z-50 shadow-lg border-b-2 border-b-orange-500">
-      <div className="max-w-screen-xl mx-auto px-4 py-2">
+    <nav className="bg-white fixed w-full top-0 left-0 z-50 shadow-lg border-b-2 border-b-orange-500">
+      <div className="max-w-screen-xl mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
           <div className="flex text-white font-bold text-xl tracking-wide">
             <motion.div
@@ -24,14 +24,14 @@ export default function Navbar() {
               <img
           src="/images/Capvim IP.png"
           alt="Publishing Team"
-          className="w-16 md:w-24 rounded-sm bg-gray-200 shadow-md p-2"
+          className="w-20 md:w-24 rounded-sm bg-gray200 shadowmd p-2"
         />
             </motion.div>
           </div>
           
           <div className="lg:hidden">
             <button
-              className="text-white"
+              className="text-blue-800"
               onClick={() => setIsOpen(!isOpen)}
             >
               <svg
@@ -53,16 +53,16 @@ export default function Navbar() {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex space-x-6">
-            <Link href="/" className="text-white font-semibold hover:text-gray-300 transition-all duration-300">
+            <Link href="/" className="text-gray-700 font-semibold hover:text-gray-600 transition-all duration-300">
               Home
             </Link>
-            <Link href="/about" className="text-white font-semibold hover:text-gray-300 transition-all duration-300">
+            <Link href="/about" className="text-gray-700 font-semibold hover:text-gray-600 transition-all duration-300">
               About Us
             </Link>
-            <Link href="/services" className="text-white font-semibold hover:text-gray-300 transition-all duration-300">
+            <Link href="/services" className="text-gray-700 font-semibold hover:text-gray-600 transition-all duration-300">
               Services
             </Link>
-            <Link href="/contacts" className="text-white font-semibold hover:text-gray-300 transition-all duration-300">
+            <Link href="/contacts" className="text-gray-700 font-semibold hover:text-gray-600 transition-all duration-300">
               Contact Us
             </Link>
           </div>
@@ -75,11 +75,11 @@ export default function Navbar() {
           initial={{ x: "100%" }}
           animate={{ x: 0 }}
           transition={{ type: "spring", stiffness: 300 }}
-          className="lg:hidden relative bg-gray-800 text-white space-y-4 px-4 py-4  top-0 right-0 w-full h-full"
+          className="lg:hidden relative bg-gray-800 text-blue-800 space-y-4 px-4 py-4  top-0 right-0 w-full h-full"
         >
           <button
             onClick={() => setIsOpen(false)}
-            className="absolute top-4 right-4 text-white text-3xl"
+            className="absolute top-4 right-4 text-blue-800 text-3xl"
           >
             <X />
           </button>
