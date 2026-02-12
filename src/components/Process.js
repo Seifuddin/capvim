@@ -64,7 +64,7 @@ export default function PublishingProcess() {
             Your Journey From Idea to Published Book
           </h2>
 
-          <p className="mt-4 text-gray-600 text-lg">
+          <p className="mt-4 text-gray-600 text-base">
             At Capvim International Publishers, we follow a structured,
             transparent, and professional process to transform your manuscript
             into a market-ready publication.

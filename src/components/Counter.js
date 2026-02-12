@@ -73,7 +73,7 @@ export default function PublishingCounters() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-2xl md:text-4xl font-serif font-extrabold text-gray-900 mb-6"
+          className="text-2xl md:text-4xl font-extrabold text-gray-900 mb-6"
         >
           Our Achievements in Numbers
         </motion.h2>
@@ -108,7 +108,7 @@ export default function PublishingCounters() {
                 <AnimatedCounter to={stat.value} />
 
                 {/* Label */}
-                <p className="text-gray-900/90 mt-2 font-medium text-sm xs:text-base">
+                <p className="text-blue-900 mt-2 font-medium text-sm xs:text-base">
                   {stat.label}
                 </p>
               </motion.div>

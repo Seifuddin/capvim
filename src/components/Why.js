@@ -211,9 +211,9 @@ const Why = () => {
                   <img
                     src={testimonial.image}
                     alt={testimonial.author}
-                    className="hidden w-16 h-16 mx-auto rounded-full mb-4 object-cover shadow-md"
+                    className="w-16 h-16 mx-auto rounded-full mb-4 object-cover shadow-md"
                   />
-                  <Quote className="w-6 h-6 text-blue-900 mx-auto mb-2" />
+                  <Quote className="w-6 h-6 text-green-700 mx-auto mb-2" />
                   <p className="italic text-gray-700 mb-4">"{testimonial.quote}"</p>
                   <p className="font-semibold text-blue-900">{testimonial.author}</p>
                 </motion.div>

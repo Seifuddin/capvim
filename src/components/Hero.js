@@ -35,9 +35,9 @@ export default function Hero() {
   }, [displayText, hydrated, currentWordIndex]);
 
   return (
-    <section className="relative bg-black/80 pt-10 overflow-hidden flex items-center justify-center text-center">
+    <section className="relative bg-black/90 pt-10 overflow-hidden flex items-center justify-center text-center">
       {/* Background Image */}
-      <div className="absolute inset-0 opacity-50">
+      <div className="absolute inset-0 opacity-35">
         <Image
           src="/images/two-people-sitting-floor-library-one-them-is-reading-book_861143-205.webp"
           alt="Background image"
@@ -77,7 +77,7 @@ export default function Hero() {
         >
           <a
             href="/services"
-            className="px-5 py-2 bg-green-400 hover:bg-indigo-700 text-white md:text-lg font-semibold rounded shadow-lg transition transform hover:scale-105"
+            className="px-5 py-2 bg-green-400 hover:bg-indigo-700 text-black md:text-lg font-semibold rounded shadow-lg transition transform hover:scale-105"
           >
             Our Services
           </a>
