@@ -60,7 +60,7 @@ export default function PublishingProcess() {
             Our Publishing Process
           </span>
 
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
+          <h2 className="text-2xl md:text-4xl font-bold text-gray-900 leading-tight">
             Your Journey From Idea to Published Book
           </h2>
 
@@ -100,7 +100,7 @@ export default function PublishingProcess() {
 
                 {/* Card */}
                 <div className="bg-gray-50 p-6 rounded shadow-md border border-gray-300 ml-16 md:ml-0 hover:shadow-xl transition duration-500">
-                  <h3 className="text-xl font-semibold text-blue-900">
+                  <h3 className="md:text-lg font-semibold text-blue-900">
                     {item.title}
                   </h3>
                   <p className="mt-3 text-gray-600 text-sm leading-relaxed">

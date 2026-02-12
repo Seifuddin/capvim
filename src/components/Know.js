@@ -34,10 +34,10 @@ export default function DidYouKnow() {
   return (
     <section className="bg-green-50 py-16 px-4">
       <div className="max-w-7xl mx-auto text-center mb-12">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+        <h2 className="text-2xl md:text-4xl font-bold text-gray-900">
           Did You Know?
         </h2>
-        <p className="mt-4 text-gray-600 text-lg max-w-2xl mx-auto">
+        <p className="mt-4 text-gray-600 text-base max-w-2xl mx-auto">
           Here are some interesting facts about Capvim International Publishers and how we help authors succeed.
         </p>
       </div>

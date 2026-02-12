@@ -21,7 +21,7 @@ export default function HeroSection() {
           transition={{ duration: 0.7 }}
           className="text-center md:text-left md:w-1/2"
         >
-          <h1 className="text-xl md:text-4xl text-green-400 font-bold leading-tight mb-4">
+          <h1 className="text-2xl md:text-4xl text-green-400 font-bold leading-tight mb-4">
             Transform Ideas {" "}
             <span className="text-white">into Books...</span>
           </h1>

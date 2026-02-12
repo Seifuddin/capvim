@@ -73,14 +73,14 @@ export default function PublishingCounters() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-3xl md:text-4xl font-serif font-extrabold text-gray-900 mb-6"
+          className="text-2xl md:text-4xl font-serif font-extrabold text-gray-900 mb-6"
         >
           Our Achievements in Numbers
         </motion.h2>
 
         <div className="w-24 h-1 bg-blue-800 mx-auto rounded-full mb-6"></div>
 
-        <p className="text-gray-700 text-sm md:text-base max-w-2xl mx-auto mb-10">
+        <p className="text-gray-700 text-base max-w-2xl mx-auto mb-10">
           At <span className="font-semibold text-blue-800">Capvim International Publishers</span>, we are proud of the milestones we've achieved in
           helping authors bring their manuscripts to life.
         </p>

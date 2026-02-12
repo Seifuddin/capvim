@@ -5,7 +5,7 @@ import { PhoneCall } from "lucide-react";
 export default function CustomeCare() {
   return (
     <section
-      className="relative bg-black py-16 bg-[url('/images/how-to-start-a-publishing-company-5.png')] bg-cover bg-center"
+      className="relative bg-black pt-10 bg-[url('/images/how-to-start-a-publishing-company-5.png')] bg-cover bg-center"
     >
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/80"></div>
@@ -17,16 +17,16 @@ export default function CustomeCare() {
         </div>
           */}
         {/* Title */}
-        <h2 className="text-2xl md:text-3xl font-serif font-bold text-white mb-4">
+        <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
           Need any Assistance?
         </h2>
-        <div className="w-24 h-1 bg-yellow-400 mx-auto rounded-full mb-6"></div>
+        <div className="w-24 h-1 bg-green-400 mx-auto rounded-full mb-6"></div>
 
         <p className="text-gray-200 text-base md:text-lg mb10 max-w-2xl mx-auto">
           In case of any assistance or any information from Capvim International Publishers, call us via our telephone number below and our
           team is ready to assist you any time, day or night.
         </p>
-        <p className="text-yellow-400 text-base md:text-lg mb-10 max-w-2xl mx-auto">
+        <p className="text-green-400 text-base md:text-lg mb-10 max-w-2xl mx-auto">
           Tap the button below to make a call
         </p>
 

@@ -71,11 +71,11 @@ export default function PricingPackages() {
             Publishing Packages
           </span>
 
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+          <h2 className="text-2xl md:text-4xl font-bold text-gray-900">
             Flexible Publishing Plans For Every Author
           </h2>
 
-          <p className="mt-4 text-gray-600 text-lg">
+          <p className="mt-4 text-gray-600 text-base">
             Whether you're publishing your first book or launching your next
             bestseller, Capvim International Publishers offers tailored
             packages designed to match your publishing goals.
@@ -109,12 +109,12 @@ export default function PricingPackages() {
               )}
 
               {/* Plan Name */}
-              <h3 className="text-2xl font-bold text-gray-900">
+              <h3 className="text-xl font-bold text-gray-700">
                 {pkg.name}
               </h3>
 
               {/* Price */}
-              <p className="mt-4 text-3xl font-extrabold text-blue-900">
+              <p className="mt-4 text-2xl font-extrabold text-blue-700">
                 {pkg.price}
               </p>
 

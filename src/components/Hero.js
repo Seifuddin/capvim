@@ -53,7 +53,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="text-4xl md:text-6xl font-bold text-white-400"
+          className="text-4xl md:text-6xl font-bold text-green-400"
         >
           {hydrated ? (
             <>
@@ -77,13 +77,13 @@ export default function Hero() {
         >
           <a
             href="/services"
-            className="px-10 py-2 bg-green-400 hover:bg-indigo-700 text-white md:text-lg font-semibold rounded shadow-lg transition transform hover:scale-105"
+            className="px-5 py-2 bg-green-400 hover:bg-indigo-700 text-white md:text-lg font-semibold rounded shadow-lg transition transform hover:scale-105"
           >
             Our Services
           </a>
           <a
             href="/portfolio"
-            className="px-10 py-2 hover:bg-green-700 text-white md:text-lg border border-white font-semibold rounded shadow-lg transition transform hover:scale-105"
+            className="px-5 py-2 hover:bg-green-700 text-white md:text-lg border border-white font-semibold rounded shadow-lg transition transform hover:scale-105"
           >
             Our Portfolio
           </a>

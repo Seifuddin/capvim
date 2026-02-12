@@ -192,10 +192,10 @@ export default function ServicesPage() {
               Our Professional Services
             </span>
 
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
+            <h2 className="text-2xl md:text-4xl font-bold text-gray-900 leading-tight">
               Comprehensive Publishing Solutions 
-              <br className="hidden md:block" />
-               From Manuscript to Marketplace
+              <br className="hidden md-block" />
+               
             </h2>
 
             <p className="mt-4 text-gray-600 text-base">
@@ -249,7 +249,7 @@ export default function ServicesPage() {
                   <div className="mt-auto flex gap-2">
                     <button
                       onClick={() => openRequestModal(service)}
-                      className="flex-1 bg-gradient-to-r from-green-600 to-green-900 text-white px-4 py-2 rounded text-sm font-medium hover:bg-green-700 transition"
+                      className="flex-1 bg-gradient-to-r from-green-600 to-green-900 text-white px-2 py-2 rounded text-sm font-medium hover:bg-green-700 transition"
                     >
                       Request Service
                     </button>
