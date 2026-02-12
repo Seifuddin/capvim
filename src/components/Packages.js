@@ -92,17 +92,17 @@ export default function PricingPackages() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className={`relative rounded-3xl p-8 border transition-all duration-500 flex flex-col
+              className={`relative rounded p-6 border transition-all duration-500 flex flex-col
                 ${
                   pkg.highlighted
-                    ? "bg-white shadow-2xl border-green-600 scale-105"
+                    ? "bg-white shadow-2xl border-blue-800 scale-105"
                     : "bg-white shadow-md border-gray-200 hover:shadow-xl"
                 }`}
             >
 
               {/* Most Popular Badge */}
               {pkg.highlighted && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-green-600 text-white px-4 py-1 rounded-full text-xs font-semibold flex items-center gap-1 shadow-md">
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-blue-600 to-blue-900 text-white px-4 py-1 rounded-full text-xs font-semibold flex items-center gap-1 shadow-md">
                   <Star className="w-4 h-4" />
                   Most Popular
                 </div>
@@ -114,7 +114,7 @@ export default function PricingPackages() {
               </h3>
 
               {/* Price */}
-              <p className="mt-4 text-3xl font-extrabold text-green-700">
+              <p className="mt-4 text-3xl font-extrabold text-blue-900">
                 {pkg.price}
               </p>
 
@@ -132,7 +132,7 @@ export default function PricingPackages() {
               <ul className="mt-6 space-y-3 flex-grow">
                 {pkg.features.map((feature, i) => (
                   <li key={i} className="flex items-start gap-2 text-sm text-gray-700">
-                    <CheckCircle className="w-5 h-5 text-green-600 mt-0.5" />
+                    <CheckCircle className="w-5 h-5 text-blue-800 mt-0.5" />
                     {feature}
                   </li>
                 ))}
@@ -140,11 +140,11 @@ export default function PricingPackages() {
 
               {/* CTA */}
               <button
-                className={`mt-8 py-3 rounded-xl font-medium transition duration-300
+                className={`mt-8 py-2 rounded font-medium transition duration-300
                   ${
                     pkg.highlighted
-                      ? "bg-green-600 text-white hover:bg-green-700 shadow-md"
-                      : "border border-green-600 text-green-700 hover:bg-green-50"
+                      ? "bg-gradient-to-r from-blue-600 to-blue-900 text-white hover:bg-green-700 shadow-md"
+                      : "border border-blue-600 text-blue-700 hover:bg-blue-50"
                   }`}
               >
                 Get Started
@@ -159,7 +159,7 @@ export default function PricingPackages() {
           <p className="text-gray-600">
             Not sure which package fits your publishing goals?
           </p>
-          <button className="mt-4 bg-green-600 text-white px-8 py-3 rounded-xl font-medium hover:bg-green-700 transition shadow-md">
+          <button className="mt-4 bg-gradient-to-r from-green-600 to-green-900 text-white px-8 py-2 rounded font-medium hover:bg-green-700 transition shadow-md">
             Request Custom Consultation
           </button>
         </div>

@@ -35,7 +35,7 @@ export default function Hero() {
   }, [displayText, hydrated, currentWordIndex]);
 
   return (
-    <section className="relative min-h-screen bg-black/80 overflow-hidden flex items-center justify-center text-center">
+    <section className="relative bg-black/80 pt-10 overflow-hidden flex items-center justify-center text-center">
       {/* Background Image */}
       <div className="absolute inset-0 opacity-50">
         <Image
@@ -48,12 +48,12 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 space-y-6 px-4">
+      <div className="relative z-10 space-y-6 py-20 px-6">
         <motion.h1
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="text-4xl md:text-6xl font-bold text-white"
+          className="text-4xl md:text-6xl font-bold text-white-400"
         >
           {hydrated ? (
             <>
@@ -65,7 +65,7 @@ export default function Hero() {
           )}
         </motion.h1>
 
-        <p className="text-lg md:text-xl text-white font-medium animate-fade-in">
+        <p className="text-base md:text-xl text-white font-medium animate-fade-in">
           We help authors, thinkers, and creators publish meaningful content that makes an impact.
         </p>
 
@@ -77,13 +77,13 @@ export default function Hero() {
         >
           <a
             href="/services"
-            className="px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white text-lg font-semibold rounded-3xl shadow-lg transition transform hover:scale-105"
+            className="px-10 py-2 bg-green-400 hover:bg-indigo-700 text-white md:text-lg font-semibold rounded shadow-lg transition transform hover:scale-105"
           >
             Our Services
           </a>
           <a
             href="/portfolio"
-            className="px-6 py-3 bg-green-600 hover:bg-green-700 text-white text-lg font-semibold rounded-3xl shadow-lg transition transform hover:scale-105"
+            className="px-10 py-2 hover:bg-green-700 text-white md:text-lg border border-white font-semibold rounded shadow-lg transition transform hover:scale-105"
           >
             Our Portfolio
           </a>

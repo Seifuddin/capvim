@@ -90,7 +90,7 @@ const Why = () => {
     <div>
       {/* WHY CHOOSE US */}
       <section className="py-20 bg-green-50 text-gray-800 overflow-x-hidden">
-        <div className="max-w-6xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-14">
             <motion.div
               initial={{ opacity: 0, y: 50 }}
@@ -98,7 +98,7 @@ const Why = () => {
               transition={{ duration: 1 }}
               className="relative"
             >
-              <h2 className="text-4xl font-bold mb-4 text-green-700">Why Choose Us</h2>
+              <h2 className="text-4xl font-bold mb-4 text-black">Why Choose Us</h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
                 Discover what makes us a trusted partner in publishing exceptional content that informs, inspires, and endures.
               </p>
@@ -111,7 +111,7 @@ const Why = () => {
               <img
                 src="/images/100-Your-Ownership.webp"
                 alt="Why Choose Us"
-                className="relative rounded-lg w-full h-[250px] md:h-[400px] lg:h-[400px]"
+                className="relative rounded w-full h-[350px] md:h-[450px] lg:h-[500px]"
               />
             </motion.div>
 
@@ -126,12 +126,12 @@ const Why = () => {
                 <motion.div
                   key={idx}
                   whileHover={{ scale: 1.03 }}
-                  className="bg-white/60 flex items-start gap-4 cursor-pointer hover:bg-indigo-50 p-2 rounded-lg shadow-sm transition-transform duration-300"
+                  className="bg-white flex items-start gap-4 cursor-pointer hover:bg-indigo-50 p-2 border border-gray-300 rounded shadow-sm transition-transform duration-300"
                   onClick={() => handleFeatureClick(item)}
                 >
-                  <div className="bg-green-700 p-2 rounded-full">{item.icon}</div>
+                  <div className="bg-gradient-to-r from-green-600 to-green-900 p-2 rounded">{item.icon}</div>
                   <div>
-                    <h4 className="text-xl font-semibold mb-1">{item.title}</h4>
+                    <h4 className="md:text-lg text-blue-900 font-semibold mb-1">{item.title}</h4>
                     <p className="text-gray-600">{item.desc}</p>
                   </div>
                 </motion.div>
@@ -167,7 +167,7 @@ const Why = () => {
               transition={{ duration: 1 }}
               className="relative"
             >
-              <h2 className="text-4xl font-bold mb-4 text-green-700">What Our Clients Say</h2>
+              <h2 className="text-4xl font-bold mb-4 text-black">What Our Clients Say</h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
                 Hear from the authors and organizations we've had the pleasure of working with.
               </p>
@@ -207,15 +207,15 @@ const Why = () => {
           >
             {testimonials.map((testimonial, idx) => (
               <SwiperSlide key={idx}>
-                <motion.div whileHover={{ scale: 1.02 }} className="bg-white borde p-6 rounded-xl shadow-lg text-center h-full">
+                <motion.div whileHover={{ scale: 1.02 }} className="bg-white border border-gray-300 p-6 rounded shadow-lg text-center h-full">
                   <img
                     src={testimonial.image}
                     alt={testimonial.author}
-                    className="w-16 h-16 mx-auto rounded-full mb-4 object-cover shadow-md"
+                    className="hidden w-16 h-16 mx-auto rounded-full mb-4 object-cover shadow-md"
                   />
-                  <Quote className="w-6 h-6 text-indigo-500 mx-auto mb-2" />
+                  <Quote className="w-6 h-6 text-blue-900 mx-auto mb-2" />
                   <p className="italic text-gray-700 mb-4">"{testimonial.quote}"</p>
-                  <p className="font-semibold text-indigo-700">{testimonial.author}</p>
+                  <p className="font-semibold text-blue-900">{testimonial.author}</p>
                 </motion.div>
               </SwiperSlide>
             ))}

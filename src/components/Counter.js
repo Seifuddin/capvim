@@ -25,7 +25,7 @@ const AnimatedCounter = ({ from = 0, to }) => {
   }, [isInView, to, count]);
 
   return (
-    <span className="text-lg md:text-2xl font-serif font-bold text-green-600">
+    <span className="text-lg md:text-2xl font-serif font-bold text-blue-900">
       {value.toLocaleString()}+
     </span>
   );
@@ -37,25 +37,25 @@ const stats = [
     icon: BookOpen,
     label: "Books Published",
     value: 1200,
-    color: "text-green-600",
+    color: "text-white",
   },
   {
     icon: PenTool,
     label: "Manuscripts Edited",
     value: 3500,
-    color: "text-green-600",
+    color: "text-white",
   },
   {
     icon: Globe,
     label: "Countries Reached",
     value: 25,
-    color: "text-green-600",
+    color: "text-white",
   },
   {
     icon: Printer,
     label: "Prints Completed",
     value: 45000,
-    color: "text-green-600",
+    color: "text-white",
   },
 ];
 
@@ -78,10 +78,10 @@ export default function PublishingCounters() {
           Our Achievements in Numbers
         </motion.h2>
 
-        <div className="w-24 h-1 bg-green-600 mx-auto rounded-full mb-6"></div>
+        <div className="w-24 h-1 bg-blue-800 mx-auto rounded-full mb-6"></div>
 
         <p className="text-gray-700 text-sm md:text-base max-w-2xl mx-auto mb-10">
-          At <span className="font-semibold text-green-700">Capvim International Publishers</span>, we are proud of the milestones we've achieved in
+          At <span className="font-semibold text-blue-800">Capvim International Publishers</span>, we are proud of the milestones we've achieved in
           helping authors bring their manuscripts to life.
         </p>
 
@@ -97,10 +97,10 @@ export default function PublishingCounters() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ scale: 1.05 }}
-                className="bg-white/30 backdrop-blur-md border border-white/20 p-5 xs:p-6 sm:p-7 rounded-xl flex flex-col items-center"
+                className="bg-white/30 backdrop-blur-md border border-gray-300 p-5 xs:p-6 sm:p-7 rounded flex flex-col items-center"
               >
                 {/* Icon */}
-                <div className="w-12 h-12 flex items-center justify-center bg-gradient-to-r from-green-400 to-green-600 p-3 rounded-full shadow-md border border-white/10">
+                <div className="w-10 h-10 flex items-center justify-center bg-gradient-to-r from-green-600 to-green-900 p-2 rounded shadow-md border border-white/10">
                   <Icon className={`${stat.color} w-6 h-6`} />
                 </div>
 

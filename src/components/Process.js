@@ -94,13 +94,13 @@ export default function PublishingProcess() {
                 }`}
               >
                 {/* Icon Circle */}
-                <div className="absolute left-0 md:left-auto md:right-[-20px] top-2 w-10 h-10 bg-green-600 text-white flex items-center justify-center rounded-full shadow-lg z-10">
+                <div className="absolute left-0 md:left-auto md:right-[-20px] top-2 w-10 h-10 bg-gradient-to-r from-green-600 to-green-900 text-white flex items-center justify-center rounded shadow-lg z-10">
                   {item.icon}
                 </div>
 
                 {/* Card */}
-                <div className="bg-gray-50 p-6 rounded-2xl shadow-md border border-gray-100 ml-16 md:ml-0 hover:shadow-xl transition duration-500">
-                  <h3 className="text-xl font-semibold text-green-700">
+                <div className="bg-gray-50 p-6 rounded shadow-md border border-gray-300 ml-16 md:ml-0 hover:shadow-xl transition duration-500">
+                  <h3 className="text-xl font-semibold text-blue-900">
                     {item.title}
                   </h3>
                   <p className="mt-3 text-gray-600 text-sm leading-relaxed">
@@ -114,7 +114,7 @@ export default function PublishingProcess() {
 
         {/* CTA */}
         <div className="text-center mt-16">
-          <button className="bg-green-600 text-white px-8 py-3 rounded-xl font-medium hover:bg-green-700 transition duration-300 shadow-md">
+          <button className="bg-gradient-to-r from-green-600 to-green-900 text-white px-6 py-2 rounded font-medium hover:bg-green-700 transition duration-300 shadow-md">
             Start Your Publishing Journey
           </button>
         </div>

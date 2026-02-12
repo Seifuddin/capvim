@@ -50,12 +50,12 @@ export default function DidYouKnow() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: index * 0.1 }}
             viewport={{ once: true }}
-            className="bg-white p-6 rounded-2xl shadow-md flex flex-col items-start gap-3 hover:shadow-xl transition duration-300"
+            className="bg-white p-6 rounded border border-gray-300 shadow-md flex flex-col items-start gap-3 hover:shadow-xl transition duration-300"
           >
-            <div className="bg-green-700 p-3 rounded-full">
+            <div className="bg-gradient-to-r from-green-600 to-green-900 p-2 rounded">
               {fact.icon}
             </div>
-            <h3 className="text-lg font-semibold text-green-700">
+            <h3 className="md:text-lg font-semibold text-blue-900">
               {fact.title}
             </h3>
             <p className="text-gray-600 text-sm">{fact.description}</p>

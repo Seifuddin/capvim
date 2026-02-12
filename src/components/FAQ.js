@@ -33,7 +33,7 @@ const faqs = [
   {
     question: "Can you help with book cover design?",
     answer:
-      "WAbsolutely! Our design team works closely with authors to create compelling and professional book covers.",
+      "Absolutely! Our design team works closely with authors to create compelling and professional book covers.",
   },
 ];
 

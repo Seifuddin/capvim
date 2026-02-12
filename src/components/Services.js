@@ -23,7 +23,7 @@ const services = [
     title: "Book Publishing",
     description:
       "We transform your manuscript into a professionally published book including ISBN registration, interior formatting, cover production, printing coordination, and distribution strategy.",
-    icon: <BookOpen className="w-6 h-6 text-green-700" />,
+    icon: <BookOpen className="w-8 h-8 rounded text-white p-2 bg-gradient-to-r from-green-600 to-green-900" />,
     image: "/images/bookpublishing.jpg.webp",
     pricing:
       "Pricing depends on manuscript length, formatting complexity, printing volume, and distribution scope. Contact us for a tailored quote.",
@@ -32,7 +32,7 @@ const services = [
     title: "Editing & Proofreading",
     description:
       "Our experienced editors refine your manuscript for clarity, grammar accuracy, structure, tone consistency, and professional publishing standards.",
-    icon: <PenTool className="w-6 h-6 text-green-700" />,
+    icon: <PenTool className="w-8 h-8 rounded text-white p-2 bg-gradient-to-r from-green-600 to-green-900" />,
     image: "/images/editing-service-editor.webp",
     pricing:
       "Costs vary depending on word count and editing depth (developmental, line editing, proofreading). Contact us for assessment.",
@@ -41,7 +41,7 @@ const services = [
     title: "Cover Design & Layout",
     description:
       "We design compelling book covers and professionally formatted interiors that reflect your genre, audience, and publishing goals.",
-    icon: <ImagePlus className="w-6 h-6 text-green-700" />,
+    icon: <ImagePlus className="w-8 h-8 rounded text-white p-2 bg-gradient-to-r from-green-600 to-green-900" />,
     image:
       "/images/orange-color-scheme-city-background-business-book-cover-design-template-brochure-flyer-layout-annual-report-magazine-108070657.webp",
     pricing:
@@ -51,7 +51,7 @@ const services = [
     title: "e-Book Creation",
     description:
       "We convert your manuscript into optimized eBook formats (EPUB, MOBI, PDF) compatible with major global digital platforms.",
-    icon: <FileText className="w-6 h-6 text-green-700" />,
+    icon: <FileText className="w-8 h-8 rounded text-white p-2 bg-gradient-to-r from-green-600 to-green-900" />,
     image:
       "/images/open-pages-book-e-book-online-learning-graphic-concept_53876-127665.avif",
     pricing:
@@ -61,7 +61,7 @@ const services = [
     title: "Printing & Distribution",
     description:
       "High-quality printing solutions with strategic distribution channels to ensure your book reaches local and international readers.",
-    icon: <Printer className="w-6 h-6 text-green-700" />,
+    icon: <Printer className="w-8 h-8 rounded text-white p-2 bg-gradient-to-r from-green-600 to-green-900" />,
     image: "/images/Woman-scanning-paper-files-1024x683.webp",
     pricing:
       "Printing cost depends on page count, paper type, binding style, and quantity.",
@@ -70,7 +70,7 @@ const services = [
     title: "Publishing Consultation",
     description:
       "Strategic publishing guidance covering market positioning, publishing models, timelines, and author branding.",
-    icon: <HelpCircle className="w-6 h-6 text-green-700" />,
+    icon: <HelpCircle className="w-8 h-8 rounded text-white p-2 bg-gradient-to-r from-green-600 to-green-900" />,
     image: "/images/classe_5SqEkiJ.original.format-webp-lossless.webp",
     pricing:
       "Consultation fees depend on session duration and scope of advisory support required.",
@@ -85,7 +85,7 @@ const PricingModal = ({ service, isOpen, onClose }) => (
   <Dialog open={isOpen} onClose={onClose} className="relative z-50">
     <div className="fixed inset-0 bg-black/40 backdrop-blur-sm" />
     <div className="fixed inset-0 flex items-center justify-center p-4">
-      <Dialog.Panel className="bg-white p-8 rounded-2xl max-w-lg w-full shadow-2xl">
+      <Dialog.Panel className="bg-white p-8 rounded max-w-lg w-full shadow-2xl">
         <Dialog.Title className="text-2xl font-bold text-green-700">
           {service?.title} Pricing
         </Dialog.Title>
@@ -136,14 +136,14 @@ const RequestModal = ({ service, isOpen, onClose }) => (
           <div className="flex gap-3">
             <button
               type="button"
-              className="flex-1 bg-gray-200 py-2 rounded-lg"
+              className="flex-1 bg-gradient-to-r from-red-600 to-red-900 py-2 rounded"
               onClick={onClose}
             >
               Cancel
             </button>
             <button
               type="submit"
-              className="flex-1 bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition"
+              className="flex-1 bg-gradient-to-r from-green-600 to-green-900 text-white py-2 rounded hover:bg-green-700 transition"
             >
               Submit Request
             </button>
@@ -183,22 +183,22 @@ export default function ServicesPage() {
         />
       </Head>
 
-      <section className="bg-green-50 py-20 px-4">
+      <section className="bg-green-50 py-20 px-6">
         <div className="max-w-7xl mx-auto">
 
           {/* SECTION HEADER */}
-          <div className="max-w-3xl mx-auto text-center mb-16">
+          <div className="max-w-5xl mx-auto text-center mb-16">
             <span className="inline-block bg-green-100 text-green-700 px-4 py-1 rounded-full text-sm font-medium mb-4">
               Our Professional Services
             </span>
 
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
-              Comprehensive Publishing Solutions
+              Comprehensive Publishing Solutions 
               <br className="hidden md:block" />
-              From Manuscript to Marketplace
+               From Manuscript to Marketplace
             </h2>
 
-            <p className="mt-4 text-gray-600 text-lg">
+            <p className="mt-4 text-gray-600 text-base">
               At Capvim International Publishers, we provide end-to-end
               publishing solutions designed to transform your manuscript into
               a professionally published and globally distributed book.
@@ -217,9 +217,9 @@ export default function ServicesPage() {
               <motion.div
                 key={index}
                 whileHover={{ y: -6 }}
-                className="group bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500 overflow-hidden flex flex-col border border-gray-100"
+                className="group bg-white rounded shadow-md hover:shadow-2xl transition-all duration-500 overflow-hidden flex flex-col border border-gray-300"
               >
-                <div className="relative w-full h-52">
+                <div className="relative w-full h-44 md:h-52">
                   <Image
                     src={service.image}
                     alt={service.title}
@@ -231,7 +231,7 @@ export default function ServicesPage() {
                 <div className="p-6 flex flex-col flex-grow">
                   <div className="flex items-center gap-2 mb-3">
                     {service.icon}
-                    <h3 className="text-xl font-semibold text-green-700">
+                    <h3 className="md:text-xl font-semibold text-blue-900">
                       {service.title}
                     </h3>
                   </div>
@@ -240,7 +240,7 @@ export default function ServicesPage() {
                     {service.description}
                   </p>
 
-                  <ul className="text-xs text-gray-500 space-y-1 mb-6">
+                  <ul className="hidden text-xs text-gray-500 space-y-1 mb-6">
                     <li>✔ Professional industry standards</li>
                     <li>✔ Experienced publishing team</li>
                     <li>✔ Transparent communication</li>
@@ -249,14 +249,14 @@ export default function ServicesPage() {
                   <div className="mt-auto flex gap-2">
                     <button
                       onClick={() => openRequestModal(service)}
-                      className="flex-1 bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition"
+                      className="flex-1 bg-gradient-to-r from-green-600 to-green-900 text-white px-4 py-2 rounded text-sm font-medium hover:bg-green-700 transition"
                     >
                       Request Service
                     </button>
 
                     <button
                       onClick={() => openPricingModal(service)}
-                      className="flex-1 border border-green-600 text-green-700 px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-50 transition"
+                      className="flex-1 border border-green-600 text-green-700 px-4 py-2 rounded text-sm font-medium hover:bg-green-50 transition"
                     >
                       View Pricing
                     </button>
