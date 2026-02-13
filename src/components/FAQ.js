@@ -49,9 +49,9 @@ export default function FAQ() {
       <div className="max-w-4xl mx-auto px-6">
         {/* Section Heading */}
         <div className="text-center mb-12">
-          <p className="text-sm uppercase tracking-wide font-semibold text-blue-700 mb-2">
-            questions and answers
-          </p>
+         <span className="inline-block bg-green-200 text-green-700 px-4 py-1 rounded-full text-sm font-medium mb-4">
+            Questions And Answers
+          </span>
           <h2 className="text-2xl md:text-4xl fontserif font-bold text-gray-900 mb-4">
             Frequently Asked Questions
           </h2>
@@ -59,7 +59,7 @@ export default function FAQ() {
                       initial={{ width: 0 }}
                       whileInView={{ width: "5rem" }}
                       transition={{ duration: 0.5 }}
-                      className="h-1 bg-blue-700 rounded-full mx-auto mb-6"
+                      className="h-1 bg-green-200 rounded-full mx-auto my-3"
                     ></motion.div>
           <p className="mt-2 text-gray-600 max-w-2xl mx-auto font-medium text-center md:text-lg mb-6">
             Have questions? We’ve got answers. Learn more about how we work and how you can get involved.

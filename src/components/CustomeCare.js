@@ -5,18 +5,21 @@ import { PhoneCall } from "lucide-react";
 export default function CustomeCare() {
   return (
     <section
-      className="relative bg-black pt-10 bg-[url('/images/how-to-start-a-publishing-company-5.png')] bg-cover bg-center"
+      className="relative bg-black py-10 bg-[url('/images/how-to-start-a-publishing-company-5.png')] bg-cover bg-center"
     >
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/80"></div>
 
-      <div className="relative max-w-5xl mx-auto px-6 lg:px-8 flex flex-col items-center text-center">
+      <div className="relative max-w-7xl mx-auto px-6 lg:px-8 flex flex-col items-center text-center">
         {/* Icon 
         <div className="mb-6 flex items-center justify-center w-20 h-20 rounded-full bg-blue-100">
           <PhoneCall className="w-10 h-10 text-blue-900" />
         </div>
           */}
         {/* Title */}
+        <span className="inline-block bg-green-400 text-black px-4 py-1 rounded-full text-sm font-medium mb-4">
+              Reach To Us
+            </span>
         <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
           Need any Assistance?
         </h2>
@@ -33,12 +36,15 @@ export default function CustomeCare() {
           {/* className="inline-block bg-green-500 text-white -900 font-serif font-semibold px-8 py-2 rounded-full shadow-lg hover:bg-blue-100 transition" */}
         {/* Call Button  */}
         <a
-          href="tel:+254111608331"
+          href="tel:+254728240931"
         >
           <div className="mb-6 flex items-center justify-center w-14 h-14 rounded-full bg-green-500">
           <PhoneCall className="w-7 h-7 text-white" />
         </div>
         </a>
+        <h2 className="text-xl md:text-2xl font-semibold text-white">
+          +254 728 240 931
+        </h2>
       </div>
     </section>
   );

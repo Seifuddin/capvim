@@ -11,6 +11,7 @@ import SubAboutUs from "@/components/SubaboutUs";
 import Who from "@/components/Who";
 import Hero from "@/components/Hero";
 import CustomeCare from "@/components/CustomeCare";
+import Assistance from "@/components/Assistance";
 
 export const metadata = {
   title: 'Capvim Publishers | Book Publishing Experts in Kenya',
@@ -56,11 +57,11 @@ export default function Home() {
       <Hero />
       <DidYouKnow />
       <HeroSection />
-      <PublishingCounters />
       <OurServices />
       <CustomeCare />
       <PublishingProcess />
       <PricingPackages />
+      <Assistance />
       <FAQ />
       <Why />
     </main>

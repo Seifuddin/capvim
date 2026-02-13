@@ -19,20 +19,23 @@ export default function HeroSection() {
           initial={{ opacity: 0, x: -40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7 }}
-          className="text-center md:text-left md:w-1/2"
+          className="text-centermd: text-left md:w-1/2"
         >
-          <h1 className="text-2xl md:text-4xl text-green-400 font-bold leading-tight mb-4">
+          <span className="inline-block bg-green-400 text-blue-800 px-4 py-1 rounded-full text-sm font-medium mb-4">
+              What We Do
+            </span>
+          <h1 className="text-2xl md:text-4xl text-white font-bold leading-tight mb-4">
             Transform Ideas {" "}
-            <span className="text-white">into Books...</span>
+            <span className="text-green-400">into Books...</span>
           </h1>
-        <div className="w-24 h-1 bg-white mx-auto md:mx-0 rounded-full mb-6"></div>
+        <div className="w-24 h-1 bg-green-400 mx-automd:mx-0 rounded-full mb-6"></div>
 
 
           <p className="mt-6 text-base md:text-xl text-gray-200">
             We help authors, thinkers, and creators publish meaningful content that makes an impact. A Trusted Partner in Publishing — From Vision to Volume.
           </p>
 
-          <div className="mt-8 flex flex-col sm:flex-row sm:justify-center md:justify-start gap-4">
+          <div className="mt-8 flex flex-wrap justifycenter gap-4">
             <Link
               href="/services"
               className="px-10 py-2 fontserif bg-green-400 text-indigo-900 rounded-md shadow-md fontsemibold hover:bg-yellow-500 transition"

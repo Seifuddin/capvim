@@ -89,8 +89,8 @@ const Why = () => {
   return (
     <div>
       {/* WHY CHOOSE US */}
-      <section className="py-20 bg-green-50 text-gray-800 overflow-x-hidden">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="py-20 bg-green-50 px-6 text-gray-800 overflow-x-hidden">
+        <div className="max-w-7xl mx-auto">
           <div className="text-center mb-14">
             <motion.div
               initial={{ opacity: 0, y: 50 }}
@@ -98,7 +98,12 @@ const Why = () => {
               transition={{ duration: 1 }}
               className="relative"
             >
+              <span className="inline-block bg-green-200 text-green-700 px-4 py-1 rounded-full text-sm font-medium mb-4">
+            Why Us
+          </span>
               <h2 className="text-2xl md:text-4xl font-bold mb-4 text-black">Why Choose Us</h2>
+            <div className="w-24 h-1 bg-green-200 mx-auto rounded-full my-3"></div>
+
               <p className="text-gray-600 max-w-2xl mx-auto">
                 Discover what makes us a trusted partner in publishing exceptional content that informs, inspires, and endures.
               </p>
@@ -158,8 +163,8 @@ const Why = () => {
       </section>
 
       {/* TESTIMONIALS */}
-      <section className="py-20 bg-green-50 text-gray-800">
-        <div className="max-w-6xl mx-auto px-6">
+      <section className="py-20 bg-green-50 px-6 text-gray-800">
+        <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <motion.div
               initial={{ opacity: 0, y: 50 }}
@@ -167,7 +172,11 @@ const Why = () => {
               transition={{ duration: 1 }}
               className="relative"
             >
+              <span className="inline-block bg-green-200 text-green-700 px-4 py-1 rounded-full text-sm font-medium mb-4">
+            Client Testimonials
+          </span>
               <h2 className="text-2xl md:text-4xl font-bold mb-4 text-black">What Our Clients Say</h2>
+              <div className="w-24 h-1 bg-green-200 mx-auto rounded-full my-3"></div>
               <p className="text-gray-600 max-w-2xl mx-auto">
                 Hear from the authors and organizations we've had the pleasure of working with.
               </p>
@@ -211,11 +220,11 @@ const Why = () => {
                   <img
                     src={testimonial.image}
                     alt={testimonial.author}
-                    className="w-16 h-16 mx-auto rounded-full mb-4 object-cover shadow-md"
+                    className="w-16 h-16 mx-auto border border-green-300 rounded-full mb-4 object-cover shadow-md"
                   />
                   <Quote className="w-6 h-6 text-green-700 mx-auto mb-2" />
                   <p className="italic text-gray-700 mb-4">"{testimonial.quote}"</p>
-                  <p className="font-semibold text-blue-900">{testimonial.author}</p>
+                  <p className="inline-block bg-green-50 text-green-700 px-4 py-1 rounded-full text-sm font-medium mb-4">{testimonial.author}</p>
                 </motion.div>
               </SwiperSlide>
             ))}

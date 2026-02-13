@@ -13,8 +13,8 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="bg-white fixed w-full top-0 left-0 z-50 shadow-lg border-b-2 border-b-orange-500">
-      <div className="max-w-screen-xl mx-auto px-4 py-4">
+    <nav className="bg-green-50 fixed w-full top-0 left-0 z-50 shadow-lg border-b-2border-b-green-700/30">
+      <div className="max-w-screen-xl mx-auto px-4 py-3.5">
         <div className="flex justify-between items-center">
           <div className="flex text-white font-bold text-xl tracking-wide">
             <motion.div

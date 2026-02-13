@@ -62,18 +62,19 @@ export default function PricingPackages() {
   ];
 
   return (
-    <section className="bg-green-50 py-24 px-4">
+    <section className="bg-green-50 pb-24 px-6">
       <div className="max-w-7xl mx-auto">
 
         {/* HEADER */}
         <div className="max-w-3xl mx-auto text-center mb-20">
-          <span className="inline-block bg-green-100 text-green-700 px-4 py-1 rounded-full text-sm font-medium mb-4">
+          <span className="inline-block bg-green-200 text-green-700 px-4 py-1 rounded-full text-sm font-medium mb-4">
             Publishing Packages
           </span>
 
           <h2 className="text-2xl md:text-4xl font-bold text-gray-900">
             Flexible Publishing Plans For Every Author
           </h2>
+          <div className="w-24 h-1 bg-green-200 mx-auto rounded-full mt-3"></div>
 
           <p className="mt-4 text-gray-600 text-base">
             Whether you're publishing your first book or launching your next
@@ -95,7 +96,7 @@ export default function PricingPackages() {
               className={`relative rounded p-6 border transition-all duration-500 flex flex-col
                 ${
                   pkg.highlighted
-                    ? "bg-white shadow-2xl border-blue-800 scale-105"
+                    ? "bg-white shadow-2xl border-green-800 scale-105"
                     : "bg-white shadow-md border-gray-200 hover:shadow-xl"
                 }`}
             >
@@ -119,7 +120,7 @@ export default function PricingPackages() {
               </p>
 
               {/* Timeline Badge */}
-              <div className="mt-3 inline-flex items-center gap-2 bg-green-50 text-green-700 px-3 py-1 rounded-full text-xs font-medium w-fit">
+              <div className="mt-3 inline-flex items-center gap-2 bg-green-200 text-green-700 px-3 py-1 rounded-full text-xs font-medium w-fit">
                 <Clock className="w-4 h-4" />
                 Estimated Timeline: {pkg.timeline}
               </div>
@@ -143,8 +144,8 @@ export default function PricingPackages() {
                 className={`mt-8 py-2 rounded font-medium transition duration-300
                   ${
                     pkg.highlighted
-                      ? "bg-gradient-to-r from-blue-600 to-blue-900 text-white hover:bg-green-700 shadow-md"
-                      : "border border-blue-600 text-blue-700 hover:bg-blue-50"
+                      ? "bg-gradient-to-r from-green-600 to-green-900 text-white hover:bg-green-700 shadow-md"
+                      : "border border-green-600 text-green-700 bg-green-50 hover:bg-blue-50"
                   }`}
               >
                 Get Started
@@ -155,7 +156,7 @@ export default function PricingPackages() {
         </div>
 
         {/* Bottom CTA */}
-        <div className="text-center mt-20">
+        <div className="hidden text-center mt-20">
           <p className="text-gray-600">
             Not sure which package fits your publishing goals?
           </p>

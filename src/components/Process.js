@@ -56,13 +56,14 @@ export default function PublishingProcess() {
 
         {/* HEADER */}
         <div className="max-w-3xl mx-auto text-center mb-20">
-          <span className="inline-block bg-emerald-100 text-emerald-700 px-4 py-1 rounded-full text-sm font-medium mb-4">
+          <span className="inline-block bg-green-200 text-green-700 px-4 py-1 rounded-full text-sm font-medium mb-4">
             Our Publishing Process
           </span>
 
           <h2 className="text-2xl md:text-4xl font-bold text-gray-900 leading-tight">
             Your Journey From Idea to Published Book
           </h2>
+          <div className="w-24 h-1 bg-green-200 mx-auto rounded-full mt-3"></div>
 
           <p className="mt-4 text-gray-600 text-base">
             At Capvim International Publishers, we follow a structured,

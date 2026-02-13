@@ -63,22 +63,25 @@ export default function PublishingCounters() {
   return (
     <section className="relative bg-green-50 px-6 pt-20 pb-10 overflow-hidden">
       {/* Background Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-green-100/40 via-green-50/90 to-green-100/70 z-0"></div>
-      <div className="absolute inset-0 bg-[url('/images/pattern.png')] opacity-5 bg-cover bg-center z-0"></div>
+      <div className="hidden absolute inset-0 bg-gradient-to-br from-green-100/40 via-green-50/90 to-green-100/70 z-0"></div>
+      <div className="hidden absolute inset-0 bg-[url('/images/pattern.png')] opacity-5 bg-cover bg-center z-0"></div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 text-center z-10">
+      <div className="relative max-w-7xl mx-auto text-center z-10">
         {/* Heading */}
+        <span className="inline-block bg-green-200 text-green-700 px-4 py-1 rounded-full text-sm font-medium mb-4">
+              Our Impact
+            </span>
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-2xl md:text-4xl font-extrabold text-gray-900 mb-6"
+          className="text-2xl md:text-4xl font-extrabold text-gray-900 mb-3"
         >
           Our Achievements in Numbers
         </motion.h2>
 
-        <div className="w-24 h-1 bg-blue-800 mx-auto rounded-full mb-6"></div>
+        <div className="w-24 h-1 bg-green-200 mx-auto rounded-full mb-6"></div>
 
         <p className="text-gray-700 text-base max-w-2xl mx-auto mb-10">
           At <span className="font-semibold text-blue-800">Capvim International Publishers</span>, we are proud of the milestones we've achieved in

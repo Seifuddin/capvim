@@ -188,7 +188,7 @@ export default function ServicesPage() {
 
           {/* SECTION HEADER */}
           <div className="max-w-5xl mx-auto text-center mb-16">
-            <span className="inline-block bg-green-100 text-green-700 px-4 py-1 rounded-full text-sm font-medium mb-4">
+            <span className="inline-block bg-green-200 text-green-700 px-4 py-1 rounded-full text-sm font-medium mb-4">
               Our Professional Services
             </span>
 
@@ -197,6 +197,7 @@ export default function ServicesPage() {
               <br className="hidden md-block" />
                
             </h2>
+            <div className="w-24 h-1 bg-green-200 mx-auto rounded-full mt-3"></div>
 
             <p className="mt-4 text-gray-600 text-base">
               At Capvim International Publishers, we provide end-to-end
