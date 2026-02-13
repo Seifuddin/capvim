@@ -46,7 +46,7 @@ export default function Assistance() {
           {/* Phone Call Button */}
           <a
             href="tel:+254728240931"
-            className="flex items-center gap-2 bg-green-600 border border-white/20 hover:bg-green-700 px-6 py-3 rounded-2xl shadow-lg transition transform hover:scale-105"
+            className="flex items-center gap-2 bg-green-600 border border-white/20 hover:bg-green-700 px-6 py-2 rounded shadow-lg transition transform hover:scale-105"
           >
             <Phone className="w-5 h-5 text-white" />
             <span className="font-medium text-white">Call Us</span>
@@ -57,7 +57,7 @@ export default function Assistance() {
             href="https://wa.me/+254728240931"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 bg-emerald-500 border border-white/20 hover:bg-emerald-600 px-6 py-3 rounded-2xl shadow-lg transition transform hover:scale-105"
+            className="flex items-center gap-2 bg-emerald-500 border border-white/20 hover:bg-emerald-600 px-6 py-2 rounded shadow-lg transition transform hover:scale-105"
           >
             <MessageCircle className="w-5 h-5 text-white" />
             <span className="font-medium text-white">WhatsApp</span>
@@ -66,7 +66,7 @@ export default function Assistance() {
           {/* Email Button */}
           <a
             href="mailto:info@lapsafamilyhospital.com"
-            className="hidden flex items-center gap-2 bg-blue-900 border border-white/20 hover:bg-red-700 px-6 py-3 rounded-2xl shadow-lg transition transform hover:scale-105"
+            className="hidden flex items-center gap-2 bg-blue-900 border border-white/20 hover:bg-red-700 px-6 py-2 rounded shadow-lg transition transform hover:scale-105"
           >
             <Mail className="w-5 h-5 text-yellow-400" />
             <span className="font-medium text-yellow-400">Email Us</span>
