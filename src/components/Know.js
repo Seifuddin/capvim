@@ -16,14 +16,14 @@ export default function DidYouKnow() {
       title: "Over 2,000 Manuscripts Reviewed",
       description:
         "Capvim International Publishers has evaluated and guided thousands of authors to success.",
-      image: "/images/Distribution.jpg",
+      image: "/images/67192215f50047d93f2c6d14_priscilla-du-preez-XkKCui44iM0-unsplash.webp",
     },
     {
       icon: <PenTool className="w-5 h-5 text-white" />,
       title: "Professional Editing",
       description:
         "Every manuscript goes through professional editing and proofreading to ensure high-quality publications.",
-      image: "/images/Distribution.jpg",
+      image: "/images/review.avif",
     },
     {
       icon: <Printer className="w-5 h-5 text-white" />,
@@ -37,13 +37,13 @@ export default function DidYouKnow() {
       title: "Digital & Print",
       description:
         "We make sure your book is available in both print and digital formats to maximize reach.",
-      image: "/images/Distribution.jpg",
+      image: "/images/stack.webp",
     },
   ];
 
   return (
-    <section className="bg-green-50 py-16 px-4">
-      <div className="max-w-7xl mx-auto text-center mb-12">
+    <section className="bg-green-50py-16px-4">
+      <div className="hidden max-w-7xl mx-auto text-center mb-12">
         <span className="inline-block bg-green-200 text-green-700 px-4 py-1 rounded-full text-sm font-medium mb-4">
           Interesting Facts
         </span>
@@ -69,8 +69,8 @@ export default function DidYouKnow() {
           loop={true}
           breakpoints={{
             0: { slidesPerView: 1 },
-            640: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 },
+            640: { slidesPerView: 1 },
+            1024: { slidesPerView: 1 },
           }}
         >
           {facts.map((fact, index) => (
@@ -80,21 +80,26 @@ export default function DidYouKnow() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className="bg-white rounded border border-gray-200 shadow-md overflow-hidden hover:shadow-xl transition duration-300"
+                className="bg-blue-950 rounded border border-gray-200 shadow-md overflow-hidden hover:shadow-xl transition duration-300"
               >
                 {/* Image Section */}
                 <div className="relative w-full h-56 overflow-hidden group">
                   <img
                     src={fact.image}
                     alt={fact.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                    className="w-full h-full border-b object-cover group-hover:scale-110 transition duration-500"
                   />
 
                   {/* Overlay */}
                   <div className="absolute inset-0 bg-black/40"></div>
 
                   {/* Icon + Title */}
-                  <div className="absolute bottom-16 left-4 right-4 flex items-center gap-3">
+                </div>
+
+                {/* Description */}
+                <div className="p-4">
+                  {/* Icon + Title */}
+                  <div className="absolutebottom-16left-4right-4 flex items-center gap-3 mb-2">
                     <div className="bg-gradient-to-r from-green-600 to-green-900 p-2 rounded">
                       {fact.icon}
                     </div>
@@ -102,17 +107,7 @@ export default function DidYouKnow() {
                       {fact.title}
                     </h3>
                   </div>
-                  {/* Description */}
-                <div className="absolute bottom-2 left-4 right-4 p6">
                   <p className="text-gray-200 text-sm leading-relaxed">
-                    {fact.description}
-                  </p>
-                </div>
-                </div>
-
-                {/* Description */}
-                <div className="hidden p-6">
-                  <p className="text-gray-600 text-sm leading-relaxed">
                     {fact.description}
                   </p>
                 </div>

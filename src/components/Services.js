@@ -33,7 +33,7 @@ const services = [
     description:
       "Our experienced editors refine your manuscript for clarity, grammar accuracy, structure, tone consistency, and professional publishing standards.",
     icon: <PenTool className="w-8 h-8 rounded text-white p-2 bg-gradient-to-r from-green-600 to-green-900" />,
-    image: "/images/editing-service-editor.webp",
+    image: "/images/review.avif",
     pricing:
       "Costs vary depending on word count and editing depth (developmental, line editing, proofreading). Contact us for assessment.",
   },

@@ -55,14 +55,14 @@ export default function Home() {
   return (
     <main className="overflow-x-hidden">
       <Hero />
+      <PricingPackages />
+      <Assistance />
       <PublishingProcess />
       <HeroSection />
       <OurServices />
-      <CustomeCare />
-      <PricingPackages />
-      <Assistance />
+      <PublishingCounters />
       <FAQ />
-      <DidYouKnow />
+      <CustomeCare />
       <Why />
     </main>
   );

@@ -62,7 +62,7 @@ export default function PricingPackages() {
   ];
 
   return (
-    <section className="bg-green-50 pb-24 px-6">
+    <section className="bg-green-50 py-24 px-6">
       <div className="max-w-7xl mx-auto">
 
         {/* HEADER */}
@@ -145,7 +145,7 @@ export default function PricingPackages() {
                   ${
                     pkg.highlighted
                       ? "bg-gradient-to-r from-green-600 to-green-900 text-white hover:bg-green-700 shadow-md"
-                      : "border border-green-600 text-green-700 bg-green-50 hover:bg-blue-50"
+                      : "border border-green-600 text-green-700 hover:bg-blue-50"
                   }`}
               >
                 Get Started

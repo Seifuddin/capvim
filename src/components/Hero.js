@@ -53,7 +53,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="text-4xl md:text-6xl font-bold text-green-400"
+          className="text-4xl md:text-6xl font-bold text-white"
         >
           {hydrated ? (
             <>
@@ -65,7 +65,7 @@ export default function Hero() {
           )}
         </motion.h1>
 
-        <p className="text-base md:text-xl text-white font-medium animate-fade-in">
+        <p className="text-base md:text-xl text-gray-200 font-medium animate-fade-in">
           We help authors, thinkers, and creators publish meaningful content that makes an impact.
         </p>
 

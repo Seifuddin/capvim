@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import DidYouKnow from "./Know";
 
 export default function HeroSection() {
   return (
@@ -52,16 +53,18 @@ export default function HeroSection() {
         </motion.div>
 
         {/* Right Side Image */}
+        
         <motion.div
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7 }}
-          className="mt-12 md:mt-0 md:w-1/2 flex justify-center"
+          className="w-full rounded max-w-md md:max-w-lg lg:max-w-xl"
         >
+          <DidYouKnow />
           <img
             src="/images/portrait-beautiful-young-woman-holding-books-showing-thumb-up_114579-70563.avif"
             alt="Hospital illustration"
-            className="w-full rounded max-w-md md:max-w-lg lg:max-w-xl drop-shadow-2xl"
+            className="hidden w-full rounded max-w-md md:max-w-lg lg:max-w-xl drop-shadow-2xl"
           />
         </motion.div>
       </div>

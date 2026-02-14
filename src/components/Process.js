@@ -17,42 +17,42 @@ export default function PublishingProcess() {
       description:
         "Authors submit their manuscript for initial review and evaluation of publishing potential.",
       icon: <FileText className="w-5 h-5" />,
-      bg: "/images/Distribution.jpg",
+      bg: "/images/pexels-photo-4861335.webp",
     },
     {
       title: "Editorial Review & Editing",
       description:
         "Our editors refine structure, clarity, grammar, and formatting to meet professional publishing standards.",
       icon: <Edit3 className="w-5 h-5" />,
-      bg: "/images/Distribution.jpg",
+      bg: "/images/review.avif",
     },
     {
       title: "Design & Formatting",
       description:
         "We create compelling book covers and professionally format the interior layout for print and digital platforms.",
       icon: <Palette className="w-5 h-5" />,
-      bg: "/images/Distribution.jpg",
+      bg: "/images/orange-color-scheme-city-background-business-book-cover-design-template-brochure-flyer-layout-annual-report-magazine-108070657.webp",
     },
     {
       title: "ISBN & Production",
       description:
         "ISBN registration, final proofreading, print preparation, and digital conversion are completed.",
       icon: <Hash className="w-5 h-5" />,
-      bg: "/images/Distribution.jpg",
+      bg: "/images/images.jpg",
     },
     {
       title: "Printing & Distribution",
       description:
         "Your book is printed and distributed through carefully selected local and international channels.",
       icon: <Printer className="w-5 h-5" />,
-      bg: "/images/Distribution.jpg",
+      bg: "/images/Woman-scanning-paper-files-1024x683.webp",
     },
     {
       title: "Launch & Promotion",
       description:
         "We guide you through launch strategy, visibility positioning, and author brand growth.",
       icon: <Megaphone className="w-5 h-5" />,
-      bg: "/images/Distribution.jpg",
+      bg: "/images/unnamed.jpg",
     },
   ];
 
@@ -103,7 +103,7 @@ export default function PublishingProcess() {
 
                 {/* Card with Background Image */}
                 <div
-                  className="relative ml-16 md:ml-0 rounded-lg overflow-hidden shadow-lg group hover:shadow-2xl transition duration-500"
+                  className="relative ml-16 md:ml-0 rounded overflow-hidden shadow-lg group hover:shadow-2xl transition duration-500"
                   style={{
                     backgroundImage: `url(${item.bg})`,
                     backgroundSize: "cover",
@@ -114,11 +114,11 @@ export default function PublishingProcess() {
                   <div className="absolute inset-0 bg-black/60 group-hover:bg-black/70 transition duration-500"></div>
 
                   {/* Content */}
-                  <div className="relative z-10 p-6 text-white backdrop-blur-sm">
+                  <div className="relative z-10 p-4 mt-20 text-white backdropblur-sm">
                     <h3 className="md:text-lg font-semibold">
                       {item.title}
                     </h3>
-                    <p className="mt-3 text-sm leading-relaxed text-gray-200">
+                    <p className="mt-1 text-sm leading-relaxed text-gray-200">
                       {item.description}
                     </p>
                   </div>
