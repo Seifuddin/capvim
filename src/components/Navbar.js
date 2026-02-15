@@ -75,11 +75,11 @@ export default function Navbar() {
           initial={{ x: "100%" }}
           animate={{ x: 0 }}
           transition={{ type: "spring", stiffness: 300 }}
-          className="lg:hidden relative bg-gray-800 text-blue-800 space-y-4 px-4 py-4  top-0 right-0 w-full h-full"
+          className="lg:hidden relative bg-gray-800 text-white space-y-4 px-4 py-4  top-0 right-0 w-full h-full"
         >
           <button
             onClick={() => setIsOpen(false)}
-            className="absolute top-4 right-4 text-blue-800 text-3xl"
+            className="absolute top-4 right-4 text-white text-3xl"
           >
             <X />
           </button>
