@@ -1,238 +1,136 @@
 "use client";
-import { useState, useRef, useCallback } from "react";
+
 import { motion } from "framer-motion";
-import { BookOpen, Users, Award, ShieldCheck, Quote, ChevronLeft, ChevronRight } from "lucide-react";
-import { Dialog } from "@headlessui/react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, EffectFade, Autoplay } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/effect-fade";
+import {
+  BookOpen,
+  PenTool,
+  Globe,
+  ShieldCheck,
+  Sparkles,
+  Users,
+} from "lucide-react";
 
-const Why = () => {
-  const [selectedFeature, setSelectedFeature] = useState(null);
-  const swiperRef = useRef(null);
-
+export default function Why() {
   const features = [
     {
-      icon: <BookOpen className="w-6 h-6 text-white" />,
-      title: "Expert Editors",
-      desc: "Our seasoned editors ensure every publication is polished and professional.",
-      modal:
-        "From manuscripts to magazines, our editors bring decades of experience to deliver quality and consistency in every page.",
+      icon: <BookOpen className="w-7 h-7 text-white" />,
+      title: "Expert Publishing Guidance",
+      description:
+        "From manuscript submission to final publication, our experienced team walks with you every step of the way.",
     },
     {
-      icon: <Users className="w-6 h-6 text-white" />,
-      title: "Collaborative Approach",
-      desc: "We work closely with authors and clients throughout the publishing journey.",
-      modal:
-        "We believe great publishing comes from partnership. You’re involved in every step, from concept to final print.",
+      icon: <PenTool className="w-7 h-7 text-white" />,
+      title: "Professional Editing & Design",
+      description:
+        "We refine your manuscript with professional editing, proofreading, and world-class cover & interior design.",
     },
     {
-      icon: <Award className="w-6 h-6 text-white" />,
-      title: "Award-Winning Designs",
-      desc: "Our layouts and covers have earned recognition across the industry.",
-      modal:
-        "We fuse storytelling with design excellence to craft books and publications that captivate readers at first glance.",
+      icon: <Globe className="w-7 h-7 text-white" />,
+      title: "Global Reach",
+      description:
+        "Your book is distributed worldwide in both print and digital formats to maximize visibility and impact.",
     },
     {
-      icon: <ShieldCheck className="w-6 h-6 text-white" />,
-      title: "Reliable & Timely Delivery",
-      desc: "We deliver high-quality publications on time, every time.",
-      modal:
-        "Our streamlined workflows and dedicated team ensure that your publishing deadlines are always met.",
+      icon: <ShieldCheck className="w-7 h-7 text-white" />,
+      title: "Quality & Integrity",
+      description:
+        "We uphold the highest publishing standards while maintaining transparency and trust with our authors.",
+    },
+    {
+      icon: <Sparkles className="w-7 h-7 text-white" />,
+      title: "Author-Focused Approach",
+      description:
+        "Every author is unique. We tailor our services to bring your vision to life with excellence and care.",
+    },
+    {
+      icon: <Users className="w-7 h-7 text-white" />,
+      title: "Strong Publishing Network",
+      description:
+        "We collaborate with trusted partners to ensure smooth printing, marketing, and distribution channels.",
     },
   ];
-
-  const testimonials = [
-    {
-      quote: "Their attention to detail and collaborative process turned my manuscript into a masterpiece.",
-      author: "Clifford Matara, Author",
-      image: "/images/WhatsApp Image 2025-04-27 at 04.32.48 (1).webp",
-    },
-    {
-      quote: "Outstanding experience! The quality of design and timeliness exceeded expectations.",
-      author: "Vincent Obwogi, Publisher",
-      image: "/images/WhatsApp Image 2025-04-27 at 04.32.48 (1).webp",
-    },
-    {
-      quote: "Professional, creative, and always on point. Highly recommended!",
-      author: "Ishmail Atudo, Editor-in-Chief",
-      image: "/images/WhatsApp Image 2025-04-27 at 04.32.48 (1).webp",
-    },
-    {
-      quote: "I felt supported every step of the way. Their team is simply the best.",
-      author: "Brian Odhiambo, Novelist",
-      image: "/images/WhatsApp Image 2025-04-27 at 04.32.48 (1).webp",
-    },
-    {
-      quote: "My project wouldn't have been the same without them.",
-      author: "Jim Jim, Poet",
-      image: "/images/WhatsApp Image 2025-04-27 at 04.32.48 (1).webp",
-    },
-    {
-      quote: "My project wouldn't have been the same without them.",
-      author: "Muriithi Nguru, Software Engineer",
-      image: "/images/WhatsApp Image 2025-04-27 at 04.32.48 (1).webp",
-    },
-  ];
-
-  const handleFeatureClick = useCallback((item) => {
-    setSelectedFeature(item);
-  }, []);
-
-  const handleModalClose = useCallback(() => {
-    setSelectedFeature(null);
-  }, []);
 
   return (
-    <div>
-      {/* WHY CHOOSE US */}
-      <section className="py-20 bg-green-50 px-6 text-gray-800 overflow-x-hidden">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-14">
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1 }}
-              className="relative"
-            >
-              <span className="inline-block bg-green-200 text-green-700 px-4 py-1 rounded-full text-sm font-medium mb-4">
-            Why Us
-          </span>
-              <h2 className="text-2xl md:text-4xl font-bold mb-4 text-black">Why Choose Us</h2>
-            <div className="w-24 h-1 bg-green-200 mx-auto rounded-full my-3"></div>
+    <section className="bg-green-50 py-16 px-6">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-12">
 
-              <p className="text-gray-600 max-w-2xl mx-auto">
-                Discover what makes us a trusted partner in publishing exceptional content that informs, inspires, and endures.
-              </p>
-            </motion.div>
-          </div>
+        <span className="inline-block bg-green-200 text-green-800 px-4 py-1 rounded-full text-xs font-semibold tracking-wide">
+              Why Choose Capvim
+            </span>
 
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            {/* Image */}
-            <motion.div initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1 }}>
+            <h2 className="mt-4 text-2xl md:text-4xl font-bold text-gray-900 leading-snug">
+              Why Authors Trust
+              <span className="text-green-700"> Capvim Publishers</span>
+            </h2>
+            <div className="w-24 h-1 bg-green-200 mx-auto rounded-full mt-3"></div>
+
+            <p className="my-4 text-gray-600 text-base">
+              We transform manuscripts into professionally published books
+              that inspire and reach readers across the globe.
+            </p>
+
+            </div>
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          
+          {/* LEFT IMAGE */}
+          <motion.div
+            initial={{ opacity: 0, x: -60 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="relative"
+          >
+            <div className="relative rounded overflow-hidden shadow-xl">
               <img
-                src="/images/100-Your-Ownership.webp"
-                alt="Why Choose Us"
-                className="relative rounded w-full h-[300px] md:h-[450px] lg:h-[500px]"
+                src="/images/1657974996_whyus.jpg"
+                alt="Capvim Publishing"
+                className="w-full h-[420px] object-cover"
               />
-            </motion.div>
+              <div className="absolute inset-0 bg-gradient-to-tr from-green-900/30 via-transparent to-transparent"></div>
+            </div>
+          </motion.div>
 
-            {/* Features */}
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1 }}
-              className="space-y-8"
-            >
-              {features.map((item, idx) => (
+          {/* RIGHT CONTENT */}
+          <motion.div
+            initial={{ opacity: 0, x: 60 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            {/* Compact Features */}
+            <div className="grid sm:grid-cols-2 gap-5">
+              {features.map((feature, index) => (
                 <motion.div
-                  key={idx}
-                  whileHover={{ scale: 1.03 }}
-                  className="bgwhite flex items-start gap-4 cursor-pointer hover:bg-indigo-50 p-2 pt-3 border-b border-gray-300 rounded shadowsm transition-transform duration-300"
-                  onClick={() => handleFeatureClick(item)}
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: index * 0.07 }}
+                  viewport={{ once: true }}
+                  className="group bgwhite p-5 rounded shadowsm border-b border-green-300 hover:shadow-md hover:-translate-y-1 transition-all duration-300"
                 >
-                  <div className="bg-gradient-to-r from-green-600 to-green-900 p-2 rounded">{item.icon}</div>
-                  <div>
-                    <h4 className="md:text-lg text-blue-900 font-semibold mb-1">{item.title}</h4>
-                    <p className="text-gray-600">{item.desc}</p>
+                  <div className="flex items-start gap-3">
+                    <div className="w-10 h-10 p-2 flex items-center justify-center rounded bg-gradient-to-r from-green-600 to-green-900 group-hover:bg-green-700 transition-all duration-300">
+                      <div className="group-hover:text-white transition duration-300">
+                        {feature.icon}
+                      </div>
+                    </div>
+
+                    <div>
+                      <h3 className="font-semibold text-blue-900 text-sm mb-1 group-hover:text-green-700 transition duration-300">
+                        {feature.title}
+                      </h3>
+                      <p className="text-gray-600 text-xs leading-relaxed">
+                        {feature.description}
+                      </p>
+                    </div>
                   </div>
                 </motion.div>
               ))}
-            </motion.div>
-          </div>
+            </div>
+          </motion.div>
         </div>
-
-        {/* Modal */}
-        <Dialog open={!!selectedFeature} onClose={handleModalClose} className="relative z-50">
-          <div className="fixed inset-0 bg-black/30 backdrop-blur-sm" aria-hidden="true" />
-          <div className="fixed inset-0 flex items-center justify-center p-4">
-            <Dialog.Panel className="w-full max-w-md bg-white rounded-xl shadow-xl p-6">
-              <Dialog.Title className="text-2xl font-bold mb-2 text-indigo-700">{selectedFeature?.title}</Dialog.Title>
-              <Dialog.Description className="text-gray-700">{selectedFeature?.modal}</Dialog.Description>
-              <div className="mt-6 text-right">
-                <button onClick={handleModalClose} className="px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 transition">
-                  Close
-                </button>
-              </div>
-            </Dialog.Panel>
-          </div>
-        </Dialog>
-      </section>
-
-      {/* TESTIMONIALS */}
-      <section className="hidden py-20 bg-green-50 px-6 text-gray-800">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1 }}
-              className="relative"
-            >
-              <span className="inline-block bg-green-200 text-green-700 px-4 py-1 rounded-full text-sm font-medium mb-4">
-            Client Testimonials
-          </span>
-              <h2 className="text-2xl md:text-4xl font-bold mb-4 text-black">What Our Clients Say</h2>
-              <div className="w-24 h-1 bg-green-200 mx-auto rounded-full my-3"></div>
-              <p className="text-gray-600 max-w-2xl mx-auto">
-                Hear from the authors and organizations we've had the pleasure of working with.
-              </p>
-            </motion.div>
-          </div>
-
-          {/* Custom Arrows */}
-          <div className="flex justify-between items-center mb-4">
-            <button
-              onClick={() => swiperRef.current?.slidePrev()}
-              className="p-2 rounded-full bg-green-100 hover:bg-indigo-200 text-indigo-600 transition"
-            >
-              <ChevronLeft className="w-6 h-6" />
-            </button>
-            <button
-              onClick={() => swiperRef.current?.slideNext()}
-              className="p-2 rounded-full bg-green-100 hover:bg-indigo-200 text-indigo-600 transition"
-            >
-              <ChevronRight className="w-6 h-6" />
-            </button>
-          </div>
-
-          {/* Swiper */}
-          <Swiper
-            modules={[Navigation, Pagination, EffectFade, Autoplay]}
-            onSwiper={(swiper) => (swiperRef.current = swiper)}
-            effect="slide"
-            autoplay={{ delay: 5000 }}
-            loop={true}
-            spaceBetween={30}
-            pagination={{ clickable: true }}
-            breakpoints={{
-              640: { slidesPerView: 1 },
-              768: { slidesPerView: 2 },
-              1024: { slidesPerView: 3 },
-            }}
-          >
-            {testimonials.map((testimonial, idx) => (
-              <SwiperSlide key={idx}>
-                <motion.div whileHover={{ scale: 1.02 }} className="bg-white border border-gray-300 p-6 rounded shadow-lg text-center h-full">
-                  <img
-                    src={testimonial.image}
-                    alt={testimonial.author}
-                    className="w-16 h-16 mx-auto border border-green-300 rounded-full mb-4 object-cover shadow-md"
-                  />
-                  <Quote className="w-6 h-6 text-green-700 mx-auto mb-2" />
-                  <p className="italic text-gray-700 mb-4">"{testimonial.quote}"</p>
-                  <p className="inline-block bg-green-50 text-green-700 px-4 py-1 rounded-full text-sm font-medium mb-4">{testimonial.author}</p>
-                </motion.div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
-      </section>
-    </div>
+      </div>
+    </section>
   );
-};
-
-export default Why;
+}
