@@ -71,7 +71,7 @@ export default function FAQ() {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="border-b border-gray-300 rounded-lg shadowsm bgwhite overflow-hidden"
+              className="border-b border-green-300 rounded-lg shadowsm bgwhite overflow-hidden"
             >
               <button
                 onClick={() => toggleFAQ(index)}

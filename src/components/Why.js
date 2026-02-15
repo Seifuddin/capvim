@@ -120,7 +120,7 @@ export default function Why() {
                       <h3 className="font-semibold text-blue-900 text-sm mb-1 group-hover:text-green-700 transition duration-300">
                         {feature.title}
                       </h3>
-                      <p className="text-gray-600 text-xs leading-relaxed">
+                      <p className="text-gray-600 text-xs md:text-sm leading-relaxed">
                         {feature.description}
                       </p>
                     </div>

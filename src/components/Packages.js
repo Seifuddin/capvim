@@ -97,7 +97,7 @@ export default function PricingPackages() {
                 ${
                   pkg.highlighted
                     ? "bg-white shadow-2xl border-green-800 scale-105"
-                    : "bg-white shadow-md border-gray-200 hover:shadow-xl"
+                    : "bg-white shadow-md border-green-300 hover:shadow-xl"
                 }`}
             >
 
