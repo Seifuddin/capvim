@@ -133,7 +133,7 @@ export default function PublishingProcess() {
 
         {/* CTA */}
         <div className="text-center mt-16">
-          <button className="bg-gradient-to-r from-green-600 to-green-900 text-white px-6 py-2 rounded font-medium hover:scale-105 transition duration-300 shadow-md">
+          <button className="bg-gradient-to-r from-green-600 to-green-900 text-white px-6 py-2 rounded-full font-medium hover:scale-105 transition duration-300 shadow-md">
             Start Your Publishing Journey
           </button>
         </div>

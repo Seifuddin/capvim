@@ -13,7 +13,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="bg-green-50 fixed w-full top-0 left-0 z-50 shadow-lg border-b-2border-b-green-700/30">
+    <nav className="bg-white fixed w-full top-0 left-0 z-50 shadow-lg border-b-2border-b-green-700/30">
       <div className="max-w-screen-xl mx-auto px-4 py-3.5">
         <div className="flex justify-between items-center">
           <div className="flex text-white font-bold text-xl tracking-wide">
@@ -36,7 +36,7 @@ export default function Navbar() {
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
+                className="h-8 w-8"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"

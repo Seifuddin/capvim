@@ -5,9 +5,10 @@ import Image from "next/image";
 
 export default function Hero() {
   const words = [
-    "Where Creativity Meets Precision — Your Publishing Journey Starts Here",
-    "A Trusted Partner in Publishing — From Vision to Volume",
+    "Your Publishing Journey Starts Here.",
     "Transform Ideas into Books.",
+    "Where Creativity Meets Precision ",
+    "A Trusted Partner in Publishing",
   ];
 
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
@@ -53,7 +54,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="text-4xl md:text-6xl font-bold text-white"
+          className="text-3xl md:text-6xl font-bold text-white"
         >
           {hydrated ? (
             <>

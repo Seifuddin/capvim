@@ -131,7 +131,7 @@ const Why = () => {
                 <motion.div
                   key={idx}
                   whileHover={{ scale: 1.03 }}
-                  className="bgwhite flex items-start gap-4 cursor-pointer hover:bg-indigo-50 p-2 pt-3 border-b border-gray-300 rounded shadow-sm transition-transform duration-300"
+                  className="bgwhite flex items-start gap-4 cursor-pointer hover:bg-indigo-50 p-2 pt-3 border-b border-gray-300 rounded shadowsm transition-transform duration-300"
                   onClick={() => handleFeatureClick(item)}
                 >
                   <div className="bg-gradient-to-r from-green-600 to-green-900 p-2 rounded">{item.icon}</div>
