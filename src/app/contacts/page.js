@@ -1,5 +1,5 @@
-import ContactUs from '@/components/ContactUs'
 import ContactsHero from '@/components/HeroContacts'
+import VisitUs from '@/components/Visit'
 import React from 'react'
 
 export const metadata = {
@@ -44,7 +44,7 @@ export default function Contact() {
   return (
     <main className="overflow-x-hidden">
       <ContactsHero />
-      <ContactUs />
+      <VisitUs />
     </main>
   )
 }
