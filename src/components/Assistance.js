@@ -21,7 +21,9 @@ export default function Assistance() {
           transition={{ duration: 0.6 }}
           className="text-2xl md:text-4xl font-bold mb-4"
         >
-          Not sure which package fits your publishing goals?
+          Not sure which package fits 
+              <span className="text-green-400"> your publishing goals? </span>
+
         </motion.h2>
         <div className="w-24 h-1 bg-green-400 mx-auto rounded-full mb-6"></div>
 

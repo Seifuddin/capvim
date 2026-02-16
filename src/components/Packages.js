@@ -72,7 +72,8 @@ export default function PricingPackages() {
           </span>
 
           <h2 className="text-2xl md:text-4xl font-bold text-gray-900">
-            Flexible Publishing Plans For Every Author
+            Flexible Publishing Plans 
+            <span className="text-green-700"> For Every Author </span>
           </h2>
           <div className="w-24 h-1 bg-green-200 mx-auto rounded-full mt-3"></div>
 
@@ -97,7 +98,7 @@ export default function PricingPackages() {
                 ${
                   pkg.highlighted
                     ? "bg-green-100 shadow-2xl border-green-800 scale-105"
-                    : "bg-green-100 shadow-md border-green-300 hover:shadow-xl"
+                    : "bg-green-100 shadow-md border-green-200 hover:shadow-xl"
                 }`}
             >
 

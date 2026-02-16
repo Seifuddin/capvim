@@ -193,7 +193,9 @@ export default function ServicesPage() {
             </span>
 
             <h2 className="text-2xl md:text-4xl font-bold text-gray-900 leading-tight">
-              Comprehensive Publishing Solutions 
+              Comprehensive 
+            <span className="text-green-700"> Publishing Solutions </span>
+
               <br className="hidden md-block" />
                
             </h2>
@@ -218,7 +220,7 @@ export default function ServicesPage() {
               <motion.div
                 key={index}
                 whileHover={{ y: -6 }}
-                className="group bg-white rounded shadowmd hover:shadow-2xl transition-all duration-500 overflow-hidden flex flex-col border border-green-300"
+                className="group bg-green-100 rounded shadowmd hover:shadow-2xl transition-all duration-500 overflow-hidden flex flex-col border border-green-200"
               >
                 <div className="relative w-full h-44 md:h-52">
                   <Image

@@ -13,37 +13,37 @@ import {
 export default function Why() {
   const features = [
     {
-      icon: <BookOpen className="w-7 h-7 text-white" />,
+      icon: <BookOpen className="w-5 h-5 text-white" />,
       title: "Expert Publishing Guidance",
       description:
         "From manuscript submission to final publication, our experienced team walks with you every step of the way.",
     },
     {
-      icon: <PenTool className="w-7 h-7 text-white" />,
+      icon: <PenTool className="w-5 h-5 text-white" />,
       title: "Professional Editing & Design",
       description:
         "We refine your manuscript with professional editing, proofreading, and world-class cover & interior design.",
     },
     {
-      icon: <Globe className="w-7 h-7 text-white" />,
+      icon: <Globe className="w-5 h-5 text-white" />,
       title: "Global Reach",
       description:
         "Your book is distributed worldwide in both print and digital formats to maximize visibility and impact.",
     },
     {
-      icon: <ShieldCheck className="w-7 h-7 text-white" />,
+      icon: <ShieldCheck className="w-5 h-5 text-white" />,
       title: "Quality & Integrity",
       description:
         "We uphold the highest publishing standards while maintaining transparency and trust with our authors.",
     },
     {
-      icon: <Sparkles className="w-7 h-7 text-white" />,
+      icon: <Sparkles className="w-5 h-5 text-white" />,
       title: "Author-Focused Approach",
       description:
         "Every author is unique. We tailor our services to bring your vision to life with excellence and care.",
     },
     {
-      icon: <Users className="w-7 h-7 text-white" />,
+      icon: <Users className="w-5 h-5 text-white" />,
       title: "Strong Publishing Network",
       description:
         "We collaborate with trusted partners to ensure smooth printing, marketing, and distribution channels.",
@@ -81,7 +81,7 @@ export default function Why() {
             viewport={{ once: true }}
             className="relative"
           >
-            <div className="relative rounded overflow-hidden shadow-xl">
+            <div className="relative border rounded overflow-hidden shadow-xl">
               <img
                 src="/images/1657974996_whyus.jpg"
                 alt="Capvim Publishing"
@@ -110,14 +110,14 @@ export default function Why() {
                   className="group bgwhite p-5 rounded shadowsm border-b border-green-300 hover:shadow-md hover:-translate-y-1 transition-all duration-300"
                 >
                   <div className="flex items-start gap-3">
-                    <div className="w-10 h-10 p-2 flex items-center justify-center rounded bg-gradient-to-r from-green-600 to-green-900 group-hover:bg-green-700 transition-all duration-300">
+                    <div className="w-9 h-9 p-2 flex items-center justify-center rounded bg-gradient-to-r from-green-600 to-green-900 group-hover:bg-green-700 transition-all duration-300">
                       <div className="group-hover:text-white transition duration-300">
                         {feature.icon}
                       </div>
                     </div>
 
                     <div>
-                      <h3 className="font-semibold text-blue-900 text-sm mb-1 group-hover:text-green-700 transition duration-300">
+                      <h3 className="font-semibold text-blue-900 text-sm md:text-lg mb-1 group-hover:text-green-700 transition duration-300">
                         {feature.title}
                       </h3>
                       <p className="text-gray-600 text-xs md:text-sm leading-relaxed">

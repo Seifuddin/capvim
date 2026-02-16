@@ -66,7 +66,9 @@ export default function PublishingProcess() {
           </span>
 
           <h2 className="text-2xl md:text-4xl font-bold text-gray-900 leading-tight">
-            Your Journey From Idea to Published Book
+            Your Journey From 
+            <span className="text-green-700"> Idea to Published Book </span>
+
           </h2>
           <div className="w-24 h-1 bg-green-200 mx-auto rounded-full mt-3"></div>
 

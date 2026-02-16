@@ -23,7 +23,7 @@ const AnimatedCounter = ({ from = 0, to }) => {
   }, [isInView, to, count]);
 
   return (
-    <span ref={ref} className="text-lg md:text-2xl fontserif font-bold text-green-400">
+    <span ref={ref} className="mt-2 md:text-xl fontserif font-bold text-green-400">
       {value.toLocaleString()}+
     </span>
   );
@@ -55,7 +55,9 @@ export default function PublishingCounters() {
           transition={{ duration: 0.6 }}
           className="text-2xl md:text-4xl font-extrabold text-white mb-3"
         >
-          Our Achievements in Numbers
+          Our Achievements 
+              <span className="text-green-400"> in Numbers </span>
+
         </motion.h2>
 
         <div className="w-24 h-1 bg-green-400 mx-auto rounded-full mb-6"></div>
@@ -80,8 +82,8 @@ export default function PublishingCounters() {
                 className="bg-white/5 backdrop-blur-md border border-white/20 p-4 xs:p-5 sm:p-6 rounded flex flex-col items-center"
               >
                 {/* Icon */}
-                <div className="w-10 h-10 flex items-center justify-center bg-gradient-to-r from-green-600 to-green-900 p-2 rounded -full shadow-md border border-white/10">
-                  <Icon className={`${stat.color} w-6 h-6`} />
+                <div className="w-9 h-9 flex items-center justify-center bg-gradient-to-r from-green-600 to-green-900 p-2 rounded -full shadow-md border border-white/10">
+                  <Icon className={`${stat.color} w-8 h-8`} />
                 </div>
 
                 {/* Counter */}

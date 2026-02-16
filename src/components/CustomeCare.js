@@ -21,7 +21,8 @@ export default function CustomeCare() {
               Reach To Us
             </span>
         <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
-          Still have questions?
+          Still have 
+              <span className="text-green-400"> Questions? </span>
         </h2>
         <div className="w-24 h-1 bg-green-400 mx-auto rounded-full mb-6"></div>
 
@@ -37,7 +38,7 @@ export default function CustomeCare() {
         <a
           href="tel:+254728240931"
         >
-          <div className="mb-6 flex items-center justify-center w-14 h-14 rounded-full bg-green-500">
+          <div className="mb-6 flex items-center justify-center w-16 h-16 border rounded-full bg-green-500">
           <PhoneCall className="w-7 h-7 text-white" />
         </div>
         </a>

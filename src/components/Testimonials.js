@@ -153,7 +153,8 @@ export default function StoriesAndTestimonials() {
             Client Testimonials
           </span>
             <h3 className="text-2xl md:text-4xl font-semibold mb-3 fontserif">
-              What Our Clients Say
+              What Our 
+              <span className="text-green-400"> Clients Say </span>
             </h3>
               <div className="w-24 h-1 bg-green-400 mx-auto rounded-full my-3"></div>
             <p className="text-blue-100 max-w-2xl mx-auto">
