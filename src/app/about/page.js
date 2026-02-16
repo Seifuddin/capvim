@@ -3,6 +3,7 @@ import AboutHero from '@/components/HeroAbout'
 import Location from '@/components/Location'
 import MissionVisionMotto from '@/components/Mission'
 import SubAboutUs from '@/components/SubaboutUs'
+import MeetOurTeam from '@/components/Team'
 import TheTeam from '@/components/Team'
 import React from 'react'
 
@@ -49,6 +50,7 @@ export default function About() {
       <AboutHero />
       <AboutUs />
       <MissionVisionMotto />
+      <MeetOurTeam />
     </main>
   )
 }
