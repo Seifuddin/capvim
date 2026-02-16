@@ -36,7 +36,7 @@ export default function AboutUs() {
             About Us
           </p>
 
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-800 leading-tight mb-6">
+          <h2 className="text-2xl md:text-4xl font-bold text-gray-800 leading-tight mb-6">
             Empowering Authors.  
             <span className="text-green-600"> Inspiring Generations.</span>
           </h2>
@@ -52,9 +52,9 @@ export default function AboutUs() {
           <div className="grid sm:grid-cols-2 gap-6">
             
             <div className="flex items-start gap-4">
-              <BookOpen className="text-green-600 mt-1" size={28} />
+              <BookOpen className="bg-gradient-to-r from-green-600 to-green-900 rounded text-white p-2 mt-1" size={32} />
               <div>
-                <h4 className="font-semibold text-gray-800">
+                <h4 className="font-semibold text-blue-900">
                   Professional Publishing
                 </h4>
                 <p className="text-gray-600 text-sm">
@@ -64,9 +64,9 @@ export default function AboutUs() {
             </div>
 
             <div className="flex items-start gap-4">
-              <Globe className="text-green-600 mt-1" size={28} />
+              <Globe className="bg-gradient-to-r from-green-600 to-green-900 rounded text-white p-2 mt-1" size={32} />
               <div>
-                <h4 className="font-semibold text-gray-800">
+                <h4 className="font-semibold text-blue-900">
                   Global Distribution
                 </h4>
                 <p className="text-gray-600 text-sm">
@@ -76,9 +76,9 @@ export default function AboutUs() {
             </div>
 
             <div className="flex items-start gap-4">
-              <ShieldCheck className="text-green-600 mt-1" size={28} />
+              <ShieldCheck className="bg-gradient-to-r from-green-600 to-green-900 rounded text-white p-2 mt-1" size={32} />
               <div>
-                <h4 className="font-semibold text-gray-800">
+                <h4 className="font-semibold text-blue-900">
                   Integrity & Excellence
                 </h4>
                 <p className="text-gray-600 text-sm">
@@ -88,9 +88,9 @@ export default function AboutUs() {
             </div>
 
             <div className="flex items-start gap-4">
-              <Sparkles className="text-green-600 mt-1" size={28} />
+              <Sparkles className="bg-gradient-to-r from-green-600 to-green-900 rounded text-white p-2 mt-1" size={32} />
               <div>
-                <h4 className="font-semibold text-gray-800">
+                <h4 className="font-semibold text-blue-900">
                   Creative Innovation
                 </h4>
                 <p className="text-gray-600 text-sm">

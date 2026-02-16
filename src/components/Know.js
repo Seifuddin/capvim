@@ -42,7 +42,7 @@ export default function DidYouKnow() {
   ];
 
   return (
-    <section className="bg-green-50py-16px-4">
+    <section className="bg-green-50 py-16px-4">
       <div className="hidden max-w-7xl mx-auto text-center mb-12">
         <span className="inline-block bg-green-200 text-green-700 px-4 py-1 rounded-full text-sm font-medium mb-4">
           Interesting Facts

@@ -47,9 +47,15 @@ export default function MeetOurTeam() {
           <p className="text-green-700 font-semibold uppercase tracking-widest mb-3">
             Our People
           </p>
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-800">
-            Meet The Minds Behind Capvim
+          <h2 className="text-2xl md:text-4xl font-bold text-gray-800">
+            Meet The 
+            <span className="text-green-600"> Minds Behind Capvim. </span>
+
           </h2>
+          <p className="text-gray-600 text-sm mt-3">
+                  A passionate team dedicated to excellence in publishing,
+          creativity, and global impact.
+                </p>
         </motion.div>
 
         {/* MAIN LAYOUT */}
