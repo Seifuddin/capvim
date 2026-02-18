@@ -165,7 +165,7 @@ export default function Portfolio() {
             </article>
 
             {/* Book Details */}
-            <div className="w-full mt-3 p-3">
+            <div className="w-full mt-3 p3">
               <h3 className="text-blue-900 font-semibold text-base md:text-lg leading-tight break-words">
                 {book.title}
               </h3>
