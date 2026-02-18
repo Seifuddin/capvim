@@ -66,7 +66,7 @@ export default function PricingPackages() {
       <div className="max-w-7xl mx-auto">
 
         {/* HEADER */}
-        <div className="max-w-3xl mx-auto text-center mb-20">
+        <div className="max-w-3xl mx-auto text-center mb-10 md:mb-20">
           <span className="inline-block bg-green-200 text-green-700 px-4 py-1 rounded-full text-sm font-medium mb-4">
             Publishing Packages
           </span>
@@ -79,7 +79,7 @@ export default function PricingPackages() {
 
           <p className="mt-4 text-gray-600 text-base">
             Whether you're publishing your first book or launching your next
-            bestseller, Capvim International Publishers offers tailored
+            bestseller, Capvim offers tailored
             packages designed to match your publishing goals.
           </p>
         </div>

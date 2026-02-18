@@ -23,10 +23,10 @@ export default function Who() {
                     Who We
                       <span className="text-green-700"> Are. </span>
                   </h2>
+                <div className="w-24 h-1 bg-green-200 mx-auto rounded-full mb-6"></div>
                   <p className="my-4 text-gray-800 text-base md:text-lg">
               We believe that every story deserves to be heard.
             </p>
-                <div className="w-24 h-1 bg-green-200 mx-auto rounded-full mb-6"></div>
                 </motion.div>
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-14 items-center">
         {/* LEFT IMAGE */}

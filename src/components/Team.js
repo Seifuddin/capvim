@@ -15,7 +15,7 @@ export default function MeetOurTeam() {
     {
       name: "Rhobey",
       role: "Chief Designer",
-      image: "/images/IMG-20250804-WA0004.jpg",
+      image: "/images/book-reading-woman-standing-red-background-high-quality-photo_114579-62404.avif",
     },
     {
       name: "Trinah",
@@ -25,7 +25,7 @@ export default function MeetOurTeam() {
     {
       name: "Muriithi Nguru",
       role: "Web Developer",
-      image: "/images/Screenshot_20250509-162936.jpg",
+      image: "/images/images (5).jpg",
     },
   ];
 

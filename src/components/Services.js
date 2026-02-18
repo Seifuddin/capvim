@@ -202,7 +202,7 @@ export default function ServicesPage() {
             <div className="w-24 h-1 bg-green-200 mx-auto rounded-full mt-3"></div>
 
             <p className="mt-4 text-gray-600 text-base">
-              At Capvim International Publishers, we provide end-to-end
+              At Capvim, we provide end-to-end
               publishing solutions designed to transform your manuscript into
               a professionally published and globally distributed book.
             </p>
