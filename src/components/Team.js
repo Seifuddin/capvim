@@ -7,25 +7,25 @@ import { ArrowUpRight } from "lucide-react";
 export default function MeetOurTeam() {
   const team = [
     {
-      name: "Dr. James Mwangi",
+      name: "Dr. Clifford Matara",
       role: "Founder & Chief Editor",
-      image: "/images/WhatsApp Image 2025-04-27 at 04.32.48 (1).webp",
+      image: "/images/images (1).jpg",
       featured: true,
     },
     {
-      name: "Sarah Wanjiku",
-      role: "Publishing Director",
-      image: "/images/WhatsApp Image 2025-04-27 at 04.32.48 (1).webp",
+      name: "Rhobey",
+      role: "Chief Designer",
+      image: "/images/images (1).jpg",
     },
     {
-      name: "David Otieno",
-      role: "Creative Design Lead",
-      image: "/images/WhatsApp Image 2025-04-27 at 04.32.48 (1).webp",
+      name: "Trinah",
+      role: "Manager Accounts",
+      image: "/images/http___com.ft.imagepublish.upp-prod-eu.s3.amazonaws.webp",
     },
     {
-      name: "Grace Njeri",
-      role: "Marketing Manager",
-      image: "/images/WhatsApp Image 2025-04-27 at 04.32.48 (1).webp",
+      name: "Muriithi Nguru",
+      role: "Web Developer",
+      image: "/images/images (1).jpg",
     },
   ];
 
@@ -44,15 +44,16 @@ export default function MeetOurTeam() {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <p className="text-green-700 font-semibold uppercase tracking-widest mb-3">
-            Our People
-          </p>
-          <h2 className="text-2xl md:text-4xl font-bold text-gray-800">
+          <span className="inline-block bg-green-200 text-green-600 px-4 py-1 rounded-full text-sm font-medium mb-4">
+              Our Team
+            </span>
+          <h2 className="text-2xl md:text-4xl font-bold text-gray-800 mb-3">
             Meet The 
             <span className="text-green-600"> Minds Behind Capvim. </span>
-
           </h2>
-          <p className="text-gray-600 text-sm mt-3">
+        <div className="w-24 h-1 bg-green-200 mx-automd:mx-0 rounded-full mb-6"></div>
+
+          <p className="text-gray-600 text-base md:text-lg mt-3">
                   A passionate team dedicated to excellence in publishing,
           creativity, and global impact.
                 </p>

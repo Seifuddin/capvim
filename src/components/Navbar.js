@@ -13,8 +13,8 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="bg-white fixed w-full top-0 left-0 z-50 shadow-lg border-b-2border-b-green-700/30">
-      <div className="max-w-screen-xl mx-auto px-4 py-3.5">
+    <nav className="bg-white fixed w-full px-6 top-0 left-0 z-50 shadow-lg border-b-2border-b-green-700/30">
+      <div className="max-w-screen-xl mx-auto py-3.5">
         <div className="flex justify-between items-center">
           <div className="flex text-white font-bold text-xl tracking-wide">
             <motion.div
@@ -24,7 +24,7 @@ export default function Navbar() {
               <img
           src="/images/Capvim IP.png"
           alt="Publishing Team"
-          className="w-20 md:w-24 rounded-sm bg-gray200 shadowmd p-2"
+          className="w-20 md:w-24"
         />
             </motion.div>
           </div>
@@ -75,7 +75,7 @@ export default function Navbar() {
           initial={{ x: "100%" }}
           animate={{ x: 0 }}
           transition={{ type: "spring", stiffness: 300 }}
-          className="lg:hidden relative bg-gray-800 text-white space-y-4 px-4 py-4  top-0 right-0 w-full h-full"
+          className="lg:hidden relative bg-gray-800 text-white space-y-4 px4 py-4  top-0 right-0 w-full h-full"
         >
           <button
             onClick={() => setIsOpen(false)}

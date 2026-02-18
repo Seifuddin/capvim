@@ -1,11 +1,15 @@
 import AboutUs from '@/components/About'
+import PublishingCounters from '@/components/Counter'
+import Hero from '@/components/Hero'
 import AboutHero from '@/components/HeroAbout'
 import OurJourney from '@/components/Journey'
 import Location from '@/components/Location'
 import MissionVisionMotto from '@/components/Mission'
+import PublishingProcess from '@/components/Process'
 import SubAboutUs from '@/components/SubaboutUs'
 import MeetOurTeam from '@/components/Team'
 import TheTeam from '@/components/Team'
+import Who from '@/components/Who'
 import React from 'react'
 
 export const metadata = {
@@ -48,8 +52,10 @@ export const metadata = {
 export default function About() {
   return (
     <main className="w-full overflow-x-hidden bg-gradient-to-br from-blue-50 to-gray-100">
-      <AboutHero />
-      <AboutUs />
+      <Hero />
+      <Who />
+      <PublishingCounters />
+      <PublishingProcess />
       <OurJourney />
       <MeetOurTeam />
     </main>

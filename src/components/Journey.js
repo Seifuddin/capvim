@@ -9,30 +9,30 @@ export default function OurJourney() {
       year: "2018",
       title: "Founded",
       description: "Capvim began with a bold publishing vision.",
-      icon: <Lightbulb size={26} />,
+      icon: <Lightbulb size={22} />,
     },
     {
       year: "2020",
       title: "Expansion",
       description: "Entered educational and institutional publishing.",
-      icon: <BookOpen size={26} />,
+      icon: <BookOpen size={22} />,
     },
     {
       year: "2022",
       title: "Global Reach",
       description: "Books distributed across international markets.",
-      icon: <Globe size={26} />,
+      icon: <Globe size={22} />,
     },
     {
       year: "2024",
       title: "Innovation",
       description: "Adopted modern digital publishing systems.",
-      icon: <Rocket size={26} />,
+      icon: <Rocket size={22} />,
     },
   ];
 
   return (
-    <section className="relative py-24 px-6 lg:px-20 overflow-hidden
+    <section className="relative py-16 px-6 lg:px-20 overflow-hidden
       bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800 text-white">
 
       {/* Deep Background Layers */}
@@ -49,12 +49,15 @@ export default function OurJourney() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <p className="text-green-400 font-semibold uppercase tracking-widest mb-3">
-            Our Journey
-          </p>
-          <h2 className="text-2xl md:text-4xl font-bold">
-            The Evolution of Capvim
+          <span className="inline-block bg-green-400 text-blue-700 px-4 py-1 rounded-full text-sm font-medium mb-4">
+              Our Journey
+            </span>
+          <h2 className="text-2xl md:text-4xl font-bold mb-5">
+            The Evolution of 
+              <span className="text-green-400"> Capvim </span>
+
           </h2>
+        <div className="w-24 h-1 bg-green-400 mx-auto rounded-full mb-6"></div>
         </motion.div>
 
         {/* Journey Strip */}
@@ -74,10 +77,10 @@ export default function OurJourney() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: index * 0.15 }}
                 viewport={{ once: true }}
-                className="text-center group"
+                className="text-center group p-2 border-b border-white/20 rounded shadow-md"
               >
                 {/* Icon */}
-                <div className="mx-auto mb-6 w-18 h-18 flex items-center justify-center
+                <div className="mx-auto mb-6 w-12 h-12 flex items-center justify-center
                   rounded-full bg-white/10 backdrop-blur-lg 
                   border border-white/20 
                   shadow-[0_0_25px_rgba(59,130,246,0.4)]
@@ -89,7 +92,7 @@ export default function OurJourney() {
                 </div>
 
                 {/* Year */}
-                <span className="block text-3xl font-extrabold text-green-400 mb-2 tracking-wide">
+                <span className="block text-xl md:text-3xl font-extrabold text-green-400 mb-2 tracking-wide">
                   {item.year}
                 </span>
 

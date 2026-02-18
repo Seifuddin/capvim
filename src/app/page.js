@@ -15,6 +15,7 @@ import Assistance from "@/components/Assistance";
 import StoriesAndTestimonials from "@/components/Testimonials";
 import ContactUs from "@/components/Contacts";
 import VisitUs from "@/components/Visit";
+import AboutUs from "@/components/About";
 
 export const metadata = {
   title: 'Capvim Publishers | Book Publishing Experts in Kenya',
@@ -58,17 +59,15 @@ export default function Home() {
   return (
     <main className="overflow-x-hidden">
       <Hero />
+      <AboutUs />
+      <HeroSection />
       <PricingPackages />
       <Assistance />
-      <PublishingProcess />
-      <HeroSection />
       <OurServices />
-      <PublishingCounters />
+      <StoriesAndTestimonials />
       <FAQ />
       <CustomeCare />
       <Why />
-      <StoriesAndTestimonials />
-      <VisitUs />
     </main>
   );
 }

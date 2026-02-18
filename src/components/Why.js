@@ -107,7 +107,7 @@ export default function Why() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.4, delay: index * 0.07 }}
                   viewport={{ once: true }}
-                  className="group bgwhite p-5 rounded shadowsm border-b border-green-300 hover:shadow-md hover:-translate-y-1 transition-all duration-300"
+                  className="group bgwhite p-3 rounded shadowsm border-b border-green-300 hover:shadow-md hover:-translate-y-1 transition-all duration-300"
                 >
                   <div className="flex items-start gap-3">
                     <div className="w-9 h-9 p-2 flex items-center justify-center rounded bg-gradient-to-r from-green-600 to-green-900 group-hover:bg-green-700 transition-all duration-300">

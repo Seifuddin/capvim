@@ -1,3 +1,4 @@
+import Hero from "@/components/Hero";
 import PortfolioHero from "@/components/HeroPortfolio";
 import Portfolio from "@/components/Portfolio";
 
@@ -42,7 +43,7 @@ export const metadata = {
 export default function PortfolioPage() {
   return (
     <section className="min-h-screen bg-gray-100">
-      <PortfolioHero />
+      <Hero />
       <Portfolio />
     </section>
   );
