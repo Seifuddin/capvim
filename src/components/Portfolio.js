@@ -143,8 +143,8 @@ const books = [
 
 export default function Portfolio() {
   return (
-    <section className="min-h-screen bg-gray-100">
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-w-6xl mx-auto py-20 px-6 md:px-20">
+    <section className="min-h-screen bg-green-50 px-6">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-w-7xl mx-auto py-20">
         {books.map((book, index) => (
           <motion.div
             key={index}
@@ -154,7 +154,7 @@ export default function Portfolio() {
             className="flex flex-col items-center"
           >
             {/* Book Image */}
-            <article className="w-full h-[260px] relative rounded-lg overflow-hidden shadow-md">
+            <article className="w-full h-[260px] relative rounded overflow-hidden">
               <Image
                 src={book.src}
                 alt={`Cover of the book titled ${book.title} by ${book.author}`}
@@ -165,12 +165,12 @@ export default function Portfolio() {
             </article>
 
             {/* Book Details */}
-            <div className="w-full bg-gradient-to-tr from-green-300 via-white to-green-200 mt-3 p-3 rounded-lg shadow-sm text-center">
-              <h3 className="text-indigo-700 font-semibold text-base md:text-lg leading-tight break-words">
+            <div className="w-full mt-3 p-3">
+              <h3 className="text-blue-900 font-semibold text-base md:text-lg leading-tight break-words">
                 {book.title}
               </h3>
-              <p className="text-gray-600 text-sm mt-1">by {book.author}</p>
-              <p className="text-gray-400 text-xs mt-2">📅 {book.date}</p>
+              <p className="text-gray-800 text-sm mt-1">by {book.author}</p>
+              <p className="text-gray-600 text-xs mt-2">📅 {book.date}</p>
               <p className="text-yellow-500 text-lg mt-1">{book.rating}</p>
             </div>
           </motion.div>
