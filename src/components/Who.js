@@ -22,8 +22,10 @@ export default function Who() {
                   <h2 className="text-2xl md:text-4xl font-bold mb-5 text-gray-900">
                     Who We
                       <span className="text-green-700"> Are. </span>
-        
                   </h2>
+                  <p className="my-4 text-gray-800 text-base md:text-lg">
+              We believe that every story deserves to be heard.
+            </p>
                 <div className="w-24 h-1 bg-green-200 mx-auto rounded-full mb-6"></div>
                 </motion.div>
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-14 items-center">
@@ -33,10 +35,10 @@ export default function Who() {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="relative w-full h-[400px] lg:h-[500px] rounded overflow-hidden shadow-2xl"
+          className="relative w-full h-[350px] lg:h-[500px] xl:h-[450px] rounded overflow-hidden shadow-2xl"
         >
           <Image
-            src="/images/istockphoto-855660812-612x612.jpg" // replace with your image
+            src="/images/filters_format(webp)_quality(1).webp" // replace with your image
             alt="Capvim International Publishers"
             fill
             className="object-cover"
@@ -51,11 +53,11 @@ export default function Who() {
           viewport={{ once: true }}
         >
           <p className="text-gray-700 text-base md:text-lg leading-relaxed mb-2">
-            At <span className="font-semibold text-gray-900">Capvim International Publishers</span>, we believe that every story deserves to be heard. Our mission is to empower authors, thinkers, and creators to share their voices with the world.
+           Our mission is to empower authors, thinkers, and creators to share their voices with the world.
           </p>
 
           <p className="text-gray-700 text-base md:text-lg leading-relaxed mb-8">
-            From editing and design to printing and digital distribution, we offer comprehensive publishing solutions tailored to your needs. With a passion for storytelling and a commitment to quality, we turn your ideas into impactful books.
+            From editing and design to printing and digital distribution, we offer comprehensive publishing solutions tailored to your needs.
           </p>
 
           {/* FEATURES */}

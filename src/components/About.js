@@ -33,7 +33,7 @@ export default function AboutUs() {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="relative w-full h-[400px] lg:h-[450px] rounded overflow-hidden shadow-2xl"
+          className="relative w-full h-[300px] md:h-[450px] xl:h-[400px] rounded overflow-hidden shadow-2xl"
         >
           <Image
             src="/images/67192215f50047d93f2c6d14_priscilla-du-preez-XkKCui44iM0-unsplash.webp" // replace with your image
@@ -50,7 +50,7 @@ export default function AboutUs() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <p className="text-gray-700 text-base md:text-lg leading-relaxed mb-8">
+          <p className="text-gray-800 text-base md:text-lg leading-relaxed mb-8">
             At <span className="font-semibold text-gray-900">Capvim International Publishers</span>, 
             we are committed to transforming powerful ideas into professionally published works. 
             We partner with authors, educators, and visionaries to produce high-quality books 

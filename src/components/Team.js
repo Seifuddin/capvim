@@ -9,13 +9,13 @@ export default function MeetOurTeam() {
     {
       name: "Dr. Clifford Matara",
       role: "Founder & Chief Editor",
-      image: "/images/images (1).jpg",
+      image: "/images/IMG-20250804-WA0003~2.jpg",
       featured: true,
     },
     {
       name: "Rhobey",
       role: "Chief Designer",
-      image: "/images/images (1).jpg",
+      image: "/images/IMG-20250804-WA0004.jpg",
     },
     {
       name: "Trinah",
@@ -25,7 +25,7 @@ export default function MeetOurTeam() {
     {
       name: "Muriithi Nguru",
       role: "Web Developer",
-      image: "/images/images (1).jpg",
+      image: "/images/Screenshot_20250509-162936.jpg",
     },
   ];
 
@@ -81,7 +81,7 @@ export default function MeetOurTeam() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
 
             {/* Content */}
-            <div className="absolute bottom-0 p-8 text-white">
+            <div className="absolute bottom-0 p-4 text-white">
               <h3 className="text-3xl font-bold">
                 {featuredMember.name}
               </h3>
@@ -115,7 +115,7 @@ export default function MeetOurTeam() {
 
                 <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent" />
 
-                <div className="absolute inset-0 flex flex-col justify-center pl-8 text-white">
+                <div className="absolute bottom-0 p-4 text-white">
                   <h4 className="text-xl font-semibold">
                     {member.name}
                   </h4>

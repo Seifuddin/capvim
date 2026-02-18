@@ -85,7 +85,7 @@ export default function Why() {
               <img
                 src="/images/1657974996_whyus.jpg"
                 alt="Capvim Publishing"
-                className="w-full h-[420px] object-cover"
+                className="w-full h-[350px] lg:h-[700px] xl:h-[600px] object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-tr from-green-900/30 via-transparent to-transparent"></div>
             </div>
@@ -117,10 +117,10 @@ export default function Why() {
                     </div>
 
                     <div>
-                      <h3 className="font-semibold text-blue-900 text-sm md:text-lg mb-1 group-hover:text-green-700 transition duration-300">
+                      <h3 className="font-semibold text-blue-900 text-base md:text-lg mb-1 group-hover:text-green-700 transition duration-300">
                         {feature.title}
                       </h3>
-                      <p className="text-gray-600 text-xs md:text-sm leading-relaxed">
+                      <p className="text-gray-600 text-sm md:text-base leading-relaxed">
                         {feature.description}
                       </p>
                     </div>
