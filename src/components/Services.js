@@ -220,7 +220,7 @@ export default function ServicesPage() {
               <motion.div
                 key={index}
                 whileHover={{ y: -6 }}
-                className="group bg-green100 rounded-md shadowmd hover:shadow-2xl transition-all duration-500 overflow-hidden flex flex-col border-b border-green-300"
+                className="group rounded shadowmd hover:shadow-2xl transition-all duration-500 overflow-hidden flex flex-col border border-green-300"
               >
                 <div className="relative w-full h-44 md:h-52">
                   <Image
@@ -231,7 +231,7 @@ export default function ServicesPage() {
                   />
                 </div>
 
-                <div className="p3 py-5 flex flex-col flex-grow">
+                <div className="p-3 py-5 flex flex-col flex-grow">
                   <div className="flex items-center gap-2 mb-3">
                     {service.icon}
                     <h3 className="md:text-xl font-semibold text-blue-900">
