@@ -97,8 +97,8 @@ export default function PricingPackages() {
               className={`relative rounded p-6 border transition-all duration-500 flex flex-col
                 ${
                   pkg.highlighted
-                    ? "bg-green-100 shadow-2xl border-green-800 scale-105"
-                    : "bg-green-100 shadow-md border-green-200 hover:shadow-xl"
+                    ? "bg-white shadow-2xl border-green-800 scale-105"
+                    : "bg-white shadow-md border-green-200 hover:shadow-xl"
                 }`}
             >
 
