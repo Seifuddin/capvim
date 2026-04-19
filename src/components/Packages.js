@@ -97,8 +97,8 @@ export default function PricingPackages() {
               className={`relative rounded p-6 border transition-all duration-500 flex flex-col
                 ${
                   pkg.highlighted
-                    ? "bg-white shadow-2xl border-green-800 scale-105"
-                    : "bg-white shadow-md border-green-200 hover:shadow-xl"
+                    ? "bg-white border-green-800 scale-105"
+                    : "bg-white border-green-200"
                 }`}
             >
 
@@ -145,7 +145,7 @@ export default function PricingPackages() {
                 className={`mt-8 py-2 rounded font-medium transition duration-300
                   ${
                     pkg.highlighted
-                      ? "bg-gradient-to-r from-green-600 to-green-900 text-white hover:bg-green-700 shadow-md"
+                      ? "bg-gradient-to-r from-green-600 to-green-900 text-white hover:bg-green-700 shadowmd"
                       : "border border-green-600 text-green-700 hover:bg-blue-50"
                   }`}
               >
