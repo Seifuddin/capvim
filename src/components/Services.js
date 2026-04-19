@@ -220,7 +220,7 @@ export default function ServicesPage() {
               <motion.div
                 key={index}
                 whileHover={{ y: -6 }}
-                className="group rounded shadowmd hover:shadow-2xl transition-all duration-500 overflow-hidden flex flex-col border border-green-300"
+                className="group bg-white rounded shadowmd hover:shadow-2xl transition-all duration-500 overflow-hidden flex flex-col border border-green-300"
               >
                 <div className="relative w-full h-44 md:h-52">
                   <Image
