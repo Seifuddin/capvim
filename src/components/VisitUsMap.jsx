@@ -135,7 +135,7 @@ export default function VisitUsMap({
   }
 
   return (
-    <section className="py-16 px-6 mdpx-6 bg-green-50">
+    <section className="py-16 px-6 mdpx-6 bg-yellow-50">
       <div className="mx-auto max-w-7xl rounded border border-green-200 bg-white shadow-xl overflow-hidden">
         <div className="grid grid-cols-1 lg:grid-cols-2">
           {/* LEFT: Directions */}

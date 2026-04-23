@@ -7,7 +7,7 @@ import { BookOpen, Globe, ShieldCheck, Sparkles } from "lucide-react";
 
 export default function AboutUs() {
   return (
-    <section className="bg-green-50 py-20 px-6 lg:px-20">
+    <section className="bg-yellow-50 py-20 px-6 lg:px-20">
          {/* Header */}
                 <motion.div
                   initial={{ opacity: 0, y: -40 }}
@@ -25,6 +25,9 @@ export default function AboutUs() {
         
                   </h2>
                 <div className="w-24 h-1 bg-green-200 mx-auto rounded-full mb-6"></div>
+                <p className="mt-4 text-gray-600 text-base">
+              We are committed to transforming powerful ideas into professionally published works.
+            </p>
                 </motion.div>
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-14 items-center">
         {/* LEFT IMAGE */}
@@ -33,7 +36,7 @@ export default function AboutUs() {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="relative w-full h-[300px] md:h-[450px] xl:h-[400px] rounded overflow-hidden shadow-2xl"
+          className="relative w-full h-[300px] md:h-[450px] xl:h-[400px] rounded overflow-hidden shadow2xl"
         >
           <Image
             src="/images/67192215f50047d93f2c6d14_priscilla-du-preez-XkKCui44iM0-unsplash.webp" // replace with your image
@@ -51,10 +54,7 @@ export default function AboutUs() {
           viewport={{ once: true }}
         >
           <p className="text-gray-800 text-base md:text-lg leading-relaxed mb-8">
-            At <span className="font-semibold text-gray-900">Capvim International Publishers</span>, 
-            we are committed to transforming powerful ideas into professionally published works. 
-            We partner with authors, educators, and visionaries to produce high-quality books 
-            that inform, inspire, and impact lives globally.
+            We partner with authors, educators, and visionaries to produce high-quality books that inform, inspire, and impact lives globally.
           </p>
 
           {/* FEATURES */}

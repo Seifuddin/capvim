@@ -51,7 +51,7 @@ export default function Why() {
   ];
 
   return (
-    <section className="bg-green-50 py-16 px-6">
+    <section className="bg-yellow-50 py-16 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
 

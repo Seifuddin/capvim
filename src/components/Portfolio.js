@@ -143,7 +143,7 @@ const books = [
 
 export default function Portfolio() {
   return (
-    <section className="min-h-screen bg-green-50 px-6">
+    <section className="min-h-screen bg-yellow-50 px-6">
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-w-7xl mx-auto py-20">
         {books.map((book, index) => (
           <motion.div

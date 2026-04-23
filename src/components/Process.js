@@ -57,7 +57,7 @@ export default function PublishingProcess() {
   ];
 
   return (
-    <section className="bg-green-50 py-24 px-4">
+    <section className="bg-yellow-50 py-24 px-4">
       <div className="max-w-7xl mx-auto">
         {/* HEADER */}
         <div className="max-w-3xl mx-auto text-center mb-10 md:mb-20">

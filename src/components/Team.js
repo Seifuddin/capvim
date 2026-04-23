@@ -33,7 +33,7 @@ export default function MeetOurTeam() {
   const otherMembers = team.filter((m) => !m.featured);
 
   return (
-    <section className="bg-green-50 py-24 px-6 lg:px-20">
+    <section className="bg-yellow-50 py-24 px-6 lg:px-20">
       <div className="max-w-7xl mx-auto">
 
         {/* SECTION HEADER */}

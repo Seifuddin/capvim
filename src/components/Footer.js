@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin } from "lucide-react";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -19,10 +20,27 @@ export default function Footer() {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.2, duration: 1, ease: "easeInOut" }}
         >
-          <h2 className="text-2xl font-bold text-white mb-2">Capvim International Publishers</h2>
-          <p className="text-sm text-gray-400">
-            Crafting impactful stories that educate, inspire, and transform minds through print and digital media.
+          <div className="flex items-center gap-3 mb-4">
+          <Image
+              src="/images/Capvim IP.png"
+              alt="Capvim Logo"
+              width={70}
+              height={40}
+              className="rounded bg-white p-1"
+            />
+            <h2 className="text-xl font-bold text-white">
+              Capvim<p className="text-sm font-normal text-white">
+            International Publishers
+            </p>
+            </h2>
+          
+          </div>
+          <p className="text-sm leading-relaxed text-gray-300">
+                      Crafting impactful stories that educate, inspire, and transform minds through print and digital media.
           </p>
+
+
+        
         </motion.div>
 
         {/* Services */}

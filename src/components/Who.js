@@ -7,7 +7,7 @@ import { Target, Eye, Quote } from "lucide-react";
 
 export default function Who() {
   return (
-    <section className="bg-green-50 py-20 px-6 lg:px-20">
+    <section className="bg-yellow-50 py-20 px-6 lg:px-20">
          {/* Header */}
                 <motion.div
                   initial={{ opacity: 0, y: -40 }}

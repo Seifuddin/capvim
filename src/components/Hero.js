@@ -40,7 +40,7 @@ export default function Hero() {
       {/* Background Image */}
       <div className="absolute inset-0 opacity-35">
         <Image
-          src="/images/two-people-sitting-floor-library-one-them-is-reading-book_861143-205.webp"
+          src="/images/1000_F_248500652_ODdXTJo565M5YO8wO7nvawB1li0uLtOZ.jpg"
           alt="Background image"
           layout="fill"
           objectFit="cover"

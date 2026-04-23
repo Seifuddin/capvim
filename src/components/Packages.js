@@ -62,7 +62,7 @@ export default function PricingPackages() {
   ];
 
   return (
-    <section className="bg-green-50 py-24 px-6">
+    <section className="bg-yellow-50 py-24 px-6">
       <div className="max-w-7xl mx-auto">
 
         {/* HEADER */}

@@ -1,6 +1,6 @@
 import Hero from "@/components/Hero"
 import ServicesHero from "@/components/HeroServices"
-import OurServices from "@/components/Services"
+import MainServices from "@/components/OurServices"
 import React from "react"
 
 export const metadata = {
@@ -46,7 +46,7 @@ export default function Services() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-blue-50 to-gray-100 overflow-x-hidden">
       <Hero />
-      <OurServices />
+      <MainServices />
     </main>
   )
 }

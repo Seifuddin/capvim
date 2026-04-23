@@ -158,7 +158,7 @@ const RequestModal = ({ service, isOpen, onClose }) => (
    MAIN COMPONENT
 ========================= */
 
-export default function ServicesPage() {
+export default function MainServices() {
   const [selectedService, setSelectedService] = useState(null);
   const [isPricingOpen, setPricingOpen] = useState(false);
   const [isRequestOpen, setRequestOpen] = useState(false);
@@ -243,7 +243,7 @@ export default function ServicesPage() {
                     {service.description}
                   </p>
 
-                  <ul className="hidden text-xs text-gray-500 space-y-1 mb-6">
+                  <ul className="text-xs text-gray-500 space-y-1 mb-6">
                     <li>✔ Professional industry standards</li>
                     <li>✔ Experienced publishing team</li>
                     <li>✔ Transparent communication</li>
