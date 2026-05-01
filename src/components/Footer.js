@@ -25,7 +25,7 @@ export default function Footer() {
               src="/images/Capvim IP.png"
               alt="Capvim Logo"
               width={70}
-              height={40}
+              height={90}
               className="rounded bg-white p-1"
             />
             <h2 className="text-xl font-bold text-white">

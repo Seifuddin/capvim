@@ -6,9 +6,9 @@ import Image from "next/image";
 export default function Hero() {
   const words = [
     "Your Publishing Journey Starts Here.",
-    "Transform Ideas into Books.",
-    "Where Creativity Meets Precision ",
-    "A Trusted Partner in Publishing",
+    "Transform Ideas Into Books.",
+    "Where Creativity Meets Precision.",
+    "A Trusted Partner in Publishing.",
   ];
 
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
@@ -76,18 +76,33 @@ export default function Hero() {
           transition={{ delay: 1, duration: 0.5 }}
           className="flex flex-wrap justify-center gap-4"
         >
-          <a
-            href="/services"
-            className="px-5 py-2 bg-green-400 hover:bg-indigo-700 text-black md:text-lg font-semibold rounded shadow-lg transition transform hover:scale-105"
-          >
-            Our Services
-          </a>
+          {/* Buttons */}
+        <div className="mt-7 flex flex-colsm: flex-row gap-3 justify-center">
+
           <a
             href="/portfolio"
-            className="px-5 py-2 hover:bg-green-700 text-white md:text-lg border border-white font-semibold rounded shadow-lg transition transform hover:scale-105"
+            className="
+              px-7 py-2.5 rounded-full
+              bg-white text-black text-sm font-medium
+              hover:bg-pink-500 hover:text-white
+              transition
+            "
           >
             Our Portfolio
           </a>
+
+          <a
+            href="/services"
+            className="
+              px-7 py-2.5 rounded-full
+              border border-white/40 text-white/90 text-sm
+              hover:border-white hover:text-white
+              transition
+            "
+          >
+            Our Services
+          </a>
+        </div>
         </motion.div>
       </div>
     </section>

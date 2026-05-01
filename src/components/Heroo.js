@@ -36,20 +36,33 @@ export default function HeroSection() {
             We help authors, thinkers, and creators publish meaningful content that makes an impact. A Trusted Partner in Publishing — From Vision to Volume.
           </p>
 
-          <div className="mt-8 flex flex-wrap justifycenter gap-4">
-            <Link
-              href="/services"
-              className="px-10 py-2 fontserif bg-green-400 text-indigo-900 rounded-md shadow-md fontsemibold hover:bg-yellow-500 transition"
-            >
-              Services
-            </Link>
-            <Link
-              href="/portfolio"
-              className="px-10 py-2 fontserif border border-white text-gray-100 rounded-md hover:bg-yellow-400 hover:text-gray-900 transition"
-            >
-              Portfolio
-            </Link>
-          </div>
+          {/* Buttons */}
+        <div className="mt-7 flex flex-colsm: flex-row gap-3 justify-start">
+
+          <a
+            href="/portfolio"
+            className="
+              px-7 py-2.5 rounded-full
+              bg-white text-black text-sm font-medium
+              hover:bg-pink-500 hover:text-white
+              transition
+            "
+          >
+            Our Portfolio
+          </a>
+
+          <a
+            href="/services"
+            className="
+              px-7 py-2.5 rounded-full
+              border border-white/40 text-white/90 text-sm
+              hover:border-white hover:text-white
+              transition
+            "
+          >
+            Our Services
+          </a>
+        </div>
         </motion.div>
 
         {/* Right Side Image */}

@@ -36,18 +36,6 @@ export default function Why() {
       description:
         "We uphold the highest publishing standards while maintaining transparency and trust with our authors.",
     },
-    {
-      icon: <Sparkles className="w-5 h-5 text-white" />,
-      title: "Author-Focused Approach",
-      description:
-        "Every author is unique. We tailor our services to bring your vision to life with excellence and care.",
-    },
-    {
-      icon: <Users className="w-5 h-5 text-white" />,
-      title: "Strong Publishing Network",
-      description:
-        "We collaborate with trusted partners to ensure smooth printing, marketing, and distribution channels.",
-    },
   ];
 
   return (
@@ -85,7 +73,7 @@ export default function Why() {
               <img
                 src="/images/1657974996_whyus.jpg"
                 alt="Capvim Publishing"
-                className="w-full h-[350px] lg:h-[700px] xl:h-[600px] object-cover"
+                className="w-full h-[350px] lg:h-[450px] object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-tr from-green-900/30 via-transparent to-transparent"></div>
             </div>

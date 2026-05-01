@@ -29,7 +29,7 @@ export default function StoriesAndTestimonials() {
   const testimonials = [
     {
       name: "Clifford Matara,",
-      role: "-Director, capvim International Publishers.",
+      role: "-Director, Capvim International Publishers.",
       quote:
         "Their attention to detail and collaborative process turned my manuscript into a masterpiece.",
             image: "/images/WhatsApp Image 2025-04-27 at 04.32.48 (1).webp",
@@ -44,7 +44,7 @@ export default function StoriesAndTestimonials() {
     },
     {
       name: "Ishmail Atudo,",
-      role: "-Director, NIMA",
+      role: "-Director, NIMA East Africa",
       quote:
         "Professional, creative, and always on point. Highly recommended!",
             image: "/images/WhatsApp Image 2025-04-27 at 04.32.48 (1).webp",
@@ -62,10 +62,10 @@ export default function StoriesAndTestimonials() {
 
     {
       name: "Murithi Nguru,",
-      role: "-Director, Lapsa",
+      role: "-Director, Lapsa Web & Graphics",
       quote:
         "My project wouldn't have been the same without them.",
-            image: "/images/WhatsApp Image 2025-04-27 at 04.32.48 (1).webp",
+            image: "/images/edited-photo.png",
 
     },
 
