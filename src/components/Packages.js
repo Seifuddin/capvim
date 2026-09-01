@@ -68,7 +68,7 @@ const packages = [
 
 export default function PricingPackages() {
   return (
-    <section className="relative overflow-hidden bg-white px-5 py-16 sm:px-6 lg:py-20">
+    <section className="relative overflow-hidden bg-slate-50 px-5 py-16 sm:px-6 lg:py-20">
       {/* Background accents */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <div className="absolute -left-32 top-20 h-72 w-72 rounded-full bg-blue-100/60 blur-3xl" />
