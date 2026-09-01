@@ -60,7 +60,6 @@ export default function Home() {
     <main className="overflow-x-hidden">
       <Hero />
       <AboutUs />
-      <HeroSection />
       <PricingPackages />
       <Assistance />
       <OurServices />
