@@ -2,120 +2,222 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { BookOpen, Globe, ShieldCheck, Sparkles, ArrowRight } from "lucide-react";
+import {
+  BookOpen,
+  Globe,
+  ShieldCheck,
+  Sparkles,
+  ArrowRight,
+} from "lucide-react";
+
+const features = [
+  {
+    icon: BookOpen,
+    title: "Professional Publishing",
+    desc: "High editorial standards and quality production",
+  },
+  {
+    icon: Globe,
+    title: "Global Distribution",
+    desc: "Reaching readers across borders and cultures",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Integrity & Excellence",
+    desc: "Built on trust, professionalism, and transparency",
+  },
+  {
+    icon: Sparkles,
+    title: "Creative Innovation",
+    desc: "Modern design and impactful storytelling",
+  },
+];
 
 export default function AboutUs() {
-  const features = [
-    { icon: BookOpen, title: "Professional Publishing", desc: "High editorial standards and quality production" },
-    { icon: Globe, title: "Global Distribution", desc: "Reaching readers across borders and cultures" },
-    { icon: ShieldCheck, title: "Integrity & Excellence", desc: "Built on trust, professionalism, and transparency" },
-    { icon: Sparkles, title: "Creative Innovation", desc: "Modern design and impactful storytelling" },
-  ];
-
   return (
-    <section className="bg-white py-24 px-6">
-      <div className="max-w-7xl mx-auto">
-        {/* Header */}
+    <section className="bg-white px-5 py-16 sm:px-6 lg:py-20">
+      <div className="mx-auto max-w-7xl">
+
+        {/* =========================
+            SECTION HEADER
+        ========================== */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          transition={{ duration: 0.6 }}
+          className="mx-auto mb-12 max-w-3xl text-center lg:mb-14"
         >
-          <span className="inline-block border border-blue-200 text-blue-600 px-4 py-1 rounded-full text-sm font-medium">
-            About Us
-          </span>
-          <h2 className="text-4xl md:text-5xl font-bold mt-4 text-gray-900">
+          {/* Label */}
+          <div className="mb-4 inline-flex items-center gap-2">
+            <span className="h-px w-7 bg-green-500" />
+
+            <span className="text-xs font-bold uppercase tracking-[0.18em] text-blue-700">
+              About Us
+            </span>
+
+            <span className="h-px w-7 bg-green-500" />
+          </div>
+
+          {/* Heading */}
+          <h2 className="text-3xl font-bold leading-tight tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
             Empowering Authors.
-            <span className="text-blue-600"> Inspiring Generations.</span>
+            <span className="block text-blue-700">
+              Inspiring Generations.
+            </span>
           </h2>
-          <p className="mt-4 text-gray-600 max-w-2xl mx-auto text-lg">
-            We transform powerful ideas into professionally published works that inform, inspire, and impact lives globally.
+
+          {/* Description */}
+          <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-slate-600 sm:text-base">
+            We transform powerful ideas into professionally published works
+            that inform, inspire, and impact lives globally.
           </p>
         </motion.div>
 
-        {/* Main Content Grid */}
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left: Image */}
+        {/* =========================
+            MAIN CONTENT
+        ========================== */}
+        <div className="grid items-center gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:gap-16">
+
+          {/* =========================
+              IMAGE
+          ========================== */}
           <motion.div
-            initial={{ opacity: 0, x: -40 }}
+            initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
             className="relative"
           >
-            <div className="relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-xl border border-gray-100">
+            <div className="relative h-[340px] overflow-hidden rounded-2xl border border-slate-200 shadow-lg sm:h-[420px] lg:h-[500px]">
               <Image
                 src="/images/67192215f50047d93f2c6d14_priscilla-du-preez-XkKCui44iM0-unsplash.webp"
                 alt="Capvim International Publishers"
                 fill
-                className="object-cover"
+                priority
+                className="object-cover transition-transform duration-700 hover:scale-105"
               />
+            </div>
+
+            {/* Small accent block */}
+            <div className="absolute -bottom-3 -right-3 -z-0 h-20 w-20 rounded-xl border border-green-200 bg-green-50" />
+
+            {/* Image label */}
+            <div className="absolute bottom-5 left-5 rounded-xl border border-white/70 bg-white px-4 py-3 shadow-lg">
+              <div className="flex items-center gap-2">
+                <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-50">
+                  <BookOpen className="h-4 w-4 text-blue-700" />
+                </div>
+
+                <div>
+                  <p className="text-xs font-bold text-slate-900">
+                    Publishing Excellence
+                  </p>
+                  <p className="text-[10px] text-slate-500">
+                    From vision to publication
+                  </p>
+                </div>
+              </div>
             </div>
           </motion.div>
 
-          {/* Right: Content */}
+          {/* =========================
+              CONTENT
+          ========================== */}
           <motion.div
-            initial={{ opacity: 0, x: 40 }}
+            initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
           >
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Your Vision, Our Expertise
-            </h3>
-            <p className="text-gray-600 leading-relaxed mb-8">
-              We partner with authors, educators, and visionaries to produce high-quality books 
-              that inform, inspire, and impact lives globally.
-            </p>
+            {/* Small heading */}
+            <div className="mb-3 flex items-center gap-2">
+              <span className="h-5 w-1 rounded-full bg-green-500" />
 
-            {/* Features Grid */}
-            <div className="grid sm:grid-cols-2 gap-4 mb-8">
-              {features.map((feature, index) => (
-                <motion.div
-                  key={feature.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="p-4 rounded-xl border border-gray-100 hover:border-blue-200 hover:shadow-md transition-all duration-300 bg-white"
-                >
-                  <div className="flex items-start gap-3">
-                    <div className="p-2 rounded-lg bg-blue-50 flex-shrink-0">
-                      <feature.icon className="w-5 h-5 text-blue-600" />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900 text-sm">
-                        {feature.title}
-                      </h4>
-                      <p className="text-gray-500 text-xs mt-0.5">
-                        {feature.desc}
-                      </p>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
+              <span className="text-xs font-bold uppercase tracking-widest text-green-600">
+                Who We Are
+              </span>
             </div>
 
-            {/* CTA */}
+            <h3 className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
+              Your Vision,
+              <span className="text-blue-700"> Our Expertise.</span>
+            </h3>
+
+            <p className="mt-4 max-w-xl text-sm leading-7 text-slate-600 sm:text-base">
+              We partner with authors, educators, and visionaries to produce
+              high-quality books that inform, inspire, and impact lives
+              globally.
+            </p>
+
+            {/* =========================
+                FEATURES
+            ========================== */}
+            <div className="mt-7 grid gap-3 sm:grid-cols-2">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+
+                return (
+                  <motion.div
+                    key={feature.title}
+                    initial={{ opacity: 0, y: 15 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{
+                      duration: 0.45,
+                      delay: index * 0.08,
+                    }}
+                    className="group rounded-xl border border-slate-200 bg-white p-4 transition-all duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-md"
+                  >
+                    <div className="flex items-start gap-3">
+                      {/* Icon */}
+                      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-blue-100 bg-blue-50 transition-colors duration-300 group-hover:bg-blue-100">
+                        <Icon className="h-5 w-5 text-blue-700" />
+                      </div>
+
+                      {/* Text */}
+                      <div>
+                        <h4 className="text-sm font-bold text-slate-900">
+                          {feature.title}
+                        </h4>
+
+                        <p className="mt-1 text-xs leading-5 text-slate-500">
+                          {feature.desc}
+                        </p>
+                      </div>
+                    </div>
+                  </motion.div>
+                );
+              })}
+            </div>
+
+            {/* =========================
+                CTA
+            ========================== */}
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
               viewport={{ once: true }}
-              className="flex flex-wrap gap-3"
+              transition={{
+                duration: 0.5,
+                delay: 0.35,
+              }}
+              className="mt-8 flex flex-wrap items-center gap-3"
             >
+              {/* Primary */}
               <a
                 href="/services"
-                className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-blue-600 text-white font-medium text-sm hover:bg-blue-700 transition-all duration-300"
+                className="group inline-flex items-center gap-2 rounded-xl bg-blue-700 px-5 py-3 text-sm font-semibold text-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-blue-800 hover:shadow-md"
               >
                 Our Services
-                <ArrowRight className="w-4 h-4" />
+
+                <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
               </a>
+
+              {/* Secondary */}
               <a
                 href="/portfolio"
-                className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full border-2 border-blue-200 text-blue-600 font-medium text-sm hover:bg-blue-50 transition-all duration-300"
+                className="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-slate-700 transition-all duration-300 hover:border-blue-200 hover:bg-blue-50 hover:text-blue-700"
               >
                 View Portfolio
               </a>
