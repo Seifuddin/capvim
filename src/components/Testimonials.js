@@ -1,218 +1,192 @@
 "use client";
+
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { Quote, HeartHandshake } from "lucide-react";
+import { Quote, HeartHandshake, Star, ChevronLeft, ChevronRight } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay } from "swiper/modules";
+import { Pagination, Autoplay, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 export default function StoriesAndTestimonials() {
-  const stories = [
-    {
-      image: "/images/utamaduni at mathare/_DSC8551.jpg",
-      title: "Empowering Women",
-      text: "Through Utamaduni’s community workshops, over 50 women have gained tailoring and entrepreneurship skills — transforming their families’ livelihoods and restoring dignity.",
-    },
-    {
-      image: "/images/utamaduni at mathare/_DSC8943.jpg",
-      title: "Restoring Hope for Street Children",
-      text: "Our outreach programs have helped reintegrate vulnerable children back to school and into safe homes, giving them a second chance at life and learning.",
-    },
-    {
-      image: "/images/how_it_went_down/_DSC7546.jpg",
-      title: "Greening the Future Together",
-      text: "Utamaduni volunteers planted 2,000 trees across local schools, helping to build environmental awareness and sustainable communities.",
-    },
-  ];
-
   const testimonials = [
     {
-      name: "Clifford Matara,",
-      role: "-Director, Capvim International Publishers.",
-      quote:
-        "Their attention to detail and collaborative process turned my manuscript into a masterpiece.",
-            image: "/images/WhatsApp Image 2025-04-27 at 04.32.48 (1).webp",
+      name: "Clifford Matara",
+      role: "Director, Capvim International Publishers",
+      quote: "Their attention to detail and collaborative process turned my manuscript into a masterpiece.",
+      image: "/images/WhatsApp Image 2025-04-27 at 04.32.48 (1).webp",
+      rating: 5,
     },
     {
-      name: "Vincent Obwogi, .",
-      role: "-Director, Inklab Graphics.",
-      quote:
-        "Outstanding experience! The quality of design and timeliness exceeded expectations.",
-            image: "/images/WhatsApp Image 2025-04-27 at 04.32.48 (1).webp",
-
+      name: "Vincent Obwogi",
+      role: "Director, Inklab Graphics",
+      quote: "Outstanding experience! The quality of design and timeliness exceeded expectations.",
+      image: "/images/WhatsApp Image 2025-04-27 at 04.32.48 (1).webp",
+      rating: 5,
     },
     {
-      name: "Ishmail Atudo,",
-      role: "-Director, NIMA East Africa",
-      quote:
-        "Professional, creative, and always on point. Highly recommended!",
-            image: "/images/WhatsApp Image 2025-04-27 at 04.32.48 (1).webp",
-
+      name: "Ishmail Atudo",
+      role: "Director, NIMA East Africa",
+      quote: "Professional, creative, and always on point. Highly recommended!",
+      image: "/images/WhatsApp Image 2025-04-27 at 04.32.48 (1).webp",
+      rating: 5,
     },
-
     {
-      name: "Brian Odhiambo,",
-      role: "-Publisher",
-      quote:
-        "I felt supported every step of the way. Their team is simply the best.",
-            image: "/images/WhatsApp Image 2025-04-27 at 04.32.48 (1).webp",
-
+      name: "Brian Odhiambo",
+      role: "Publisher",
+      quote: "I felt supported every step of the way. Their team is simply the best.",
+      image: "/images/WhatsApp Image 2025-04-27 at 04.32.48 (1).webp",
+      rating: 5,
     },
-
     {
-      name: "Murithi Nguru,",
-      role: "-Director, Lapsa Web & Graphics",
-      quote:
-        "My project wouldn't have been the same without them.",
-            image: "/images/edited-photo.png",
-
+      name: "Murithi Nguru",
+      role: "Director, Lapsa Web & Graphics",
+      quote: "My project wouldn't have been the same without them.",
+      image: "/images/edited-photo.png",
+      rating: 5,
     },
-
   ];
 
   return (
-    <section className="relative py-20 bg-amber-50 px6 overflow-hidden bg-gradient-to-r from-blue-900 to-blue-800">
-
-      {/* Decorative Waves */}
-      <div className="absolute -top-16 left-0 w-full h-36 bg-gradient-to-r from-indigo-800 via-indigo-900 to-indigo-800 rounded-b-full opacity-30"></div>
-      <div className="absolute -bottom-16 right-0 w-56 h-56 bg-indigo-700 rounded-full mix-blend-multiply filter blur-2xl opacity-25"></div>
-
-      <div className="relative z-10 px6">
-        {/* Header 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
-          <p className="text-sm uppercase font-semibold tracking-wider text-pink-700">
-            Stories of Change
-          </p>
-          <h2 className="text-2xl md:text-3xl font-serif font-bold text-gray-900 mb-4">
-            Real Lives, Real Impact
-          </h2>
-          <motion.div
-            initial={{ width: 0 }}
-            whileInView={{ width: "5rem" }}
-            transition={{ duration: 0.5 }}
-            className="h-1 bg-pink-700 rounded-full mx-auto mb-6"
-          ></motion.div>
-          <p className="mt-2 text-gray-600 max-w-2xl mx-auto font-medium text-center md:text-lg mb-6">
-            Every story from <span className="font-semibold text-gray-800">Utamaduni</span>{" "}
-            reminds us why we serve — transforming lives through compassion, unity, and culture.
-          </p>
-        </motion.div>
-*/}
-        {/* Stories Grid 
-        <div className="grid md:grid-cols-3 gap-8 mb-20">
-          {stories.map((story, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.2 }}
-              className="rounded overflow-hidden bg-white shadow-md hover:shadow-xl transition-all duration-300"
-            >
-              <div className="relative w-full h-44">
-                <Image
-                  src={story.image}
-                  alt={story.title}
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div className="p-4">
-                <h3 className="md:text-lg font-bold text-blue-900 mb-2 font-serif">
-                  {story.title}
-                </h3>
-                <p className="text-gray-700 text-sm leading-relaxed">
-                  {story.text}
-                </p>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-        */}
-        
-
-        {/* Testimonials Section with Swiper Slider */}
+    <section className="py-24 px-6 bg-white">
+      <div className="max-w-7xl mx-auto">
+        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
-          className="text-white max-w-7xl mx-auto rounded-2xl px-6 md:p14 shadow2xl relative overflow-hidden"
+          className="text-center max-w-3xl mx-auto mb-16"
         >
-          <HeartHandshake className="absolute opacity-10 w-40 h-40 right-10 bottom-10 text-blue-200" />
-          <div className="text-center mb-12 px4">
-            <Quote className="w-10 h-10 mx-auto mb-4 text-white" />
-            <span className="inline-block bg-green-400 text-blue-700 px-4 py-1 rounded-full text-sm font-medium mb-4">
-            Client Testimonials
-          </span>
-            <h3 className="text-2xl md:text-4xl font-semibold mb-3 fontserif">
-              What Our 
-              <span className="text-green-400"> Clients Say </span>
-            </h3>
-              <div className="w-24 h-1 bg-green-400 mx-auto rounded-full my-3"></div>
-            <p className="text-blue-100 max-w-2xl mx-auto">
-              Hear from the authors and organizations we've had the pleasure of working with.
-            </p>
+          <div className="inline-flex items-center gap-2 bg-blue-50 border border-blue-100 px-5 py-2 rounded-full text-sm text-blue-600 font-medium mb-4">
+            <HeartHandshake className="w-4 h-4" />
+            Testimonials
           </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
+            What Our{" "}
+            <span className="text-blue-600">Clients Say</span>
+          </h2>
+          <div className="w-20 h-1 bg-blue-600 mx-auto rounded-full mt-4" />
+          <p className="mt-4 text-gray-500 text-lg">
+            Real stories from authors and partners we've worked with
+          </p>
+        </motion.div>
 
+        {/* Testimonials Slider */}
+        <div className="relative">
           <Swiper
-            modules={[Pagination, Autoplay]}
+            modules={[Pagination, Autoplay, Navigation]}
             spaceBetween={30}
             slidesPerView={1}
-            pagination={{ clickable: true }}
-            autoplay={{ delay: 4000, disableOnInteraction: false }}
+            pagination={{ 
+              clickable: true,
+              bulletClass: 'swiper-pagination-bullet !bg-blue-400 !opacity-50',
+              bulletActiveClass: '!bg-blue-600 !opacity-100 !w-8',
+            }}
+            autoplay={{ delay: 5000, disableOnInteraction: false }}
             loop={true}
+            navigation={{
+              prevEl: '.swiper-button-prev',
+              nextEl: '.swiper-button-next',
+            }}
             breakpoints={{
               768: { slidesPerView: 2 },
               1024: { slidesPerView: 3 },
             }}
+            className="pb-12"
           >
-            {testimonials.map((t, i) => (
-              <SwiperSlide key={i}>
+            {testimonials.map((testimonial, index) => (
+              <SwiperSlide key={index}>
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.5 }}
-                  className="bg-white/5 rounded-2xl border border-blue-700 p-4 backdrop-blur-sm shadow-md hover:shadow-lg transition-all h-full"
+                  className="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 h-full"
                 >
-                  <div className="flex items-center gap-4 mb-4">
-                    <Image
-                      src={t.image}
-                      alt={t.name}
-                      width={50}
-                      height={50}
-                      className="rounded-full border-2 border-green-500"
-                    />
+                  {/* Rating */}
+                  <div className="flex gap-1 mb-4">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                    ))}
+                  </div>
+
+                  {/* Quote */}
+                  <div className="mb-4">
+                    <Quote className="w-8 h-8 text-blue-200 mb-2" />
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      "{testimonial.quote}"
+                    </p>
+                  </div>
+
+                  {/* Author */}
+                  <div className="flex items-center gap-4 pt-4 border-t border-gray-100">
+                    <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-blue-100 flex-shrink-0">
+                      <Image
+                        src={testimonial.image}
+                        alt={testimonial.name}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
                     <div>
-                      <h4 className="font-bold text-gray-100 fontserif md:text-lg my-2">{t.name}</h4>
-                      <p className="text-blue-200 text-sm">{t.role}</p>
+                      <h4 className="font-semibold text-gray-900 text-sm">
+                        {testimonial.name}
+                      </h4>
+                      <p className="text-gray-400 text-xs">
+                        {testimonial.role}
+                      </p>
                     </div>
                   </div>
-                  <p className="text-blue-100 text-sm leading-relaxed">
-                    “{t.quote}”
-                  </p>
                 </motion.div>
               </SwiperSlide>
             ))}
           </Swiper>
 
-          {/* Call to Action 
-          <div className="text-center mt-14">
-            <button className="bg-yellow-400 text-blue-800 px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-white transition-all duration-300">
+          {/* Navigation Buttons */}
+          <button className="swiper-button-prev absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 w-10 h-10 rounded-full bg-white border border-gray-200 shadow-md flex items-center justify-center hover:bg-blue-50 hover:border-blue-300 transition-all duration-300 hidden md:flex">
+            <ChevronLeft className="w-5 h-5 text-gray-600" />
+          </button>
+          <button className="swiper-button-next absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 w-10 h-10 rounded-full bg-white border border-gray-200 shadow-md flex items-center justify-center hover:bg-blue-50 hover:border-blue-300 transition-all duration-300 hidden md:flex">
+            <ChevronRight className="w-5 h-5 text-gray-600" />
+          </button>
+        </div>
+
+        {/* Bottom CTA */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          viewport={{ once: true }}
+          className="hidden mt-16 text-center"
+        >
+          <div className="inline-flex items-center gap-6 bg-gray-50 px-8 py-4 rounded-2xl border border-gray-100">
+            <span className="text-gray-600 text-sm">Join our community of happy authors</span>
+            <a href="/contact" className="bg-blue-600 text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-blue-700 transition-colors shadow-sm hover:shadow-md">
               Share Your Story
-            </button>
+            </a>
           </div>
-          */}
         </motion.div>
       </div>
+
+      {/* Custom Swiper Styles */}
+      <style jsx global>{`
+        .swiper-pagination-bullet {
+          background: #93C5FD !important;
+          opacity: 0.5 !important;
+        }
+        .swiper-pagination-bullet-active {
+          background: #2563EB !important;
+          opacity: 1 !important;
+          width: 24px !important;
+          border-radius: 8px !important;
+        }
+        .swiper-button-prev::after,
+        .swiper-button-next::after {
+          display: none;
+        }
+      `}</style>
     </section>
   );
 }

@@ -183,7 +183,7 @@ export default function MainServices() {
         />
       </Head>
 
-      <section className="bg-yellow-50 py-20 px-6">
+      <section className="bg-gray-50 py-20 px-6">
         <div className="max-w-7xl mx-auto">
 
           {/* SECTION HEADER */}

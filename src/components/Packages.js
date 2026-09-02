@@ -241,7 +241,7 @@ export default function PricingPackages() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mx-auto mt-10 max-w-3xl rounded-2xl border border-slate-200 bg-white p-6 text-center shadow-sm sm:p-7"
+          className="hidden mx-auto mt-10 max-w-3xl rounded-2xl border border-slate-200 bg-white p-6 text-center shadow-sm sm:p-7"
         >
           <p className="text-sm text-slate-600 sm:text-base">
             Not sure which package fits your publishing goals?

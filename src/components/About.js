@@ -202,7 +202,7 @@ export default function AboutUs() {
                 duration: 0.5,
                 delay: 0.35,
               }}
-              className="mt-8 flex flex-wrap items-center gap-3"
+              className="hidden mt-8 flex flex-wrap items-center gap-3"
             >
               {/* Primary */}
               <a
