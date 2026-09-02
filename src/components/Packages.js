@@ -1,258 +1,292 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 import {
   CheckCircle2,
   Star,
   Clock3,
   ArrowRight,
   Sparkles,
+  Rocket,
+  Shield,
+  TrendingUp,
 } from "lucide-react";
 
 const packages = [
   {
-    name: "Essential Publishing",
-    price: "From $499",
-    timeline: "4 – 6 Weeks",
-    description:
-      "Perfect for first-time authors ready to professionally publish their manuscript.",
+    name: "Essential",
+    price: "$499",
+    period: "one-time",
+    timeline: "4–6 Weeks",
+    description: "Perfect for first-time authors ready to publish professionally.",
     features: [
       "Manuscript assessment",
       "Basic proofreading",
-      "Interior formatting (print-ready)",
+      "Interior formatting",
       "ISBN registration",
       "Basic cover design",
-      "Print-ready PDF delivery",
+      "Print-ready PDF",
     ],
+    color: "from-blue-500 to-cyan-600",
+    badge: "Starter",
     highlighted: false,
   },
   {
-    name: "Professional Publishing",
-    price: "From $999",
-    timeline: "6 – 8 Weeks",
-    description:
-      "Ideal for serious authors who want high-quality publishing and distribution support.",
+    name: "Professional",
+    price: "$999",
+    period: "one-time",
+    timeline: "6–8 Weeks",
+    description: "Ideal for serious authors who want high-quality publishing.",
     features: [
       "Full editorial review",
       "Line editing & proofreading",
-      "Premium custom cover design",
-      "Interior formatting (print + eBook)",
+      "Premium custom cover",
+      "Interior formatting + eBook",
       "ISBN registration",
-      "eBook conversion (EPUB + MOBI)",
-      "Global distribution guidance",
-      "Author consultation session",
+      "eBook conversion",
+      "Global distribution",
+      "Author consultation",
     ],
+    color: "from-emerald-500 to-teal-600",
+    badge: "Most Popular",
     highlighted: true,
   },
   {
-    name: "Elite Publishing",
-    price: "Custom Quote",
-    timeline: "8 – 12 Weeks",
-    description:
-      "For authors who want full-service publishing, branding, and launch strategy.",
+    name: "Elite",
+    price: "Custom",
+    period: "quote",
+    timeline: "8–12 Weeks",
+    description: "Full-service publishing, branding, and launch strategy.",
     features: [
       "Developmental editing",
-      "Full line editing & proofreading",
-      "Premium multi-concept cover design",
-      "Advanced interior layout design",
-      "ISBN + barcode registration",
+      "Full line editing",
+      "Premium multi-cover design",
+      "Advanced layout design",
+      "ISBN + barcode",
       "Print coordination",
-      "Global distribution setup",
+      "Global distribution",
       "Book launch strategy",
-      "Marketing & branding consultation",
-      "Priority publishing support",
+      "Marketing consultation",
+      "Priority support",
     ],
+    color: "from-purple-500 to-pink-600",
+    badge: "Premium",
     highlighted: false,
   },
 ];
 
 export default function PricingPackages() {
+  const containerRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start end", "end start"],
+  });
+
   return (
-    <section className="relative overflow-hidden bg-slate-50 px-5 py-16 sm:px-6 lg:py-20">
-      {/* Background accents */}
-      <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="absolute -left-32 top-20 h-72 w-72 rounded-full bg-blue-100/60 blur-3xl" />
-        <div className="absolute -right-32 bottom-20 h-72 w-72 rounded-full bg-green-100/60 blur-3xl" />
+    <section
+      ref={containerRef}
+      className="relative py-12 px-4 overflow-hidden bg-slate-50 via-white to-blue-50/30"
+    >
+      {/* Animated Background */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <motion.div
+          className="absolute -top-20 -right-20 w-80 h-80 rounded-full bg-gradient-to-br from-blue-200/20 to-cyan-200/20 blur-3xl"
+          animate={{
+            x: [0, 40, -20, 0],
+            y: [0, -30, 20, 0],
+            scale: [1, 1.1, 0.9, 1],
+          }}
+          transition={{ duration: 20, repeat: Infinity }}
+        />
+        <motion.div
+          className="absolute -bottom-20 -left-20 w-80 h-80 rounded-full bg-gradient-to-tr from-emerald-200/20 to-teal-200/20 blur-3xl"
+          animate={{
+            x: [0, -40, 20, 0],
+            y: [0, 30, -20, 0],
+            scale: [1, 0.9, 1.1, 1],
+          }}
+          transition={{ duration: 25, repeat: Infinity }}
+        />
+        <motion.div
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full bg-purple-200/10 blur-3xl"
+          animate={{
+            scale: [1, 1.2, 1],
+            opacity: [0.3, 0.5, 0.3],
+          }}
+          transition={{ duration: 18, repeat: Infinity }}
+        />
       </div>
 
-      <div className="relative mx-auto max-w-7xl">
-        {/* Header */}
-        <div className="mx-auto mb-12 max-w-3xl text-center lg:mb-14">
-          <motion.div
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="mb-4 inline-flex items-center gap-2 rounded-full border border-blue-100 bg-white px-4 py-2 text-xs font-semibold uppercase tracking-wider text-blue-700 shadow-sm"
-          >
-            <Sparkles className="h-3.5 w-3.5 text-green-600" />
-            Publishing Packages
-          </motion.div>
+      <div className="relative max-w-7xl mx-auto">
+        {/* HEADER - Ultra Compact */}
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="text-center mb-7"
+        >
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gradient-to-r from-blue-100 to-indigo-100 border border-blue-200/50 shadow-sm mb-2.5">
+            <Sparkles className="w-3.5 h-3.5 text-blue-600" />
+            <span className="text-[10px] font-bold text-blue-700 uppercase tracking-wider">
+              Pricing Plans
+            </span>
+          </div>
 
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl"
-          >
-            Flexible Publishing Plans{" "}
-            <span className="text-blue-700">For Every Author</span>
-          </motion.h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-slate-900">
+            Flexible Plans{" "}
+            <span className="bg-gradient-to-r from-blue-600 to-emerald-600 bg-clip-text text-transparent">
+              For Every Author
+            </span>
+          </h2>
 
-          <motion.div
-            initial={{ width: 0 }}
-            whileInView={{ width: 72 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7, delay: 0.2 }}
-            className="mx-auto mt-5 h-1 rounded-full bg-gradient-to-r from-blue-600 to-green-500"
-          />
+          <p className="mt-1 text-sm text-slate-600 max-w-2xl mx-auto">
+            Choose the perfect package to bring your manuscript to life
+          </p>
+        </motion.div>
 
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-slate-600 sm:text-base"
-          >
-            Whether you're publishing your first book or launching your next
-            bestseller, Capvim offers tailored packages designed to match your
-            publishing goals.
-          </motion.p>
-        </div>
-
-        {/* Pricing Cards */}
-        <div className="grid items-stretch gap-6 lg:grid-cols-3">
+        {/* PRICING CARDS - More Compact */}
+        <div className="grid lg:grid-cols-3 gap-3 items-stretch">
           {packages.map((pkg, index) => (
             <motion.article
               key={pkg.name}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{
-                duration: 0.55,
-                delay: index * 0.1,
+                duration: 0.4,
+                delay: index * 0.06,
               }}
-              whileHover={{ y: -6 }}
-              className={`group relative flex flex-col overflow-hidden rounded-2xl border bg-white shadow-sm transition-shadow duration-300 hover:shadow-xl ${
+              whileHover={{ y: -3 }}
+              className={`group relative flex flex-col overflow-hidden rounded-xl border bg-white/90 backdrop-blur-sm transition-all duration-300 ${
                 pkg.highlighted
-                  ? "border-blue-600 shadow-lg shadow-blue-100"
-                  : "border-slate-200"
+                  ? "border-emerald-500 shadow-lg shadow-emerald-100/50 ring-2 ring-emerald-500/20"
+                  : "border-slate-200 hover:border-blue-200"
               }`}
             >
-              {/* Top accent */}
-              <div
-                className={`h-1 w-full ${
-                  pkg.highlighted
-                    ? "bg-gradient-to-r from-blue-600 to-green-500"
-                    : "bg-slate-200"
-                }`}
-              />
+              {/* Top Gradient Bar */}
+              <div className={`h-1 w-full bg-gradient-to-r ${pkg.color}`} />
 
-              {/* Popular badge */}
+              {/* Popular Badge - More Compact */}
               {pkg.highlighted && (
-                <div className="absolute right-5 top-5">
-                  <div className="inline-flex items-center gap-1.5 rounded-full bg-blue-700 px-3 py-1.5 text-[11px] font-bold text-white shadow-md">
-                    <Star className="h-3.5 w-3.5 fill-current" />
-                    Most Popular
+                <div className="absolute right-3 top-3">
+                  <div className="inline-flex items-center gap-1 rounded-full bg-gradient-to-r from-emerald-500 to-teal-600 px-2.5 py-0.5 text-[8px] font-bold text-white shadow-md">
+                    <Star className="w-2.5 h-2.5 fill-current" />
+                    Popular
                   </div>
                 </div>
               )}
 
-              <div className="flex flex-1 flex-col p-6 sm:p-7">
-                {/* Package name */}
-                <div className="mb-5">
-                  <h3 className="pr-28 text-xl font-bold tracking-tight text-slate-900">
-                    {pkg.name}
-                  </h3>
-
-                  <div className="mt-4 flex items-end gap-1">
-                    <span
-                      className={`text-3xl font-extrabold tracking-tight ${
-                        pkg.highlighted
-                          ? "text-blue-700"
-                          : "text-slate-900"
-                      }`}
-                    >
-                      {pkg.price}
-                    </span>
+              <div className="flex flex-1 flex-col p-4">
+                {/* Header */}
+                <div className="flex items-start justify-between mb-2">
+                  <div>
+                    <h3 className="text-base font-bold text-slate-800">
+                      {pkg.name}
+                    </h3>
+                    <div className="flex items-baseline gap-1 mt-0.5">
+                      <span className={`text-2xl font-black ${pkg.highlighted ? 'text-emerald-600' : 'text-slate-800'}`}>
+                        {pkg.price}
+                      </span>
+                      <span className="text-[9px] text-slate-400 font-medium">
+                        {pkg.period}
+                      </span>
+                    </div>
                   </div>
+                  
+                  {/* Badge */}
+                  <span className={`text-[8px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-gradient-to-r ${pkg.color} text-white`}>
+                    {pkg.badge}
+                  </span>
                 </div>
 
                 {/* Timeline */}
-                <div className="mb-5 inline-flex w-fit items-center gap-2 rounded-lg border border-green-100 bg-green-50 px-3 py-2 text-xs font-semibold text-green-700">
-                  <Clock3 className="h-4 w-4" />
-                  <span>
-                    Estimated Timeline: {pkg.timeline}
+                <div className="inline-flex items-center gap-1.5 rounded-lg bg-slate-100 px-2.5 py-1 w-fit mb-2.5">
+                  <Clock3 className="w-3 h-3 text-slate-500" />
+                  <span className="text-[9px] font-semibold text-slate-600">
+                    {pkg.timeline}
                   </span>
                 </div>
 
                 {/* Description */}
-                <p className="mb-6 min-h-[56px] text-sm leading-6 text-slate-600">
+                <p className="text-[11px] text-slate-500 leading-relaxed mb-2.5">
                   {pkg.description}
                 </p>
 
                 {/* Divider */}
-                <div className="mb-5 h-px bg-slate-100" />
+                <div className="h-px bg-slate-100 mb-2.5" />
 
-                {/* Features */}
-                <ul className="flex-grow space-y-3">
-                  {pkg.features.map((feature) => (
+                {/* Features - Compact */}
+                <ul className="flex-grow space-y-1.5">
+                  {pkg.features.slice(0, 6).map((feature) => (
                     <li
                       key={feature}
-                      className="flex items-start gap-3 text-sm text-slate-700"
+                      className="flex items-start gap-2 text-[10px] text-slate-600"
                     >
-                      <CheckCircle2
-                        className={`mt-0.5 h-4.5 w-4.5 shrink-0 ${
-                          pkg.highlighted
-                            ? "text-green-600"
-                            : "text-blue-600"
-                        }`}
-                      />
-
-                      <span className="leading-5">
-                        {feature}
-                      </span>
+                      <CheckCircle2 className={`w-3 h-3 mt-0.5 flex-shrink-0 ${pkg.highlighted ? 'text-emerald-500' : 'text-blue-500'}`} />
+                      <span className="leading-tight">{feature}</span>
                     </li>
                   ))}
+                  {pkg.features.length > 6 && (
+                    <li className="text-[9px] text-slate-400 font-medium pl-5">
+                      +{pkg.features.length - 6} more features
+                    </li>
+                  )}
                 </ul>
 
-                {/* CTA */}
-                <button
+                {/* CTA Button */}
+                <motion.button
                   type="button"
-                  className={`group/btn mt-8 flex w-full items-center justify-center gap-2 rounded-xl px-5 py-3.5 text-sm font-bold transition-all duration-300 ${
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  className={`mt-3 flex w-full items-center justify-center gap-1.5 rounded-lg px-3 py-2 text-[10px] font-bold transition-all duration-300 ${
                     pkg.highlighted
-                      ? "bg-blue-700 text-white shadow-lg shadow-blue-200 hover:bg-blue-800"
-                      : "border border-slate-200 bg-white text-slate-800 hover:border-blue-600 hover:bg-blue-50 hover:text-blue-700"
+                      ? "bg-gradient-to-r from-emerald-500 to-teal-600 text-white shadow-md shadow-emerald-200 hover:shadow-lg"
+                      : "border border-slate-200 bg-white text-slate-700 hover:border-blue-300 hover:bg-blue-50 hover:text-blue-700"
                   }`}
                 >
-                  Get Started
-
-                  <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover/btn:translate-x-1" />
-                </button>
+                  Choose Plan
+                  <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5" />
+                </motion.button>
               </div>
             </motion.article>
           ))}
         </div>
 
-        {/* Bottom CTA */}
+        {/* Trust & CTA Bar - Compact */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="hidden mx-auto mt-10 max-w-3xl rounded-2xl border border-slate-200 bg-white p-6 text-center shadow-sm sm:p-7"
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="hidden mt-5 flex flex-wrap items-center justify-center gap-4 pt-4 border-t border-slate-200/50"
         >
-          <p className="text-sm text-slate-600 sm:text-base">
-            Not sure which package fits your publishing goals?
-          </p>
+          {/* Trust Indicators */}
+          <div className="flex items-center gap-3 text-[9px] text-slate-500">
+            <div className="flex items-center gap-1.5">
+              <Shield className="w-3 h-3 text-emerald-500" />
+              <span className="font-medium text-slate-700">100% Satisfaction</span>
+            </div>
+            <span className="text-slate-300">•</span>
+            <div className="flex items-center gap-1.5">
+              <TrendingUp className="w-3 h-3 text-blue-500" />
+              <span className="font-medium text-slate-700">98% Retention</span>
+            </div>
+            <span className="text-slate-300">•</span>
+            <div className="flex items-center gap-1.5">
+              <Rocket className="w-3 h-3 text-purple-500" />
+              <span className="font-medium text-slate-700">30-Day Turnaround</span>
+            </div>
+          </div>
 
+          {/* CTA Link */}
           <button
             type="button"
-            className="mt-4 inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-blue-700 to-green-600 px-6 py-3 text-sm font-bold text-white shadow-lg shadow-blue-100 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl"
+            className="hidden inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-[10px] font-semibold hover:shadow-md transition-all duration-300 hover:-translate-y-0.5"
           >
-            Request Custom Consultation
-            <ArrowRight className="h-4 w-4" />
+            Custom Consultation
+            <ArrowRight className="w-3 h-3" />
           </button>
         </motion.div>
       </div>

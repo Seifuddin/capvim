@@ -1,10 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Dialog } from "@headlessui/react";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
-import Head from "next/head";
 import {
   BookOpen,
   PenTool,
@@ -12,138 +11,170 @@ import {
   FileText,
   Printer,
   HelpCircle,
+  Sparkles,
+  ArrowRight,
+  CheckCircle,
+  Clock,
+  Shield,
 } from "lucide-react";
-
-/* =========================
-   SERVICE DATA
-========================= */
 
 const services = [
   {
     title: "Book Publishing",
     description:
-      "We transform your manuscript into a professionally published book including ISBN registration, interior formatting, cover production, printing coordination, and distribution strategy.",
-    icon: <BookOpen className="w-8 h-8 rounded text-white p-2 bg-gradient-to-r from-green-600 to-green-900" />,
+      "Complete publishing solutions from manuscript to market-ready book including ISBN, formatting, and distribution.",
+    icon: BookOpen,
     image: "/images/bookpublishing.jpg.webp",
+    color: "from-blue-500 to-cyan-600",
+    badge: "Most Popular",
     pricing:
-      "Pricing depends on manuscript length, formatting complexity, printing volume, and distribution scope. Contact us for a tailored quote.",
+      "Pricing depends on manuscript length, formatting complexity, printing volume, and distribution scope.",
   },
   {
     title: "Editing & Proofreading",
     description:
-      "Our experienced editors refine your manuscript for clarity, grammar accuracy, structure, tone consistency, and professional publishing standards.",
-    icon: <PenTool className="w-8 h-8 rounded text-white p-2 bg-gradient-to-r from-green-600 to-green-900" />,
+      "Expert refinement for clarity, grammar, structure, and professional publishing standards.",
+    icon: PenTool,
     image: "/images/review.avif",
+    color: "from-purple-500 to-pink-600",
+    badge: "Essential",
     pricing:
-      "Costs vary depending on word count and editing depth (developmental, line editing, proofreading). Contact us for assessment.",
+      "Costs vary based on word count and editing depth (developmental, line editing, proofreading).",
   },
   {
     title: "Cover Design & Layout",
     description:
-      "We design compelling book covers and professionally formatted interiors that reflect your genre, audience, and publishing goals.",
-    icon: <ImagePlus className="w-8 h-8 rounded text-white p-2 bg-gradient-to-r from-green-600 to-green-900" />,
-    image:
-      "/images/orange-color-scheme-city-background-business-book-cover-design-template-brochure-flyer-layout-annual-report-magazine-108070657.webp",
+      "Compelling covers and professionally formatted interiors that reflect your genre and audience.",
+    icon: ImagePlus,
+    image: "/images/orange-color-scheme-city-background-business-book-cover-design-template-brochure-flyer-layout-annual-report-magazine-108070657.webp",
+    color: "from-amber-500 to-orange-600",
+    badge: "Creative",
     pricing:
-      "Pricing depends on design complexity, revisions required, and layout specifications. Reach out for detailed pricing.",
+      "Pricing depends on design complexity, revisions required, and layout specifications.",
   },
   {
     title: "e-Book Creation",
     description:
-      "We convert your manuscript into optimized eBook formats (EPUB, MOBI, PDF) compatible with major global digital platforms.",
-    icon: <FileText className="w-8 h-8 rounded text-white p-2 bg-gradient-to-r from-green-600 to-green-900" />,
-    image:
-      "/images/open-pages-book-e-book-online-learning-graphic-concept_53876-127665.avif",
+      "Convert your manuscript into optimized eBook formats (EPUB, MOBI, PDF) for global digital platforms.",
+    icon: FileText,
+    image: "/images/open-pages-book-e-book-online-learning-graphic-concept_53876-127665.avif",
+    color: "from-emerald-500 to-teal-600",
+    badge: "Digital",
     pricing:
       "Pricing varies based on formatting complexity and number of platforms targeted.",
   },
   {
     title: "Printing & Distribution",
     description:
-      "High-quality printing solutions with strategic distribution channels to ensure your book reaches local and international readers.",
-    icon: <Printer className="w-8 h-8 rounded text-white p-2 bg-gradient-to-r from-green-600 to-green-900" />,
+      "High-quality printing with strategic distribution to reach local and international readers.",
+    icon: Printer,
     image: "/images/Woman-scanning-paper-files-1024x683.webp",
+    color: "from-rose-500 to-red-600",
+    badge: "Global",
     pricing:
       "Printing cost depends on page count, paper type, binding style, and quantity.",
   },
   {
     title: "Publishing Consultation",
     description:
-      "Strategic publishing guidance covering market positioning, publishing models, timelines, and author branding.",
-    icon: <HelpCircle className="w-8 h-8 rounded text-white p-2 bg-gradient-to-r from-green-600 to-green-900" />,
+      "Strategic guidance covering market positioning, publishing models, timelines, and author branding.",
+    icon: HelpCircle,
     image: "/images/classe_5SqEkiJ.original.format-webp-lossless.webp",
+    color: "from-indigo-500 to-purple-600",
+    badge: "Expert",
     pricing:
       "Consultation fees depend on session duration and scope of advisory support required.",
   },
 ];
 
-/* =========================
-   PRICING MODAL
-========================= */
-
 const PricingModal = ({ service, isOpen, onClose }) => (
   <Dialog open={isOpen} onClose={onClose} className="relative z-50">
-    <div className="fixed inset-0 bg-black/40 backdrop-blur-sm" />
+    <div className="fixed inset-0 bg-black/60 backdrop-blur-sm" />
     <div className="fixed inset-0 flex items-center justify-center p-4">
-      <Dialog.Panel className="bg-white p-8 rounded max-w-lg w-full shadow-2xl">
-        <Dialog.Title className="text-2xl font-bold text-green-700">
-          {service?.title} Pricing
-        </Dialog.Title>
-        <p className="text-gray-600 mt-4">{service?.pricing}</p>
-        <button
-          className="mt-6 w-full px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition"
-          onClick={onClose}
-        >
-          Close
-        </button>
+      <Dialog.Panel className="bg-white rounded-2xl max-w-lg w-full shadow-2xl overflow-hidden">
+        <div className="bg-gradient-to-r from-green-600 to-emerald-700 px-6 py-4">
+          <Dialog.Title className="text-xl font-bold text-white">
+            {service?.title} — Pricing
+          </Dialog.Title>
+        </div>
+        <div className="p-6">
+          <div className="flex items-start gap-3 mb-4">
+            <div className="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center flex-shrink-0">
+              <span className="text-green-600 text-lg">💰</span>
+            </div>
+            <p className="text-gray-600 text-sm leading-relaxed">
+              {service?.pricing}
+            </p>
+          </div>
+          <div className="bg-blue-50 rounded-lg p-3 mb-4">
+            <p className="text-xs text-blue-700 flex items-center gap-2">
+              <Shield className="w-3.5 h-3.5" />
+              <span>Ready to get started? Contact us for a personalized quote.</span>
+            </p>
+          </div>
+          <button
+            className="w-full px-4 py-2.5 bg-gradient-to-r from-green-600 to-emerald-700 text-white rounded-lg font-semibold hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5"
+            onClick={onClose}
+          >
+            Close
+          </button>
+        </div>
       </Dialog.Panel>
     </div>
   </Dialog>
 );
 
-/* =========================
-   REQUEST MODAL
-========================= */
-
 const RequestModal = ({ service, isOpen, onClose }) => (
   <Dialog open={isOpen} onClose={onClose} className="relative z-50">
-    <div className="fixed inset-0 bg-black/40 backdrop-blur-sm" />
+    <div className="fixed inset-0 bg-black/60 backdrop-blur-sm" />
     <div className="fixed inset-0 flex items-center justify-center p-4">
-      <Dialog.Panel className="bg-white p-8 rounded-2xl max-w-lg w-full shadow-2xl">
-        <Dialog.Title className="text-2xl font-bold text-green-700">
-          Request: {service?.title}
-        </Dialog.Title>
+      <Dialog.Panel className="bg-white rounded-2xl max-w-lg w-full shadow-2xl overflow-hidden">
+        <div className="bg-gradient-to-r from-green-600 to-emerald-700 px-6 py-4">
+          <Dialog.Title className="text-xl font-bold text-white">
+            Request: {service?.title}
+          </Dialog.Title>
+          <p className="text-green-100 text-sm mt-0.5">We'll get back to you within 24 hours</p>
+        </div>
 
-        <form className="mt-6 space-y-4">
-          <input
-            type="text"
-            placeholder="Your Name"
-            className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-500"
-            required
-          />
-          <input
-            type="email"
-            placeholder="Your Email"
-            className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-500"
-            required
-          />
-          <textarea
-            placeholder="Describe your request..."
-            className="w-full border rounded-lg px-4 py-2 h-28 focus:outline-none focus:ring-2 focus:ring-green-500"
-            required
-          />
+        <form className="p-6 space-y-4">
+          <div>
+            <label className="text-xs font-semibold text-gray-700 uppercase tracking-wider">Full Name</label>
+            <input
+              type="text"
+              placeholder="John Doe"
+              className="w-full border border-gray-200 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition"
+              required
+            />
+          </div>
+          <div>
+            <label className="text-xs font-semibold text-gray-700 uppercase tracking-wider">Email Address</label>
+            <input
+              type="email"
+              placeholder="john@example.com"
+              className="w-full border border-gray-200 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition"
+              required
+            />
+          </div>
+          <div>
+            <label className="text-xs font-semibold text-gray-700 uppercase tracking-wider">Message</label>
+            <textarea
+              placeholder="Tell us about your project..."
+              className="w-full border border-gray-200 rounded-lg px-4 py-2.5 text-sm h-24 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition"
+              required
+            />
+          </div>
 
-          <div className="flex gap-3">
+          <div className="flex gap-3 pt-2">
             <button
               type="button"
-              className="flex-1 bg-gradient-to-r from-red-600 to-red-900 py-2 rounded"
+              className="flex-1 px-4 py-2.5 border border-gray-200 rounded-lg text-gray-600 font-medium hover:bg-gray-50 transition"
               onClick={onClose}
             >
               Cancel
             </button>
             <button
               type="submit"
-              className="flex-1 bg-gradient-to-r from-green-600 to-green-900 text-white py-2 rounded hover:bg-green-700 transition"
+              className="flex-1 px-4 py-2.5 bg-gradient-to-r from-green-600 to-emerald-700 text-white rounded-lg font-semibold hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5"
             >
               Submit Request
             </button>
@@ -154,14 +185,18 @@ const RequestModal = ({ service, isOpen, onClose }) => (
   </Dialog>
 );
 
-/* =========================
-   MAIN COMPONENT
-========================= */
-
 export default function MainServices() {
   const [selectedService, setSelectedService] = useState(null);
   const [isPricingOpen, setPricingOpen] = useState(false);
   const [isRequestOpen, setRequestOpen] = useState(false);
+  const containerRef = useRef(null);
+  
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start end", "end start"],
+  });
+
+  const y = useTransform(scrollYProgress, [0, 1], [0, -30]);
 
   const openPricingModal = (service) => {
     setSelectedService(service);
@@ -175,113 +210,183 @@ export default function MainServices() {
 
   return (
     <>
-      <Head>
-        <title>Publishing Services | Capvim International Publishers</title>
-        <meta
-          name="description"
-          content="Professional publishing services including book publishing, editing, cover design, eBook creation, printing, and consultation by Capvim International Publishers."
-        />
-      </Head>
-
-      <section className="bg-gray-50 py-20 px-6">
-        <div className="max-w-7xl mx-auto">
-
-          {/* SECTION HEADER */}
-          <div className="max-w-5xl mx-auto text-center mb-16">
-            <span className="inline-block bg-green-200 text-green-700 px-4 py-1 rounded-full text-sm font-medium mb-4">
-              Our Professional Services
-            </span>
-
-            <h2 className="text-2xl md:text-4xl font-bold text-gray-900 leading-tight">
-              Comprehensive 
-            <span className="text-green-700"> Publishing Solutions </span>
-
-              <br className="hidden md-block" />
-               
-            </h2>
-            <div className="w-24 h-1 bg-green-200 mx-auto rounded-full mt-3"></div>
-
-            <p className="mt-4 text-gray-600 text-base">
-              At Capvim, we provide end-to-end
-              publishing solutions designed to transform your manuscript into
-              a professionally published and globally distributed book.
-            </p>
-          </div>
-
-          {/* SERVICES GRID */}
+      <section
+        ref={containerRef}
+        className="relative py-12 px-4 overflow-hidden bg-slate-50 via-white to-blue-50/30"
+      >
+        {/* Animated Background */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3"
-          >
-            {services.map((service, index) => (
-              <motion.div
-                key={index}
-                whileHover={{ y: -6 }}
-                className="group bg-white rounded shadowmdhover:shadow-2xl transition-all duration-500 overflow-hidden flex flex-col border border-green-300"
-              >
-                <div className="relative w-full h-44 md:h-52">
-                  <Image
-                    src={service.image}
-                    alt={service.title}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-700"
-                  />
-                </div>
-
-                <div className="p-3 py-5 flex flex-col flex-grow">
-                  <div className="flex items-center gap-2 mb-3">
-                    {service.icon}
-                    <h3 className="md:text-xl font-semibold text-blue-900">
-                      {service.title}
-                    </h3>
-                  </div>
-
-                  <p className="text-gray-600 text-sm mb-4">
-                    {service.description}
-                  </p>
-
-                  <ul className="text-xs text-gray-500 space-y-1 mb-6">
-                    <li>✔ Professional industry standards</li>
-                    <li>✔ Experienced publishing team</li>
-                    <li>✔ Transparent communication</li>
-                  </ul>
-
-                  <div className="mt-auto flex gap-2">
-                    <button
-                      onClick={() => openRequestModal(service)}
-                      className="flex-1 bg-gradient-to-r from-green-600 to-green-900 text-white px-2 py-2 rounded text-sm font-medium hover:bg-green-700 transition"
-                    >
-                      Request Service
-                    </button>
-
-                    <button
-                      onClick={() => openPricingModal(service)}
-                      className="flex-1 border border-green-600 text-green-700 px-4 py-2 rounded text-sm font-medium hover:bg-green-50 transition"
-                    >
-                      View Pricing
-                    </button>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
+            className="absolute -top-20 -right-20 w-96 h-96 rounded-full bg-gradient-to-br from-green-200/20 to-emerald-200/20 blur-3xl"
+            animate={{
+              x: [0, 40, -20, 0],
+              y: [0, -30, 20, 0],
+              scale: [1, 1.1, 0.9, 1],
+            }}
+            transition={{ duration: 20, repeat: Infinity }}
+          />
+          <motion.div
+            className="absolute -bottom-20 -left-20 w-96 h-96 rounded-full bg-gradient-to-tr from-blue-200/20 to-purple-200/20 blur-3xl"
+            animate={{
+              x: [0, -40, 20, 0],
+              y: [0, 30, -20, 0],
+              scale: [1, 0.9, 1.1, 1],
+            }}
+            transition={{ duration: 25, repeat: Infinity }}
+          />
+          <div className="absolute inset-0 bg-[url('/images/grid.svg')] opacity-[0.02]" />
         </div>
 
-        <PricingModal
-          service={selectedService}
-          isOpen={isPricingOpen}
-          onClose={() => setPricingOpen(false)}
-        />
+        <div className="relative max-w-7xl mx-auto">
+          {/* SECTION HEADER - More Compact */}
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-8"
+          >
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gradient-to-r from-green-100 to-emerald-100 border border-green-200/50 shadow-sm mb-3">
+              <Sparkles className="w-3.5 h-3.5 text-green-600" />
+              <span className="text-[10px] font-bold text-green-700 uppercase tracking-wider">
+                Our Services
+              </span>
+            </div>
 
-        <RequestModal
-          service={selectedService}
-          isOpen={isRequestOpen}
-          onClose={() => setRequestOpen(false)}
-        />
+            <h2 className="text-2xl md:text-3xl font-bold text-slate-900">
+              Comprehensive{" "}
+              <span className="bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">
+                Publishing Solutions
+              </span>
+            </h2>
+
+            <p className="mt-1.5 text-sm text-slate-600 max-w-2xl mx-auto">
+              End-to-end publishing solutions to transform your manuscript into
+              a professionally published and globally distributed book.
+            </p>
+          </motion.div>
+
+          {/* SERVICES GRID - More Compact */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3"
+          >
+            {services.map((service, index) => {
+              const Icon = service.icon;
+              return (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 15 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: index * 0.06 }}
+                  whileHover={{ y: -4 }}
+                  className="group"
+                >
+                  <div className="relative bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-slate-100 hover:border-green-200">
+                    {/* Image - Smaller */}
+                    <div className="relative h-32 w-full overflow-hidden">
+                      <Image
+                        src={service.image}
+                        alt={service.title}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-700"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+                      
+                      {/* Badge */}
+                      <div className="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-2 py-0.5 rounded-full text-[8px] font-bold text-slate-700 border border-white/20 shadow-sm">
+                        {service.badge}
+                      </div>
+                    </div>
+
+                    <div className="p-3.5">
+                      <div className="flex items-center gap-2 mb-1.5">
+                        <div className={`
+                          w-7 h-7 rounded-lg
+                          bg-gradient-to-br ${service.color}
+                          flex items-center justify-center
+                          flex-shrink-0
+                        `}>
+                          <Icon className="w-3.5 h-3.5 text-white" />
+                        </div>
+                        <h3 className="text-sm font-bold text-slate-800 leading-tight">
+                          {service.title}
+                        </h3>
+                      </div>
+
+                      <p className="text-[11px] text-slate-500 leading-relaxed line-clamp-2">
+                        {service.description}
+                      </p>
+
+                      <div className="mt-2.5 flex gap-1.5">
+                        <button
+                          onClick={() => openRequestModal(service)}
+                          className="flex-1 px-2.5 py-1.5 bg-gradient-to-r from-green-600 to-emerald-700 text-white text-[10px] font-semibold rounded-lg hover:shadow-md transition-all duration-300 hover:-translate-y-0.5 flex items-center justify-center gap-1"
+                        >
+                          Request
+                          <ArrowRight className="w-3 h-3" />
+                        </button>
+
+                        <button
+                          onClick={() => openPricingModal(service)}
+                          className="px-3 py-1.5 border border-slate-200 text-slate-600 text-[10px] font-medium rounded-lg hover:border-green-300 hover:bg-green-50 hover:text-green-700 transition-all duration-300"
+                        >
+                          Pricing
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              );
+            })}
+          </motion.div>
+
+          {/* Bottom Trust Bar - Ultra Compact */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.5 }}
+            viewport={{ once: true }}
+            className="hidden mt-6 pt-4 border-t border-slate-200/50 flex flex-wrap items-center justify-center gap-4 text-[10px] text-slate-500"
+          >
+            <div className="flex items-center gap-1.5">
+              <CheckCircle className="w-3.5 h-3.5 text-green-500" />
+              <span className="font-medium text-slate-700">100% Satisfaction</span>
+            </div>
+            <span className="text-slate-300">|</span>
+            <div className="flex items-center gap-1.5">
+              <Clock className="w-3.5 h-3.5 text-blue-500" />
+              <span className="font-medium text-slate-700">30-Day Turnaround</span>
+            </div>
+            <span className="text-slate-300">|</span>
+            <div className="flex items-center gap-1.5">
+              <Shield className="w-3.5 h-3.5 text-emerald-500" />
+              <span className="font-medium text-slate-700">98% Author Retention</span>
+            </div>
+            <span className="text-slate-300 hidden sm:inline">|</span>
+            <div className="flex items-center gap-1.5 hidden sm:flex">
+              <span className="text-yellow-400 text-xs">★★★★★</span>
+              <span className="font-medium text-slate-700">4.9/5 Rating</span>
+            </div>
+          </motion.div>
+        </div>
       </section>
+
+      <PricingModal
+        service={selectedService}
+        isOpen={isPricingOpen}
+        onClose={() => setPricingOpen(false)}
+      />
+
+      <RequestModal
+        service={selectedService}
+        isOpen={isRequestOpen}
+        onClose={() => setRequestOpen(false)}
+      />
     </>
   );
 }

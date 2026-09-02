@@ -1,105 +1,171 @@
 "use client";
-import { useState } from "react";
-import Link from "next/link"; // Import Next.js Link
-import { motion } from "framer-motion"; // For smooth animations
-import { X } from 'lucide-react'; // Add this import for the close icon
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import { motion, AnimatePresence } from "framer-motion";
+import { Menu, X, ChevronDown, Sparkles, BookOpen } from "lucide-react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
-  // Close the menu when a link is clicked
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const handleLinkClick = () => {
     setIsOpen(false);
   };
 
+  const navLinks = [
+    { href: "/", label: "Home" },
+    { href: "/about", label: "About" },
+    { href: "/services", label: "Services" },
+    { href: "/portfolio", label: "Portfolio" },
+    { href: "/contacts", label: "Contact" },
+  ];
+
   return (
-    <nav className="bg-white fixed w-full px-6 top-0 left-0 z-50 shadow-lg border-b-2border-b-green-700/30">
-      <div className="max-w-screen-xl mx-auto py-3.5">
-        <div className="flex justify-between items-center">
-          <div className="flex text-white font-bold text-xl tracking-wide">
+    <nav
+      className={`
+        fixed w-full top-0 left-0 z-50
+        transition-all duration-300
+        ${scrolled 
+          ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-slate-200/50' 
+          : 'bg-white border-b border-slate-100'
+        }
+      `}
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="flex items-center justify-between h-14 md:h-16">
+          {/* Logo */}
+          <Link href="/" className="flex items-center gap-2 group">
             <motion.div
-              whileHover={{ scale: 1.1 }}
-              className="cursor-pointer"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="relative"
             >
               <img
-          src="/images/Capvim IP.png"
-          alt="Publishing Team"
-          className="w-20 md:w-24"
-        />
+                src="/images/Capvim IP.png"
+                alt="Capvim International Publishers"
+                className="h-10 md:h-12 w-auto object-contain"
+              />
             </motion.div>
-          </div>
-          
-          <div className="lg:hidden">
-            <button
-              className="text-blue-800"
-              onClick={() => setIsOpen(!isOpen)}
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-8 w-8"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
-            </button>
-          </div>
+            
+            {/* Brand Name - Hidden on mobile */}
+            <div className="hidden sm:block">
+              <span className="text-sm font-bold text-slate-800 tracking-tight">
+                Capvim
+              </span>
+              <span className="text-[10px] font-medium text-emerald-600 block -mt-0.5 tracking-wider">
+                Publishers
+              </span>
+            </div>
+          </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex space-x-6">
-            <Link href="/" className="text-gray-700 font-semibold hover:text-gray-600 transition-all duration-300">
-              Home
-            </Link>
-            <Link href="/about" className="text-gray-700 font-semibold hover:text-gray-600 transition-all duration-300">
-              About Us
-            </Link>
-            <Link href="/services" className="text-gray-700 font-semibold hover:text-gray-600 transition-all duration-300">
-              Services
-            </Link>
-            <Link href="/portfolio" className="text-gray-700 font-semibold hover:text-gray-600 transition-all duration-300">
-              Our Portfolio
-            </Link>
-            <Link href="/contacts" className="text-gray-700 font-semibold hover:text-gray-600 transition-all duration-300">
-              Contact Us
-            </Link>
+          <div className="hidden lg:flex items-center gap-1">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="relative px-3 py-1.5 text-sm font-medium text-slate-600 hover:text-emerald-600 transition-colors duration-300 group"
+              >
+                {link.label}
+                <span className="absolute inset-x-0 bottom-0 h-0.5 bg-gradient-to-r from-emerald-500 to-teal-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+              </Link>
+            ))}
+            
+            {/* CTA Button */}
+            <motion.a
+              href="/contacts"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="ml-3 px-4 py-1.5 rounded-lg bg-gradient-to-r from-emerald-600 to-teal-600 text-white text-sm font-semibold shadow-sm hover:shadow-md transition-all duration-300 flex items-center gap-1.5"
+            >
+              <Sparkles className="w-3.5 h-3.5" />
+              Get Started
+            </motion.a>
           </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="lg:hidden relative w-9 h-9 rounded-lg hover:bg-slate-100 transition-colors duration-300 flex items-center justify-center"
+            aria-label="Toggle menu"
+          >
+            <motion.div
+              animate={{ rotate: isOpen ? 90 : 0 }}
+              transition={{ duration: 0.3 }}
+            >
+              {isOpen ? (
+                <X className="w-5 h-5 text-slate-700" />
+              ) : (
+                <Menu className="w-5 h-5 text-slate-700" />
+              )}
+            </motion.div>
+          </button>
         </div>
       </div>
 
-      {/* Mobile Navigation */}
-      {isOpen && (
-        <motion.div
-          initial={{ x: "100%" }}
-          animate={{ x: 0 }}
-          transition={{ type: "spring", stiffness: 300 }}
-          className="lg:hidden relative bg-gray-800 text-white space-y-4 px4 py-4  top-0 right-0 w-full h-full"
-        >
-          <button
-            onClick={() => setIsOpen(false)}
-            className="absolute top-4 right-4 text-white text-3xl"
+      {/* Mobile Navigation - Slide In */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className="lg:hidden overflow-hidden border-t border-slate-100"
           >
-            <X />
-          </button>
-          <Link href="/" className="block font-semibold py-2" onClick={handleLinkClick}>
-            Home
-          </Link>
-          <Link href="/about" className="block font-semibold py-2" onClick={handleLinkClick}>
-            About Us
-          </Link>
-          <Link href="/services" className="block font-semibold py-2" onClick={handleLinkClick}>
-            Services
-          </Link>
-          <Link href="/contacts" className="block font-semibold py-2" onClick={handleLinkClick}>
-            Contact Us
-          </Link>
-        </motion.div>
-      )}
+            <div className="px-4 py-3 space-y-1 bg-white">
+              {navLinks.map((link, index) => (
+                <motion.div
+                  key={link.href}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: index * 0.05 }}
+                >
+                  <Link
+                    href={link.href}
+                    onClick={handleLinkClick}
+                    className="block px-4 py-2.5 rounded-lg text-sm font-medium text-slate-600 hover:text-emerald-600 hover:bg-emerald-50 transition-all duration-300"
+                  >
+                    {link.label}
+                  </Link>
+                </motion.div>
+              ))}
+              
+              {/* Mobile CTA */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.2 }}
+                className="pt-2"
+              >
+                <Link
+                  href="/contacts"
+                  onClick={handleLinkClick}
+                  className="flex items-center justify-center gap-2 w-full px-4 py-2.5 rounded-lg bg-gradient-to-r from-emerald-600 to-teal-600 text-white text-sm font-semibold shadow-sm hover:shadow-md transition-all duration-300"
+                >
+                  <Sparkles className="w-4 h-4" />
+                  Get Started
+                </Link>
+              </motion.div>
+
+              {/* Mobile Footer */}
+              <div className="pt-3 mt-2 border-t border-slate-100">
+                <p className="text-[10px] text-slate-400 text-center">
+                  © {new Date().getFullYear()} Capvim Publishers
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 }
