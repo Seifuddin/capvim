@@ -104,14 +104,14 @@ export default function FAQ() {
             </span>
           </div>
 
-          <h2 className="text-2xl md:text-3xl font-bold text-slate-900">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900">
             Frequently{" "}
             <span className="bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">
               Asked Questions
             </span>
           </h2>
 
-          <p className="mt-1 text-sm text-slate-600 max-w-2xl mx-auto">
+          <p className="mt-1 textsm text-slate-600 max-w-2xl mx-auto">
             Everything you need to know about publishing with Capvim
           </p>
         </motion.div>
@@ -157,7 +157,7 @@ export default function FAQ() {
                 className="group"
               >
                 <div className={`
-                  rounded-xl border transition-all duration-300 overflow-hidden
+                  rounded -xl border transition-all duration-300 overflow-hidden
                   ${openIndex === index 
                     ? 'border-green-200 bg-white shadow-md shadow-green-100/30' 
                     : 'border-slate-200 bg-white/80 backdrop-blur-sm hover:border-green-200 hover:shadow-sm'
@@ -170,7 +170,7 @@ export default function FAQ() {
                     <div className="flex items-start gap-3 flex-1 min-w-0">
                       {/* Category Badge */}
                       <span className={`
-                        flex-shrink-0 text-[8px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full
+                        flex-shrink-0 text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full
                         ${openIndex === index 
                           ? 'bg-gradient-to-r from-green-500 to-emerald-500 text-white' 
                           : 'bg-slate-100 text-slate-500 group-hover:bg-green-100 group-hover:text-green-700'
@@ -181,7 +181,7 @@ export default function FAQ() {
                       </span>
                       
                       <span className={`
-                        text-sm font-medium transition-colors duration-300
+                        textbase font-medium transition-colors duration-300
                         ${openIndex === index 
                           ? 'text-green-700' 
                           : 'text-slate-700 group-hover:text-slate-900'
@@ -210,7 +210,7 @@ export default function FAQ() {
                       >
                         <div className="px-4 pb-4 pt-0.5">
                           <div className="h-px bg-gradient-to-r from-green-200 to-transparent mb-3" />
-                          <p className="text-sm text-slate-600 leading-relaxed">
+                          <p className="text-base text-slate-600 leading-relaxed">
                             {faq.answer}
                           </p>
                         </div>

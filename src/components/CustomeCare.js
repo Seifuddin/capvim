@@ -22,11 +22,11 @@ export default function CustomerCare() {
               <span className="bg-green-400 text-black px-3 py-0.5 rounded-full text-xs font-bold uppercase tracking-wider">
                 Support
               </span>
-              <h2 className="text-2xl md:text-3xl font-bold text-white">
+              <h2 className="text-3xl md:text-4xl font-bold text-white">
                 Still have <span className="text-green-400">Questions?</span>
               </h2>
             </div>
-            <p className="text-gray-300 tex">
+            <p className="text-gray-300 text-base">
               Talk to our customer care team one-on-one
             </p>
           </div>

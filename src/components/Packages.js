@@ -134,14 +134,14 @@ export default function PricingPackages() {
             </span>
           </div>
 
-          <h2 className="text-2xl md:text-3xl font-bold text-slate-900">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900">
             Flexible Plans{" "}
             <span className="bg-green-600 to-emerald-600 bg-clip-text text-transparent">
               For Every Author
             </span>
           </h2>
 
-          <p className="mt-1 text-sm text-slate-600 max-w-2xl mx-auto">
+          <p className="mt-1 text-base text-slate-600 max-w-2xl mx-auto">
             Choose the perfect package to bring your manuscript to life
           </p>
         </motion.div>
@@ -159,7 +159,7 @@ export default function PricingPackages() {
                 delay: index * 0.06,
               }}
               whileHover={{ y: -3 }}
-              className={`group relative flex flex-col overflow-hidden rounded-xl border bg-white/90 backdrop-blur-sm transition-all duration-300 ${
+              className={`group relative flex flex-col overflow-hidden rounded -xl border bg-white/90 backdrop-blur-sm transition-all duration-300 ${
                 pkg.highlighted
                   ? "border-emerald-500 shadow-lg shadow-emerald-100/50 ring-2 ring-emerald-500/20"
                   : "border-slate-200 hover:border-blue-200"
@@ -171,7 +171,7 @@ export default function PricingPackages() {
               {/* Popular Badge - More Compact */}
               {pkg.highlighted && (
                 <div className="absolute right-3 top-3">
-                  <div className="inline-flex items-center gap-1 rounded-full bg-gradient-to-r from-emerald-500 to-teal-600 px-2.5 py-0.5 text-[8px] font-bold text-white shadow-md">
+                  <div className="inline-flex items-center gap-1 rounded-full bg-gradient-to-r from-emerald-500 to-teal-600 px-2.5 py-0.5 text-[10px] font-bold text-white shadow-md">
                     <Star className="w-2.5 h-2.5 fill-current" />
                     Popular
                   </div>
@@ -189,14 +189,14 @@ export default function PricingPackages() {
                       <span className={`text-2xl font-black ${pkg.highlighted ? 'text-emerald-600' : 'text-slate-800'}`}>
                         {pkg.price}
                       </span>
-                      <span className="text-[9px] text-slate-400 font-medium">
+                      <span className="text-[11px] text-slate-400 font-medium">
                         {pkg.period}
                       </span>
                     </div>
                   </div>
                   
                   {/* Badge */}
-                  <span className={`text-[8px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-gradient-to-r ${pkg.color} text-white`}>
+                  <span className={`text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-gradient-to-r ${pkg.color} text-white`}>
                     {pkg.badge}
                   </span>
                 </div>
@@ -204,13 +204,13 @@ export default function PricingPackages() {
                 {/* Timeline */}
                 <div className="inline-flex items-center gap-1.5 rounded-lg bg-slate-100 px-2.5 py-1 w-fit mb-2.5">
                   <Clock3 className="w-3 h-3 text-slate-500" />
-                  <span className="text-[9px] font-semibold text-slate-600">
+                  <span className="text-[11px] font-semibold text-slate-600">
                     {pkg.timeline}
                   </span>
                 </div>
 
                 {/* Description */}
-                <p className="text-[11px] text-slate-500 leading-relaxed mb-2.5">
+                <p className="text-[13px] text-slate-500 leading-relaxed mb-2.5">
                   {pkg.description}
                 </p>
 
@@ -222,14 +222,14 @@ export default function PricingPackages() {
                   {pkg.features.slice(0, 6).map((feature) => (
                     <li
                       key={feature}
-                      className="flex items-start gap-2 text-[10px] text-slate-600"
+                      className="flex items-start gap-2 text-[14px] text-slate-600"
                     >
                       <CheckCircle2 className={`w-3 h-3 mt-0.5 flex-shrink-0 ${pkg.highlighted ? 'text-emerald-500' : 'text-blue-500'}`} />
                       <span className="leading-tight">{feature}</span>
                     </li>
                   ))}
                   {pkg.features.length > 6 && (
-                    <li className="text-[9px] text-slate-400 font-medium pl-5">
+                    <li className="text-[11px] text-slate-400 font-medium pl-5">
                       +{pkg.features.length - 6} more features
                     </li>
                   )}

@@ -107,14 +107,14 @@ export default function AboutUs() {
             </span>
           </div>
 
-          <h2 className="text-2xl md:text-3xl font-bold text-slate-900">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900">
             Empowering Authors.{" "}
             <span className="bg-green-600 to-indigo-600 bg-clip-text text-transparent">
               Inspiring Generations.
             </span>
           </h2>
 
-          <p className="mt-1.5 text-sm text-slate-600 max-w-2xl mx-auto">
+          <p className="mt-1.5 text-base text-slate-600 max-w-2xl mx-auto">
             We transform powerful ideas into professionally published works
             that inform, inspire, and impact lives globally.
           </p>

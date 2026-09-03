@@ -253,7 +253,7 @@ export default function MainServices() {
               </span>
             </div>
 
-            <h2 className="text-2xl md:text-3xl font-bold text-slate-900">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900">
               Comprehensive{" "}
               <span className="bg-green-600 to-emerald-600 bg-clip-text text-transparent">
                 Publishing Solutions

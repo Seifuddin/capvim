@@ -107,14 +107,14 @@ export default function StoriesAndTestimonials() {
             </span>
           </div>
 
-          <h2 className="text-2xl md:text-3xl font-bold text-slate-900">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900">
             What Our{" "}
             <span className="bg-green-600 to-indigo-600 bg-clip-text text-transparent">
               Clients Say
             </span>
           </h2>
 
-          <p className="mt-1 text-sm text-slate-600 max-w-2xl mx-auto">
+          <p className="mt-1 text-base text-slate-600 max-w-2xl mx-auto">
             Real stories from authors and partners we've worked with
           </p>
         </motion.div>
@@ -162,7 +162,7 @@ export default function StoriesAndTestimonials() {
                     {/* Quote - Compact */}
                     <div className="mb-2.5">
                       <Quote className="w-5 h-5 text-blue-200 mb-1" />
-                      <p className="text-xs text-slate-600 leading-relaxed line-clamp-3">
+                      <p className="text-base text-slate-600 leading-relaxed line-clamp-3">
                         "{testimonial.quote}"
                       </p>
                     </div>
@@ -178,10 +178,10 @@ export default function StoriesAndTestimonials() {
                         />
                       </div>
                       <div className="flex-1 min-w-0">
-                        <h4 className="font-semibold text-slate-800 text-xs truncate">
+                        <h4 className="font-semibold text-slate-800 text-base truncate">
                           {testimonial.name}
                         </h4>
-                        <p className="text-slate-400 text-[10px] truncate">
+                        <p className="text-slate-400 text-[12px] truncate">
                           {testimonial.role}
                         </p>
                       </div>

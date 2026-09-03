@@ -106,7 +106,7 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <h1 className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.05] tracking-tight">
+              <h1 className="text-5xl sm:text-5xl md:text-5xl lg:text-6xl font-bold leading-[1.05] tracking-tight">
                 <span className="text-white">Publish Your</span>
                 <br />
                 <span className="bg-gradient-to-r from-pink-400 via-purple-400 to-blue-400 bg-clip-text text-transparent">
@@ -120,7 +120,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-sm sm:text-base text-gray-300 max-w-lg font-light leading-relaxed"
+              className="text-base text-gray-300 max-w-lg font-light leading-relaxed"
             >
               From manuscript to bestseller — end-to-end publishing services 
               that turn your vision into a lasting legacy.

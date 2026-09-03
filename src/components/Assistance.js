@@ -130,7 +130,7 @@ export default function Assistance() {
                 </div>
 
                 {/* Heading */}
-                <h2 className="max-w-xl text-xl font-bold leading-snug tracking-tight text-white sm:text-2xl">
+                <h2 className="max-w-xl text-3xl md:text-4xl font-bold leading-snug tracking-tight text-white sm:text-2xl">
                   Not sure which package fits{" "}
                   <span className="text-green-300">
                     your publishing goals?
@@ -138,7 +138,7 @@ export default function Assistance() {
                 </h2>
 
                 {/* Description */}
-                <p className="mt-2 max-w-xl text-sm leading-6 text-blue-100/60">
+                <p className="mt-2 max-w-xl text-base leading-6 text-blue-100/60">
                   Request a custom consultation directly from our office.
                 </p>
               </motion.div>
