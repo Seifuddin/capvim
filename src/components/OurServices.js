@@ -212,7 +212,7 @@ export default function MainServices() {
     <>
       <section
         ref={containerRef}
-        className="relative py-12 px-4 overflow-hidden bg-slate-50 via-white to-blue-50/30"
+        className="relative py-20 px-4 overflow-hidden bg-slate-50 via-white to-blue-50/30"
       >
         {/* Animated Background */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -255,12 +255,12 @@ export default function MainServices() {
 
             <h2 className="text-2xl md:text-3xl font-bold text-slate-900">
               Comprehensive{" "}
-              <span className="bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">
+              <span className="bg-green-600 to-emerald-600 bg-clip-text text-transparent">
                 Publishing Solutions
               </span>
             </h2>
 
-            <p className="mt-1.5 text-sm text-slate-600 max-w-2xl mx-auto">
+            <p className="mt-1.5 text-base text-slate-600 max-w-2xl mx-auto">
               End-to-end publishing solutions to transform your manuscript into
               a professionally published and globally distributed book.
             </p>
@@ -286,9 +286,9 @@ export default function MainServices() {
                   whileHover={{ y: -4 }}
                   className="group"
                 >
-                  <div className="relative bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-slate-100 hover:border-green-200">
+                  <div className="relative bg-white rounded overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-slate-100 hover:border-green-200">
                     {/* Image - Smaller */}
-                    <div className="relative h-32 w-full overflow-hidden">
+                    <div className="relative h-40 w-full overflow-hidden">
                       <Image
                         src={service.image}
                         alt={service.title}
@@ -313,27 +313,27 @@ export default function MainServices() {
                         `}>
                           <Icon className="w-3.5 h-3.5 text-white" />
                         </div>
-                        <h3 className="text-sm font-bold text-slate-800 leading-tight">
+                        <h3 className="textsm font-bold text-slate-800 leading-tight">
                           {service.title}
                         </h3>
                       </div>
 
-                      <p className="text-[11px] text-slate-500 leading-relaxed line-clamp-2">
+                      <p className="text-[14px] text-slate-500 leading-relaxed line-clamp-2">
                         {service.description}
                       </p>
 
                       <div className="mt-2.5 flex gap-1.5">
                         <button
                           onClick={() => openRequestModal(service)}
-                          className="flex-1 px-2.5 py-1.5 bg-gradient-to-r from-green-600 to-emerald-700 text-white text-[10px] font-semibold rounded-lg hover:shadow-md transition-all duration-300 hover:-translate-y-0.5 flex items-center justify-center gap-1"
+                          className="flex-1 px-2.5 py-2 bg-gradient-to-r from-green-600 to-emerald-700 text-white text-[12px] font-semibold rounded-lg hover:shadow-md transition-all duration-300 hover:-translate-y-0.5 flex items-center justify-center gap-1"
                         >
                           Request
-                          <ArrowRight className="w-3 h-3" />
+                          <ArrowRight className="w-4 h-4" />
                         </button>
 
                         <button
                           onClick={() => openPricingModal(service)}
-                          className="px-3 py-1.5 border border-slate-200 text-slate-600 text-[10px] font-medium rounded-lg hover:border-green-300 hover:bg-green-50 hover:text-green-700 transition-all duration-300"
+                          className="px-3 py-2 border border-slate-200 text-slate-600 text-[12px] font-medium rounded-lg hover:border-green-300 hover:bg-green-50 hover:text-green-700 transition-all duration-300"
                         >
                           Pricing
                         </button>

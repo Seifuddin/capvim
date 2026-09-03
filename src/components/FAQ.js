@@ -65,7 +65,7 @@ export default function FAQ() {
   );
 
   return (
-    <section className="relative py-12 px-4 overflow-hidden bg-slate-50 via-white to-blue-50/30">
+    <section className="relative py-24 px-4 overflow-hidden bg-slate-50 via-white to-blue-50/30">
       {/* Animated Background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div

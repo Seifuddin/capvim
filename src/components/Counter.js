@@ -78,7 +78,7 @@ export default function PublishingCounters() {
   return (
     <section
       ref={sectionRef}
-      className="relative py-8 px-4 overflow-hidden"
+      className="relative py-14 px-4 overflow-hidden"
     >
       {/* Premium Background with Animated Gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#0a1628] via-[#0f2847] to-[#0a1628]" />
@@ -149,7 +149,7 @@ export default function PublishingCounters() {
             <span className="inline-block bg-gradient-to-r from-green-400/20 to-emerald-400/20 text-green-400 px-3 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-widest border border-green-400/20 backdrop-blur-sm">
               Our Impact
             </span>
-            <h2 className="text-lg md:text-xl font-bold text-white tracking-tight">
+            <h2 className="text-2xl md:text-3xl font-bold text-white tracking-tight">
               Achievements <span className="text-green-400">in Numbers</span>
             </h2>
           </div>

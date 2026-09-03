@@ -135,7 +135,7 @@ export default function Hero() {
             >
               <motion.a
                 href="/get-started"
-                className="group relative px-5 py-2.5 rounded-full bg-gradient-to-r from-pink-500 to-purple-500 text-white font-semibold text-sm overflow-hidden shadow-lg shadow-pink-500/25"
+                className="group relative px-5 py-2.5 rounded -full bg-gradient-to-r from-pink-500 to-purple-500 text-white font-semibold text-sm overflow-hidden shadow-lg shadow-pink-500/25"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -153,7 +153,7 @@ export default function Hero() {
 
               <motion.a
                 href="/portfolio"
-                className="group px-5 py-2.5 rounded-full bg-white/5 border border-white/10 text-white/90 font-medium text-sm backdrop-blur-sm hover:bg-white/10 hover:border-white/30 transition-all"
+                className="group px-5 py-2.5 rounded bg-white/5 border border-white/10 text-white/90 font-medium text-sm backdrop-blur-sm hover:bg-white/10 hover:border-white/30 transition-all"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >

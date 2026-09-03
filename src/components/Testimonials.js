@@ -67,7 +67,7 @@ export default function StoriesAndTestimonials() {
   return (
     <section
       ref={containerRef}
-      className="relative py-12 px-4 overflow-hidden bg-slate-50 via-white to-blue-50/30"
+      className="relative py-24 px-4 overflow-hidden bg-slate-50 via-white to-blue-50/30"
     >
       {/* Animated Background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -101,15 +101,15 @@ export default function StoriesAndTestimonials() {
           className="text-center mb-7"
         >
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gradient-to-r from-blue-100 to-indigo-100 border border-blue-200/50 shadow-sm mb-2.5">
-            <HeartHandshake className="w-3.5 h-3.5 text-blue-600" />
-            <span className="text-[10px] font-bold text-blue-700 uppercase tracking-wider">
+            <HeartHandshake className="w-3.5 h-3.5 text-green-600" />
+            <span className="text-[10px] font-bold text-green-700 uppercase tracking-wider">
               Testimonials
             </span>
           </div>
 
           <h2 className="text-2xl md:text-3xl font-bold text-slate-900">
             What Our{" "}
-            <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+            <span className="bg-green-600 to-indigo-600 bg-clip-text text-transparent">
               Clients Say
             </span>
           </h2>

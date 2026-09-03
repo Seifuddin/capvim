@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export default function CustomerCare() {
   return (
-    <section className="relative bg-black py-8 px-4 overflow-hidden">
+    <section className="relative bg-black py-14 px-4 overflow-hidden">
       {/* Background Image with Overlay */}
       <div 
         className="absolute inset-0 bg-[url('/images/how-to-start-a-publishing-company-5.png')] bg-cover bg-center"
@@ -22,11 +22,11 @@ export default function CustomerCare() {
               <span className="bg-green-400 text-black px-3 py-0.5 rounded-full text-xs font-bold uppercase tracking-wider">
                 Support
               </span>
-              <h2 className="text-lg md:text-xl font-bold text-white">
+              <h2 className="text-2xl md:text-3xl font-bold text-white">
                 Still have <span className="text-green-400">Questions?</span>
               </h2>
             </div>
-            <p className="text-gray-300 text-sm">
+            <p className="text-gray-300 tex">
               Talk to our customer care team one-on-one
             </p>
           </div>

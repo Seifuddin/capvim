@@ -65,10 +65,10 @@ export default function Home() {
       <MainServices />
       <PricingPackages />
       <Assistance />
-      <Why />
       <FAQ />
       <CustomeCare />
       <StoriesAndTestimonials />
+      <Why />
     </main>
   );
 }

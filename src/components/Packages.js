@@ -86,7 +86,7 @@ export default function PricingPackages() {
   return (
     <section
       ref={containerRef}
-      className="relative py-12 px-4 overflow-hidden bg-slate-50 via-white to-blue-50/30"
+      className="relative py-20 px-4 overflow-hidden bg-slate-50 via-white to-blue-50/30"
     >
       {/* Animated Background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -128,15 +128,15 @@ export default function PricingPackages() {
           className="text-center mb-7"
         >
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gradient-to-r from-blue-100 to-indigo-100 border border-blue-200/50 shadow-sm mb-2.5">
-            <Sparkles className="w-3.5 h-3.5 text-blue-600" />
-            <span className="text-[10px] font-bold text-blue-700 uppercase tracking-wider">
+            <Sparkles className="w-3.5 h-3.5 text-green-600" />
+            <span className="text-[10px] font-bold text-green-700 uppercase tracking-wider">
               Pricing Plans
             </span>
           </div>
 
           <h2 className="text-2xl md:text-3xl font-bold text-slate-900">
             Flexible Plans{" "}
-            <span className="bg-gradient-to-r from-blue-600 to-emerald-600 bg-clip-text text-transparent">
+            <span className="bg-green-600 to-emerald-600 bg-clip-text text-transparent">
               For Every Author
             </span>
           </h2>
@@ -240,7 +240,7 @@ export default function PricingPackages() {
                   type="button"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className={`mt-3 flex w-full items-center justify-center gap-1.5 rounded-lg px-3 py-2 text-[10px] font-bold transition-all duration-300 ${
+                  className={`mt-3 flex w-full items-center justify-center gap-1.5 rounded -lg px-3 py-2 text-[12px] font-bold transition-all duration-300 ${
                     pkg.highlighted
                       ? "bg-gradient-to-r from-emerald-500 to-teal-600 text-white shadow-md shadow-emerald-200 hover:shadow-lg"
                       : "border border-slate-200 bg-white text-slate-700 hover:border-blue-300 hover:bg-blue-50 hover:text-blue-700"
