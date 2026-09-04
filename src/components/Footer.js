@@ -79,7 +79,7 @@ export default function Footer() {
             className="col-span-2 md:col-span-1"
           >
             <div className="flex items-center gap-2.5 mb-2.5">
-              <div className="relative w-10 h-10 rounded-lg bg-white/10 backdrop-blur-sm border border-white/10 flex items-center justify-center flex-shrink-0">
+              <div className="relative w-10 h-10 rounded-lg bg-white backdrop-blur-sm border border-white/10 flex items-center justify-center flex-shrink-0">
                 <Image
                   src="/images/Capvim IP.png"
                   alt="Capvim Logo"

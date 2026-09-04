@@ -129,9 +129,9 @@ export default function PublishingCounters() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="flex flex-col sm:flex-row items-center justify-between gap-2 mb-5"
+          className="flexflex-colm:flex-row text-center items-center justify-between gap-2 mb-5"
         >
-          <div className="flex items-center gap-2.5">
+          <div className="flexitems-center gap-2.5">
             {/* Animated Sparkle */}
             <motion.div
               animate={{ 
@@ -149,12 +149,12 @@ export default function PublishingCounters() {
             <span className="inline-block bg-gradient-to-r from-green-400/20 to-emerald-400/20 text-green-400 px-3 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-widest border border-green-400/20 backdrop-blur-sm">
               Our Impact
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight">
+            <h2 className="text-3xl md:text-4xl my-3 font-bold text-white tracking-tight">
               Achievements <span className="text-green-400">in Numbers</span>
             </h2>
           </div>
 
-          <div className="flex items-center gap-1.5 text-base text-gray-400">
+          <div className="flex items-center justify-center gap-1.5 text-base text-gray-400">
             <TrendingUp className="w-3.5 h-3.5 text-green-400" />
             <span className="text-gray-300">Helping authors</span>
             <span className="text-green-400 font-semibold">worldwide</span>

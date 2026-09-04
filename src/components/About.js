@@ -296,7 +296,7 @@ export default function AboutUs() {
 
                 <motion.a
                   href="/portfolio"
-                  className="px-3.5 py-1.5 rounded-lg border border-slate-200 bg-white text-slate-700 text-[11px] font-medium hover:border-blue-200 hover:bg-blue-50 hover:text-blue-700 transition-all duration-300"
+                  className="px-3.5 py-2 rounded -lg border border-slate-200 bg-white text-slate-700 text-[11px] font-medium hover:border-blue-200 hover:bg-blue-50 hover:text-blue-700 transition-all duration-300"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >

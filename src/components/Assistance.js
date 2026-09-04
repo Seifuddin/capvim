@@ -92,7 +92,7 @@ export default function Assistance() {
             {/* =================================================
                 MAIN CTA ROW
             ================================================== */}
-            <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+            <div className="flexflex-colgap-6lg: flex-rowlg: text-center lg justify-center">
 
               {/* LEFT CONTENT */}
               <motion.div
@@ -114,7 +114,7 @@ export default function Assistance() {
               >
 
                 {/* Label + response */}
-                <div className="mb-3 flex flex-wrap items-center gap-3">
+                <div className="mb-3 flex flex-wrap items-center justify-center gap-3">
 
                   <span className="inline-flex items-center gap-1.5 rounded-full border border-green-400/20 bg-green-500/10 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-green-300">
                     <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-green-400" />
@@ -130,7 +130,7 @@ export default function Assistance() {
                 </div>
 
                 {/* Heading */}
-                <h2 className="max-w-xl text-3xl md:text-4xl font-bold leading-snug tracking-tight text-white sm:text-2xl">
+                <h2 className="max-w-3xl mx-auto text-center text-3xl md:text-4xl font-bold leading-snug tracking-tight text-white sm:text-2xl">
                   Not sure which package fits{" "}
                   <span className="text-green-300">
                     your publishing goals?
@@ -138,7 +138,7 @@ export default function Assistance() {
                 </h2>
 
                 {/* Description */}
-                <p className="mt-2 max-w-xl text-base leading-6 text-blue-100/60">
+                <p className="mt-2 max-w-2xl mx-auto text-base leading-6 text-blue-100/60">
                   Request a custom consultation directly from our office.
                 </p>
               </motion.div>
@@ -164,7 +164,7 @@ export default function Assistance() {
                 }}
                 className="shrink-0"
               >
-                <div className="flex w-full flex-nowrap items-center gap-2 sm:gap-3 lg:w-auto">
+                <div className="flex w-full flex-nowrap items-center justify-center my-4 gap-2 sm:gap-3 lg:w-auto">
 
                   {contactMethods.map((method, index) => {
                     const Icon = method.icon;
