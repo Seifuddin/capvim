@@ -9,7 +9,7 @@ export default function MeetOurTeam() {
     {
       name: "Dr. Clifford Matara",
       role: "Founder & Chief Editor",
-      image: "/images/edited-photo.png",
+      image: "/images/Screenshot_20240909-072242.jpg",
       featured: true,
     },
     {

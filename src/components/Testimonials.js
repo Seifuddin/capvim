@@ -59,7 +59,7 @@ export default function StoriesAndTestimonials() {
       name: "Murithi Nguru",
       role: "Director, Lapsa Web & Graphics",
       quote: "My project wouldn't have been the same without them.",
-      image: "/images/edited-photo.png",
+      image: "/images/Screenshot_20240909-072242.jpg",
       rating: 5,
     },
   ];
